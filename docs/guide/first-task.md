@@ -1,12 +1,15 @@
 ---
 title: 第一次任务，先学会怎样验收
 description: 用一份虚构会议记录完成第一次文件整理，并独立核对输入和输出。
+prev:
+  text: 从练习目录开始
+  link: /guide/ready-to-work
 next:
   text: 查看推文资料
   link: /tweets/
 ---
 
-<span class="library-status">PREVIEW · 样稿章节</span>
+<span class="library-status">MODULE 02 · STEP 05</span>
 
 # 第一次任务，先学会怎样验收
 
@@ -15,7 +18,7 @@ next:
 这很适合作为第一次 Pi 练习。材料短、结果看得见，做错了也没有真实损失。我们会让 Pi 把一份虚构会议记录整理成行动清单，然后离开 Pi 的总结，自己检查原文件和最终结果。
 
 ::: warning 开始前
-本章默认你已经安装并能启动 Pi。安装和登录还在整理中，请暂时以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。截图只用来辨认操作，你看到的模型、状态栏和更新提示可能不同，也不影响这次练习。
+本章接着“安装与基础设置”继续。你应当已经能在 `pi-practice` 目录启动 Pi，并收到模型回复。如果还没完成，请先回到 [上一课](/guide/ready-to-work)。截图只用来辨认操作，你看到的模型、状态栏和更新提示可能不同，也不影响这次练习。
 :::
 
 ## 1. 准备一份容易核对的材料
@@ -23,12 +26,22 @@ next:
 先新建一个独立练习目录。以下命令适用于 macOS 和 Linux。
 
 ```bash
-mkdir -p ~/Downloads/Pi-Agent-first-task/input
-mkdir -p ~/Downloads/Pi-Agent-first-task/output
-cd ~/Downloads/Pi-Agent-first-task
+mkdir ~/Downloads/pi-practice/input
+mkdir ~/Downloads/pi-practice/output
+cd ~/Downloads/pi-practice
 ```
 
-把 <a href="/examples/first-task/meeting-notes.md" download="项目会议记录.md">练习用会议记录</a> 保存为 `input/项目会议记录.md`。你也可以新建同名文件，再复制下面的内容。
+任何一条 `mkdir` 如果提示 `File exists`，先不要继续。这表明旧练习可能还在，其中的输出会干扰本次验收。回到模块一新建另一个空目录，并在本页命令中使用相同的新名字。
+
+在当前练习目录执行下面的命令，把练习材料直接保存到 `input`。
+
+```bash
+curl -L https://pi.xiaomovps.com/examples/first-task/meeting-notes.md \
+  -o input/项目会议记录.md
+ls input
+```
+
+`ls input` 必须显示 `项目会议记录.md`。如果下载失败，也可以打开 <a href="/examples/first-task/meeting-notes.md" download="项目会议记录.md">练习用会议记录</a>，将下面的内容保存为同名文件。
 
 ```markdown
 # 项目启动会记录
@@ -50,7 +63,7 @@ cd ~/Downloads/Pi-Agent-first-task
 shasum -a 256 input/项目会议记录.md > input-before.sha256
 ```
 
-最后运行 `pwd`，确认当前位置以 `Pi-Agent-first-task` 结尾；运行 `ls output`，确认输出目录还是空的。旧文件也会通过“文件存在”检查，所以第一次练习要从空目录开始。
+最后运行 `pwd`，确认当前位置以 `pi-practice` 结尾；运行 `ls output`。这条命令没有显示任何文件名才表示输出目录为空。旧文件也会通过“文件存在”检查，所以第一次练习要从空目录开始。
 
 ## 2. 把任务写成可以检查的要求
 
@@ -80,7 +93,7 @@ shasum -a 256 input/项目会议记录.md > input-before.sha256
 
 ![向 Pi 提交会议记录整理任务](/images/first-task-submit.png)
 
-图中顶部的 Package 更新、底部的模型与状态栏来自演示环境，不是这次练习的前置要求。这里只核对中间的任务文字和底部显示的当前目录。
+这是项目维护者使用虚构会议材料制作的演示截图。图中顶部的 Package 更新、底部的模型与状态栏不是这次练习的前置要求。图中路径也是旧演示目录；你的底部路径必须是 `.../pi-practice`，无需与截图文字相同。
 
 按 `Esc` 只能停止尚未完成的动作，不能撤销已经发生的写入。中止以后仍要继续检查输入文件；如果它已经改变，请保留现场，并从原始练习材料重新开始。
 
@@ -122,7 +135,7 @@ sed -n '1,120p' output/行动清单.md
 
 第一次练习不需要记住所有命令。照着同一个顺序做就够了。准备可核对的材料，写清动作与范围，观察实际读写，再独立检查结果。
 
-下一步可以继续学习 [`@文件` 解决的是什么问题](/tweets/#at-files)，理解怎样更明确地把材料交给 Pi。
+延伸阅读可以先看 [`@文件` 解决的是什么问题](/tweets/#at-files)。它目前是资料卡片，正式课程会在后续模块补齐。
 
 **Agent 的总结只是线索，能够独立验证的结果才算完成。**
 

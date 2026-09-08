@@ -3,3 +3,14 @@ docs/.vitepress/cache/
 docs/.vitepress/dist/
 .DS_Store
 *.log
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+auth.json
+credentials.json
+*.pem
+*.key
+id_ed25519
+id_rsa

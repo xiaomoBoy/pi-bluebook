@@ -18,16 +18,24 @@ export default defineConfig({
     siteTitle: 'PI BLUEBOOK',
     nav: [
       { text: '首页', link: '/' },
-      { text: '开始学习', link: '/guide/first-task' },
+      { text: '开始学习', link: '/guide/before-install' },
       { text: '推文资料', link: '/tweets/' },
       { text: 'GitHub', link: 'https://github.com/xiaomoBoy/pi-bluebook' }
     ],
     sidebar: [
       {
-        text: '开始这里',
+        text: '模块一 · 安装与基础设置',
         items: [
-          { text: '学习蓝皮书', link: '/' },
-          { text: '第一次任务', link: '/guide/first-task' }
+          { text: '1. 安装前检查', link: '/guide/before-install' },
+          { text: '2. 安装并启动 Pi', link: '/guide/install-pi' },
+          { text: '3. 登录与模型设置', link: '/guide/connect-model' },
+          { text: '4. 从练习目录开始', link: '/guide/ready-to-work' }
+        ]
+      },
+      {
+        text: '模块二 · 完成第一个任务',
+        items: [
+          { text: '5. 第一次任务', link: '/guide/first-task' }
         ]
       },
       {

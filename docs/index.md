@@ -11,18 +11,18 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /guide/first-task
+      link: /guide/before-install
     - theme: alt
       text: 查看推文资料
       link: /tweets/
 
 features:
   - icon: "01"
-    title: 第一次任务
-    details: 从一个小而完整的场景开始，理解材料、动作、限制和验收。
+    title: 安装与设置
+    details: 准备终端和运行环境，安装 Pi，完成登录和第一次连通测试。
   - icon: "02"
-    title: 形成工作流
-    details: 学会管理文件、上下文和会话，让结果能够检查、复用和修正。
+    title: 完成第一次任务
+    details: 从一个小而完整的场景开始，理解材料、动作、限制和验收。
   - icon: "03"
     title: 扩展自己的 Pi
     details: 认识 Skill、Extension 与 Pi Package，把反复做的事情沉淀下来。
