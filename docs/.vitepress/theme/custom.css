@@ -480,41 +480,8 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
   line-height: 1.45;
 }
 
-.tweet-entry.is-collapsed {
-  padding-bottom: 18px;
-}
-
-.tweet-entry.is-collapsed blockquote,
-.tweet-entry.is-collapsed .tweet-media-note {
+.tweet-entry.is-paged-out {
   display: none;
-}
-
-.tweet-entry.is-expanded {
-  border-color: color-mix(in srgb, var(--pi-blue) 58%, var(--pi-line));
-}
-
-.tweet-toggle,
-.tweet-archive-actions button {
-  border: 0;
-  color: var(--pi-blue-dark);
-  background: transparent;
-  font-family: var(--vp-font-family-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-}
-
-.tweet-toggle {
-  margin-left: 12px;
-  padding: 5px 0 5px 14px;
-  border-left: 1px solid var(--pi-line);
-}
-
-.tweet-toggle:hover,
-.tweet-archive-actions button:hover {
-  color: var(--vp-c-brand-1);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .tweet-archive-tools {
@@ -536,14 +503,10 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
   font-size: 1.08rem;
 }
 
-.tweet-archive-actions {
-  display: flex;
-  flex: none;
-  gap: 12px;
-}
-
-.tweet-archive-actions button {
-  padding: 4px 0;
+.tweet-archive-tools__note {
+  color: var(--pi-muted);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
 }
 
 .tweet-quick-index {
@@ -581,6 +544,56 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
 
 .tweet-quick-index a:hover {
   color: var(--vp-c-brand-1);
+}
+
+.tweet-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.tweet-pagination--top {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--pi-line);
+}
+
+.tweet-pagination--bottom {
+  margin: 30px 0 36px;
+}
+
+.tweet-pagination__pages {
+  display: flex;
+  gap: 6px;
+}
+
+.tweet-pagination button {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 1px solid var(--pi-line);
+  color: var(--pi-muted);
+  background: var(--pi-paper-strong);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.tweet-pagination button:hover:not(:disabled),
+.tweet-pagination button.is-current {
+  border-color: var(--pi-blue);
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.tweet-pagination button.is-current {
+  font-weight: 700;
+}
+
+.tweet-pagination button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
 }
 
 .tweet-entry blockquote {
@@ -1114,18 +1127,6 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
     padding: 18px 17px;
   }
 
-  .tweet-entry.is-collapsed {
-    padding-bottom: 14px;
-  }
-
-  .tweet-toggle {
-    display: block;
-    margin: 8px 0 0;
-    padding: 5px 0 0;
-    border-top: 1px solid var(--pi-line);
-    border-left: 0;
-  }
-
   .tweet-archive-tools {
     padding: 16px 17px;
   }
@@ -1138,5 +1139,19 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
 
   .tweet-quick-index ol {
     grid-template-columns: 1fr;
+  }
+
+  .tweet-pagination {
+    gap: 7px;
+  }
+
+  .tweet-pagination__pages {
+    gap: 4px;
+  }
+
+  .tweet-pagination button {
+    min-width: 32px;
+    min-height: 34px;
+    padding: 5px 8px;
   }
 }

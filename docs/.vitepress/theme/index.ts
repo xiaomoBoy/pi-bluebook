@@ -4,19 +4,7 @@ import { useRoute } from 'vitepress'
 import './custom.css'
 
 const entrySelector = '.tweet-entry:not(.tweet-entry-featured)'
-
-function setEntryState(entry: HTMLElement, expanded: boolean) {
-  entry.classList.toggle('is-collapsed', !expanded)
-  entry.classList.toggle('is-expanded', expanded)
-
-  const button = entry.querySelector<HTMLButtonElement>('.tweet-toggle')
-  if (!button) return
-
-  const entryTitle = entry.querySelector('h2')?.textContent?.trim() || '本篇记录'
-  button.setAttribute('aria-expanded', String(expanded))
-  button.setAttribute('aria-label', `${expanded ? '收起' : '展开'}原文：${entryTitle}`)
-  button.textContent = expanded ? '收起原文' : '展开原文'
-}
+const entriesPerPage = 5
 
 function openHashTarget(shouldScroll = false) {
   if (!window.location.hash) return
@@ -26,91 +14,158 @@ function openHashTarget(shouldScroll = false) {
   const entry = target?.closest<HTMLElement>('.tweet-entry')
   if (!entry) return
 
-  setEntryState(entry, true)
-  if (shouldScroll) {
-    window.requestAnimationFrame(() => entry.scrollIntoView({ block: 'start' }))
+  const page = entry.dataset.archivePage
+  const pageButton = page
+    ? document.querySelector<HTMLButtonElement>(`.tweet-pagination button[data-page="${page}"]`)
+    : null
+
+  if (pageButton && pageButton.getAttribute('aria-current') !== 'page') {
+    pageButton.click()
   }
+
+  window.requestAnimationFrame(() => {
+    if (shouldScroll) entry.scrollIntoView({ block: 'start' })
+  })
 }
 
 function enhanceTweetArchive() {
   const entries = Array.from(document.querySelectorAll<HTMLElement>(entrySelector))
   if (!entries.length) return
 
-  for (const entry of entries) {
-    if (entry.dataset.archiveReady === 'true') continue
-
-    const heading = entry.querySelector('h2')
-    const meta = entry.querySelector('.tweet-meta')
-    if (!heading || !meta) continue
-
-    entry.dataset.archiveReady = 'true'
-    entry.classList.add('is-collapsed')
-
-    const button = document.createElement('button')
-    button.type = 'button'
-    button.className = 'tweet-toggle'
-    button.textContent = '展开原文'
-    button.setAttribute('aria-expanded', 'false')
-    button.setAttribute('aria-label', `展开原文：${heading.textContent?.trim() || '本篇记录'}`)
-    button.addEventListener('click', () => {
-      setEntryState(entry, entry.classList.contains('is-collapsed'))
-    })
-    meta.insertAdjacentElement('afterend', button)
+  if (document.querySelector('.tweet-archive-tools')) {
+    openHashTarget(true)
+    return
   }
 
-  if (!document.querySelector('.tweet-archive-tools')) {
-    const tools = document.createElement('section')
-    tools.className = 'tweet-archive-tools'
-    tools.setAttribute('aria-label', '本阶段文章阅读工具')
+  const pageCount = Math.ceil(entries.length / entriesPerPage)
+  let currentPage = 0
 
-    const heading = document.createElement('div')
-    heading.className = 'tweet-archive-tools__heading'
+  for (const [index, entry] of entries.entries()) {
+    entry.classList.remove('is-collapsed', 'is-expanded')
+    entry.querySelector('.tweet-toggle')?.remove()
+    entry.dataset.archivePage = String(Math.floor(index / entriesPerPage))
+  }
 
-    const title = document.createElement('strong')
-    title.textContent = `本阶段文章 · ${entries.length} 篇`
+  const tools = document.createElement('section')
+  tools.className = 'tweet-archive-tools'
+  tools.setAttribute('aria-label', '本阶段文章阅读工具')
 
-    const actions = document.createElement('div')
-    actions.className = 'tweet-archive-actions'
+  const heading = document.createElement('div')
+  heading.className = 'tweet-archive-tools__heading'
 
-    const expandAll = document.createElement('button')
-    expandAll.type = 'button'
-    expandAll.textContent = '全部展开'
-    expandAll.addEventListener('click', () => entries.forEach((entry) => setEntryState(entry, true)))
+  const title = document.createElement('strong')
+  title.textContent = `本阶段文章 · ${entries.length} 篇`
 
-    const collapseAll = document.createElement('button')
-    collapseAll.type = 'button'
-    collapseAll.textContent = '全部收起'
-    collapseAll.addEventListener('click', () => entries.forEach((entry) => setEntryState(entry, false)))
+  const note = document.createElement('span')
+  note.className = 'tweet-archive-tools__note'
+  note.textContent = `每页完整显示 ${entriesPerPage} 篇`
 
-    actions.append(expandAll, collapseAll)
-    heading.append(title, actions)
+  heading.append(title, note)
 
-    const directory = document.createElement('details')
-    directory.className = 'tweet-quick-index'
+  const directory = document.createElement('details')
+  directory.className = 'tweet-quick-index'
 
-    const summary = document.createElement('summary')
-    summary.textContent = '展开标题目录，直接跳到某一篇'
+  const summary = document.createElement('summary')
+  summary.textContent = '展开标题目录，直接跳到某一篇'
 
-    const list = document.createElement('ol')
-    for (const entry of entries) {
-      const item = document.createElement('li')
-      const link = document.createElement('a')
-      const entryTitle = entry.querySelector('h2')?.textContent?.trim() || '未命名记录'
-      link.href = `#${entry.id}`
-      link.textContent = entryTitle
-      link.addEventListener('click', () => {
-        setEntryState(entry, true)
-        directory.open = false
-      })
-      item.append(link)
-      list.append(item)
+  const list = document.createElement('ol')
+  for (const entry of entries) {
+    const item = document.createElement('li')
+    const link = document.createElement('a')
+    const entryTitle = entry.querySelector('h2')?.textContent?.trim() || '未命名记录'
+    link.href = `#${entry.id}`
+    link.textContent = entryTitle
+    link.addEventListener('click', () => {
+      const targetPage = Number(entry.dataset.archivePage || 0)
+      renderPage(targetPage, false)
+      directory.open = false
+    })
+    item.append(link)
+    list.append(item)
+  }
+
+  directory.append(summary, list)
+
+  function createPagination(position: 'top' | 'bottom') {
+    const pagination = document.createElement('nav')
+    pagination.className = `tweet-pagination tweet-pagination--${position}`
+    pagination.setAttribute('aria-label', position === 'top' ? '文章分页' : '文章分页（页尾）')
+
+    const previous = document.createElement('button')
+    previous.type = 'button'
+    previous.dataset.direction = 'previous'
+    previous.textContent = '上一页'
+    previous.addEventListener('click', () => renderPage(currentPage - 1, true))
+
+    const pages = document.createElement('div')
+    pages.className = 'tweet-pagination__pages'
+
+    for (let page = 0; page < pageCount; page += 1) {
+      const pageButton = document.createElement('button')
+      pageButton.type = 'button'
+      pageButton.dataset.page = String(page)
+      pageButton.textContent = String(page + 1)
+      pageButton.setAttribute('aria-label', `第 ${page + 1} 页`)
+      pageButton.addEventListener('click', () => renderPage(page, true))
+      pages.append(pageButton)
     }
 
-    directory.append(summary, list)
-    tools.append(heading, directory)
-    entries[0].insertAdjacentElement('beforebegin', tools)
+    const next = document.createElement('button')
+    next.type = 'button'
+    next.dataset.direction = 'next'
+    next.textContent = '下一页'
+    next.addEventListener('click', () => renderPage(currentPage + 1, true))
+
+    pagination.append(previous, pages, next)
+    return pagination
   }
 
+  const topPagination = createPagination('top')
+  const bottomPagination = createPagination('bottom')
+
+  function renderPage(page: number, shouldScroll: boolean) {
+    currentPage = Math.max(0, Math.min(page, pageCount - 1))
+
+    for (const [index, entry] of entries.entries()) {
+      entry.classList.toggle(
+        'is-paged-out',
+        Math.floor(index / entriesPerPage) !== currentPage
+      )
+    }
+
+    for (const pagination of document.querySelectorAll<HTMLElement>('.tweet-pagination')) {
+      const previous = pagination.querySelector<HTMLButtonElement>('[data-direction="previous"]')
+      const next = pagination.querySelector<HTMLButtonElement>('[data-direction="next"]')
+      if (previous) previous.disabled = currentPage === 0
+      if (next) next.disabled = currentPage === pageCount - 1
+
+      for (const pageButton of pagination.querySelectorAll<HTMLButtonElement>('[data-page]')) {
+        const isCurrent = Number(pageButton.dataset.page) === currentPage
+        pageButton.classList.toggle('is-current', isCurrent)
+        if (isCurrent) {
+          pageButton.setAttribute('aria-current', 'page')
+        } else {
+          pageButton.removeAttribute('aria-current')
+        }
+      }
+    }
+
+    if (shouldScroll) {
+      window.requestAnimationFrame(() => {
+        tools.scrollIntoView({ block: 'start', behavior: 'smooth' })
+      })
+    }
+  }
+
+  tools.append(heading, directory, topPagination)
+  entries[0].insertAdjacentElement('beforebegin', tools)
+  entries.at(-1)?.insertAdjacentElement('afterend', bottomPagination)
+
+  const hashTarget = window.location.hash
+    ? document.getElementById(decodeURIComponent(window.location.hash.slice(1)))?.closest<HTMLElement>('.tweet-entry')
+    : null
+  const initialPage = hashTarget ? Number(hashTarget.dataset.archivePage || 0) : 0
+  renderPage(initialPage, false)
   openHashTarget(true)
 }
 
