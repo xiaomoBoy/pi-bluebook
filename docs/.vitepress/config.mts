@@ -5,6 +5,9 @@ export default defineConfig({
   title: 'Pi 学习蓝皮书',
   description: '从第一次任务到搭出自己的 Agent',
   cleanUrls: true,
+  sitemap: {
+    hostname: 'https://pi.xiaomovps.com'
+  },
   lastUpdated: true,
   head: [
     ['meta', { name: 'theme-color', content: '#f4f1e9' }],

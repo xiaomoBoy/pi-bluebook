@@ -4,6 +4,10 @@
 
 当前仓库处于最小预览阶段，只包含首页、一个示范章节和推文资料库样稿。
 
+在线预览：[pi.xiaomovps.com](https://pi.xiaomovps.com)
+
+文章从原始材料到发布的分工与验收方式见 [EDITORIAL_WORKFLOW.md](./EDITORIAL_WORKFLOW.md)。
+
 ## 本地预览
 
 ```bash

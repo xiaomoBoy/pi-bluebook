@@ -22,7 +22,7 @@ prev:
 
   <article class="tweet-card">
     <p class="meta">基础 · 上下文</p>
-    <h2><code>@文件</code> 解决的是什么问题</h2>
+    <h2 id="at-files"><code>@文件</code> 解决的是什么问题</h2>
     <p>明确告诉 Pi 本次任务要使用哪份材料，减少它在目录里猜测，也让任务范围更容易被人检查。</p>
     <p class="chapter">未来关联：第 4 章 · 工作目录、文件与上下文</p>
   </article>
