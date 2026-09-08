@@ -36,6 +36,8 @@ export default defineConfig({
       level: [2, 3],
       label: '本页内容'
     },
+    sidebarMenuLabel: '学习目录',
+    darkModeSwitchLabel: '外观模式',
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
