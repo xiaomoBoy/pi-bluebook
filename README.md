@@ -21,9 +21,9 @@
 | 模块三 · 8至9 | [上下文与压缩](docs/guide/context-and-compaction.md) | 理解长对话、压缩、提示缓存和可持续产物 |
 | 模块四 · 10至12 | [扩展自己的 Pi](docs/guide/skills-extensions-packages.md) | 区分 Skill、Extension 和 Package，理解 Extension 设计与子 Agent 分工 |
 | 模块五 · 13至14 | [稳定工作流](docs/guide/vps-and-long-running.md) | 处理长时间任务，建立权限、隔离、恢复和验收意识 |
-| 个人记录 | [从好奇到搭工作台](docs/journey/index.md) | 整理小墨的 Pi 实践、转折与当前理解 |
+| 个人记录 | [我的 Pi 学习记录](docs/journey/index.md) | 把个人感悟与实践过程放在一起，连接六阶段原文路线 |
 | 原文启发与实践 | [学习专区](docs/translations/index.md) | 从会话、压缩和提示缓存原文出发，重构为带场景与练习的中文学习文章 |
-| 补充资料 | [推文资料](docs/tweets/index.md) | 了解实践记录与主线章节的关联方式 |
+| 推文原文 | [六阶段学习目录](docs/tweets/index.md) | 98 条 Pi 推文按学习顺序整理，保留原文与发布日期 |
 
 已经能够启动 Pi 并获得回复的读者，可以先检查第 4 课的前置条件，再进入第一次任务。当前操作主线以 macOS 为主；其他系统的适用范围见各课说明。
 

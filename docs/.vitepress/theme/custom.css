@@ -463,6 +463,93 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
   font-size: 0.82rem;
 }
 
+.tweet-entry {
+  margin: 28px 0;
+  padding: 22px 24px;
+  border: 1px solid var(--pi-line);
+  background: color-mix(in srgb, var(--pi-paper-strong) 92%, transparent);
+  box-shadow: 0 10px 24px rgb(40 52 62 / 5%);
+  scroll-margin-top: 108px;
+}
+
+.tweet-entry h2 {
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+  font-size: 1.36rem;
+  line-height: 1.45;
+}
+
+.tweet-entry blockquote {
+  margin: 18px 0 0;
+  padding: 2px 0 2px 18px;
+  border-left: 2px solid var(--pi-blue);
+  color: var(--vp-c-text-1);
+}
+
+.tweet-entry blockquote p {
+  line-height: 1.86;
+}
+
+.tweet-meta,
+.tweet-media-note,
+.tweet-date {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.74rem;
+}
+
+.tweet-meta {
+  color: var(--pi-blue-dark);
+  letter-spacing: 0.03em;
+}
+
+.tweet-media-note {
+  margin: 16px 0 0;
+  color: var(--pi-muted);
+}
+
+.tweet-entry-featured {
+  margin-top: 22px;
+}
+
+.journey-stage-grid {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0 34px;
+}
+
+.journey-stage-card {
+  display: grid;
+  gap: 7px;
+  padding: 18px 20px;
+  border: 1px solid var(--pi-line);
+  color: var(--vp-c-text-1);
+  background: color-mix(in srgb, var(--pi-paper-strong) 92%, transparent);
+  text-decoration: none;
+}
+
+.journey-stage-card:hover {
+  border-color: var(--pi-blue);
+  transform: translateY(-1px);
+}
+
+.journey-stage-card span {
+  color: var(--pi-blue-dark);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.journey-stage-card strong {
+  font-family: "Iowan Old Style", Baskerville, "Songti SC", STSong, "Noto Serif CJK SC", serif;
+  font-size: 1.16rem;
+}
+
+.journey-stage-card small {
+  color: var(--pi-muted);
+  line-height: 1.65;
+}
+
 @media (min-width: 960px) {
   body .VPLocalSearchBox .shell {
     margin-top: 96px;
@@ -901,5 +988,9 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
 
   .tweet-card {
     padding: 21px 20px;
+  }
+
+  .tweet-entry {
+    padding: 18px 17px;
   }
 }

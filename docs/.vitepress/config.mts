@@ -20,7 +20,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '开始学习', link: '/guide/before-install', activeMatch: '^/guide/' },
       { text: '原文启发', link: '/translations/' },
-      { text: '推文资料', link: '/tweets/' },
+      { text: '推文原文', link: '/tweets/' },
       { text: 'GitHub', link: 'https://github.com/xiaomoBoy/pi-bluebook' }
     ],
     sidebar: [
@@ -66,7 +66,14 @@ export default defineConfig({
       {
         text: '个人学习记录',
         items: [
-          { text: '从好奇到搭工作台', link: '/journey/' }
+          { text: '我的 Pi 学习记录', link: '/journey/' },
+          { text: '推文学习目录', link: '/tweets/' },
+          { text: '1. 从好奇开始认识 Pi', link: '/tweets/01-meet-pi' },
+          { text: '2. 先把第一个任务做完', link: '/tweets/02-first-tasks' },
+          { text: '3. 理解 Session 与上下文', link: '/tweets/03-sessions-context' },
+          { text: '4. Skill 与 Extension', link: '/tweets/04-skills-extensions' },
+          { text: '5. 让子 Agent 学会分工', link: '/tweets/05-subagents-research' },
+          { text: '6. 把 Pi 变成长期工作流', link: '/tweets/06-long-running' }
         ]
       },
       {
@@ -77,10 +84,6 @@ export default defineConfig({
           { text: '压缩前先留下交接', link: '/translations/compaction-in-pi' },
           { text: '别让缓存带偏任务', link: '/translations/prompt-caching' }
         ]
-      },
-      {
-        text: '资料库',
-        items: [{ text: '推文资料', link: '/tweets/' }]
       }
     ],
     outline: {

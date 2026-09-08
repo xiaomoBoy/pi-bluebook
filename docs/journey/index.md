@@ -1,59 +1,88 @@
 ---
-title: 从好奇到搭出自己的工作台
-description: 小墨学习 Pi Agent 的几个转折与当前理解。
+title: 我的 Pi 学习记录
+description: 从好奇、实操、源码理解到搭建个人工作流的 Pi 学习过程。
 prev:
   text: 权限、隔离与验收
   link: /guide/safety
 next:
-  text: 原文启发与实践
-  link: /translations/
+  text: 推文学习目录
+  link: /tweets/
 ---
 
 <span class="library-status">PERSONAL NOTES · 持续更新</span>
 
-# 从好奇到搭出自己的工作台
+# 我的 Pi 学习记录
 
-一开始，我也只是好奇 Pi Agent 是什么。从好奇接触、插件分享到源码阅读，后来的路是一步步走到自己工作流的。下面记录回顾时比较重要的几个转折，并不严格按日期排列。
+我的个人感悟和学习过程本来就分不开。很多判断来自一次实操，后来读到源码或文章，又会回头修正早先的理解。这里不把它们改写成一条过分整齐的成功路线。
 
-## 先用起来
+下面这段话是我决定整理蓝皮书时写下的原文。
 
-我现在给新手的建议很简单：先跟着 Quickstart 跑起来，立即交给 Pi 一个真实、范围小、可以验收的任务。这时不需要先收集完所有教程、插件和提示词。
+<article class="tweet-entry tweet-entry-featured">
 
-第一个任务的价值也不是有多惊艳。你需要亲手看到它怎样读文件、怎样执行命令、怎样写结果，然后学会中止、继续和检查。这些体感是纯看介绍很难得到的。
+<span class="tweet-meta">2026-09-08 18:48:38 · 小墨原文</span>
 
-## 开始理解 Harness
+> 准备把自己的Pi学习过程整理出来
+>
+> 不知道会有多少来看，但是分享本来就是一件有意义的事情，把它整理出来，本身也是一种对学习的回顾
+>
+> 这两个月来，从简单的Pi Agent到研究源码，分析里面的内容怎么一步一步的学习成长到自己开始写插件
+>
+> 开始只是纯好奇，为什么会有一个这么简洁的Agent的出现，为什么Openclaw会选择它当作基座去进行开发，后来我也慢慢懂得了原因
+>
+> 很建议大家在学习之余去翻看一下作者的履历，那不仅仅是简单的历史回顾，更是一种思想的碰撞，也回答了为什么会这样
+>
+> 不说那么多了，开始动手了，然后你也感兴趣，请在评论区告诉我👇
 
-用过一段时间后，我逐渐把 Pi 理解为一个 Agent Harness。模型很重要，但真正影响日常体验的，还有会话怎样保存，工具怎样暴露，上下文怎样组织，扩展怎样进入工作流。
+</article>
 
-当我开始看 Session Tree、上下文、压缩和提示缓存，很多以前只是“感觉有点奇怪”的现象开始能被解释。例如，为什么从早期节点改走另一条路有价值，为什么长对话不能只靠模型临时记忆，为什么把重要结果写入文件比口头总结更稳定。
+## 从时间线改成学习路线
 
-## 自己动手补一小块
+98 条原文已经按六个阶段整理。阶段顺序服务于学习，阶段内部仍保留发布时间。这样既能让新手知道先看什么，也不会抹掉我当时认识事物的先后。
 
-“任务结束时提醒我”这个小需求，推动我去学 Extension。当时的目标很具体，还没有打算先搭一套庞大的工作台。
+<div class="journey-stage-grid">
 
-在提醒功能的实际实现和排错中，我又回到了事件、状态判断和真实界面验收。这些问题让我更明确地意识到，“命令运行了”和“用户真的看到提醒”是两件事。
+<a class="journey-stage-card" href="/tweets/01-meet-pi">
+  <span>STAGE 01 · 27 篇原文</span>
+  <strong>从好奇开始认识 Pi</strong>
+  <small>先理解 Pi 是什么、为什么保持简洁，以及 Agent Harness 会怎样影响实际体验。</small>
+</a>
 
-## 让长任务和分工稳定下来
+<a class="journey-stage-card" href="/tweets/02-first-tasks">
+  <span>STAGE 02 · 25 篇原文</span>
+  <strong>先把第一个任务做完</strong>
+  <small>认识模型选择、入门技巧和基础界面，再回到一个可以独立验收的小任务。</small>
+</a>
 
-我开始使用 VPS 承接部分长任务，尝试子 Agent 分工，也会整理和清理自己安装的插件。工具数量在增加，我对边界、产物、验收和出错后恢复的关注也更多了。
+<a class="journey-stage-card" href="/tweets/03-sessions-context">
+  <span>STAGE 03 · 7 篇原文</span>
+  <strong>理解 Session 与上下文</strong>
+  <small>弄清会话树、长期记忆、压缩、Token 与提示缓存之间的关系。</small>
+</a>
 
-对我来说，搭工作台不是一次装完所有能力。它是做真实任务，找到重复问题，用 Skill 固化方法，用 Extension 补足缺失功能，然后删掉已经没用的部分。
+<a class="journey-stage-card" href="/tweets/04-skills-extensions">
+  <span>STAGE 04 · 22 篇原文</span>
+  <strong>搭建自己的 Skill 与 Extension</strong>
+  <small>从使用现成插件走向整理方法、控制数量，再解决自己的真实需求。</small>
+</a>
 
-## 为什么要做这本蓝皮书
+<a class="journey-stage-card" href="/tweets/05-subagents-research">
+  <span>STAGE 05 · 7 篇原文</span>
+  <strong>让子 Agent 学会分工</strong>
+  <small>学习怎样拆分搜索、整理、审阅任务，并检查不同 Agent 交回的证据。</small>
+</a>
 
-我已经发过一些零散的 Pi 使用记录。它们对当时的一个问题有用，却不容易让刚来的人知道先学什么、后学什么。蓝皮书的作用，就是把这些片段重新放回一条循序渐进的路上。
+<a class="journey-stage-card" href="/tweets/06-long-running">
+  <span>STAGE 06 · 10 篇原文</span>
+  <strong>把 Pi 变成长期工作流</strong>
+  <small>处理 VPS、远程设备、Runtime、界面与生态，让 Pi 从一次任务走向长期使用。</small>
+</a>
 
-它不是 Pi 官方文档，也不会把我的经验写成所有人必须复制的标准答案。我希望保留的是学习的先后顺序、真实卡住的地方，以及怎样用可验收结果向前走。
+</div>
 
-### 原始记录
+## 我希望保留什么
 
-- [从好奇接触到插件分享和源码阅读](https://x.com/xiaomovps/status/2095857935255798186)
-- [给初学者的上手建议](https://x.com/xiaomovps/status/2095175082696122460)
-- [我对 Agent Harness 的理解](https://x.com/xiaomovps/status/2093634905037230252)
-- [Session Tree 与上下文使用记录](https://x.com/xiaomovps/status/2093359637932445901)
-- [在 VPS 上运行长任务的个人体验](https://x.com/xiaomovps/status/2093242314764537867)
-- [子 Agent 使用记录](https://x.com/xiaomovps/status/2093160756716204485)
-- [第一个任务提醒 Extension](https://x.com/xiaomovps/status/2096979758349496647)
-- [从提醒问题回到事件与状态](https://x.com/xiaomovps/status/2097181979540111592)
-- [工作台是一步步搭出来的](https://x.com/xiaomovps/status/2096573015811113279)
-- [Pi 学习蓝皮书的起点](https://x.com/xiaomovps/status/2097275917915853200)
+学习记录里会同时留下当时的判断和后来的修正。早期推文有些内容依赖当时版本，语言也没有重新润色。它们继续保留，是因为学习过程本身包含试错。
+
+真正需要读者照着操作的内容会进入蓝皮书主线，重新核验命令、版本与验收结果。个人记录负责说明我怎样走到这里，两部分互相连接，但承担的任务不同。
+
+[从第一阶段开始阅读](/tweets/01-meet-pi) · [查看全部六个阶段](/tweets/)

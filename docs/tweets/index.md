@@ -1,40 +1,39 @@
 ---
-title: 推文资料
-description: 按学习阶段整理 Pi 相关推文与实践记录。
+title: 推文学习目录
+description: 按六个学习阶段整理小墨的 98 条 Pi 推文原文。
 prev:
-  text: 第一次任务
-  link: /guide/first-task
+  text: 我的 Pi 学习记录
+  link: /journey/
+next:
+  text: 从好奇开始认识 Pi
+  link: /tweets/01-meet-pi
 ---
 
-<span class="library-status">整理中 · 当前仅展示结构</span>
+<span class="library-status">98 条原文 · 六阶段学习路线</span>
 
-# 推文资料
+# 推文学习目录
 
-这里是主线章节背后的经验索引，不需要从头连续阅读。完整资料导入前，先用三个示例展示后续的整理方式。
+这些推文最初按时间零散发布。现在我把 2026 年 8 月 11 日至 9 月 8 日的 98 条 Pi 相关原文，重新放进一条从入门到长期工作的学习路线。
 
-<div class="tweet-grid">
-  <article class="tweet-card">
-    <p class="meta">入门 · 验收</p>
-    <h2 id="first-task">第一次任务为什么必须可以验收</h2>
-    <p>Agent 说“已经完成”只是状态，不是证据。第一个练习应该留下能打开、能比较、能独立检查的结果。</p>
-    <p class="chapter">已关联：第 5 课 · 第一次任务</p>
-  </article>
+这里没有直接堆放一个按日期排列的长列表。每条原文只进入最适合的一个阶段，阶段内部按时间从早到晚排列。读者既能顺着学习，也能看到我的认识怎样变化。
 
-  <article class="tweet-card">
-    <p class="meta">基础 · 上下文</p>
-    <h2 id="at-files"><code>@文件</code> 解决的是什么问题</h2>
-    <p>明确告诉 Pi 本次任务要使用哪份材料，减少它在目录里猜测，也让任务范围更容易被人检查。</p>
-    <p class="chapter">已关联：第 6 课 · 文件与工作目录</p>
-  </article>
+## 六个阶段
 
-  <article class="tweet-card">
-    <p class="meta">扩展 · 复用</p>
-    <h2 id="skill-extension-package">Skill、Extension 和 Pi Package 的区别</h2>
-    <p>Skill 保存专项工作方法，Extension 改变 Pi 的行为，Pi Package 则负责把这些能力组合和分发。</p>
-    <p class="chapter">已关联：第 10–11 课 · 扩展方式与需求验收</p>
-  </article>
-</div>
+| 顺序 | 阶段 | 原文数量 | 学完以后 |
+| --- | --- | ---: | --- |
+| 01 | [从好奇开始认识 Pi](/tweets/01-meet-pi) | 27 | 先理解 Pi 是什么、为什么保持简洁，以及 Agent Harness 会怎样影响实际体验。 |
+| 02 | [先把第一个任务做完](/tweets/02-first-tasks) | 25 | 认识模型选择、入门技巧和基础界面，再回到一个可以独立验收的小任务。 |
+| 03 | [理解 Session 与上下文](/tweets/03-sessions-context) | 7 | 弄清会话树、长期记忆、压缩、Token 与提示缓存之间的关系。 |
+| 04 | [搭建自己的 Skill 与 Extension](/tweets/04-skills-extensions) | 22 | 从使用现成插件走向整理方法、控制数量，再解决自己的真实需求。 |
+| 05 | [让子 Agent 学会分工](/tweets/05-subagents-research) | 7 | 学习怎样拆分搜索、整理、审阅任务，并检查不同 Agent 交回的证据。 |
+| 06 | [把 Pi 变成长期工作流](/tweets/06-long-running) | 10 | 处理 VPS、远程设备、Runtime、界面与生态，让 Pi 从一次任务走向长期使用。 |
 
-::: info 正式资料库会补充什么
-每条内容将保留原文、发布日期、来源链接、主题、难度、学习阶段和关联章节，并区分官方事实与个人实践。
+## 建议的阅读方法
+
+第一次先读每个阶段开头的说明，再挑两三篇与自己当前问题最接近的原文。需要完整了解学习过程时，再按 01 到 06 连续阅读。
+
+推文中的模型、版本、价格和产品状态会变化。日期是理解它们的一部分。涉及安装和实际操作时，请回到[主学习路线](/guide/before-install)查看经过重新核验的教程。
+
+::: info 原文整理规则
+正文来自个人 Google Drive 原文库。站内保留发布时间和原文字句，移除了 x.com 地址与 t.co 媒体短链。原帖图片和视频会在后续取得清晰素材后补充，不用失效短链代替。
 :::
