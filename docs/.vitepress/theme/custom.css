@@ -829,6 +829,27 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
 
   .VPDoc h1 {
     font-size: 2.15rem;
+    overflow-wrap: anywhere;
+  }
+
+  .VPDoc .vp-doc h1 .header-anchor {
+    display: none;
+  }
+
+  .VPDoc div[class*="language-"],
+  .VPDoc .vp-block {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .VPDoc div.language-text code {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .VPDoc h2 {
