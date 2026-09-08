@@ -480,6 +480,109 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
   line-height: 1.45;
 }
 
+.tweet-entry.is-collapsed {
+  padding-bottom: 18px;
+}
+
+.tweet-entry.is-collapsed blockquote,
+.tweet-entry.is-collapsed .tweet-media-note {
+  display: none;
+}
+
+.tweet-entry.is-expanded {
+  border-color: color-mix(in srgb, var(--pi-blue) 58%, var(--pi-line));
+}
+
+.tweet-toggle,
+.tweet-archive-actions button {
+  border: 0;
+  color: var(--pi-blue-dark);
+  background: transparent;
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.tweet-toggle {
+  margin-left: 12px;
+  padding: 5px 0 5px 14px;
+  border-left: 1px solid var(--pi-line);
+}
+
+.tweet-toggle:hover,
+.tweet-archive-actions button:hover {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tweet-archive-tools {
+  margin: 26px 0 10px;
+  padding: 18px 20px;
+  border: 1px solid color-mix(in srgb, var(--pi-blue) 45%, var(--pi-line));
+  background: color-mix(in srgb, var(--vp-c-brand-soft) 34%, var(--pi-paper-strong));
+}
+
+.tweet-archive-tools__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.tweet-archive-tools__heading strong {
+  font-family: "Iowan Old Style", Baskerville, "Songti SC", STSong, "Noto Serif CJK SC", serif;
+  font-size: 1.08rem;
+}
+
+.tweet-archive-actions {
+  display: flex;
+  flex: none;
+  gap: 12px;
+}
+
+.tweet-archive-actions button {
+  padding: 4px 0;
+}
+
+.tweet-quick-index {
+  margin-top: 12px;
+  border-top: 1px solid var(--pi-line);
+}
+
+.tweet-quick-index summary {
+  padding: 13px 0 1px;
+  color: var(--pi-muted);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.tweet-quick-index ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 26px;
+  margin: 16px 0 4px;
+  padding-left: 1.45rem;
+}
+
+.tweet-quick-index li {
+  padding-left: 3px;
+  color: var(--pi-muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.tweet-quick-index a {
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+}
+
+.tweet-quick-index a:hover {
+  color: var(--vp-c-brand-1);
+}
+
 .tweet-entry blockquote {
   margin: 18px 0 0;
   padding: 2px 0 2px 18px;
@@ -686,6 +789,23 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1399px) {
+  .VPNavBarSearch {
+    margin-right: 12px;
+  }
+
+  .VPNavBarSearch .DocSearch-Button {
+    justify-content: center;
+    width: 40px;
+    padding: 0;
+  }
+
+  .VPNavBarSearch .DocSearch-Button-Placeholder,
+  .VPNavBarSearch .DocSearch-Button-Keys {
+    display: none;
   }
 }
 
@@ -992,5 +1112,31 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
 
   .tweet-entry {
     padding: 18px 17px;
+  }
+
+  .tweet-entry.is-collapsed {
+    padding-bottom: 14px;
+  }
+
+  .tweet-toggle {
+    display: block;
+    margin: 8px 0 0;
+    padding: 5px 0 0;
+    border-top: 1px solid var(--pi-line);
+    border-left: 0;
+  }
+
+  .tweet-archive-tools {
+    padding: 16px 17px;
+  }
+
+  .tweet-archive-tools__heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tweet-quick-index ol {
+    grid-template-columns: 1fr;
   }
 }

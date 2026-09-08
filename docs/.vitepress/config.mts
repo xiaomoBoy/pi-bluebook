@@ -1,18 +1,65 @@
 import { defineConfig } from 'vitepress'
 
+const siteName = 'Pi 学习蓝皮书'
+const siteUrl = 'https://pi.xiaomovps.com'
+const siteDescription = '面向初学者的非官方 Pi 学习路径：从安装、第一次任务到搭出自己的 Agent。'
+
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'Pi 学习蓝皮书',
-  description: '从第一次任务到搭出自己的 Agent',
+  title: siteName,
+  description: siteDescription,
   cleanUrls: true,
   sitemap: {
-    hostname: 'https://pi.xiaomovps.com'
+    hostname: siteUrl
   },
   lastUpdated: true,
   head: [
     ['meta', { name: 'theme-color', content: '#f4f1e9' }],
-    ['link', { rel: 'icon', href: '/brand-mark.svg', type: 'image/svg+xml' }]
+    ['meta', { name: 'author', content: '小墨' }],
+    ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: siteName }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    ['link', { rel: 'icon', href: '/brand-mark.svg', type: 'image/svg+xml' }],
+    [
+      'script',
+      { type: 'application/ld+json' },
+      JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: siteName,
+        url: siteUrl,
+        description: siteDescription,
+        inLanguage: 'zh-CN',
+        author: {
+          '@type': 'Person',
+          name: '小墨',
+          url: 'https://xiaomovps.com/'
+        }
+      })
+    ]
   ],
+  transformPageData(pageData) {
+    const pagePath = pageData.relativePath
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '')
+    const canonicalUrl = new URL(pagePath, `${siteUrl}/`).href
+    const pageTitle = pageData.relativePath === 'index.md'
+      ? siteName
+      : `${pageData.title} | ${siteName}`
+    const pageDescription = pageData.frontmatter.description || siteDescription
+
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { property: 'og:title', content: pageTitle }],
+      ['meta', { property: 'og:description', content: pageDescription }],
+      ['meta', { property: 'og:url', content: canonicalUrl }],
+      ['meta', { name: 'twitter:card', content: 'summary' }],
+      ['meta', { name: 'twitter:title', content: pageTitle }],
+      ['meta', { name: 'twitter:description', content: pageDescription }]
+    )
+  },
   themeConfig: {
     logo: '/brand-mark.svg',
     siteTitle: 'PI BLUEBOOK',
@@ -21,6 +68,7 @@ export default defineConfig({
       { text: '开始学习', link: '/guide/before-install', activeMatch: '^/guide/' },
       { text: '原文启发', link: '/translations/' },
       { text: '推文原文', link: '/tweets/' },
+      { text: '联系合作', link: 'https://xiaomovps.com/' },
       { text: 'GitHub', link: 'https://github.com/xiaomoBoy/pi-bluebook' }
     ],
     sidebar: [
