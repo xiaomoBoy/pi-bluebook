@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Pi 学习蓝皮书标志</title>
+  <desc id="desc">由深蓝色方块组成的 PB 字母标志</desc>
+  <rect width="120" height="120" fill="#26313a"/>
+  <path fill="#f8f5ed" d="M22 23h37c20 0 31 10 31 27 0 18-12 29-32 29H42v18H22V23Zm20 18v20h14c9 0 14-3 14-10 0-7-5-10-14-10H42Z"/>
+  <rect x="77" y="68" width="20" height="29" fill="#4f90aa"/>
+</svg>
