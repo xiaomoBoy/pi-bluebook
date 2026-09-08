@@ -170,6 +170,10 @@ body {
   font-style: italic;
 }
 
+.VPDoc .vp-doc h1 .header-anchor {
+  margin-left: -0.55em;
+}
+
 .VPDoc h2 {
   margin-top: 2.25rem;
   font-size: 1.75rem;
@@ -215,9 +219,10 @@ body {
 }
 
 .VPHome .VPHero {
+  margin-top: 16px;
   margin-right: auto;
   margin-left: auto;
-  padding: calc(var(--vp-nav-height) + 52px) 64px 52px;
+  padding: 48px 64px 52px;
   max-width: 1180px;
   border: 1px solid var(--pi-line);
   background: color-mix(in srgb, var(--pi-paper) 96%, transparent);
@@ -381,6 +386,12 @@ body {
 }
 
 @media (min-width: 960px) {
+  #app .VPHome .VPHero {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
   .VPNavBar {
     margin: 14px 36px 0;
     width: calc(100% - 72px);
@@ -642,7 +653,7 @@ body {
   }
 
   .VPHome .VPHero {
-    padding: calc(var(--vp-nav-height) + 40px) 32px 44px;
+    padding: 40px 32px 44px;
   }
 
   .VPHome .VPHero.has-image .container {
@@ -737,7 +748,7 @@ body {
   }
 
   .VPHome .VPHero {
-    padding: calc(var(--vp-nav-height) + 28px) 22px 38px;
+    padding: 32px 22px 38px;
   }
 
   .VPHome .VPHero.has-image .container {
