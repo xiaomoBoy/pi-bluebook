@@ -17,7 +17,7 @@
   --vp-c-brand-2: var(--pi-blue);
   --vp-c-brand-3: #76aabe;
   --vp-c-brand-soft: rgba(79, 144, 170, 0.14);
-  --vp-c-bg: transparent;
+  --vp-c-bg: var(--pi-paper);
   --vp-c-bg-alt: rgba(251, 250, 246, 0.84);
   --vp-c-bg-elv: var(--pi-paper-strong);
   --vp-c-bg-soft: rgba(245, 246, 244, 0.92);
