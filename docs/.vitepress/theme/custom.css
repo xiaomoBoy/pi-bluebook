@@ -24,6 +24,11 @@
   --vp-c-text-1: var(--pi-ink);
   --vp-c-text-2: var(--pi-muted);
   --vp-c-divider: var(--pi-line);
+  --vp-nav-screen-bg-color: var(--pi-paper);
+  --vp-local-search-bg: var(--pi-paper-strong);
+  --vp-local-search-result-bg: var(--pi-paper-strong);
+  --vp-local-search-result-selected-bg: var(--vp-c-bg-soft);
+  --vp-backdrop-bg-color: rgba(38, 49, 58, 0.28);
   --vp-font-family-base: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --vp-font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   --vp-layout-max-width: 1480px;
@@ -47,6 +52,7 @@
   --vp-c-text-1: var(--pi-ink);
   --vp-c-text-2: var(--pi-muted);
   --vp-c-divider: var(--pi-line);
+  --vp-backdrop-bg-color: rgba(0, 0, 0, 0.62);
 }
 
 html {
@@ -64,6 +70,16 @@ body {
     linear-gradient(90deg, var(--pi-grid) 1px, transparent 1px);
   background-size: 18px 18px;
   letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--vp-c-brand-soft);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--pi-blue);
+  outline-offset: 3px;
 }
 
 .VPNavBar {
@@ -136,6 +152,32 @@ body {
   font-size: 0.72rem;
 }
 
+.VPLocalSearchBox .shell {
+  border: 1px solid var(--pi-line);
+  border-radius: 0;
+  background: var(--pi-paper-strong);
+  box-shadow: 0 20px 60px rgba(24, 32, 38, 0.18);
+}
+
+.VPLocalSearchBox .search-bar,
+.VPLocalSearchBox .result {
+  border-radius: 0;
+  background: var(--vp-local-search-result-bg);
+}
+
+.VPLocalSearchBox .search-bar {
+  min-height: 48px;
+}
+
+.VPLocalSearchBox .result:focus-visible {
+  outline: 2px solid var(--pi-blue);
+  outline-offset: -2px;
+}
+
+.VPLocalSearchBox .search-keyboard-shortcuts {
+  font-family: var(--vp-font-family-mono);
+}
+
 .VPContent {
   padding-top: 24px;
 }
@@ -157,6 +199,7 @@ body {
 .tweet-card h2 {
   font-family: "Iowan Old Style", Baskerville, "Songti SC", STSong, "Noto Serif CJK SC", serif;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 .VPDoc h1,
@@ -187,9 +230,44 @@ body {
 }
 
 .VPDoc img {
+  display: block;
+  margin: 24px auto 8px;
   border: 1px solid var(--pi-line);
+  border-radius: 0;
   background: #f8f1dd;
   box-shadow: 0 8px 22px rgba(34, 45, 53, 0.08);
+}
+
+.VPDoc .custom-block {
+  margin: 24px 0;
+  border-radius: 0;
+  padding: 18px 18px 10px;
+}
+
+.VPDoc .custom-block p {
+  line-height: 1.75;
+}
+
+.VPDoc div[class*="language-"] {
+  border: 1px solid color-mix(in srgb, var(--pi-line) 70%, transparent);
+  border-radius: 0;
+}
+
+.VPDoc :not(pre) > code {
+  border: 1px solid color-mix(in srgb, var(--pi-line) 55%, transparent);
+  border-radius: 0;
+  padding: 2px 5px;
+}
+
+.VPDocFooter .last-updated,
+.VPDocFooter .desc {
+  font-family: var(--vp-font-family-mono);
+  letter-spacing: 0.05em;
+}
+
+.VPDocFooter .pager-link {
+  border-radius: 0;
+  background: color-mix(in srgb, var(--pi-paper-strong) 88%, transparent);
 }
 
 .VPDocAsideOutline {
@@ -386,6 +464,11 @@ body {
 }
 
 @media (min-width: 960px) {
+  .VPLocalSearchBox .shell {
+    margin-top: 96px;
+    width: min(calc(100vw - 48px), 760px);
+  }
+
   #app .VPHome .VPHero {
     border: 0;
     background: transparent;
@@ -653,6 +736,7 @@ body {
   }
 
   .VPHome .VPHero {
+    width: calc(100% - 24px);
     padding: 40px 32px 44px;
   }
 
@@ -705,6 +789,16 @@ body {
 }
 
 @media (max-width: 767px) {
+  #app .VPNavScreen {
+    top: calc(var(--vp-nav-height) + 10px);
+    border-top: 1px solid var(--pi-line);
+    background-color: var(--pi-paper) !important;
+  }
+
+  .VPLocalSearchBox .shell {
+    border: 0;
+  }
+
   .VPNavBar .wrapper {
     padding: 0 16px !important;
   }
