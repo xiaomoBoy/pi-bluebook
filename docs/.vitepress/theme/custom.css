@@ -152,29 +152,29 @@ button:focus-visible {
   font-size: 0.72rem;
 }
 
-.VPLocalSearchBox .shell {
+body .VPLocalSearchBox .shell {
   border: 1px solid var(--pi-line);
   border-radius: 0;
   background: var(--pi-paper-strong);
   box-shadow: 0 20px 60px rgba(24, 32, 38, 0.18);
 }
 
-.VPLocalSearchBox .search-bar,
-.VPLocalSearchBox .result {
+body .VPLocalSearchBox .search-bar,
+body .VPLocalSearchBox .result {
   border-radius: 0;
   background: var(--vp-local-search-result-bg);
 }
 
-.VPLocalSearchBox .search-bar {
+body .VPLocalSearchBox .search-bar {
   min-height: 48px;
 }
 
-.VPLocalSearchBox .result:focus-visible {
+body .VPLocalSearchBox .result:focus-visible {
   outline: 2px solid var(--pi-blue);
   outline-offset: -2px;
 }
 
-.VPLocalSearchBox .search-keyboard-shortcuts {
+body .VPLocalSearchBox .search-keyboard-shortcuts {
   font-family: var(--vp-font-family-mono);
 }
 
@@ -464,7 +464,7 @@ button:focus-visible {
 }
 
 @media (min-width: 960px) {
-  .VPLocalSearchBox .shell {
+  body .VPLocalSearchBox .shell {
     margin-top: 96px;
     width: min(calc(100vw - 48px), 760px);
   }
@@ -795,7 +795,7 @@ button:focus-visible {
     background-color: var(--pi-paper) !important;
   }
 
-  .VPLocalSearchBox .shell {
+  body .VPLocalSearchBox .shell {
     border: 0;
   }
 

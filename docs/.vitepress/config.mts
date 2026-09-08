@@ -38,6 +38,10 @@ export default defineConfig({
     },
     sidebarMenuLabel: '学习目录',
     darkModeSwitchLabel: '外观模式',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到暗色模式',
+    returnToTopLabel: '返回顶部',
+    skipToContentLabel: '跳转到正文',
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
