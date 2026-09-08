@@ -5,8 +5,8 @@ prev:
   text: 从练习目录开始
   link: /guide/ready-to-work
 next:
-  text: 查看推文资料
-  link: /tweets/
+  text: 文件与工作目录
+  link: /guide/files-and-context
 ---
 
 <span class="library-status">MODULE 02 · STEP 05</span>
@@ -30,6 +30,8 @@ mkdir ~/Downloads/pi-practice/input
 mkdir ~/Downloads/pi-practice/output
 cd ~/Downloads/pi-practice
 ```
+
+如果你的练习目录使用了其他名字，上面三行的 `pi-practice` 都要替换成同一个实际名字。
 
 任何一条 `mkdir` 如果提示 `File exists`，先不要继续。这表明旧练习可能还在，其中的输出会干扰本次验收。回到模块一新建另一个空目录，并在本页命令中使用相同的新名字。
 
@@ -63,7 +65,7 @@ ls input
 shasum -a 256 input/项目会议记录.md > input-before.sha256
 ```
 
-最后运行 `pwd`，确认当前位置以 `pi-practice` 结尾；运行 `ls output`。这条命令没有显示任何文件名才表示输出目录为空。旧文件也会通过“文件存在”检查，所以第一次练习要从空目录开始。
+最后运行 `pwd`，确认当前位置以你的练习目录名结尾；运行 `ls output`。这条命令没有显示任何文件名才表示输出目录为空。旧文件也会通过“文件存在”检查，所以第一次练习要从空目录开始。
 
 ## 2. 把任务写成可以检查的要求
 
