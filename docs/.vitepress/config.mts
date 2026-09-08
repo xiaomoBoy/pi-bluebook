@@ -67,9 +67,6 @@ export default defineConfig({
         }
       }
     },
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/xiaomoBoy/pi-bluebook' }
-    ],
     footer: {
       message: '非 Pi 官方项目 · 内容采用 CC BY-NC-SA 4.0',
       copyright: 'Copyright © 2026 xiaomo'
