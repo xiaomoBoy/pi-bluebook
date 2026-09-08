@@ -55,7 +55,7 @@ next:
 会话可携带性、上下文压缩和文件版本管理是三个不同问题。想继续对话，关心会话；想继续模型当前的思考线索，关心上下文；想恢复文件，使用 Git 或备份。
 :::
 
-推荐继续阅读 [Pi 的上下文压缩](/translations/compaction-in-pi) 和 [带不走的会话](/translations/session-portability)。两篇译读会把“为什么这样设计”讲得更深。
+推荐继续阅读 [压缩前先给下一棒留下交接](/translations/compaction-in-pi) 和 [会话为什么也要归你](/translations/session-portability)。两篇学习文章会把机制、场景和验收动作连起来。
 
 ### 本章依据
 

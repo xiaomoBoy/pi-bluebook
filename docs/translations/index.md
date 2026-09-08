@@ -1,58 +1,66 @@
 ---
-title: 优质译读
-description: 精选 Pi 与 Agent 工程相关文章，提供标明作者、来源和学习位置的中文摘要式译读。
+title: 原文启发与实践
+description: 从重要英文文章出发，重新整理成小墨自己的 Pi 学习文章与可操作练习。
 prev:
-  text: 从好奇到搭工作台
+  text: 我的 Pi 学习记录
   link: /journey/
 next:
-  text: 带不走的会话
+  text: 会话为什么也要归你
   link: /translations/session-portability
 ---
 
-<span class="library-status">优质译读 · CURATED READING</span>
+<span class="library-status">原文启发与实践 · SOURCE TO PRACTICE</span>
 
-# 优质译读
+# 原文启发与实践
 
-我在学习 Pi 的过程中，有三篇文章帮我把许多零散的使用体感连了起来。它们讨论会话能否带走、上下文如何压缩，以及 Agent 为什么会使用提示缓存。
+我学习 Pi 时遇到过三个反复出现的问题。一次会话怎样算真正留在自己手里，长任务被压缩以后会留下什么，状态栏里的缓存数字又在说明什么。
 
-本板块提供的是中文摘要式译读，目标是帮助中文读者抓住论点、术语和与 Pi 学习路线的联系。它们不是全文逐句翻译，也不替代原文。
+Earendil Engineering 的三篇文章帮我把这些问题连了起来。这个板块保留原文的技术事实和思想来源，再用我自己的学习顺序重做标题、结构、例子和练习。它们不是逐段翻译，也不是几百字的内容概述。
 
-## 阅读顺序
+## 建议阅读顺序
 
-### 01 带不走的会话
+### 01 会话为什么也要归你
 
-**原题**：*The Session You Cannot Take With You*  
-**作者**：Earendil Engineering `<rfc@earendil.com>`  
-**发布日期**：2026-07-30  
-**学习位置**：完成“会话的保存与续写”后
+**参考原文**　*The Session You Cannot Take With You*
 
-如果一次 Agent 会话依赖于提供商内部、无法导出的隐藏状态，用户就很难真正拥有自己的工作记录。这篇文章给出一组很实用的可携带性检查标准。
+**作者**　Earendil Engineering `<rfc@earendil.com>`
 
-[阅读中文译读](/translations/session-portability) · [查看原文](https://earendil.com/posts/session-portability/)
+**适合什么时候读**　已经完成一两个真实任务，开始保存和续写会话
 
-### 02 Pi 的上下文压缩如何工作
+从一份会议记录任务开始，检查聊天、工具证据和项目文件能不能一起留下。文章最后会带你命名会话、写一份可接手的决定记录，再导出会话。
 
-**原题**：*How Compaction Works in Pi*  
-**作者**：Earendil Engineering `<rfc@earendil.com>`  
-**发布日期**：2026-08-13  
-**学习位置**：进入长任务与上下文模块时
+[阅读学习文章](/translations/session-portability) · [查看英文原文](https://earendil.com/posts/session-portability/)
 
-上下文不可能无限增长。Pi 会保留较近的对话，并把更早的部分整理成摘要。文章解释了这个过程保留什么、改变什么。
+### 02 压缩前先给下一棒留下交接
 
-[阅读中文译读](/translations/compaction-in-pi) · [查看原文](https://earendil.com/posts/compaction-in-pi/)
+**参考原文**　*How Compaction Works in Pi*
 
-### 03 Agent 中的提示缓存
+**作者**　Earendil Engineering `<rfc@earendil.com>`
 
-**原题**：*Prompt Caching In Agents*  
-**作者**：Earendil Engineering `<rfc@earendil.com>`  
-**发布日期**：2026-07-22  
-**学习位置**：已经能观察会话底部 token、cache 和 cost 信息后
+**适合什么时候读**　一个任务已经持续很多轮，准备进入下一阶段
 
-连续对话会反复携带相同的前缀。提示缓存能够复用已处理的部分，但模型、工具、分支与压缩都可能影响这种复用。
+把上下文压缩理解成一次工作交接。你会看见 Pi 压缩前后的输入变化，写出 `CHECKPOINT.md`，再完成一次有明确验收的 `/compact` 练习。
 
-[阅读中文译读](/translations/prompt-caching) · [查看原文](https://earendil.com/posts/prompt-caching/)
+[阅读学习文章](/translations/compaction-in-pi) · [查看英文原文](https://earendil.com/posts/compaction-in-pi/)
 
-::: info 版权与来源说明
-原文版权归原作者与发布方所有。本站只提供基于原文的中文摘要、术语解释和学习联系，并在每页保留原文链接。如需引用、转载或深入研究，请以英文原文为准。
+### 03 别让缓存命中率带偏任务
+
+**参考原文**　*Prompt Caching In Agents*
+
+**作者**　Earendil Engineering `<rfc@earendil.com>`
+
+**适合什么时候读**　已经能看懂 Pi 底部的 token、cache 和 cost
+
+提示缓存复用的是输入前缀的计算。文章会把缓存、上下文和项目记录分开，随后让你在同一个 Pi 会话里观察两轮请求的变化。
+
+[阅读学习文章](/translations/prompt-caching) · [查看英文原文](https://earendil.com/posts/prompt-caching/)
+
+## 怎样使用这一模块
+
+第一次阅读时先跟着例子走，不需要记住 KV cache、provider-sealed state 之类术语。每篇只完成一个小练习，亲眼看到会话、压缩或缓存怎样出现在 Pi 里。
+
+第二次阅读可以打开英文原文对照。原作者负责提出问题并解释机制，本站负责把这些内容放进一条面向初学者的 Pi 学习路径。两部分的归属会在每一页底部单独说明。
+
+::: info 来源与内容边界
+三篇英文原文的版权归 Earendil Engineering 与发布方所有。本站保留作者、标题、发布日期和原文链接。中文文章经过重新选题、组织和实践化处理，不构成全文翻译，也不替代原文。本站新增的场景、练习与个人判断由小墨负责。
 :::
-

@@ -5,7 +5,7 @@ prev:
   text: 权限、隔离与验收
   link: /guide/safety
 next:
-  text: 优质译读
+  text: 原文启发与实践
   link: /translations/
 ---
 

@@ -22,7 +22,7 @@
 | 模块四 · 10至12 | [扩展自己的 Pi](docs/guide/skills-extensions-packages.md) | 区分 Skill、Extension 和 Package，理解 Extension 设计与子 Agent 分工 |
 | 模块五 · 13至14 | [稳定工作流](docs/guide/vps-and-long-running.md) | 处理长时间任务，建立权限、隔离、恢复和验收意识 |
 | 个人记录 | [从好奇到搭工作台](docs/journey/index.md) | 整理小墨的 Pi 实践、转折与当前理解 |
-| 优质译读 | [译读专区](docs/translations/index.md) | 阅读会话可携带性、Pi 压缩和提示缓存的中文摘要式译读 |
+| 原文启发与实践 | [学习专区](docs/translations/index.md) | 从会话、压缩和提示缓存原文出发，重构为带场景与练习的中文学习文章 |
 | 补充资料 | [推文资料](docs/tweets/index.md) | 了解实践记录与主线章节的关联方式 |
 
 已经能够启动 Pi 并获得回复的读者，可以先检查第 4 课的前置条件，再进入第一次任务。当前操作主线以 macOS 为主；其他系统的适用范围见各课说明。
@@ -61,7 +61,7 @@ pi-bluebook/
 │   ├── index.md                 # 网站首页
 │   ├── guide/                   # 按学习顺序编写的课程
 │   ├── journey/                 # 个人学习记录与感悟
-│   ├── translations/            # 标明作者与来源的中文译读
+│   ├── translations/            # 标明作者与来源的原文启发与实践
 │   ├── tweets/                  # 推文与实践资料索引
 │   ├── public/
 │   │   ├── examples/            # 可下载的练习材料

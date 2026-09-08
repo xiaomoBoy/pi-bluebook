@@ -19,7 +19,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '开始学习', link: '/guide/before-install', activeMatch: '^/guide/' },
-      { text: '优质译读', link: '/translations/' },
+      { text: '原文启发', link: '/translations/' },
       { text: '推文资料', link: '/tweets/' },
       { text: 'GitHub', link: 'https://github.com/xiaomoBoy/pi-bluebook' }
     ],
@@ -70,12 +70,12 @@ export default defineConfig({
         ]
       },
       {
-        text: '优质译读',
+        text: '原文启发与实践',
         items: [
-          { text: '译读说明', link: '/translations/' },
-          { text: '带不走的会话', link: '/translations/session-portability' },
-          { text: 'Pi 的上下文压缩', link: '/translations/compaction-in-pi' },
-          { text: 'Agent 中的提示缓存', link: '/translations/prompt-caching' }
+          { text: '模块说明', link: '/translations/' },
+          { text: '会话为什么也要归你', link: '/translations/session-portability' },
+          { text: '压缩前先留下交接', link: '/translations/compaction-in-pi' },
+          { text: '别让缓存带偏任务', link: '/translations/prompt-caching' }
         ]
       },
       {
