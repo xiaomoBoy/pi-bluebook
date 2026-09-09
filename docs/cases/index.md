@@ -5,8 +5,8 @@ prev:
   text: 蓝皮书主线
   link: /guide/
 next:
-  text: 第一次文件任务
-  link: /guide/first-task
+  text: CASE 01 · 会议记录
+  link: /cases/meeting-notes
 ---
 
 <span class="library-status">PRACTICE LAB · 从材料到验收</span>
