@@ -9,6 +9,7 @@ export default defineConfig({
   title: siteName,
   description: siteDescription,
   cleanUrls: true,
+  srcExclude: ['public/**/*.md'],
   sitemap: {
     hostname: siteUrl
   },
