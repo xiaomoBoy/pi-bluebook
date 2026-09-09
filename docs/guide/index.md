@@ -28,6 +28,10 @@ next:
 3. [登录与模型设置](/guide/connect-model)
 4. [从练习目录开始](/guide/ready-to-work)
 
+::: info Windows 用户从这里开始
+先完成 [Windows 中文路径：安装并启动 Pi](/guide/windows-setup)，通过页面验收后直接接入第 3 课。后续看到“普通终端”时继续使用 Git Bash，并按页面里的对照表替换练习目录和指纹命令。
+:::
+
 **完成标志：** 能在独立练习目录启动 Pi，并获得一次真实回复。
 
 ## 模块二 · 完成真实任务
