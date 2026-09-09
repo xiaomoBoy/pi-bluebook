@@ -25,7 +25,7 @@
 | 实操案例 | [案例库](docs/cases/index.md) | 用 6 个固定材料案例练习文件任务、Skill、Extension、分工、恢复和安全审阅 |
 | 参考手册 | [主题索引](docs/reference/index.md) | 按问题查找核心机制、操作入口、能力边界与延伸阅读 |
 | 小墨札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
-| 延伸阅读 | [专题文章](docs/translations/index.md) | 与第 7 至 9 课配套，继续追问会话、压缩和提示缓存机制 |
+| Earendil 官方授权译文 | [译文专区](docs/translations/index.md) | 经 Earendil 授权发布的三篇会话、压缩与提示缓存文章完整中文译文 |
 
 已经能够启动 Pi 并获得回复的读者，可以先检查第 4 课的前置条件，再进入第一次任务。当前操作主线以 macOS 为主；其他系统的适用范围见各课说明。
 
@@ -65,7 +65,7 @@ pi-bluebook/
 │   ├── cases/                   # 与课程模块对应的可复现实操
 │   ├── reference/               # 按主题查询的参考手册
 │   ├── journey/                 # 蓝皮书之外的个人札记
-│   ├── translations/            # 与章节配套的延伸阅读
+│   ├── translations/            # Earendil 官方授权中文译文
 │   ├── tweets/                  # 推文与实践资料索引
 │   ├── public/
 │   │   ├── examples/            # 可下载的练习材料
@@ -91,6 +91,7 @@ pi-bluebook/
 你可以使用、修改和分发，也可以用于商业用途；分发本项目的全部或重要部分时，需要
 保留原版权声明和许可证。具体说明见[内容许可](LICENSE-CONTENT.md)。
 
+- `docs/translations/` 中三篇 Earendil 官方授权译文及适配部分采用 [CC BY 4.0](LICENSE-CONTENT.md)，英文原文版权归 Earendil 所有。
 - 第三方商标、截图、引用和其他第三方素材不自动包含在原创内容许可中，其权利归各自权利人所有；素材旁的单独说明优先。
 
 具体权利和条件以许可文件为准。

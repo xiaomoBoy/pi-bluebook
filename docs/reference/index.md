@@ -108,11 +108,11 @@ Package 管理命令输入在普通终端：`pi install <来源>` 安装，`pi l
 
 专题文章不再作为一条独立课程。它们会从对应章节进入，用原始文章和实践进一步解释一个机制：
 
-- 学完第 7 课后：[会话为什么也要归你](/translations/session-portability)
-- 学完第 8 课后：[压缩前先给下一棒留下交接](/translations/compaction-in-pi)
-- 学完第 9 课后：[别让缓存命中率带偏任务](/translations/prompt-caching)
+- 学完第 7 课后：[无法随身带走的会话](/translations/session-portability)
+- 学完第 8 课后：[Pi 中的压缩机制](/translations/compaction-in-pi)
+- 学完第 9 课后：[Agent 中的提示缓存](/translations/prompt-caching)
 
-[查看全部延伸阅读](/translations/)
+[查看全部官方授权译文](/translations/)
 
 ::: tip 怎么使用参考手册
 先用搜索或上面的主题索引定位问题；需要建立完整理解时，再沿着页面顶部的课程归属回到对应章节。

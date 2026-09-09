@@ -108,7 +108,7 @@ test -f worklog/handoff.md && echo "PASS: 交接文件存在"
 会话可携带性、上下文压缩和文件版本管理是三个不同问题。想继续对话，关心会话；想继续模型当前的思考线索，关心上下文；想恢复文件，使用 Git 或备份。
 :::
 
-推荐继续阅读 [压缩前先给下一棒留下交接](/translations/compaction-in-pi) 和 [会话为什么也要归你](/translations/session-portability)。两篇学习文章会把机制、场景和验收动作连起来。
+推荐继续阅读官方授权译文 [Pi 中的压缩机制](/translations/compaction-in-pi) 和 [无法随身带走的会话](/translations/session-portability)，对照理解压缩过程与会话可移植性。
 
 ### 本章依据
 

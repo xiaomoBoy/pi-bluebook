@@ -7,3 +7,10 @@
 分发本项目的全部或重要部分时，需要保留原版权声明和 MIT License。
 
 第三方商标、截图、引用和其他第三方素材不自动包含在本许可中，其权利归各自权利人所有。
+
+## Earendil 官方授权译文
+
+`docs/translations/` 中三篇 Earendil Engineering 文章的中文译文及适配部分，
+经 Earendil 授权按
+[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)
+发布。页面保留原文标题、作者、发布日期、原文链接及授权说明；英文原文版权归 Earendil 所有。

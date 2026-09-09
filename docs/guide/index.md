@@ -38,7 +38,7 @@ next:
 
 **完成标志：** 能独立检查输入材料、输出文件和任务要求，不让 Agent 给自己打分。
 
-**配套内容：**[CASE 01 · 把会议记录整理成行动清单](/cases/meeting-notes) · [延伸阅读：会话为什么也要归你](/translations/session-portability)
+**配套内容：**[CASE 01 · 把会议记录整理成行动清单](/cases/meeting-notes) · [授权译文：无法随身带走的会话](/translations/session-portability)
 
 ## 模块三 · 长任务与上下文
 
@@ -47,7 +47,7 @@ next:
 
 **完成标志：** 任务持续变长时，知道怎样留下关键结果，并理解压缩和缓存不是一回事。
 
-**延伸阅读：**[压缩前先给下一棒留下交接](/translations/compaction-in-pi) · [别让缓存命中率带偏任务](/translations/prompt-caching)
+**官方授权译文：**[Pi 中的压缩机制](/translations/compaction-in-pi) · [Agent 中的提示缓存](/translations/prompt-caching)
 
 ## 模块四 · 扩展自己的 Pi
 

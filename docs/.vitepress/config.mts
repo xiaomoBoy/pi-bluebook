@@ -161,18 +161,18 @@ export default defineConfig({
           ]
         },
         {
-          text: '延伸阅读',
-          items: [{ text: '专题文章目录', link: '/translations/' }]
+          text: 'Earendil 官方授权译文',
+          items: [{ text: '授权译文目录', link: '/translations/' }]
         }
       ],
       '/translations/': [
         {
-          text: '延伸阅读',
+          text: 'Earendil 官方授权译文',
           items: [
-            { text: '专题文章目录', link: '/translations/' },
-            { text: '会话为什么也要归你', link: '/translations/session-portability' },
-            { text: '压缩前先留下交接', link: '/translations/compaction-in-pi' },
-            { text: '别让缓存带偏任务', link: '/translations/prompt-caching' }
+            { text: '授权译文目录', link: '/translations/' },
+            { text: '无法随身带走的会话', link: '/translations/session-portability' },
+            { text: 'Pi 中的压缩机制', link: '/translations/compaction-in-pi' },
+            { text: 'Agent 中的提示缓存', link: '/translations/prompt-caching' }
           ]
         },
         {
@@ -258,7 +258,7 @@ export default defineConfig({
       }
     },
     footer: {
-      message: '自由阅读，也欢迎转载和改编 · 网站与原创内容采用 MIT License',
+      message: '网站与原创内容采用 MIT License · Earendil 授权译文采用 CC BY 4.0',
       copyright: '© 2026 小墨 · 第三方内容归原作者所有'
     }
   }

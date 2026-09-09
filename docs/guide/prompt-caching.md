@@ -63,7 +63,7 @@ next:
 
 只要你不再用缓存数字给任务质量打分，并知道质量检查要回到真实产物，本课就通过。
 
-想深入理解这个机制，继续阅读 [别让缓存命中率带偏任务](/translations/prompt-caching)。
+想深入理解这个机制，继续阅读官方授权译文 [Agent 中的提示缓存](/translations/prompt-caching)。
 
 ### 本章依据
 
