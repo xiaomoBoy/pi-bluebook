@@ -61,9 +61,10 @@ pwd
 mkdir ~/Downloads/pi-practice
 cd ~/Downloads/pi-practice
 pwd
+ls -A
 ```
 
-这三行要按顺序执行：先执行 `mkdir`，等光标回来；再执行 `cd`；最后才执行 `pwd`。前两行成功时通常不会显示任何文字，直接回到可输入行是正常的。最后一行输出应当以 `/Downloads/pi-practice` 结尾。
+这四行要按顺序执行：先执行 `mkdir`，等光标回来；再执行 `cd`；然后执行 `pwd` 和 `ls -A`。前两行成功时通常不会显示任何文字，直接回到可输入行是正常的。`pwd` 应当以 `/Downloads/pi-practice` 结尾，最后的 `ls -A` 不显示任何文件名才说明目录为空。
 
 如果第一条命令提示 `File exists`，先不要进入那个目录。它可能保留着旧练习内容。换一个新名字，例如 `pi-practice-2`，重新执行上面的三个动作。后续课程里出现 `pi-practice` 时，也要换成你实际使用的名字。
 
@@ -71,6 +72,7 @@ pwd
 
 - [ ] `mkdir` 没有显示 `File exists` 或其他报错。
 - [ ] `pwd` 最后一段是 `Downloads/pi-practice`；如果我用了新名字，最后一段就是那个新名字。
+- [ ] `ls -A` 没有列出文件名。
 - [ ] 这个目录是专门练习用的，里面还没有我的笔记、照片、代码或工作文件。
 
 ## 3. 检查 Node.js 和 npm
@@ -82,11 +84,11 @@ node --version
 npm --version
 ```
 
-两行都返回版本号，而且 Node.js 不低于 `22.19.0`，就可以进入下一课。这个最低版本要求核验于 2026-09-08，发布后请以 [Pi 官方源码要求](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json) 为准。
+两行都返回版本号，而且 Node.js 不低于 `22.19.0`，就可以进入下一课。这个最低版本要求核验于 2026-09-09，发布后请以 [Pi 官方源码要求](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json) 为准。
 
 例如，第一行可能显示 `v22.19.0` 或更高版本，第二行会显示另一串版本号。版本号的具体数字可以不同；关键是两条命令都有版本号输出，而且每次输出后光标都会回来。
 
-如果看到 `command not found`，或 Node.js 版本太低，请先从 [Node.js 官方下载页](https://nodejs.org/en/download) 安装当前 LTS 版。安装后完全退出终端，重新打开，再执行这两条检查命令。
+如果看到 `command not found`，或 Node.js 版本太低，请先从 [Node.js 官方下载页](https://nodejs.org/en/download) 安装当前 LTS 版。完成官方安装向导后，关闭所有终端窗口，重新打开终端，再回到练习目录执行这两条检查命令。
 
 如果出现你看不懂的错误，不要接着尝试别的命令。用鼠标从“你输入的命令”开始拖选到最后一行错误，按 `Command + C` 复制，粘贴到一个临时笔记中。保留命令、完整输出和截图；其中如果意外包含账号、密钥或私人路径，先遮住这些内容再发给他人。
 
@@ -104,6 +106,7 @@ npm --version
 
 - 我能打开终端，并用 `pwd` 查看当前位置。
 - 我新建了一个空白的 `pi-practice` 目录。
-- `node --version` 和 `npm --version` 都返回了可用版本号。
+- `ls -A` 没列出文件，说明练习目录开始时为空。
+- `node --version` 不低于本页要求，`npm --version` 返回版本号，两条命令结束后光标都重新出现。
 
 [下一课，安装并启动 Pi →](/guide/install-pi)

@@ -24,7 +24,7 @@ next:
 3. [登录与模型设置](/guide/connect-model)
 4. [从练习目录开始](/guide/ready-to-work)
 
-**完成标志：**能在独立练习目录启动 Pi，并获得一次真实回复。
+**完成标志：** 能在独立练习目录启动 Pi，并获得一次真实回复。
 
 ## 模块二 · 完成真实任务
 
@@ -32,16 +32,16 @@ next:
 6. [文件与工作目录](/guide/files-and-context)
 7. [会话的保存与续写](/guide/sessions)
 
-**完成标志：**能独立检查输入材料、输出文件和任务要求，不让 Agent 给自己打分。
+**完成标志：** 能独立检查输入材料、输出文件和任务要求，不让 Agent 给自己打分。
 
-**配套内容：**[CASE 01 · 把会议记录整理成行动清单](/cases/) · [延伸阅读：会话为什么也要归你](/translations/session-portability)
+**配套内容：**[CASE 01 · 把会议记录整理成行动清单](/cases/meeting-notes) · [延伸阅读：会话为什么也要归你](/translations/session-portability)
 
 ## 模块三 · 长任务与上下文
 
 8. [上下文与压缩](/guide/context-and-compaction)
 9. [提示缓存入门](/guide/prompt-caching)
 
-**完成标志：**任务持续变长时，知道怎样留下关键结果，并理解压缩和缓存不是一回事。
+**完成标志：** 任务持续变长时，知道怎样留下关键结果，并理解压缩和缓存不是一回事。
 
 **延伸阅读：**[压缩前先给下一棒留下交接](/translations/compaction-in-pi) · [别让缓存命中率带偏任务](/translations/prompt-caching)
 
@@ -51,14 +51,18 @@ next:
 11. [Extension 的需求与验收](/guide/first-extension)
 12. [子 Agent 如何分工](/guide/subagents)
 
-**完成标志：**能从真实需求出发选择扩展方式，并检查新增能力是否真的生效。
+**完成标志：** 能从真实需求出发选择扩展方式，并检查新增能力是否真的生效。
+
+**配套实操：**[CASE 02 · 第一个 Skill](/cases/first-skill) · [CASE 03 · 最小 Extension](/cases/first-extension) · [CASE 04 · 两路独立审阅](/cases/independent-review)
 
 ## 模块五 · 建立稳定工作流
 
 13. [长时间任务与 VPS](/guide/vps-and-long-running)
 14. [权限、隔离与验收](/guide/safety)
 
-**完成标志：**建立检查点、恢复路径和权限边界，让长任务可以继续，也可以安全停下。
+**完成标志：** 建立检查点、恢复路径和权限边界，让长任务可以继续，也可以安全停下。
+
+**配套实操：**[CASE 05 · 从检查点恢复](/cases/checkpoint-recovery) · [CASE 06 · 任务前安全审阅](/cases/safe-review)
 
 ## 需要查找，而不是继续上课时
 

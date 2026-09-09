@@ -27,10 +27,11 @@ npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 
 `-g` 表示把 Pi 安装成这台电脑可以直接调用的命令。`--ignore-scripts` 会禁止依赖包在安装时运行生命周期脚本；Pi 的正常 npm 安装不需要这些脚本。
 
-按回车后，终端会陆续显示下载和安装信息。这是正常的等待过程，不需要继续输入。只有同时满足下面两点，安装才算结束：
+按回车后，终端会陆续显示下载和安装信息。这是正常的等待过程，不需要继续输入。只有同时满足下面三点，安装才算通过：
 
 1. 终端重新出现可以输入的光标；
 2. 最后没有出现以 `npm ERR!` 开头的错误。
+3. 紧接着运行 `pi --version` 能返回版本号。
 
 如果安装超过一会儿仍在滚动文字，继续等待；如果文字停止但光标没有回来，也先不要输入下一条命令。网络慢时下载会比普通命令花更久。
 
@@ -40,7 +41,11 @@ npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 pi --version
 ```
 
-这里输入的是 `pi --version`，随后出现的一串版本号才是输出。看到版本号、并且光标重新出现，而不是 `command not found`，就算通过。本书不把某个具体 Pi 版本当成永久要求，安装命令核验于 2026-09-08，后续以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。
+这里输入的是 `pi --version`，随后出现的一串版本号才是输出。看到版本号、并且光标重新出现，而不是 `command not found`，就算通过。本书不把某个具体 Pi 版本当成永久要求，安装命令核验于 2026-09-09，后续以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。
+
+![在真实终端中检查 Node.js、npm 与 Pi 版本](/images/01-Pi-版本检查-实操图.png)
+
+这张图记录的是 2026-09-09 的本机教学环境。你的版本号可以更新，判断方法保持不变：三条检查都有输出，命令执行结束后终端光标重新出现。它只能证明当前环境已经装好，不能当成首次安装过程的截图。
 
 ### 小检查
 

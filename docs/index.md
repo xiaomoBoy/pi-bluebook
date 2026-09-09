@@ -71,7 +71,7 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
     <header class="bluebook-section__header">
       <div>
         <p>THE CURRICULUM</p>
-        <h2>五个模块，完整走完 Pi</h2>
+        <h2>五个模块，从安装走到稳定工作流</h2>
       </div>
       <p>主线按学习依赖排序。已经能启动 Pi 的读者，可以从第二模块进入真实任务。</p>
     </header>
