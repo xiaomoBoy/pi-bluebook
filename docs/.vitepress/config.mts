@@ -75,7 +75,10 @@ export default defineConfig({
       '/guide/': [
         {
           text: '蓝皮书',
-          items: [{ text: '完整学习目录', link: '/guide/' }]
+          items: [
+            { text: '完整学习目录', link: '/guide/' },
+            { text: '序章 · Pi 作者 Mario Zechner', link: '/guide/mario-zechner' }
+          ]
         },
         {
           text: '模块一 · 安装与基础设置',

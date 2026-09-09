@@ -4,7 +4,7 @@
 
 每一课按“场景 → 概念 → 实操 → 验收”展开。目标是让你知道从哪里开始、每一步应该看到什么，以及怎样确认结果，而不只是复制一段命令。
 
-[在线阅读](https://pi.xiaomovps.com) · [从安装前检查开始](https://pi.xiaomovps.com/guide/before-install) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues)
+[在线阅读](https://pi.xiaomovps.com) · [从作者序章开始](https://pi.xiaomovps.com/guide/mario-zechner) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues)
 
 ## 当前内容与学习路径
 
@@ -12,6 +12,7 @@
 
 | 顺序 | 章节 | 你会完成什么 |
 | --- | --- | --- |
+| 序章 | [Pi 作者 Mario Zechner](docs/guide/mario-zechner.md) | 沿完整时间线理解 libGDX、RoboVM、Pi 与 Earendil 之间的联系 |
 | 模块一 · 1 | [安装前检查](docs/guide/before-install.md) | 打开终端，准备练习目录，检查 Node.js 和 npm |
 | 模块一 · 2 | [安装并启动 Pi](docs/guide/install-pi.md) | 安装 Pi，确认可用，并学会启动与退出 |
 | 模块一 · 3 | [登录与模型设置](docs/guide/connect-model.md) | 连接可用服务，选择模型，收到一次真实回复 |

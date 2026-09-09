@@ -2,8 +2,8 @@
 title: 安装前，先把终端和环境准备好
 description: 打开终端，建立安全的练习目录，检查 Node.js 和 npm。
 prev:
-  text: 首页
-  link: /
+  text: 序章 · Mario Zechner
+  link: /guide/mario-zechner
 next:
   text: 安装并启动 Pi
   link: /guide/install-pi

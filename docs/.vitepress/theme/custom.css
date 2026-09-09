@@ -248,6 +248,16 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
   box-shadow: 0 8px 22px rgba(34, 45, 53, 0.08);
 }
 
+.VPDoc .image-caption {
+  margin: 8px auto 28px;
+  max-width: 92%;
+  color: var(--pi-muted);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.76rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
 .VPDoc .custom-block {
   margin: 24px 0;
   border-radius: 0;
