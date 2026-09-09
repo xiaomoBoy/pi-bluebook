@@ -70,7 +70,8 @@ export default defineConfig({
       { text: '实操', link: '/cases/', activeMatch: '^/cases/' },
       { text: '参考手册', link: '/reference/', activeMatch: '^/(reference|translations)/' },
       { text: '小墨札记', link: '/journey/', activeMatch: '^/(journey|tweets)/' },
-      { text: 'GitHub', link: 'https://github.com/xiaomoBoy/pi-bluebook' }
+      { text: 'GitHub', link: 'https://github.com/xiaomoBoy/pi-bluebook' },
+      { text: '联系合作', link: 'https://xiaomovps.com/' }
     ],
     sidebar: {
       '/guide/': [
