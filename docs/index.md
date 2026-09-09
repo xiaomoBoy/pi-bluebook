@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Pi 学习蓝皮书
-description: 面向中文初学者的 Pi 系统学习手册，从安装、第一次任务到搭建可控的 Agent 工作流。
+description: 面向中文初学者的 Pi 系统学习手册，先理解 Pi，再从第一次任务走向可控的 Agent 工作流。
 ---
 
 <main class="bluebook-home">
@@ -37,16 +37,16 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
     <header class="bluebook-section__header">
       <div>
         <p>READING MAP</p>
-        <h2>一条主线，三个配套区域</h2>
+        <h2>一条主线，四个配套区域</h2>
       </div>
-      <p>蓝皮书负责连续学习；实操把知识变成结果；参考手册用于查询；插件推荐帮助你按需求选择第三方能力。</p>
+      <p>蓝皮书负责连续学习；实操、参考手册和插件推荐解决具体问题；授权译文保留原作者的完整论述。</p>
     </header>
     <div class="bluebook-map">
-      <a class="bluebook-map__item bluebook-map__item--primary" href="/guide/">
+      <a class="bluebook-map__item bluebook-map__item--primary" href="/guide/introduction">
         <span>01 · CORE CURRICULUM</span>
         <h3>蓝皮书主线</h3>
         <p>全站的核心。从导论进入，经过 5 个模块、14 课，完整走到扩展、VPS 与安全验收。</p>
-        <b>按顺序学习 →</b>
+        <b>从导论开始 →</b>
       </a>
       <a class="bluebook-map__item" href="/cases/">
         <span>02 · LAB</span>
@@ -65,6 +65,12 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
         <h3>插件推荐</h3>
         <p>从 98 条推文实践中整理，按需求、来源和风险选择，不做一键全家桶。</p>
         <b>查看选择地图 →</b>
+      </a>
+      <a class="bluebook-map__item" href="/translations/">
+        <span>05 · AUTHORIZED TRANSLATIONS</span>
+        <h3>授权译文</h3>
+        <p>经 Earendil 授权发布的十篇完整中文译文，保留原文信息、授权声明与图片署名。</p>
+        <b>进入译文专区 →</b>
       </a>
     </div>
     <aside class="bluebook-notes-strip">

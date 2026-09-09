@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 const siteName = 'Pi 学习蓝皮书'
 const siteUrl = 'https://pi.xiaomovps.com'
-const siteDescription = '面向初学者的非官方 Pi 学习路径：从安装、第一次任务到搭出自己的 Agent。'
+const siteDescription = '面向中文初学者的非官方 Pi 学习路径：先理解 Pi，再从第一次任务走向可控的 Agent 工作流。'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -68,7 +68,8 @@ export default defineConfig({
       { text: '蓝皮书', link: '/guide/', activeMatch: '^/guide/' },
       { text: '插件推荐', link: '/plugins/', activeMatch: '^/plugins/' },
       { text: '实操', link: '/cases/', activeMatch: '^/cases/' },
-      { text: '参考手册', link: '/reference/', activeMatch: '^/(reference|translations)/' },
+      { text: '参考手册', link: '/reference/', activeMatch: '^/reference/' },
+      { text: '授权译文', link: '/translations/', activeMatch: '^/translations/' },
       { text: '小墨札记', link: '/journey/', activeMatch: '^/(journey|tweets)/' },
       { text: 'GitHub', link: 'https://github.com/xiaomoBoy/pi-bluebook' },
       { text: '联系合作', link: 'https://xiaomovps.com/' }
@@ -162,6 +163,14 @@ export default defineConfig({
       ],
       '/reference/': [
         {
+          text: '第一次阅读',
+          items: [
+            { text: '导论 · 为什么读这本书', link: '/guide/introduction' },
+            { text: '十条仍然成立的判断', link: '/guide/lasting-principles' },
+            { text: '凡例与本版说明', link: '/guide/edition-2026' }
+          ]
+        },
+        {
           text: '参考手册',
           items: [{ text: '主题索引', link: '/reference/' }]
         },
@@ -205,8 +214,12 @@ export default defineConfig({
           ]
         },
         {
-          text: '返回参考手册',
-          items: [{ text: '主题索引', link: '/reference/' }]
+          text: '本版入口',
+          items: [
+            { text: '导论 · 为什么读这本书', link: '/guide/introduction' },
+            { text: '凡例与本版说明', link: '/guide/edition-2026' },
+            { text: '参考手册主题索引', link: '/reference/' }
+          ]
         }
       ],
       '/journey/': [
