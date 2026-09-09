@@ -12,7 +12,7 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
       <p class="bluebook-deck">从第一次可验收的任务开始，逐步理解 Session、Context、Skill、Extension 与长期工作流。</p>
       <p class="bluebook-intro">一条为中文初学者重新编排的系统学习路线。先把一件真实的小事做完整，再一层一层搭出自己的 Pi。</p>
       <div class="bluebook-actions">
-        <a class="bluebook-button bluebook-button--primary" href="/guide/">进入蓝皮书</a>
+        <a class="bluebook-button bluebook-button--primary" href="/guide/introduction">从导论开始</a>
         <a class="bluebook-button" href="#reading-map">查看内容地图</a>
       </div>
     </div>
@@ -23,7 +23,7 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
         <div><dt>主线课程</dt><dd>14 课</dd></div>
         <div><dt>学习模块</dt><dd>5 个</dd></div>
         <div><dt>学习档案</dt><dd>98 篇</dd></div>
-        <div><dt>更新状态</dt><dd>持续编写</dd></div>
+        <div><dt>当前版次</dt><dd>2026 开放版</dd></div>
       </dl>
       <p class="bluebook-edition__note">网站与原创内容采用 MIT License</p>
     </aside>
@@ -45,7 +45,7 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
       <a class="bluebook-map__item bluebook-map__item--primary" href="/guide/">
         <span>01 · CORE CURRICULUM</span>
         <h3>蓝皮书主线</h3>
-        <p>全站的核心。5 个模块、14 课，从安装和第一次任务开始，完整走到扩展、VPS 与安全验收。</p>
+        <p>全站的核心。从导论进入，经过 5 个模块、14 课，完整走到扩展、VPS 与安全验收。</p>
         <b>按顺序学习 →</b>
       </a>
       <a class="bluebook-map__item" href="/cases/">
@@ -156,6 +156,6 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
       <h2>不用先把所有概念学完。</h2>
       <span>准备一个练习目录，完成第一个可以亲自验收的结果。</span>
     </div>
-    <a class="bluebook-button bluebook-button--primary" href="/guide/before-install">开始第 1 课</a>
+    <a class="bluebook-button bluebook-button--primary" href="/guide/introduction">从导论开始</a>
   </section>
 </main>

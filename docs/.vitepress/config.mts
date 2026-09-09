@@ -79,6 +79,9 @@ export default defineConfig({
           text: '蓝皮书',
           items: [
             { text: '完整学习目录', link: '/guide/' },
+            { text: '导论 · 为什么读这本书', link: '/guide/introduction' },
+            { text: '十条仍然成立的判断', link: '/guide/lasting-principles' },
+            { text: '凡例与本版说明', link: '/guide/edition-2026' },
             { text: '序章 · Pi 作者 Mario Zechner', link: '/guide/mario-zechner' }
           ]
         },

@@ -2,8 +2,8 @@
 title: 序章：先认识 Pi 的作者 Mario Zechner
 description: 从 libGDX、RoboVM 到 Pi 与 Earendil，沿时间线理解 Mario Zechner 的经历怎样进入 Pi 的设计。
 prev:
-  text: 蓝皮书主线
-  link: /guide/
+  text: 凡例与本版说明
+  link: /guide/edition-2026
 next:
   text: 第 1 课 · 安装前检查
   link: /guide/before-install

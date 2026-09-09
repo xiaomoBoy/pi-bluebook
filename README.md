@@ -1,10 +1,10 @@
 # Pi 学习蓝皮书
 
-一本面向中文初学者的非官方 Pi 学习手册。从打开终端、安装与登录开始，完成第一个可以独立验收的文件任务，再逐步学习上下文、工作流和扩展。
+一本面向中文初学者的非官方 Pi 学习手册。先理解 Pi 是什么、适合谁和真实使用门槛，再从安装与登录开始，完成第一个可以独立验收的文件任务，逐步学习上下文、工作流和扩展。
 
 每一课按“场景 → 概念 → 实操 → 验收”展开。目标是让你知道从哪里开始、每一步应该看到什么，以及怎样确认结果，而不只是复制一段命令。
 
-[在线阅读](https://pi.xiaomovps.com) · [从作者序章开始](https://pi.xiaomovps.com/guide/mario-zechner) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues)
+[在线阅读](https://pi.xiaomovps.com) · [从导论开始](https://pi.xiaomovps.com/guide/introduction) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues)
 
 ## 当前内容与学习路径
 
@@ -12,6 +12,9 @@
 
 | 顺序 | 章节 | 你会完成什么 |
 | --- | --- | --- |
+| 导论 | [为什么要读这本 Pi 蓝皮书](docs/guide/introduction.md) | 理解 Pi 的位置、中文初学者的真实门槛和本版主张 |
+| 长期判断 | [从 98 条推文留下的十条判断](docs/guide/lasting-principles.md) | 区分原始学习档案与截至本版仍然成立的判断 |
+| 凡例 | [2026 开放学习版说明](docs/guide/edition-2026.md) | 明确平台路径、核验截止、维护规则和版权边界 |
 | 序章 | [Pi 作者 Mario Zechner](docs/guide/mario-zechner.md) | 沿完整时间线理解 libGDX、RoboVM、Pi 与 Earendil 之间的联系 |
 | 模块一 · 1 | [安装前检查](docs/guide/before-install.md) | 打开终端，准备练习目录，检查 Node.js 和 npm |
 | 模块一 · 2 | [安装并启动 Pi](docs/guide/install-pi.md) | 安装 Pi，确认可用，并学会启动与退出 |
