@@ -40,6 +40,7 @@ next:
 - [Windows 中文路径](/guide/windows-setup)：用 Git Bash 完成 Windows 环境准备、安装和第一次启动。
 - [登录与模型设置](/guide/connect-model)：连接 Provider 与模型。
 - [从练习目录开始](/guide/ready-to-work)：把实验与真实文件隔离。
+- [安装后生命周期管理](/guide/lifecycle-management)：更新 Pi、刷新模型目录、退出登录、卸载并处理本地数据。
 
 ## 常用命令速查
 
@@ -49,11 +50,15 @@ next:
 | --- | --- | --- |
 | 普通终端 | `pi` | 在当前目录启动交互界面 |
 | 普通终端 | `pi --version` | 查看当前安装版本 |
+| 普通终端 | `pi update` | 只更新 Pi 本体 |
+| 普通终端 | `pi update --models` | 只刷新模型目录 |
+| 普通终端 | `pi list` | 查看设置中登记的 Package |
 | 普通终端 | `pi -c` | 继续当前项目最近会话 |
 | 普通终端 | `pi -r` | 打开当前项目会话选择器 |
 | 普通终端 | `pi --no-extensions -e ./file.ts` | 忽略自动发现的 Extension，只显式加载一个文件 |
 | 普通终端 | `pi --no-skills --skill ./SKILL.md` | 忽略自动发现的 Skill，只显式加载一个文件 |
 | Pi 编辑区 | `/login` | 管理模型服务认证 |
+| Pi 编辑区 | `/logout` | 清除选定 Provider 的本地凭据 |
 | Pi 编辑区 | `/model` | 选择当前模型 |
 | Pi 编辑区 | `/name 名称` | 设置会话显示名 |
 | Pi 编辑区 | `/resume` | 浏览并切换会话 |

@@ -173,6 +173,8 @@ Pi 官方还提供可选的 `powershell` 工具，但它不是本书入门路线
 
 [下一课，登录账号并选择模型 →](/guide/connect-model)
 
+已经安装完成、现在需要升级或卸载？查看 [安装后生命周期管理](/guide/lifecycle-management)。
+
 ### 本页依据
 
 - [Pi 官方 Windows 设置](https://pi.dev/docs/latest/windows)

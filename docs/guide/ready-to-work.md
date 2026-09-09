@@ -87,6 +87,8 @@ pi
 
 [下一课，整理会议记录并独立验收 →](/guide/first-task)
 
+需要先了解怎样升级、换账号或卸载时，查看 [安装后生命周期管理](/guide/lifecycle-management)。
+
 ### 本模块依据
 
 - [Pi Quickstart](https://pi.dev/docs/latest/quickstart)

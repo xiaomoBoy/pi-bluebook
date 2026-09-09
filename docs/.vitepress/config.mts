@@ -87,7 +87,8 @@ export default defineConfig({
             { text: '2. 安装并启动 Pi', link: '/guide/install-pi' },
             { text: 'Windows 中文安装路径', link: '/guide/windows-setup' },
             { text: '3. 登录与模型设置', link: '/guide/connect-model' },
-            { text: '4. 从练习目录开始', link: '/guide/ready-to-work' }
+            { text: '4. 从练习目录开始', link: '/guide/ready-to-work' },
+            { text: '维护 · 更新、退出与卸载', link: '/guide/lifecycle-management' }
           ]
         },
         {

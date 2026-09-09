@@ -18,6 +18,7 @@
 | Windows 路径 | [Windows 中文安装路径](docs/guide/windows-setup.md) | 用 Git Bash 准备环境、安装 Pi，并接入第 3 课 |
 | 模块一 · 3 | [登录与模型设置](docs/guide/connect-model.md) | 连接可用服务，选择模型，收到一次真实回复 |
 | 模块一 · 4 | [从练习目录开始](docs/guide/ready-to-work.md) | 确认当前目录和基础设置，完成进入任务前的检查 |
+| 安装后维护 | [更新、退出登录与卸载](docs/guide/lifecycle-management.md) | 管理 Pi 版本、认证、Package 和本地数据 |
 | 模块二 · 5 | [第一次任务](docs/guide/first-task.md) | 把虚构会议记录整理成行动清单，独立核对输入与输出 |
 | 模块二 · 6至7 | [文件与会话](docs/guide/files-and-context.md) | 用工作目录和 `@文件` 建立清晰起点，学会会话命名、续写和分支 |
 | 模块三 · 8至9 | [上下文与压缩](docs/guide/context-and-compaction.md) | 理解长对话、压缩、提示缓存和可持续产物 |
