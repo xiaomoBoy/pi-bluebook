@@ -21,9 +21,10 @@
 | 模块三 · 8至9 | [上下文与压缩](docs/guide/context-and-compaction.md) | 理解长对话、压缩、提示缓存和可持续产物 |
 | 模块四 · 10至12 | [扩展自己的 Pi](docs/guide/skills-extensions-packages.md) | 区分 Skill、Extension 和 Package，理解 Extension 设计与子 Agent 分工 |
 | 模块五 · 13至14 | [稳定工作流](docs/guide/vps-and-long-running.md) | 处理长时间任务，建立权限、隔离、恢复和验收意识 |
-| 个人记录 | [我的 Pi 学习记录](docs/journey/index.md) | 把个人感悟与实践过程放在一起，连接六阶段原文路线 |
-| 原文启发与实践 | [学习专区](docs/translations/index.md) | 从会话、压缩和提示缓存原文出发，重构为带场景与练习的中文学习文章 |
-| 推文原文 | [六阶段学习目录](docs/tweets/index.md) | 98 条 Pi 推文按学习顺序整理，保留原文与发布日期 |
+| 实操案例 | [案例库](docs/cases/index.md) | 把课程知识放进可下载、可执行、可独立验收的真实任务 |
+| 参考手册 | [主题索引](docs/reference/index.md) | 按问题查找核心机制、操作入口、能力边界与延伸阅读 |
+| 小墨札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
+| 延伸阅读 | [专题文章](docs/translations/index.md) | 与第 7 至 9 课配套，继续追问会话、压缩和提示缓存机制 |
 
 已经能够启动 Pi 并获得回复的读者，可以先检查第 4 课的前置条件，再进入第一次任务。当前操作主线以 macOS 为主；其他系统的适用范围见各课说明。
 
@@ -60,8 +61,10 @@ pi-bluebook/
 ├── docs/
 │   ├── index.md                 # 网站首页
 │   ├── guide/                   # 按学习顺序编写的课程
-│   ├── journey/                 # 个人学习记录与感悟
-│   ├── translations/            # 标明作者与来源的原文启发与实践
+│   ├── cases/                   # 与课程模块对应的可复现实操
+│   ├── reference/               # 按主题查询的参考手册
+│   ├── journey/                 # 蓝皮书之外的个人札记
+│   ├── translations/            # 与章节配套的延伸阅读
 │   ├── tweets/                  # 推文与实践资料索引
 │   ├── public/
 │   │   ├── examples/            # 可下载的练习材料
@@ -83,13 +86,13 @@ pi-bluebook/
 
 ## 许可证
 
-本仓库分别许可网站代码与原创内容：
+本仓库的网站代码、原创书稿、推文整理稿和原创图片统一采用 [MIT License](LICENSE)。
+你可以使用、修改和分发，也可以用于商业用途；分发本项目的全部或重要部分时，需要
+保留原版权声明和许可证。具体说明见[内容许可](LICENSE-CONTENT.md)。
 
-- 网站代码采用 [MIT License](LICENSE)。
-- 原创书稿、推文整理稿和原创图片采用 [CC BY-NC-SA 4.0](LICENSE-CONTENT.md)：转载与改编需署名、限非商业使用，并以相同许可分享衍生作品。
 - 第三方商标、截图、引用和其他第三方素材不自动包含在原创内容许可中，其权利归各自权利人所有；素材旁的单独说明优先。
 
-具体权利和条件以对应许可文件为准。不要将网站代码的 MIT 许可套用于整本书的内容。
+具体权利和条件以许可文件为准。
 
 ## 非官方声明
 

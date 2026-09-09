@@ -1,6 +1,6 @@
 ---
-title: 我的 Pi 学习记录
-description: 从好奇、实操、源码理解到搭建个人工作流的 Pi 学习过程。
+title: 写在蓝皮书之外
+description: 小墨关于 Pi 的个人感悟、学习过程、踩坑记录与推文档案。
 prev:
   text: 权限、隔离与验收
   link: /guide/safety
@@ -9,11 +9,11 @@ next:
   link: /tweets/
 ---
 
-<span class="library-status">PERSONAL NOTES · 持续更新</span>
+<span class="library-status">XIAOMO'S NOTES · 蓝皮书之外</span>
 
-# 我的 Pi 学习记录
+# 写在蓝皮书之外
 
-我的个人感悟和学习过程本来就分不开。很多判断来自一次实操，后来读到源码或文章，又会回头修正早先的理解。这里不把它们改写成一条过分整齐的成功路线。
+这里保留我的个人感悟、学习过程和判断变化。很多判断来自一次实操，后来读到源码或文章，又会回头修正早先的理解。它们不会被改写成一条过分整齐的成功路线，也不承担蓝皮书教程的职责。
 
 下面这段话是我决定整理蓝皮书时写下的原文。
 

@@ -5,11 +5,11 @@ prev:
   text: 压缩前先留下交接
   link: /translations/compaction-in-pi
 next:
-  text: 推文原文库
-  link: /tweets/
+  text: 参考手册
+  link: /reference/
 ---
 
-<span class="library-status">原文启发与实践 · 03</span>
+<span class="library-status">EXTENDED READING · 第 9 课</span>
 
 # 别让缓存命中率带偏任务
 

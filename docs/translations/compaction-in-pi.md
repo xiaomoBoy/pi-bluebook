@@ -9,7 +9,7 @@ next:
   link: /translations/prompt-caching
 ---
 
-<span class="library-status">原文启发与实践 · 02</span>
+<span class="library-status">EXTENDED READING · 第 8 课</span>
 
 # 压缩前先给下一棒留下交接
 

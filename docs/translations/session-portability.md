@@ -2,14 +2,14 @@
 title: 会话为什么也要归你
 description: 从一次 Pi 任务出发，理解会话记录、工具证据与可携带性。
 prev:
-  text: 原文启发与实践
+  text: 延伸阅读
   link: /translations/
 next:
   text: 压缩前先留下交接
   link: /translations/compaction-in-pi
 ---
 
-<span class="library-status">原文启发与实践 · 01</span>
+<span class="library-status">EXTENDED READING · 第 7 课</span>
 
 # 会话为什么也要归你
 
