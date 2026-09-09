@@ -191,7 +191,14 @@ export default defineConfig({
             { text: '授权译文目录', link: '/translations/' },
             { text: '无法随身带走的会话', link: '/translations/session-portability' },
             { text: 'Pi 中的压缩机制', link: '/translations/compaction-in-pi' },
-            { text: 'Agent 中的提示缓存', link: '/translations/prompt-caching' }
+            { text: 'Agent 中的提示缓存', link: '/translations/prompt-caching' },
+            { text: '什么是 Agent Harness？', link: '/translations/what-is-a-harness' },
+            { text: '这个 Harness 属于我', link: '/translations/mine-agent-harness' },
+            { text: 'Pi：极简而高效', link: '/translations/pi-minimal-performant' },
+            { text: 'Pi 与 Lefos 正式发布', link: '/translations/announcing-pi-and-lefos' },
+            { text: '关于今日公告的思考', link: '/translations/announcement-reflection' },
+            { text: '制高点', link: '/translations/the-high-ground' },
+            { text: '邀请你开启一场通信', link: '/translations/invitation' }
           ]
         },
         {

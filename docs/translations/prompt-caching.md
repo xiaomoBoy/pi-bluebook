@@ -5,8 +5,8 @@ prev:
   text: Pi 中的压缩机制
   link: /translations/compaction-in-pi
 next:
-  text: 参考手册
-  link: /reference/
+  text: 什么是 Agent Harness？
+  link: /translations/what-is-a-harness
 ---
 
 <span class="library-status">Earendil 官方授权中文译文 · 03</span>
@@ -253,3 +253,4 @@ Token
 
 - [英文原文：Prompt Caching In Agents](https://earendil.com/posts/prompt-caching/)
 - [上一篇：Pi 中的压缩机制](/translations/compaction-in-pi)
+- [下一篇：什么是 Agent Harness？](/translations/what-is-a-harness)
