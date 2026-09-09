@@ -134,11 +134,12 @@ export default defineConfig({
           items: [
             { text: '案例库与使用方法', link: '/cases/' },
             { text: 'CASE 01 · 会议记录行动清单', link: '/cases/meeting-notes' },
-            { text: 'CASE 02 · 第一个 Skill', link: '/cases/first-skill' },
-            { text: 'CASE 03 · 最小 Extension', link: '/cases/first-extension' },
-            { text: 'CASE 04 · 两路独立审阅', link: '/cases/independent-review' },
-            { text: 'CASE 05 · 从检查点恢复', link: '/cases/checkpoint-recovery' },
-            { text: 'CASE 06 · 任务前安全审阅', link: '/cases/safe-review' }
+            { text: 'CASE 02 · 压缩前后对照', link: '/cases/compaction-before-after' },
+            { text: 'CASE 03 · 第一个 Skill', link: '/cases/first-skill' },
+            { text: 'CASE 04 · 最小 Extension', link: '/cases/first-extension' },
+            { text: 'CASE 05 · 两路独立审阅', link: '/cases/independent-review' },
+            { text: 'CASE 06 · 从检查点恢复', link: '/cases/checkpoint-recovery' },
+            { text: 'CASE 07 · 任务前安全审阅', link: '/cases/safe-review' }
           ]
         },
         {

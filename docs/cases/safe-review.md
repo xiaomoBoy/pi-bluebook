@@ -1,11 +1,11 @@
 ---
-title: CASE 06 · 任务前安全审阅
+title: CASE 07 · 任务前安全审阅
 description: 在不执行未知代码的前提下，判断任务范围、权限、恢复点和验收方式。
-prev: { text: CASE 05 · 中断恢复, link: /cases/checkpoint-recovery }
+prev: { text: CASE 06 · 中断恢复, link: /cases/checkpoint-recovery }
 next: { text: 回到课程, link: /guide/safety }
 ---
 
-<span class="library-status">CASE 06 · 可练习</span>
+<span class="library-status">CASE 07 · 可练习</span>
 
 # 任务前安全审阅
 
@@ -48,7 +48,11 @@ pi --name "安全审阅练习" --no-extensions --no-context-files \
 
 执行过程中只应看到两次输入读取和一次 `safety-review/plan.md` 写入。出现其他路径或工具动作时按 `Esc` 停止，并按照[第 14 课](/guide/safety)保留现场。
 
-## 验收
+## 关键现象
+
+Agent 只能把材料中已有的事实写成已知，把仓库内容、脚本行为和凭据需求保留为未知；最终结论必须停在“信息不足”。如果输出直接建议安装或执行，说明安全审阅越过了当前证据。
+
+## 独立验收
 
 - 计划写清只读范围、可能执行的动作、凭据暴露面和需要的隔离方式。
 - 没有运行未知安装脚本，也没有把真实密钥放入练习目录。

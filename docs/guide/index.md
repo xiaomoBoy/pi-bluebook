@@ -61,6 +61,8 @@ next:
 
 **完成标志：** 任务持续变长时，知道怎样留下关键结果，并理解压缩和缓存不是一回事。
 
+**配套实验：**[CASE 02 · 压缩前后对照](/cases/compaction-before-after)
+
 **官方授权译文：**[Pi 中的压缩机制](/translations/compaction-in-pi) · [Agent 中的提示缓存](/translations/prompt-caching)
 
 ## 模块四 · 扩展自己的 Pi
@@ -71,7 +73,7 @@ next:
 
 **完成标志：** 能从真实需求出发选择扩展方式，并检查新增能力是否真的生效。
 
-**配套实操：**[CASE 02 · 第一个 Skill](/cases/first-skill) · [CASE 03 · 最小 Extension](/cases/first-extension) · [CASE 04 · 两路独立审阅](/cases/independent-review)
+**配套实操：**[CASE 03 · 第一个 Skill](/cases/first-skill) · [CASE 04 · 最小 Extension](/cases/first-extension) · [CASE 05 · 两路独立审阅](/cases/independent-review)
 
 ## 模块五 · 建立稳定工作流
 
@@ -80,7 +82,7 @@ next:
 
 **完成标志：** 建立检查点、恢复路径和权限边界，让长任务可以继续，也可以安全停下。
 
-**配套实操：**[CASE 05 · 从检查点恢复](/cases/checkpoint-recovery) · [CASE 06 · 任务前安全审阅](/cases/safe-review)
+**配套实操：**[CASE 06 · 从检查点恢复](/cases/checkpoint-recovery) · [CASE 07 · 任务前安全审阅](/cases/safe-review)
 
 ## 需要查找，而不是继续上课时
 
