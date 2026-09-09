@@ -37,6 +37,7 @@ next:
 
 - [安装前检查](/guide/before-install)：确认环境和练习目录。
 - [安装并启动 Pi](/guide/install-pi)：完成第一次启动。
+- [Windows 中文路径](/guide/windows-setup)：用 Git Bash 完成 Windows 环境准备、安装和第一次启动。
 - [登录与模型设置](/guide/connect-model)：连接 Provider 与模型。
 - [从练习目录开始](/guide/ready-to-work)：把实验与真实文件隔离。
 

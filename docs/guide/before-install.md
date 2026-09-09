@@ -18,7 +18,7 @@ next:
 这一课只处理这三件事。先不安装 Extension、Skill 或第三方 Package，也不把真实文件放进练习区。
 
 ::: info 本课环境
-主线按 macOS 编写，Linux 可以使用同样的检查命令。Windows 的终端和路径不同，请先参考 [Pi 官方 Windows 设置](https://pi.dev/docs/latest/windows)，不要直接改写本页命令。
+主线按 macOS 编写，Linux 可以使用同样的检查命令。Windows 用户不要直接改写本页命令，请改走完整的 [Windows 中文安装路径](/guide/windows-setup)：它会从 Git Bash、Node.js 和练习目录开始，一直带你完成第一次启动。
 :::
 
 ## 先认识这个窗口：输入和输出不是一回事

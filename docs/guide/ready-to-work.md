@@ -15,6 +15,10 @@ next:
 
 安装和登录已经完成，现在还需要确认 Pi 会从哪里开始工作。这一步会直接影响它看到的项目内容，也决定下一课的练习文件放在哪里。
 
+::: info Windows 用户
+继续使用 Git Bash，把本课及后续课程中的 `~/Downloads/pi-practice` 换成 `~/pi-practice`。如果忘记路径对应关系，回到 [Windows 中文安装路径](/guide/windows-setup)查看对照表。
+:::
+
 ## 1. 从明确的目录启动
 
 先在 Pi 底部编辑区输入 `/quit`，按 `Return`。当你重新看到普通终端的命令提示符时，再逐行执行：

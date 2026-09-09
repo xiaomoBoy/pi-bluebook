@@ -35,6 +35,8 @@ pwd
 
 路径就是文件在电脑上的位置。`/` 用来分隔一层层文件夹，`~` 则是你的用户主目录的简写。`~/Downloads/pi-practice` 和上面那条完整路径通常指向同一个位置。
 
+Windows 用户继续使用 Git Bash；你的练习目录写作 `~/pi-practice`，`pwd` 通常显示 `/c/Users/你的用户名/pi-practice`。不要把 Git Bash 中的 `/` 改成 Windows 资源管理器使用的反斜杠。
+
 运行 `ls` 可以查看当前目录里有什么。运行 `cd 目录名` 可以进入另一个目录。这三条命令已经足够支撑新手的前几次练习。
 
 ::: warning 先确认位置再启动
@@ -79,7 +81,7 @@ shasum -a 256 -c input-before.sha256
 test -f input/项目会议记录.md && echo "PASS: 输入存在"
 ```
 
-Linux 把第一条指纹检查替换为 `sha256sum -c input-before.sha256`。
+Linux 和 Windows Git Bash 把第一条指纹检查替换为 `sha256sum -c input-before.sha256`；Windows 同时把 `cd` 路径换成 `~/pi-practice`。
 
 如果练习目录不是 `pi-practice`，替换成你记录的实际名称。指纹不是 `OK`、输入不存在，或 `pwd` 位置不对时都不要继续；回到第 5 课的干净材料。
 
@@ -136,7 +138,7 @@ test -f output/截止日期索引.md && echo "PASS: 日期索引存在"
 sed -n '1,80p' output/截止日期索引.md
 ```
 
-Linux 同样把 `shasum -a 256 -c` 替换为 `sha256sum -c`。
+Linux 和 Windows Git Bash 同样把 `shasum -a 256 -c` 替换为 `sha256sum -c`；Windows 的 `cd` 路径仍使用 `~/pi-practice`。
 
 如果你在第 1 课使用了 `pi-practice-2` 或其他名字，这里和后续课程的 `pi-practice` 都要替换成你实际记下的练习目录名。
 

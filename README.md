@@ -15,6 +15,7 @@
 | 序章 | [Pi 作者 Mario Zechner](docs/guide/mario-zechner.md) | 沿完整时间线理解 libGDX、RoboVM、Pi 与 Earendil 之间的联系 |
 | 模块一 · 1 | [安装前检查](docs/guide/before-install.md) | 打开终端，准备练习目录，检查 Node.js 和 npm |
 | 模块一 · 2 | [安装并启动 Pi](docs/guide/install-pi.md) | 安装 Pi，确认可用，并学会启动与退出 |
+| Windows 路径 | [Windows 中文安装路径](docs/guide/windows-setup.md) | 用 Git Bash 准备环境、安装 Pi，并接入第 3 课 |
 | 模块一 · 3 | [登录与模型设置](docs/guide/connect-model.md) | 连接可用服务，选择模型，收到一次真实回复 |
 | 模块一 · 4 | [从练习目录开始](docs/guide/ready-to-work.md) | 确认当前目录和基础设置，完成进入任务前的检查 |
 | 模块二 · 5 | [第一次任务](docs/guide/first-task.md) | 把虚构会议记录整理成行动清单，独立核对输入与输出 |
@@ -27,9 +28,9 @@
 | 小墨札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
 | Earendil 官方授权译文 | [译文专区](docs/translations/index.md) | 经 Earendil 授权发布的三篇会话、压缩与提示缓存文章完整中文译文 |
 
-已经能够启动 Pi 并获得回复的读者，可以先检查第 4 课的前置条件，再进入第一次任务。当前操作主线以 macOS 为主；其他系统的适用范围见各课说明。
+已经能够启动 Pi 并获得回复的读者，可以先检查第 4 课的前置条件，再进入第一次任务。主线以 macOS 为基础，Windows 用户可通过独立中文路径完成安装，再使用 Git Bash 继续后续课程。
 
-后续计划继续补入真实界面截图、Extension 代码实操、不同系统的安装差异和更多来源经过核对的个人实践。
+后续计划继续补入 Windows 真实界面截图、Extension 完整系统实操和更多来源经过核对的个人实践。
 
 ## 本地运行网站
 

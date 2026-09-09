@@ -85,6 +85,7 @@ export default defineConfig({
           items: [
             { text: '1. 安装前检查', link: '/guide/before-install' },
             { text: '2. 安装并启动 Pi', link: '/guide/install-pi' },
+            { text: 'Windows 中文安装路径', link: '/guide/windows-setup' },
             { text: '3. 登录与模型设置', link: '/guide/connect-model' },
             { text: '4. 从练习目录开始', link: '/guide/ready-to-work' }
           ]

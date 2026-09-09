@@ -23,7 +23,7 @@ next:
 
 ## 1. 准备一份容易核对的材料
 
-先新建一个独立练习目录。以下命令适用于 macOS 和 Linux。
+先新建一个独立练习目录。以下命令适用于 macOS 和 Linux。Windows 用户继续使用 Git Bash，把三行中的 `~/Downloads/pi-practice` 换成 `~/pi-practice`。
 
 ```bash
 mkdir ~/Downloads/pi-practice/input
@@ -74,6 +74,8 @@ Linux 常见发行版使用：
 sha256sum input/项目会议记录.md > input-before.sha256
 ```
 
+Windows Git Bash 也使用上面的 `sha256sum` 命令。
+
 最后运行 `pwd`，确认当前位置以你的练习目录名结尾；运行 `ls output`。这条命令没有显示任何文件名才表示输出目录为空。旧文件也会通过“文件存在”检查，所以第一次练习要从空目录开始。
 
 ## 2. 把任务写成可以检查的要求
@@ -118,7 +120,7 @@ test -f output/行动清单.md && echo "PASS: 输出文件存在"
 sed -n '1,120p' output/行动清单.md
 ```
 
-Linux 把第一条替换为 `sha256sum -c input-before.sha256`，后两条不变。
+Linux 和 Windows Git Bash 把第一条替换为 `sha256sum -c input-before.sha256`，后两条不变。
 
 `shasum` 用执行前留下的指纹核对输入文件是否逐字节未变，应该显示 `OK`。`test -f` 只检查输出路径是否存在，应该显示 `PASS`。`sed` 把输出正文打印出来，供你逐项核对；它本身不会判断内容是否正确。
 

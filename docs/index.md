@@ -79,11 +79,12 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
       <article class="bluebook-module bluebook-module--lead">
         <div class="bluebook-module__number">01</div>
         <div class="bluebook-module__body">
-          <p class="bluebook-module__meta">MODULE ONE · 4 LESSONS</p>
+          <p class="bluebook-module__meta">MODULE ONE · 4 LESSONS + WINDOWS PATH</p>
           <h3>安装与基础设置</h3>
           <ol>
             <li><a href="/guide/before-install"><span>01</span>安装前检查</a></li>
             <li><a href="/guide/install-pi"><span>02</span>安装并启动 Pi</a></li>
+            <li><a href="/guide/windows-setup"><span>WIN</span>Windows 中文路径</a></li>
             <li><a href="/guide/connect-model"><span>03</span>登录与模型设置</a></li>
             <li><a href="/guide/ready-to-work"><span>04</span>从练习目录开始</a></li>
           </ol>
