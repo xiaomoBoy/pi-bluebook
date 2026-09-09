@@ -37,9 +37,9 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
     <header class="bluebook-section__header">
       <div>
         <p>READING MAP</p>
-        <h2>一条主线，两个配套区域</h2>
+        <h2>一条主线，三个配套区域</h2>
       </div>
-      <p>蓝皮书负责连续学习；实操把知识变成结果；参考手册在遇到问题时提供查询和延伸阅读。</p>
+      <p>蓝皮书负责连续学习；实操把知识变成结果；参考手册用于查询；插件推荐帮助你按需求选择第三方能力。</p>
     </header>
     <div class="bluebook-map">
       <a class="bluebook-map__item bluebook-map__item--primary" href="/guide/">
@@ -59,6 +59,12 @@ description: 面向中文初学者的 Pi 系统学习手册，从安装、第一
         <h3>参考手册</h3>
         <p>按主题查概念、能力边界、操作入口与章节延伸阅读。</p>
         <b>按问题查找 →</b>
+      </a>
+      <a class="bluebook-map__item" href="/plugins/">
+        <span>04 · PLUGINS</span>
+        <h3>插件推荐</h3>
+        <p>从 98 条推文实践中整理，按需求、来源和风险选择，不做一键全家桶。</p>
+        <b>查看选择地图 →</b>
       </a>
     </div>
     <aside class="bluebook-notes-strip">

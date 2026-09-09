@@ -26,6 +26,7 @@
 | 模块五 · 13至14 | [稳定工作流](docs/guide/vps-and-long-running.md) | 处理长时间任务，建立权限、隔离、恢复和验收意识 |
 | 实操案例 | [案例库](docs/cases/index.md) | 用 6 个固定材料案例练习文件任务、Skill、Extension、分工、恢复和安全审阅 |
 | 参考手册 | [主题索引](docs/reference/index.md) | 按问题查找核心机制、操作入口、能力边界与延伸阅读 |
+| 插件推荐 | [选择地图](docs/plugins/index.md) | 从推文实践中整理当前可核验的插件来源、适用场景和风险边界 |
 | 小墨札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
 | Earendil 官方授权译文 | [译文专区](docs/translations/index.md) | 经 Earendil 授权发布的三篇会话、压缩与提示缓存文章完整中文译文 |
 
@@ -66,6 +67,7 @@ pi-bluebook/
 │   ├── guide/                   # 按学习顺序编写的课程
 │   ├── cases/                   # 与课程模块对应的可复现实操
 │   ├── reference/               # 按主题查询的参考手册
+│   ├── plugins/                 # 从推文实践整理的插件选择与核验清单
 │   ├── journey/                 # 蓝皮书之外的个人札记
 │   ├── translations/            # Earendil 官方授权中文译文
 │   ├── tweets/                  # 推文与实践资料索引

@@ -29,6 +29,7 @@ next:
 | 能力 | 主题入口 | 先记住的一句话 |
 | --- | --- | --- |
 | 固化方法与新增能力 | [Skill、Extension 与 Package](/guide/skills-extensions-packages) | Skill 教它怎么做，Extension 给它新的运行能力 |
+| 选择第三方扩展 | [插件推荐](/plugins/) | 先确认需求和来源，只试一个最接近问题的插件 |
 | 多任务分工 | [子 Agent](/guide/subagents) | 分工之后仍需统一证据和最终验收 |
 | 安全地执行任务 | [权限、隔离与验收](/guide/safety) | 成功返回不等于业务结果已经完成 |
 | 长时间运行 | [VPS 与长期任务](/guide/vps-and-long-running) | 先设计检查点、恢复路径和停止条件 |

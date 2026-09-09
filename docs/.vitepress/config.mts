@@ -66,6 +66,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '蓝皮书', link: '/guide/', activeMatch: '^/guide/' },
+      { text: '插件推荐', link: '/plugins/', activeMatch: '^/plugins/' },
       { text: '实操', link: '/cases/', activeMatch: '^/cases/' },
       { text: '参考手册', link: '/reference/', activeMatch: '^/(reference|translations)/' },
       { text: '小墨札记', link: '/journey/', activeMatch: '^/(journey|tweets)/' },
@@ -138,6 +139,21 @@ export default defineConfig({
         {
           text: '回到课程',
           items: [{ text: '蓝皮书完整目录', link: '/guide/' }]
+        }
+      ],
+      '/plugins/': [
+        {
+          text: '插件推荐',
+          items: [
+            { text: '推荐总览与选择方法', link: '/plugins/' },
+            { text: 'Skill、Extension 与 Package', link: '/guide/skills-extensions-packages' },
+            { text: '安装后生命周期管理', link: '/guide/lifecycle-management' },
+            { text: '权限、隔离与验收', link: '/guide/safety' }
+          ]
+        },
+        {
+          text: '原始记录',
+          items: [{ text: 'Skill 与 Extension 推文', link: '/tweets/04-skills-extensions' }]
         }
       ],
       '/reference/': [
