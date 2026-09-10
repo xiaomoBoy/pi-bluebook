@@ -120,6 +120,10 @@ button:focus-visible {
 }
 
 @media (min-width: 768px) {
+  .VPNavBarMenu {
+    order: -1;
+  }
+
   .VPNavBar .VPNavBarAppearance {
     display: flex !important;
     align-items: center;
@@ -1394,6 +1398,25 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
 
   .VPNavBar.has-sidebar .title {
     border-bottom: 0;
+  }
+
+  /* Sidebar is below the floating bar, so don't offset the navbar by sidebar width. */
+  #app .VPNavBar.has-sidebar .title {
+    position: static;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  #app .VPNavBar.has-sidebar .content {
+    position: static;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  #app .VPNavBar.has-sidebar .content-body {
+    position: static;
+    background-color: transparent;
   }
 
   #app .VPSidebar {
