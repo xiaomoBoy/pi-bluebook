@@ -1,6 +1,7 @@
 node_modules/
 docs/.vitepress/cache/
 docs/.vitepress/dist/
+.wrangler/
 .DS_Store
 *.log
 

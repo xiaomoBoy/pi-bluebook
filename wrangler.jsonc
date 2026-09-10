@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "pi-bluebook",
+  "compatibility_date": "2026-09-10",
+  "workers_dev": true,
+  "preview_urls": true,
+  "routes": [
+    {
+      "pattern": "pi.xiaomovps.com/*",
+      "zone_name": "xiaomovps.com"
+    }
+  ],
+  "assets": {
+    "directory": "./docs/.vitepress/dist",
+    "not_found_handling": "404-page"
+  }
+}
