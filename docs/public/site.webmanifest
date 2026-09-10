@@ -1,0 +1,22 @@
+{
+  "name": "Pi 学习蓝皮书",
+  "short_name": "PI BLUEBOOK",
+  "description": "面向中文初学者的 Pi 系统学习路线。",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f0e8",
+  "theme_color": "#f4f1e9",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

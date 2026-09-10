@@ -1,6 +1,6 @@
 ---
 title: 实操案例
-description: 可以独立复现和验收的 Pi 完整任务案例。
+description: 收录可以独立复现和验收的 Pi 完整任务案例，提供练习材料、执行步骤、预期结果与检查清单。
 prev:
   text: 蓝皮书主线
   link: /guide/

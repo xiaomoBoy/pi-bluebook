@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Pi 学习蓝皮书
+titleTemplate: ':title｜中文初学者 Agent 学习路线'
 description: 面向中文初学者的 Pi 系统学习手册，先理解 Pi，再从第一次任务走向可控的 Agent 工作流。
 ---
 

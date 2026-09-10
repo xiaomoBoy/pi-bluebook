@@ -6,6 +6,7 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
+    "docs:check": "npm run docs:build && node scripts/check-seo.mjs",
     "docs:preview": "vitepress preview docs",
     "deploy": "npm run docs:build && wrangler deploy",
     "deploy:dry-run": "npm run docs:build && wrangler deploy --dry-run"

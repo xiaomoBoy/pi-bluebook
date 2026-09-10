@@ -1,6 +1,6 @@
 ---
 title: CASE 06 · 从检查点恢复
-description: 处理三篇小材料，中断后按进度文件继续且不重不漏。
+description: 用三篇练习材料模拟长任务中断，通过进度文件恢复处理，检查续写过程是否做到不重不漏。
 prev: { text: CASE 05 · 独立分工, link: /cases/independent-review }
 next: { text: CASE 07 · 安全边界, link: /cases/safe-review }
 ---
