@@ -405,6 +405,23 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
   padding: 2px 5px;
 }
 
+.translation-formula {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  padding: 1rem 0.75rem;
+  border: 1px solid var(--pi-line);
+  background: color-mix(in srgb, var(--pi-paper-strong) 88%, transparent);
+  text-align: center;
+}
+
+.translation-formula code {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
 .VPDocFooter .last-updated,
 .VPDocFooter .desc {
   font-family: var(--vp-font-family-mono);

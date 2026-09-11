@@ -1,6 +1,6 @@
 ---
 title: Earendil 官方授权译文
-description: 经 Earendil 正式授权发布的十篇 Pi、Agent Harness 与公司愿景文章完整中文译文。
+description: 经 Earendil 正式授权发布的十一篇 Pi、Agent Harness、代码质量与公司愿景文章完整中文译文。
 prev:
   text: 参考手册
   link: /reference/
@@ -13,7 +13,7 @@ next:
 
 # Earendil 官方授权译文
 
-这里收录 Earendil 关于 Pi、Agent Harness、会话机制与公司愿景的十篇文章中文译文。十篇译文均已获得 Earendil 正式授权，并按原文完整翻译。
+这里收录 Earendil 关于 Pi、Agent Harness、会话机制、代码质量与公司愿景的十一篇文章中文译文。十一篇译文均已获得 Earendil 正式授权，并按原文完整翻译。
 
 每一页都保留原文标题、作者、发布日期和原文链接，并标明：
 
@@ -23,7 +23,7 @@ next:
 
 ## 建议阅读顺序
 
-前六篇最贴近 Pi 学习：先理解会话、压缩和缓存，再认识 Harness，并从非工程师和性能案例两个角度理解 Pi。后四篇记录 Pi 加入 Earendil 的背景，以及 Earendil 对可信、个性化软件的长期愿景。
+前六篇最贴近 Pi 学习：先理解会话、压缩和缓存，再认识 Harness，并从非工程师和性能案例两个角度理解 Pi。第七至十篇记录 Pi 加入 Earendil 的背景，以及 Earendil 对可信、个性化软件的长期愿景。第十一篇进一步讨论 AI 代码的质量评估。
 
 ### 01 无法随身带走的会话
 
@@ -125,6 +125,16 @@ Earendil 邀请读者通过开放写作和电子邮件，加入一场关于软�
 
 [阅读中文译文](/translations/invitation) · [查看英文原文](https://earendil.com/posts/invitation/)
 
+### 11 如果编程已经不成问题，接下来呢？
+
+**原文标题**　*If coding is solved, what now?: Measuring the sloppiness of code*
+
+**发布日期**　2026-09-10
+
+从代码行数、冗长程度与侵蚀程度等指标出发，讨论为什么功能正确的 AI 代码仍会让代码库逐渐恶化，并借助多轮编程评估说明自动评判的局限，以及人类直觉与品味为何仍然不可缺少。
+
+[阅读中文译文](/translations/measuring-code-sloppiness) · [查看英文原文](https://earendil.com/posts/measuring-code-sloppiness/)
+
 ::: info 翻译与许可说明
-十篇英文原文的版权归 Earendil 所有。中文译文及适配部分经 Earendil 授权按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) 发布。译文力求忠实保留原文结构、观点、示例、图片和链接；如有歧义，请以对应的英文原文为准。原文配图随文章授权使用，并在译文中保留摄影者、制图方或项目来源署名。
+十一篇英文原文的版权归 Earendil 所有。中文译文及适配部分经 Earendil 授权按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) 发布。译文力求忠实保留原文结构、观点、示例、图片和链接；如有歧义，请以对应的英文原文为准。原文配图随文章授权使用，并在译文中保留摄影者、制图方或项目来源署名。
 :::

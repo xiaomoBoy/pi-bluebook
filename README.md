@@ -31,7 +31,7 @@
 | 参考手册 | [主题索引](docs/reference/index.md) | 按问题查找核心机制、操作入口、能力边界与延伸阅读 |
 | 插件推荐 | [选择地图](docs/plugins/index.md) | 从推文实践中整理当前可核验的插件来源、适用场景和风险边界 |
 | 小墨札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
-| Earendil 官方授权译文 | [译文专区](docs/translations/index.md) | 经 Earendil 授权发布的十篇 Pi、Harness、会话机制与公司愿景文章完整中文译文 |
+| Earendil 官方授权译文 | [译文专区](docs/translations/index.md) | 经 Earendil 授权发布的十一篇 Pi、Harness、会话机制、代码质量与公司愿景文章完整中文译文 |
 
 已经能够启动 Pi 并获得回复的读者，可以先检查第 4 课的前置条件，再进入第一次任务。主线以 macOS 为基础，Windows 用户可通过独立中文路径完成安装，再使用 Git Bash 继续后续课程。
 
@@ -106,7 +106,7 @@ pi-bluebook/
 你可以使用、修改和分发，也可以用于商业用途；分发本项目的全部或重要部分时，需要
 保留原版权声明和许可证。具体说明见[内容许可](LICENSE-CONTENT.md)。
 
-- `docs/translations/` 中十篇 Earendil 官方授权译文及适配部分采用 [CC BY 4.0](LICENSE-CONTENT.md)，英文原文版权归 Earendil 所有。
+- `docs/translations/` 中十一篇 Earendil 官方授权译文及适配部分采用 [CC BY 4.0](LICENSE-CONTENT.md)，英文原文版权归 Earendil 所有。
 - 第三方商标、截图、引用和其他第三方素材不自动包含在原创内容许可中，其权利归各自权利人所有；素材旁的单独说明优先。
 
 具体权利和条件以许可文件为准。

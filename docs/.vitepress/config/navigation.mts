@@ -268,7 +268,7 @@ export const sidebar = {
           text: '译文目录',
           collapsed: true,
           items: [
-            { text: '十篇授权译文总览', link: '/translations/' }
+            { text: '十一篇授权译文总览', link: '/translations/' }
           ]
         },
         {
@@ -297,6 +297,13 @@ export const sidebar = {
             { text: '关于今日公告的思考', link: '/translations/announcement-reflection' },
             { text: '制高点', link: '/translations/the-high-ground' },
             { text: '邀请你开启一场通信', link: '/translations/invitation' }
+          ]
+        },
+        {
+          text: '代码质量与评估',
+          collapsed: true,
+          items: [
+            { text: '衡量代码的粗糙程度', link: '/translations/measuring-code-sloppiness' }
           ]
         },
         {

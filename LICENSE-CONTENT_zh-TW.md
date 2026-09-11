@@ -10,7 +10,7 @@
 
 ## Earendil 官方授權譯文
 
-`docs/translations/` 中十篇 Earendil 文章的中文譯文及適配部分，
+`docs/translations/` 中十一篇 Earendil 文章的中文譯文及適配部分，
 經 Earendil 授權按
 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)
 釋出。頁面保留原文標題、作者、釋出日期、原文連結及授權說明；英文原文版權歸 Earendil 所有。

@@ -70,7 +70,7 @@ description: 面向中文初學者的 Pi 系統學習手冊，先理解 Pi，再
       <a class="bluebook-map__item" href="/zh-TW/translations/">
         <span>05 · AUTHORIZED TRANSLATIONS</span>
         <h3>授權譯文</h3>
-        <p>經 Earendil 授權釋出的十篇完整中文譯文，保留原文資訊、授權宣告與圖片署名。</p>
+        <p>經 Earendil 授權釋出的十一篇完整中文譯文，保留原文資訊、授權宣告與圖片署名。</p>
         <b>進入譯文專區 →</b>
       </a>
     </div>

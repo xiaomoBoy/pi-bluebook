@@ -268,7 +268,7 @@ export const sidebarTW = {
           text: '譯文目錄',
           collapsed: true,
           items: [
-            { text: '十篇授權譯文總覽', link: '/zh-TW/translations/' }
+            { text: '十一篇授權譯文總覽', link: '/zh-TW/translations/' }
           ]
         },
         {
@@ -297,6 +297,13 @@ export const sidebarTW = {
             { text: '關於今日公告的思考', link: '/zh-TW/translations/announcement-reflection' },
             { text: '制高點', link: '/zh-TW/translations/the-high-ground' },
             { text: '邀請你開啟一場通訊', link: '/zh-TW/translations/invitation' }
+          ]
+        },
+        {
+          text: '程式碼品質與評估',
+          collapsed: true,
+          items: [
+            { text: '衡量程式碼的粗糙程度', link: '/zh-TW/translations/measuring-code-sloppiness' }
           ]
         },
         {

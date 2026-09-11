@@ -5,8 +5,8 @@ prev:
   text: 制高点
   link: /translations/the-high-ground
 next:
-  text: 官方授权译文目录
-  link: /translations/
+  text: 衡量代码的粗糙程度
+  link: /translations/measuring-code-sloppiness
 ---
 
 <span class="library-status">Earendil 官方授权中文译文 · 10</span>
@@ -44,4 +44,4 @@ Armin 与 Colin
 
 - [英文原文：An Invitation to Begin a Correspondence](https://earendil.com/posts/invitation/)
 - [上一篇：制高点](/translations/the-high-ground)
-- [返回：官方授权译文目录](/translations/)
+- [下一篇：衡量代码的粗糙程度](/translations/measuring-code-sloppiness)
