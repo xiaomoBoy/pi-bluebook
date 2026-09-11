@@ -174,7 +174,7 @@ npm run docs:check
 git diff --check
 git status --short
 git diff -- docs/reference/task-completion-checklist.md \
-  docs/reference/index.md docs/.vitepress/config.mts
+  docs/reference/index.md docs/.vitepress/config/navigation.mts
 ```
 
 逐项打开并确认：

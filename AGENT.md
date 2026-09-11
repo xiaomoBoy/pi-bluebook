@@ -43,7 +43,7 @@ npm run docs:preview
 - 技术事实应有可靠来源；版本、认证和模型支持等易变化内容需要注明核验日期。
 - 不把推测、模型自述或截图之外的信息写成已经验证的事实。
 - 图片不能代替必要的正文步骤；加入图片前检查清晰度、隐私信息、来源与授权范围。
-- 修改学习路径、导航或页面文件时，同步检查 `docs/.vitepress/config.mts` 中的入口与侧栏。
+- 修改学习路径、导航或页面文件时，同步检查 `docs/.vitepress/config/navigation.mts` 中的入口与侧栏。
 - 保留与当前任务无关的内容，不修改原始材料来替代整理稿。
 
 更完整的贡献要求见 `CONTRIBUTING.md`，文章审阅与发布流程见 `EDITORIAL_WORKFLOW.md`。
@@ -51,7 +51,7 @@ npm run docs:preview
 ## 基础验收
 
 - 只修改仓库说明时，检查文字、命令和链接。
-- 修改课程、导航、主题或样式后，运行 `npm run docs:build`。
+- 修改课程、导航、主题或样式后，运行 `npm run docs:check`。
 - 检查新页面能从导航或相关章节到达，图片和下载材料路径有效。
 - 不提交 `node_modules/`、VitePress 缓存、构建产物、日志或凭据。
 
@@ -70,7 +70,7 @@ npm run docs:preview
 
 ## 固定部署流程
 
-网站使用 Cloudflare Workers 静态资源部署，生产域名为 `https://pi.xiaomovps.com`，配置位于 `wrangler.jsonc`。
+网站使用 Cloudflare Workers 静态资源部署，生产域名为 `https://pi.xiaomovps.com`，配置位于 `wrangler.jsonc`。工程目录和维护入口见 `MAINTENANCE.md`。
 
 1. 首次在一台电脑上部署时，运行 `npx wrangler login` 完成 Cloudflare 登录；后续优先复用本机保存的授权，不把 Token 或凭据写入仓库。
 2. 在项目根目录运行 `npm run deploy`。该命令会先完成 VitePress 构建和 SEO 检查，全部通过后才执行 Cloudflare 部署。

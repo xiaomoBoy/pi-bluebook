@@ -14,7 +14,7 @@
 
 1. 新建 `docs/reference/task-completion-checklist.md`
 2. 修改 `docs/reference/index.md`
-3. 修改 `docs/.vitepress/config.mts`
+3. 修改 `docs/.vitepress/config/navigation.mts`
 4. 新建或更新 `worklog/graduation-checkpoint.md`
 
 除上述路径外，不修改其他项目文件。`worklog/` 是本次本地练习记录，不应加入提交。
@@ -39,7 +39,7 @@
 ## 导航要求
 
 - 在 `docs/reference/index.md` 增加新页面入口。
-- 在 `docs/.vitepress/config.mts` 的参考手册侧栏增加“任务完成检查表”。
+- 在 `docs/.vitepress/config/navigation.mts` 的参考手册侧栏增加“任务完成检查表”。
 - 不改变其他页面的标题、排序和链接。
 
 ## 验收要求

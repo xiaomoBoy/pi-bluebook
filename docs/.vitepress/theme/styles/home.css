@@ -1,0 +1,684 @@
+/* Bluebook home page and reading-map presentation. */
+
+/* Bluebook home: a publication front matter, not a personal landing page. */
+.VPHome .vp-doc.container {
+  width: min(calc(100% - 48px), var(--pi-shell-width));
+  max-width: var(--pi-shell-width);
+  padding: 0;
+}
+
+.bluebook-home {
+  padding: 30px 0 16px;
+}
+
+.bluebook-home a {
+  text-decoration: none;
+}
+
+.bluebook-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.65fr);
+  min-height: 500px;
+  border: 1px solid var(--pi-line);
+  background: color-mix(in srgb, var(--pi-paper) 97%, transparent);
+  box-shadow: var(--pi-shadow);
+  animation: bluebook-rise 520ms ease-out both;
+}
+
+.bluebook-hero__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 58px 64px 62px;
+}
+
+.bluebook-kicker,
+.bluebook-section__header > div > p,
+.bluebook-start > div > p {
+  margin: 0;
+  color: var(--pi-blue-dark);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.bluebook-kicker {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--pi-line);
+}
+
+.bluebook-hero h1 {
+  margin: 32px 0 8px;
+  border: 0;
+  color: var(--pi-ink);
+  font-family: "Iowan Old Style", Baskerville, "Songti SC", STSong, "Noto Serif CJK SC", serif;
+  font-size: clamp(3.35rem, 6.2vw, 6.05rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.bluebook-deck {
+  max-width: 700px;
+  margin: 16px 0 0;
+  color: var(--pi-ink);
+  font-family: "Iowan Old Style", Baskerville, "Songti SC", STSong, "Noto Serif CJK SC", serif;
+  font-size: clamp(1.25rem, 2vw, 1.72rem);
+  font-weight: 600;
+  line-height: 1.52;
+  letter-spacing: -0.012em;
+}
+
+.bluebook-intro {
+  max-width: 640px;
+  margin: 20px 0 0;
+  color: var(--pi-muted);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  letter-spacing: 0.012em;
+}
+
+.bluebook-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.bluebook-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--pi-line);
+  color: var(--pi-ink) !important;
+  background: var(--pi-paper-strong);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.bluebook-button:hover {
+  border-color: var(--pi-blue);
+  transform: translateY(-2px);
+}
+
+.bluebook-button--primary {
+  border-color: var(--pi-blue-dark);
+  color: #fff !important;
+  background: var(--pi-blue-dark);
+}
+
+.bluebook-edition {
+  display: flex;
+  flex-direction: column;
+  padding: 44px 32px 32px;
+  border-left: 1px solid var(--pi-line);
+  color: #f8f5ec;
+  background: #27323a;
+}
+
+.dark .bluebook-edition {
+  background: #10171b;
+}
+
+.bluebook-edition__mark {
+  margin-bottom: auto;
+  font-family: "Iowan Old Style", Baskerville, serif;
+  font-size: 7.4rem;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+}
+
+.bluebook-edition__mark span {
+  color: var(--pi-blue);
+}
+
+.bluebook-edition__label {
+  margin: 54px 0 12px;
+  color: #9eb8c4;
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.bluebook-edition dl {
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.bluebook-edition dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.bluebook-edition dt,
+.bluebook-edition dd {
+  margin: 0;
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.74rem;
+}
+
+.bluebook-edition dt {
+  color: #abb5ba;
+}
+
+.bluebook-edition__note {
+  margin: 18px 0 0;
+  color: #abb5ba;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.bluebook-principle {
+  display: grid;
+  grid-template-columns: 150px minmax(300px, 0.9fr) 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 17px 26px;
+  border-right: 1px solid var(--pi-line);
+  border-bottom: 1px solid var(--pi-line);
+  border-left: 1px solid var(--pi-line);
+  background: color-mix(in srgb, var(--pi-blue) 8%, var(--pi-paper));
+}
+
+.bluebook-principle span,
+.bluebook-principle strong {
+  font-family: var(--vp-font-family-mono);
+}
+
+.bluebook-principle span {
+  color: var(--pi-blue-dark);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.bluebook-principle strong {
+  color: var(--pi-ink);
+  font-size: 0.84rem;
+  letter-spacing: 0.05em;
+}
+
+.bluebook-principle p {
+  margin: 0;
+  color: var(--pi-muted);
+  font-size: 0.86rem;
+}
+
+.bluebook-section {
+  padding-top: 76px;
+  scroll-margin-top: 96px;
+}
+
+.bluebook-section__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 56px;
+  align-items: end;
+  margin-bottom: 24px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--pi-line);
+}
+
+.bluebook-section__header h2,
+.bluebook-start h2 {
+  margin: 7px 0 0;
+  border: 0;
+  font-family: "Iowan Old Style", Baskerville, "Songti SC", STSong, "Noto Serif CJK SC", serif;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.bluebook-section__header h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.85rem);
+  line-height: 1.2;
+}
+
+.bluebook-section__header > p {
+  margin: 0;
+  color: var(--pi-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.bluebook-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  border-top: 1px solid var(--pi-line);
+  border-left: 1px solid var(--pi-line);
+}
+
+.bluebook-map__item {
+  min-height: 248px;
+  padding: 27px 30px;
+  border-right: 1px solid var(--pi-line);
+  border-bottom: 1px solid var(--pi-line);
+  color: var(--pi-ink) !important;
+  background: color-mix(in srgb, var(--pi-paper) 96%, transparent);
+  transition: background-color 180ms ease;
+}
+
+.bluebook-map__item:hover {
+  background: color-mix(in srgb, var(--pi-blue) 9%, var(--pi-paper));
+}
+
+.bluebook-map__item--primary {
+  grid-row: span 2;
+  min-height: 488px;
+  padding: 38px 38px;
+  background: #27323a;
+  color: #f8f5ec !important;
+}
+
+.bluebook-map__item--primary:hover {
+  background: #31404a;
+}
+
+.bluebook-map__item > span,
+.bluebook-map__item b {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.bluebook-map__item > span {
+  color: var(--pi-blue-dark);
+}
+
+.bluebook-map__item--primary > span {
+  color: #9ec5d4;
+}
+
+.bluebook-map__item--primary h3 {
+  margin-top: 82px;
+  font-size: clamp(2.25rem, 4vw, 3.35rem);
+}
+
+.bluebook-map__item--primary p {
+  max-width: 560px;
+  font-size: 0.96rem;
+}
+
+.bluebook-map__item h3 {
+  margin: 34px 0 9px;
+  font-family: "Iowan Old Style", Baskerville, "Songti SC", STSong, "Noto Serif CJK SC", serif;
+  font-size: 1.62rem;
+  font-weight: 600;
+}
+
+.bluebook-map__item p {
+  min-height: 56px;
+  margin: 0 0 24px;
+  color: var(--pi-muted);
+  font-size: 0.88rem;
+  line-height: 1.72;
+}
+
+.bluebook-map__item--primary p {
+  color: #bac4c9;
+}
+
+.bluebook-map__item b {
+  color: inherit;
+}
+
+.bluebook-notes-strip {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: 18px 24px;
+  border-right: 1px solid var(--pi-line);
+  border-bottom: 1px solid var(--pi-line);
+  border-left: 1px solid var(--pi-line);
+  background: color-mix(in srgb, var(--pi-paper) 96%, transparent);
+}
+
+.bluebook-notes-strip > span,
+.bluebook-notes-strip > a {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.bluebook-notes-strip > span {
+  color: var(--pi-blue-dark);
+}
+
+.bluebook-notes-strip p {
+  margin: 0;
+  color: var(--pi-muted);
+  font-size: 0.81rem;
+  line-height: 1.66;
+}
+
+.bluebook-notes-strip strong {
+  color: var(--pi-ink);
+}
+
+.bluebook-notes-strip > a {
+  color: var(--pi-ink);
+  white-space: nowrap;
+}
+
+.bluebook-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--pi-line);
+  border-left: 1px solid var(--pi-line);
+}
+
+.bluebook-module {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  min-height: 344px;
+  border-right: 1px solid var(--pi-line);
+  border-bottom: 1px solid var(--pi-line);
+  background: color-mix(in srgb, var(--pi-paper) 96%, transparent);
+}
+
+.bluebook-module--wide {
+  grid-column: 1 / -1;
+}
+
+.bluebook-module__number {
+  padding: 24px 18px;
+  border-right: 1px solid var(--pi-line);
+  color: var(--pi-blue-dark);
+  font-family: var(--vp-font-family-mono);
+  font-size: 1.45rem;
+  font-style: italic;
+}
+
+.bluebook-module__body {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 27px 23px;
+}
+
+.bluebook-module__meta {
+  margin: 0;
+  color: var(--pi-muted);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.bluebook-module h3 {
+  margin: 7px 0 22px;
+  font-family: "Iowan Old Style", Baskerville, "Songti SC", STSong, "Noto Serif CJK SC", serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.bluebook-module ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--pi-line);
+}
+
+.bluebook-module li {
+  margin: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--pi-line) 70%, transparent);
+}
+
+.bluebook-module li a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 9px 2px;
+  color: var(--pi-ink);
+  font-size: 0.86rem;
+}
+
+.bluebook-module li a:hover {
+  color: var(--pi-blue-dark);
+}
+
+.bluebook-module li span {
+  color: var(--pi-blue-dark);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.68rem;
+}
+
+.bluebook-module__result {
+  margin: auto 0 0;
+  padding-top: 20px;
+  color: var(--pi-muted);
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+.bluebook-module__result span {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--pi-blue-dark);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+}
+
+.bluebook-start {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  align-items: center;
+  margin-top: 76px;
+  padding: 32px 36px;
+  border: 1px solid var(--pi-line);
+  background: color-mix(in srgb, var(--pi-blue) 9%, var(--pi-paper));
+}
+
+.bluebook-start h2 {
+  font-size: 1.85rem;
+}
+
+.bluebook-start span {
+  display: block;
+  margin-top: 6px;
+  color: var(--pi-muted);
+  font-size: 0.9rem;
+}
+
+@keyframes bluebook-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bluebook-hero { animation: none; }
+  .bluebook-button { transition: none; }
+}
+
+@media (max-width: 959px) {
+  .VPHome .vp-doc.container {
+    width: calc(100% - 24px);
+  }
+
+  .bluebook-hero {
+    grid-template-columns: minmax(0, 1fr) 270px;
+  }
+
+  .bluebook-hero__main {
+    padding: 48px 40px 50px;
+  }
+
+  .bluebook-edition {
+    padding: 40px 26px 28px;
+  }
+
+  .bluebook-principle {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .bluebook-principle p {
+    grid-column: 2;
+  }
+
+  .bluebook-section__header {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bluebook-home {
+    padding-top: 16px;
+  }
+
+  .bluebook-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .bluebook-edition {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 0 22px;
+    border-top: 1px solid var(--pi-line);
+    border-left: 0;
+  }
+
+  .bluebook-edition__mark {
+    grid-row: 1 / 4;
+    font-size: 5rem;
+  }
+
+  .bluebook-edition__label {
+    margin: 0 0 8px;
+  }
+
+  .bluebook-edition__note {
+    grid-column: 2;
+  }
+
+  .bluebook-principle,
+  .bluebook-section__header {
+    grid-template-columns: 1fr;
+  }
+
+  .bluebook-principle p {
+    grid-column: 1;
+  }
+
+  .bluebook-map,
+  .bluebook-catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .bluebook-map__item--primary {
+    grid-row: auto;
+    min-height: 360px;
+  }
+
+  .bluebook-notes-strip {
+    grid-template-columns: 1fr auto;
+  }
+
+  .bluebook-notes-strip > span {
+    grid-column: 1 / -1;
+  }
+
+  .bluebook-module--wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 519px) {
+  .bluebook-hero__main {
+    padding: 34px 22px 38px;
+  }
+
+  .bluebook-kicker {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .bluebook-hero h1 {
+    margin-top: 28px;
+    font-size: 2.85rem;
+    line-height: 1.08;
+  }
+
+  .bluebook-deck {
+    font-size: 1.16rem;
+    line-height: 1.55;
+  }
+
+  .bluebook-intro {
+    font-size: 0.92rem;
+    line-height: 1.78;
+  }
+
+  .bluebook-edition {
+    padding: 28px 22px;
+  }
+
+  .bluebook-section {
+    padding-top: 64px;
+  }
+
+  .bluebook-section__header {
+    gap: 16px;
+  }
+
+  .bluebook-section__header h2 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .bluebook-map__item {
+    min-height: 220px;
+    padding: 24px 22px;
+  }
+
+  .bluebook-map__item--primary {
+    min-height: 320px;
+  }
+
+  .bluebook-map__item--primary h3 {
+    margin-top: 54px;
+    font-size: 2rem;
+  }
+
+  .bluebook-notes-strip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 20px 22px;
+  }
+
+  .bluebook-module {
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+
+  .bluebook-module__number {
+    padding: 22px 12px;
+    font-size: 1rem;
+  }
+
+  .bluebook-module__body {
+    padding: 24px 18px 22px;
+  }
+
+  .bluebook-start {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 28px 24px;
+  }
+}

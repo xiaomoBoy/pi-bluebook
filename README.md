@@ -8,7 +8,7 @@
 
 ## 当前内容与学习路径
 
-2026 开放学习版的读者对象、阅读顺序、基本主张和内容边界已经确定；网站仍会持续校订错字、失效命令、链接和核验日期。当前导论、序章、五个模块、14 课和 7 个配套案例，已经形成从理解 Pi、完成第一次任务、管理会话与上下文，到扩展、分工、长任务和安全验收的完整学习路径。需要真实系统界面的进阶效果会明确标出，不用文字或伪图代替实测。
+2026 开放学习版的读者对象、阅读顺序、基本主张和内容边界已经确定；网站仍会持续校订错字、失效命令、链接和核验日期。当前导论、序章、五个模块、14 课和 8 个配套案例，已经形成从理解 Pi、完成第一次任务、管理会话与上下文，到扩展、分工、长任务和安全验收的完整学习路径。需要真实系统界面的进阶效果会明确标出，不用文字或伪图代替实测。
 
 | 顺序 | 章节 | 你会完成什么 |
 | --- | --- | --- |
@@ -27,7 +27,7 @@
 | 模块三 · 8至9 | [上下文与压缩](docs/guide/context-and-compaction.md) | 理解长对话、压缩、提示缓存和可持续产物 |
 | 模块四 · 10至12 | [扩展自己的 Pi](docs/guide/skills-extensions-packages.md) | 区分 Skill、Extension 和 Package，理解 Extension 设计与子 Agent 分工 |
 | 模块五 · 13至14 | [稳定工作流](docs/guide/vps-and-long-running.md) | 处理长时间任务，建立权限、隔离、恢复和验收意识 |
-| 实操案例 | [案例库](docs/cases/index.md) | 用 7 个固定材料案例练习文件任务、压缩对照、Skill、Extension、分工、恢复和安全审阅 |
+| 实操案例 | [案例库](docs/cases/index.md) | 用 7 个单项实验和 1 个毕业项目，依次练习文件任务、压缩、扩展、分工、恢复、安全与完整 Agent 工作流 |
 | 参考手册 | [主题索引](docs/reference/index.md) | 按问题查找核心机制、操作入口、能力边界与延伸阅读 |
 | 插件推荐 | [选择地图](docs/plugins/index.md) | 从推文实践中整理当前可核验的插件来源、适用场景和风险边界 |
 | 小墨札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
@@ -55,11 +55,11 @@ npm run docs:dev
 检查正式构建并预览构建结果：
 
 ```bash
-npm run docs:build
+npm run docs:check
 npm run docs:preview
 ```
 
-构建结果生成在 `docs/.vitepress/dist/`，无需提交到仓库。`docs:preview` 预览的是上一次构建结果，内容有变化时请重新构建。
+`docs:check` 会依次检查内容资源引用、完成正式构建并核对 SEO 产物。构建结果生成在 `docs/.vitepress/dist/`，无需提交到仓库。`docs:preview` 预览的是上一次构建结果，内容有变化时请重新检查。
 
 ## 目录结构
 
@@ -78,8 +78,12 @@ pi-bluebook/
 │   │   ├── examples/            # 可下载的练习材料
 │   │   └── images/              # 教程图片
 │   └── .vitepress/
-│       ├── config.mts           # 导航、侧栏与网站配置
-│       └── theme/               # 页面主题和样式
+│       ├── config.mts           # 站点、SEO、搜索和页脚配置
+│       ├── config/              # 顶部导航与各板块侧栏
+│       └── theme/styles/        # 按职责拆分的页面主题样式
+├── scripts/                     # 内容与正式产物检查
+├── .github/workflows/           # 自动化质量检查
+├── MAINTENANCE.md               # 工程结构与维护入口
 ├── CONTRIBUTING.md             # 反馈与贡献说明
 ├── EDITORIAL_WORKFLOW.md        # 文章审阅、核验与发布流程
 ├── LICENSE                     # 网站代码许可
