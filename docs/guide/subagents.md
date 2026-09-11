@@ -5,8 +5,8 @@ prev:
   text: Extension 的需求与验收
   link: /guide/first-extension
 next:
-  text: 长时间任务与 VPS
-  link: /guide/vps-and-long-running
+  text: Pi 工作原理
+  link: /guide/how-pi-works
 ---
 
 <span class="library-status">MODULE 04 · STEP 12 · 可练习</span>

@@ -1,6 +1,6 @@
 ---
 title: 蓝皮书主线
-description: Pi 学习蓝皮书的五个学习模块与 14 课完整目录。
+description: Pi 学习蓝皮书的五个学习模块、14 课课程与完整运行原理篇。
 prev:
   text: 首页
   link: /
@@ -9,7 +9,7 @@ next:
   link: /guide/introduction
 ---
 
-<span class="library-status">CORE CURRICULUM · 5 个模块 · 14 课</span>
+<span class="library-status">CORE CURRICULUM · 5 个模块 · 14 课 + 原理篇</span>
 
 # 蓝皮书主线
 
@@ -75,6 +75,10 @@ next:
 
 **配套实操：**[CASE 03 · 第一个 Skill](/cases/first-skill) · [CASE 04 · 最小 Extension](/cases/first-extension) · [CASE 05 · 两路独立审阅](/cases/independent-review)
 
+### 原理串联篇 · 把所有术语接成一次完整运行
+
+[Pi 工作原理：从一条 Prompt 到一次完整 Agent Loop](/guide/how-pi-works)把 Session、Context、System Prompt、Tool、Skill、模型调用和 Compaction 放回同一条链路，并沿用会议记录任务走完一次真实工具循环。建议在完成模块二、三和四后阅读；如果前面的术语仍然是散的，也可以先用这张总图建立方向，再回到对应课程练习。
+
 ## 模块五 · 建立稳定工作流
 
 13. [长时间任务与 VPS](/guide/vps-and-long-running)
@@ -82,8 +86,8 @@ next:
 
 **完成标志：** 建立检查点、恢复路径和权限边界，让长任务可以继续，也可以安全停下。
 
-**配套实操：**[CASE 06 · 从检查点恢复](/cases/checkpoint-recovery) · [CASE 07 · 任务前安全审阅](/cases/safe-review)
+**配套实操：**[CASE 06 · 从检查点恢复](/cases/checkpoint-recovery) · [CASE 07 · 任务前安全审阅](/cases/safe-review) · [CASE 08 · Pi 蓝皮书毕业项目](/cases/graduation-project)
 
 ## 需要查找，而不是继续上课时
 
-进入[参考手册](/reference/)按主题查询。个人经历、推文原文和认知变化单独保存在[小墨札记](/journey/)，不会混进课程结论。
+进入[参考手册](/reference/)按主题查询：[FAQ](/reference/faq)回答常见疑问，[故障排查手册](/reference/troubleshooting)从已经发生的症状开始定位，[热词表](/reference/glossary)解释陌生概念。个人经历、推文原文和认知变化单独保存在[小墨札记](/journey/)，不会混进课程结论。

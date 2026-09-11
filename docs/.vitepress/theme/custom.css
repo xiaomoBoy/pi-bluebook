@@ -153,10 +153,131 @@ button:focus-visible {
   height: 27px;
 }
 
-.VPNavBarMenuLink,
-.VPNavBarMenuGroup .text {
-  font-size: 0.73rem;
-  letter-spacing: 0.08em;
+.VPNavBarMenu > .VPNavBarMenuLink,
+.VPNavBarMenu > .VPNavBarMenuGroup > .button .text {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+}
+
+.VPNavBarMenuGroup .VPMenu {
+  min-width: 232px;
+  border: 1px solid var(--pi-line);
+  border-radius: 0;
+  padding: 10px;
+  background: color-mix(in srgb, var(--pi-paper-strong) 97%, transparent);
+  box-shadow: 0 18px 44px rgba(24, 32, 38, 0.14);
+}
+
+.VPNavBarMenuGroup .VPMenuGroup .title {
+  padding: 0 10px;
+  color: var(--pi-muted);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.VPNavBarMenuGroup .VPMenuLink .link {
+  border-radius: 0;
+  padding: 0 10px;
+  font-size: 0.84rem;
+  line-height: 34px;
+}
+
+.VPNavBarMenuGroup .VPMenuLink .link:hover,
+.VPNavBarMenuGroup .VPMenuLink .link.active {
+  background: color-mix(in srgb, var(--vp-c-brand-soft) 45%, transparent);
+  color: var(--pi-blue-dark);
+}
+
+/* Keep the current learning stage visible while the other sidebar groups stay compact. */
+.VPSidebarItem.level-0.collapsed.has-active > .items {
+  display: block !important;
+}
+
+.VPSidebarItem.level-0.collapsed.has-active > .item .caret-icon {
+  transform: rotate(90deg) !important;
+}
+
+.VPFooter {
+  margin: 72px auto 24px;
+  width: min(calc(100% - 48px), var(--pi-shell-width));
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.VPFooter .container {
+  max-width: none;
+  border: 1px solid var(--pi-line);
+  background: color-mix(in srgb, var(--pi-paper-strong) 92%, transparent);
+  text-align: left;
+}
+
+.VPFooter .message {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  margin: 0;
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--pi-line);
+}
+
+.pi-footer-brand {
+  color: var(--pi-ink);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.pi-footer-brand::before {
+  display: inline-block;
+  margin-right: 10px;
+  width: 7px;
+  height: 7px;
+  background: var(--pi-blue);
+  content: "";
+  vertical-align: 1px;
+}
+
+.pi-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 24px;
+}
+
+.VPFooter .pi-footer-links a {
+  color: var(--pi-ink);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.VPFooter .pi-footer-links a:hover {
+  color: var(--pi-blue-dark);
+}
+
+.VPFooter .copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin: 0;
+  padding: 16px 28px;
+  color: var(--pi-muted);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
 }
 
 body .VPLocalSearchBox .shell {
@@ -317,7 +438,8 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
 }
 
 .VPHome {
-  padding-bottom: 64px;
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
 }
 
 .VPHome .VPHero {
@@ -1735,6 +1857,28 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
 }
 
 @media (max-width: 767px) {
+  .VPFooter {
+    margin-top: 48px;
+    width: calc(100% - 24px);
+  }
+
+  .VPFooter .message {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px 20px;
+  }
+
+  .pi-footer-links {
+    justify-content: flex-start;
+    gap: 10px 18px;
+  }
+
+  .VPFooter .copyright {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 20px;
+  }
+
   #app .VPNavScreen {
     top: calc(var(--vp-nav-height) + 10px);
     border-top: 1px solid var(--pi-line);

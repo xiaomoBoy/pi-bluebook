@@ -2,7 +2,7 @@
 title: CASE 07 · 任务前安全审阅
 description: 在不执行未知代码的前提下，判断任务范围、权限、恢复点和验收方式。
 prev: { text: CASE 06 · 中断恢复, link: /cases/checkpoint-recovery }
-next: { text: 回到课程, link: /guide/safety }
+next: { text: CASE 08 · 毕业项目, link: /cases/graduation-project }
 ---
 
 <span class="library-status">CASE 07 · 可练习</span>

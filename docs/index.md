@@ -38,9 +38,9 @@ description: 面向中文初学者的 Pi 系统学习手册，先理解 Pi，再
     <header class="bluebook-section__header">
       <div>
         <p>READING MAP</p>
-        <h2>一条主线，四个配套区域</h2>
+        <h2>一条主线，五个功能入口</h2>
       </div>
-      <p>蓝皮书负责连续学习；实操、参考手册和插件推荐解决具体问题；授权译文保留原作者的完整论述。</p>
+      <p>先按主线学习，再到案例练习；遇到问题查手册，需要扩展时看插件，想追溯完整观点再读授权译文。</p>
     </header>
     <div class="bluebook-map">
       <a class="bluebook-map__item bluebook-map__item--primary" href="/guide/introduction">
@@ -58,7 +58,7 @@ description: 面向中文初学者的 Pi 系统学习手册，先理解 Pi，再
       <a class="bluebook-map__item" href="/reference/">
         <span>03 · REFERENCE</span>
         <h3>参考手册</h3>
-        <p>按主题查概念、能力边界、操作入口与章节延伸阅读。</p>
+        <p>FAQ 找短答，故障手册按症状排查，热词表解释陌生概念。</p>
         <b>按问题查找 →</b>
       </a>
       <a class="bluebook-map__item" href="/plugins/">
@@ -133,12 +133,13 @@ description: 面向中文初学者的 Pi 系统学习手册，先理解 Pi，再
       <article class="bluebook-module">
         <div class="bluebook-module__number">04</div>
         <div class="bluebook-module__body">
-          <p class="bluebook-module__meta">MODULE FOUR · 3 LESSONS</p>
+          <p class="bluebook-module__meta">MODULE FOUR · 3 LESSONS + PRINCIPLES</p>
           <h3>扩展自己的 Pi</h3>
           <ol>
             <li><a href="/guide/skills-extensions-packages"><span>10</span>Skill、Extension 与 Package</a></li>
             <li><a href="/guide/first-extension"><span>11</span>Extension 的需求与验收</a></li>
             <li><a href="/guide/subagents"><span>12</span>子 Agent 如何分工</a></li>
+            <li><a href="/guide/how-pi-works"><span>原理</span>从 Prompt 到 Agent Loop</a></li>
           </ol>
           <p class="bluebook-module__result"><span>完成标志</span>从自己的需求出发，而不是堆满插件。</p>
         </div>
@@ -146,11 +147,12 @@ description: 面向中文初学者的 Pi 系统学习手册，先理解 Pi，再
       <article class="bluebook-module bluebook-module--wide">
         <div class="bluebook-module__number">05</div>
         <div class="bluebook-module__body">
-          <p class="bluebook-module__meta">MODULE FIVE · 2 LESSONS</p>
+          <p class="bluebook-module__meta">MODULE FIVE · 2 LESSONS + CAPSTONE</p>
           <h3>建立稳定工作流</h3>
           <ol>
             <li><a href="/guide/vps-and-long-running"><span>13</span>长时间任务与 VPS</a></li>
             <li><a href="/guide/safety"><span>14</span>权限、隔离与验收</a></li>
+            <li><a href="/cases/graduation-project"><span>结课</span>CASE 08 · 毕业项目</a></li>
           </ol>
           <p class="bluebook-module__result"><span>完成标志</span>搭出能继续、能恢复、也能核对的工作方式。</p>
         </div>

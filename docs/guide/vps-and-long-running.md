@@ -2,8 +2,8 @@
 title: 长时间任务与 VPS
 description: 理解本地电脑与 VPS 运行 Pi 的取舍，为长任务设计检查点。
 prev:
-  text: 子 Agent 如何分工
-  link: /guide/subagents
+  text: Pi 工作原理
+  link: /guide/how-pi-works
 next:
   text: 权限、隔离与验收
   link: /guide/safety

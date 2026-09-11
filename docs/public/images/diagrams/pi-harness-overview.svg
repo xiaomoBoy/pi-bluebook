@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-harness-title pi-harness-desc">
+      <title id="pi-harness-title">Pi 如何组织一次真实任务</title>
+      <desc id="pi-harness-desc">用户把目标交给 Pi，Pi 组织模型推理、工具调用、文件操作和会话保存，形成可持续验收的工作过程。</desc>
+      <defs><style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');</style>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#65727d"/></marker>
+        <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f90aa"/></marker>
+        <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#276d89"/></marker>
+      </defs>
+
+      <rect width="960" height="600" fill="#fbfaf6"/>
+
+      <!-- Connectors: draw before nodes. -->
+      <line x1="176" y1="280" x2="320" y2="280" stroke="#276d89" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+      <path d="M 388,220 V 176 H 760 V 192" fill="none" stroke="#4f90aa" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+      <path d="M 808,192 V 204 H 452 V 220" fill="none" stroke="#65727d" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+      <line x1="520" y1="280" x2="704" y2="280" stroke="#4f90aa" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+      <line x1="784" y1="316" x2="784" y2="360" stroke="#65727d" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <line x1="420" y1="340" x2="420" y2="400" stroke="#65727d" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+      <!-- Connector labels: masked with visible gaps. -->
+      <rect x="216" y="260" width="72" height="12" rx="2" fill="#fbfaf6"/>
+      <text x="252" y="269" fill="#276d89" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">GOAL</text>
+
+      <rect x="536" y="156" width="72" height="12" rx="2" fill="#fbfaf6"/>
+      <text x="572" y="165" fill="#4f90aa" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">CONTEXT</text>
+
+      <rect x="564" y="212" width="88" height="12" rx="2" fill="#fbfaf6"/>
+      <text x="608" y="221" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">NEXT ACTION</text>
+
+      <rect x="568" y="260" width="80" height="12" rx="2" fill="#fbfaf6"/>
+      <text x="608" y="269" fill="#4f90aa" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">TOOL CALL</text>
+
+      <rect x="796" y="328" width="80" height="12" rx="2" fill="#fbfaf6"/>
+      <text x="836" y="337" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">READ / WRITE</text>
+
+      <rect x="432" y="364" width="48" height="12" rx="2" fill="#fbfaf6"/>
+      <text x="456" y="373" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">SAVE</text>
+
+      <!-- User -->
+      <rect x="40" y="244" width="136" height="72" rx="6" fill="#fbfaf6"/>
+      <rect x="40" y="244" width="136" height="72" rx="6" fill="#65727d" fill-opacity="0.10" stroke="#87939b" stroke-width="1"/>
+      <rect x="48" y="252" width="40" height="12" rx="2" fill="none" stroke="#65727d" stroke-opacity="0.42" stroke-width="0.8"/>
+      <text x="68" y="261" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">INPUT</text>
+      <text x="108" y="284" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">用户目标</text>
+      <text x="108" y="304" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">要完成什么</text>
+
+      <!-- Pi focal node -->
+      <rect x="320" y="220" width="200" height="120" rx="8" fill="#fbfaf6"/>
+      <rect x="320" y="220" width="200" height="120" rx="8" fill="#4f90aa" fill-opacity="0.10" stroke="#4f90aa" stroke-width="1.2"/>
+      <rect x="332" y="232" width="64" height="16" rx="2" fill="none" stroke="#4f90aa" stroke-opacity="0.55" stroke-width="0.8"/>
+      <text x="364" y="244" fill="#276d89" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">HARNESS</text>
+      <text x="420" y="280" fill="#26313a" font-size="24" font-weight="600" font-family="Iowan Old Style, Songti SC, serif" text-anchor="middle">Pi</text>
+      <text x="420" y="304" fill="#276d89" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">组织工作，而不是模型</text>
+      <text x="420" y="324" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">Context · Tools · Session</text>
+
+      <!-- Model -->
+      <rect x="704" y="120" width="160" height="72" rx="6" fill="#fbfaf6"/>
+      <rect x="704" y="120" width="160" height="72" rx="6" fill="#ffffff" stroke="#26313a" stroke-width="1"/>
+      <rect x="712" y="128" width="40" height="12" rx="2" fill="none" stroke="#26313a" stroke-opacity="0.38" stroke-width="0.8"/>
+      <text x="732" y="137" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">MODEL</text>
+      <text x="784" y="160" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">模型</text>
+      <text x="784" y="180" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">理解与判断</text>
+
+      <!-- Tools -->
+      <rect x="704" y="244" width="160" height="72" rx="6" fill="#fbfaf6"/>
+      <rect x="704" y="244" width="160" height="72" rx="6" fill="#ffffff" stroke="#26313a" stroke-width="1"/>
+      <rect x="712" y="252" width="40" height="12" rx="2" fill="none" stroke="#26313a" stroke-opacity="0.38" stroke-width="0.8"/>
+      <text x="732" y="261" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">TOOLS</text>
+      <text x="784" y="284" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">工具</text>
+      <text x="784" y="304" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">读取 · 编辑 · 命令</text>
+
+      <!-- Files -->
+      <rect x="704" y="360" width="160" height="72" rx="6" fill="#fbfaf6"/>
+      <rect x="704" y="360" width="160" height="72" rx="6" fill="#26313a" fill-opacity="0.05" stroke="#65727d" stroke-width="1"/>
+      <rect x="712" y="368" width="40" height="12" rx="2" fill="none" stroke="#65727d" stroke-opacity="0.45" stroke-width="0.8"/>
+      <text x="732" y="377" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">STATE</text>
+      <text x="784" y="400" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">项目文件</text>
+      <text x="784" y="420" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">真实产物与结果</text>
+
+      <!-- Session -->
+      <rect x="320" y="400" width="200" height="72" rx="6" fill="#fbfaf6"/>
+      <rect x="320" y="400" width="200" height="72" rx="6" fill="#26313a" fill-opacity="0.05" stroke="#65727d" stroke-width="1"/>
+      <rect x="328" y="408" width="40" height="12" rx="2" fill="none" stroke="#65727d" stroke-opacity="0.45" stroke-width="0.8"/>
+      <text x="348" y="417" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">STATE</text>
+      <text x="420" y="440" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">Session</text>
+      <text x="420" y="460" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">保存工作历史</text>
+
+      <!-- Bottom legend strip -->
+      <line x1="40" y1="516" x2="920" y2="516" stroke="#26313a" stroke-opacity="0.12" stroke-width="0.8"/>
+      <text x="40" y="540" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" letter-spacing="0.14em">LEGEND</text>
+
+      <rect x="128" y="528" width="16" height="12" rx="2" fill="#4f90aa" fill-opacity="0.10" stroke="#4f90aa" stroke-width="1"/>
+      <text x="152" y="540" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif">组织层</text>
+
+      <rect x="248" y="528" width="16" height="12" rx="2" fill="#ffffff" stroke="#26313a" stroke-width="1"/>
+      <text x="272" y="540" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif">执行能力</text>
+
+      <rect x="392" y="528" width="16" height="12" rx="2" fill="#26313a" fill-opacity="0.05" stroke="#65727d" stroke-width="1"/>
+      <text x="416" y="540" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif">持久状态</text>
+
+      <text x="920" y="540" fill="#65727d" font-size="12" font-family="Iowan Old Style, Songti SC, serif" font-style="italic" text-anchor="end">模型负责判断，Pi 负责把判断变成工作。</text>
+    </svg>

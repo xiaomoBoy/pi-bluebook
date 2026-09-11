@@ -5,8 +5,8 @@ prev:
   text: 实操案例
   link: /cases/
 next:
-  text: Session 与续写
-  link: /guide/sessions
+  text: 常见问题 FAQ
+  link: /reference/faq
 ---
 
 <span class="library-status">REFERENCE · 遇到问题时查这里</span>
@@ -19,6 +19,16 @@ next:
 [十条仍然成立的判断](/guide/lasting-principles)区分当前结论与原始学习档案；[凡例与 2026 开放学习版说明](/guide/edition-2026)记录平台路径、核验截止、维护规则与版权边界。
 :::
 
+## 三种快速查法
+
+| 你现在遇到的是 | 从这里进入 | 阅读路径 |
+| --- | --- | --- |
+| 一个具体问题 | [Pi 常见问题 FAQ](/reference/faq) | 先看短答，再进入对应概念或课程 |
+| 一个已经发生的故障 | [Pi 故障排查手册](/reference/troubleshooting) | 按现象建立基线，每次只改变一个条件 |
+| 一个看不懂的词 | [AI 与 Agent 热词表](/reference/glossary) | 先读人话解释，再理解它在 Pi 中的含义 |
+
+FAQ、故障排查手册与热词表会互相引用，并继续连接主线课程。FAQ 回答“为什么”，故障手册处理“现在坏在哪里”，热词表解释“这个词是什么意思”。
+
 ## 核心机制
 
 | 你正在找什么 | 主题入口 | 适合解决的问题 |
@@ -27,6 +37,7 @@ next:
 | 怎样保存并继续任务 | [Session 与续写](/guide/sessions) | 会话命名、恢复与可携带性 |
 | 长任务为什么会忘记 | [上下文与压缩](/guide/context-and-compaction) | Context、Compaction 与交接记录 |
 | Cache 数字代表什么 | [提示缓存](/guide/prompt-caching) | 缓存命中、成本与状态判断 |
+| 这些概念怎样连成一次运行 | [从 Prompt 到 Agent Loop](/guide/how-pi-works) | Context 组装、模型调用、工具闭环与 Session 写回 |
 
 ## 能力与边界
 
@@ -89,21 +100,9 @@ Package 管理命令输入在普通终端：`pi install <来源>` 安装，`pi l
 
 ## 故障排查顺序
 
-1. 先停止重复尝试，保留完整错误文字。
-2. 核对输入位置：普通终端还是 Pi 编辑区。
-3. 核对 `pwd`、实际文件路径、当前模型和会话名称。
-4. 临时禁用非必要资源：例如 `--no-extensions`、`--no-skills`。
-5. 只改变一个条件后重试，并记录实际结果。
-6. 涉及密钥、付费、发布、删除或对外发送时，不自行扩大操作。
+先停止重复尝试并保留完整错误，再核对输入位置、工作目录、当前模型和 Session。随后建立不加载附加资源的干净基线，每次只恢复一个变量。涉及密钥、付费、发布、删除或对外发送时，不自行扩大操作。
 
-| 现象 | 首先检查 |
-| --- | --- |
-| `pi: command not found` | 重新打开终端后运行 `pi --version`，不要随机改 PATH |
-| 模型列表为空 | `/login` 的认证是否完成、账号是否真有调用权限 |
-| 找不到会话 | 是否位于创建会话时的同一工作目录 |
-| Skill 没被使用 | 实际加载路径、`name`/`description`、启动参数 |
-| Extension 加载错误 | 文件内容和路径；不带 `-e` 重新启动恢复 |
-| Agent 说完成但结果不对 | 回到输入、输出、差异、测试或真实界面重新验收 |
+[打开完整的 Pi 故障排查手册 →](/reference/troubleshooting)
 
 ## 术语边界
 

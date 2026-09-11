@@ -35,6 +35,10 @@ Pi Package 可以在当前用户权限下执行代码。名字里带 `safe`、`p
 
 如果你还不知道自己缺什么，先不要安装。完成[第一次任务](/guide/first-task)，遇到一个重复出现的具体问题，再回来选。
 
+::: tip 插件已经报错时，不要继续叠加安装
+[Extension 加载失败](/reference/troubleshooting#extension-failed)先检查加载位置与干净基线；多个插件同时异常时，按[插件互相冲突](/reference/troubleshooting#resource-conflict)逐个恢复。诊断阶段一次只改变一个变量。
+:::
+
 ## 第一组：适合先试的界面增强
 
 ### pi-footer：状态栏
