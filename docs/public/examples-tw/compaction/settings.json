@@ -1,0 +1,6 @@
+{
+  "compaction": {
+    "enabled": true,
+    "keepRecentTokens": 200
+  }
+}

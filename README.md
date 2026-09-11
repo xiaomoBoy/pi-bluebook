@@ -4,7 +4,7 @@
 
 每一课按“场景 → 概念 → 实操 → 验收”展开。目标是让你知道从哪里开始、每一步应该看到什么，以及怎样确认结果，而不只是复制一段命令。
 
-[在线阅读](https://pi.xiaomovps.com) · [从导论开始](https://pi.xiaomovps.com/guide/introduction) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues)
+[在线阅读](https://pi.xiaomovps.com) · [从导论开始](https://pi.xiaomovps.com/guide/introduction) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues) · [繁體中文版](README_zh-TW.md)
 
 ## 当前内容与学习路径
 
@@ -52,6 +52,8 @@ npm run docs:dev
 
 打开终端显示的本地地址即可预览；修改 `docs/` 下的文件后，页面会自动更新。停止预览时，在该终端按 `Ctrl+C`。
 
+只维护网站或预览内容不需要 Python。需要同步繁体版本时，先运行 `python3 -m pip install -r requirements-dev.txt`，再运行 `npm run sync:zh-tw`；生成结果仍需人工校对台湾常用术语和页面排版。
+
 检查正式构建并预览构建结果：
 
 ```bash
@@ -67,6 +69,7 @@ npm run docs:preview
 pi-bluebook/
 ├── docs/
 │   ├── index.md                 # 网站首页
+│   ├── zh-TW/                   # 从简体正文生成的繁体版本
 │   ├── guide/                   # 按学习顺序编写的课程
 │   ├── cases/                   # 与课程模块对应的可复现实操
 │   ├── reference/               # 按主题查询的参考手册
@@ -76,6 +79,7 @@ pi-bluebook/
 │   ├── tweets/                  # 推文与实践资料索引
 │   ├── public/
 │   │   ├── examples/            # 可下载的练习材料
+│   │   ├── examples-tw/         # 生成的繁体练习材料
 │   │   └── images/              # 教程图片
 │   └── .vitepress/
 │       ├── config.mts           # 站点、SEO、搜索和页脚配置

@@ -6,7 +6,7 @@
 
 | 要调整的内容 | 修改位置 | 同步检查 |
 | --- | --- | --- |
-| 顶部菜单、各板块侧栏 | `docs/.vitepress/config/navigation.mts` | 新页面是否能从至少一个入口到达 |
+| 顶部菜单、各板块侧栏 | `docs/.vitepress/config/navigation.mts` | 运行 `npm run sync:zh-tw`，检查两种语言入口 |
 | 站点名称、SEO、搜索、页脚 | `docs/.vitepress/config.mts` | `npm run docs:check` |
 | 全站颜色、字体、基础组件 | `docs/.vitepress/theme/styles/foundation.css` | 明暗模式与正文页面 |
 | 首页结构样式 | `docs/.vitepress/theme/styles/home.css` | 首页桌面端与窄屏 |
@@ -24,6 +24,7 @@
 
 ```bash
 npm ci
+python3 -m pip install -r requirements-dev.txt
 ```
 
 编辑时使用热更新预览：
@@ -46,6 +47,8 @@ npm run docs:check
 
 只想快速检查内容引用时，可运行 `npm run check:content`。只检查已经生成的正式产物，可运行 `npm run check:seo`。
 
+简体正文更新后，运行 `npm run sync:zh-tw` 重新生成繁体页面、练习材料和繁体导航。转换依赖锁定在 `requirements-dev.txt`；生成后仍需人工检查术语、授权译文说明和关键页面排版。
+
 ## 新增页面
 
 1. 把页面放入职责明确的内容目录，不在根目录临时堆放正文。
@@ -53,7 +56,8 @@ npm run docs:check
 3. 在 `navigation.mts` 的对应侧栏加入入口；如果是核心页面，再判断是否需要顶部菜单入口。
 4. 从相关课程、案例或参考页面增加双向阅读链接。
 5. 图片放入 `docs/public/images/<主题>/`，练习材料放入 `docs/public/examples/<案例>/`。
-6. 运行 `npm run docs:check`，再检查桌面端和窄屏页面。
+6. 运行 `npm run sync:zh-tw` 生成对应繁体页面和导航，不直接长期维护生成文件。
+7. 运行 `npm run docs:check`，再检查两种语言的桌面端和窄屏页面。
 
 ## 调整样式
 

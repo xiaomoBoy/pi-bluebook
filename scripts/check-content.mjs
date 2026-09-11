@@ -4,7 +4,10 @@ import path from 'node:path'
 const projectRoot = process.cwd()
 const docsDir = path.join(projectRoot, 'docs')
 const publicDir = path.join(docsDir, 'public')
-const navigationFile = path.join(docsDir, '.vitepress', 'config', 'navigation.mts')
+const navigationFiles = [
+  path.join(docsDir, '.vitepress', 'config', 'navigation.mts'),
+  path.join(docsDir, '.vitepress', 'config', 'navigation.zh-tw.mts')
+]
 
 const contentFiles = [
   ...walk(projectRoot, (filePath) =>
@@ -13,7 +16,7 @@ const contentFiles = [
     !filePath.includes(`${path.sep}.git${path.sep}`) &&
     !filePath.startsWith(publicDir)
   ),
-  navigationFile
+  ...navigationFiles
 ]
 
 const errors = []
@@ -21,7 +24,7 @@ let checkedReferences = 0
 
 for (const filePath of contentFiles) {
   const source = fs.readFileSync(filePath, 'utf8')
-  const references = extractReferences(source, filePath === navigationFile)
+  const references = extractReferences(source, navigationFiles.includes(filePath))
 
   for (const reference of references) {
     const target = normalizeTarget(reference.target)

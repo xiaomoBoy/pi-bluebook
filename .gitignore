@@ -4,6 +4,9 @@ docs/.vitepress/dist/
 .wrangler/
 .DS_Store
 *.log
+.venv/
+__pycache__/
+*.py[cod]
 
 # Local credentials and environment files
 .env

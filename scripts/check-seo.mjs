@@ -46,6 +46,7 @@ for (const filePath of htmlFiles) {
   const requiredFragments = [
     'rel="canonical"',
     'property="og:image"',
+    'property="og:locale"',
     'name="twitter:image"',
     'name="twitter:card" content="summary_large_image"',
     'type="application/ld+json"'
@@ -57,18 +58,57 @@ for (const filePath of htmlFiles) {
     }
   }
 
+  const isTW = relativePath.startsWith(`zh-TW${path.sep}`)
+  const expectedLanguage = isTW ? 'zh-Hant-TW' : 'zh-CN'
+  const expectedOgLocale = isTW ? 'zh_Hant_TW' : 'zh_CN'
+  if (!html.includes(`<html lang="${expectedLanguage}"`)) {
+    fail(`${relativePath} has the wrong html language`)
+  }
+  if (!html.includes(`property="og:locale" content="${expectedOgLocale}"`)) {
+    fail(`${relativePath} has the wrong Open Graph locale`)
+  }
+
+  const alternateLinks = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)]
+  const alternateLanguages = new Set(alternateLinks.map((match) => match[1]))
+  for (const language of ['zh-CN', 'zh-Hant-TW', 'x-default']) {
+    if (!alternateLanguages.has(language)) {
+      fail(`${relativePath} is missing the ${language} alternate`)
+    }
+  }
+
+  for (const [, language, href] of alternateLinks) {
+    if (language === 'x-default') continue
+    const targetUrl = new URL(href)
+    const cleanPath = decodeURIComponent(targetUrl.pathname)
+    const targetFile = cleanPath.endsWith('/')
+      ? path.join(distDir, cleanPath, 'index.html')
+      : path.join(distDir, `${cleanPath}.html`)
+    if (!fs.existsSync(targetFile)) {
+      fail(`${relativePath} points to missing ${language} alternate ${cleanPath}`)
+    }
+  }
+
   const jsonLdMatch = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)
   if (!jsonLdMatch) continue
 
   try {
     const data = JSON.parse(jsonLdMatch[1])
-    if (relativePath === 'index.html') {
-      if (data['@type'] !== 'WebSite' || data.alternateName !== 'PI BLUEBOOK') {
+    if (relativePath === 'index.html' || relativePath === 'zh-TW/index.html') {
+      if (
+        data['@type'] !== 'WebSite' ||
+        data.alternateName !== 'PI BLUEBOOK' ||
+        data.inLanguage !== expectedLanguage
+      ) {
         fail('home page WebSite data is incomplete')
       }
     } else {
       const graphTypes = new Set(data['@graph']?.map((item) => item['@type']))
-      if (!graphTypes.has('WebPage') || !graphTypes.has('BreadcrumbList')) {
+      const webPage = data['@graph']?.find((item) => item['@type'] === 'WebPage')
+      if (
+        !graphTypes.has('WebPage') ||
+        !graphTypes.has('BreadcrumbList') ||
+        webPage?.inLanguage !== expectedLanguage
+      ) {
         fail(`${relativePath} is missing WebPage or BreadcrumbList data`)
       }
     }

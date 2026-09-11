@@ -14,11 +14,13 @@
 - 网站配置：`docs/.vitepress/config.mts`
 - 主题与样式：`docs/.vitepress/theme/`
 - 构建产物：`docs/.vitepress/dist/`，不纳入 Git
+- 简体转繁体工具：Python 3 + `requirements-dev.txt`
 
 常用命令：
 
 ```bash
 npm ci
+npm run sync:zh-tw
 npm run docs:dev
 npm run docs:build
 npm run docs:preview
@@ -30,10 +32,12 @@ npm run docs:preview
 - `docs/cases/`：与课程配套的可复现实操案例。
 - `docs/reference/`：按主题查找的参考手册。
 - `docs/translations/`：与课程相关的延伸阅读。
+- `docs/zh-TW/`：由简体正文生成的繁体版本，不作为独立内容源维护。
 - `docs/journey/`：蓝皮书之外的个人札记。
 - `docs/tweets/`：98 条推文与实践资料档案。
 - `docs/public/images/`：教程图片。
 - `docs/public/examples/`：供读者下载和练习的材料。
+- `docs/public/examples-tw/`：由简体练习材料生成的繁体版本。
 
 ## 基础内容规范
 
@@ -44,6 +48,7 @@ npm run docs:preview
 - 不把推测、模型自述或截图之外的信息写成已经验证的事实。
 - 图片不能代替必要的正文步骤；加入图片前检查清晰度、隐私信息、来源与授权范围。
 - 修改学习路径、导航或页面文件时，同步检查 `docs/.vitepress/config/navigation.mts` 中的入口与侧栏。
+- 简体正文、练习材料或导航更新后运行 `npm run sync:zh-tw`；繁体生成内容的问题优先修正转换脚本或名词表。
 - 保留与当前任务无关的内容，不修改原始材料来替代整理稿。
 
 更完整的贡献要求见 `CONTRIBUTING.md`，文章审阅与发布流程见 `EDITORIAL_WORKFLOW.md`。
