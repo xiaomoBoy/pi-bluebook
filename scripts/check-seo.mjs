@@ -62,7 +62,7 @@ for (const filePath of htmlFiles) {
 
   try {
     const data = JSON.parse(jsonLdMatch[1])
-    if (relativePath === 'index.html') {
+    if (relativePath === 'index.html' || relativePath === 'zh-TW/index.html') {
       if (data['@type'] !== 'WebSite' || data.alternateName !== 'PI BLUEBOOK') {
         fail('home page WebSite data is incomplete')
       }

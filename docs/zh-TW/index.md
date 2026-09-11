@@ -1,0 +1,168 @@
+---
+layout: home
+title: Pi 學習藍皮書
+titleTemplate: ':title｜中文初學者 Agent 學習路線'
+description: 面向中文初學者的 Pi 系統學習手冊，先理解 Pi，再從第一次任務走向可控的 Agent 工作流。
+---
+
+<main class="bluebook-home">
+  <section class="bluebook-hero" aria-labelledby="bluebook-title">
+    <div class="bluebook-hero__main">
+      <p class="bluebook-kicker"><span>PI BLUEBOOK</span><span>開放學習版 · 2026</span></p>
+      <h1 id="bluebook-title">Pi 學習藍皮書</h1>
+      <p class="bluebook-deck">從第一次可驗收的任務開始，逐步理解 工作階段（Session）、上下文（Context）、技能（Skill）、擴充功能（Extension） 與長期工作流。</p>
+      <p class="bluebook-intro">一條為中文初學者重新編排的系統學習路線。先把一件真實的小事做完整，再一層一層搭出自己的 Pi。</p>
+      <div class="bluebook-actions">
+        <a class="bluebook-button bluebook-button--primary" href="/zh-TW/guide/introduction">從導論開始</a>
+        <a class="bluebook-button" href="#reading-map">檢視內容地圖</a>
+      </div>
+    </div>
+    <aside class="bluebook-edition" aria-label="本書概況">
+      <div class="bluebook-edition__mark" aria-hidden="true">P<span>.</span></div>
+      <p class="bluebook-edition__label">CURRENT EDITION</p>
+      <dl>
+        <div><dt>主線課程</dt><dd>14 課</dd></div>
+        <div><dt>學習模組</dt><dd>5 個</dd></div>
+        <div><dt>學習檔案</dt><dd>98 篇</dd></div>
+        <div><dt>當前版次</dt><dd>2026 開放版</dd></div>
+      </dl>
+      <p class="bluebook-edition__note">網站與原創內容採用 MIT License</p>
+    </aside>
+  </section>
+  <section class="bluebook-principle" aria-label="本書方法">
+    <span>本書方法</span>
+    <strong>場景 → 概念 → 實作 → 驗收</strong>
+    <p>每一課都要留下一個能由你親自檢查的結果。</p>
+  </section>
+  <section class="bluebook-section" id="reading-map">
+    <header class="bluebook-section__header">
+      <div>
+        <p>READING MAP</p>
+        <h2>一條主線，四個配套區域</h2>
+      </div>
+      <p>藍皮書負責連續學習；實作、參考手冊和外掛程式推薦解決具體問題；授權譯文保留原作者的完整論述。</p>
+    </header>
+    <div class="bluebook-map">
+      <a class="bluebook-map__item bluebook-map__item--primary" href="/zh-TW/guide/introduction">
+        <span>01 · CORE CURRICULUM</span>
+        <h3>藍皮書主線</h3>
+        <p>全站的核心。從導論進入，經過 5 個模組、14 課，完整走到擴充、VPS 與安全驗收。</p>
+        <b>從導論開始 →</b>
+      </a>
+      <a class="bluebook-map__item" href="/zh-TW/cases/">
+        <span>02 · LAB</span>
+        <h3>實作案例</h3>
+        <p>與課程章節對應，提供材料、步驟、預期結果和驗收清單。</p>
+        <b>進入案例庫 →</b>
+      </a>
+      <a class="bluebook-map__item" href="/zh-TW/reference/">
+        <span>03 · REFERENCE</span>
+        <h3>參考手冊</h3>
+        <p>按主題查概念、能力邊界、操作入口與章節延伸閱讀。</p>
+        <b>按問題查詢 →</b>
+      </a>
+      <a class="bluebook-map__item" href="/zh-TW/plugins/">
+        <span>04 · PLUGINS</span>
+        <h3>外掛程式推薦</h3>
+        <p>從 98 條推文實踐中整理，按需求、來源和風險選擇，不做一鍵全家桶。</p>
+        <b>檢視選擇地圖 →</b>
+      </a>
+      <a class="bluebook-map__item" href="/zh-TW/translations/">
+        <span>05 · AUTHORIZED TRANSLATIONS</span>
+        <h3>授權譯文</h3>
+        <p>經 Earendil 授權釋出的十篇完整中文譯文，保留原文資訊、授權宣告與圖片署名。</p>
+        <b>進入譯文專區 →</b>
+      </a>
+    </div>
+    <aside class="bluebook-notes-strip">
+      <span>AUTHOR'S NOTES</span>
+      <p><strong>小墨札記</strong>保留 98 條推文、個人感悟和判斷變化。它是藍皮書的素材檔案，不替代經過核驗的教程。</p>
+      <a href="/zh-TW/journey/">閱讀札記 →</a>
+    </aside>
+  </section>
+  <section class="bluebook-section" id="catalog">
+    <header class="bluebook-section__header">
+      <div>
+        <p>THE CURRICULUM</p>
+        <h2>五個模組，從安裝走到穩定工作流</h2>
+      </div>
+      <p>主線按學習依賴排序。已經能啟動 Pi 的讀者，可以從第二模組進入真實任務。</p>
+    </header>
+    <div class="bluebook-catalog">
+      <article class="bluebook-module bluebook-module--lead">
+        <div class="bluebook-module__number">01</div>
+        <div class="bluebook-module__body">
+          <p class="bluebook-module__meta">MODULE ONE · 4 LESSONS + PLATFORM & MAINTENANCE</p>
+          <h3>安裝與基礎設定</h3>
+          <ol>
+            <li><a href="/zh-TW/guide/before-install"><span>01</span>安裝前檢查</a></li>
+            <li><a href="/zh-TW/guide/install-pi"><span>02</span>安裝並啟動 Pi</a></li>
+            <li><a href="/zh-TW/guide/windows-setup"><span>WIN</span>Windows 中文路徑</a></li>
+            <li><a href="/zh-TW/guide/connect-model"><span>03</span>登入與模型設定</a></li>
+            <li><a href="/zh-TW/guide/ready-to-work"><span>04</span>從練習目錄開始</a></li>
+            <li><a href="/zh-TW/guide/lifecycle-management"><span>維護</span>更新、退出與解除安裝</a></li>
+          </ol>
+          <p class="bluebook-module__result"><span>完成標誌</span>能在獨立目錄啟動 Pi，並獲得一次真實回覆。</p>
+        </div>
+      </article>
+      <article class="bluebook-module">
+        <div class="bluebook-module__number">02</div>
+        <div class="bluebook-module__body">
+          <p class="bluebook-module__meta">MODULE TWO · 3 LESSONS</p>
+          <h3>完成真實任務</h3>
+          <ol>
+            <li><a href="/zh-TW/guide/first-task"><span>05</span>第一次任務</a></li>
+            <li><a href="/zh-TW/guide/files-and-context"><span>06</span>檔案與工作目錄</a></li>
+            <li><a href="/zh-TW/guide/sessions"><span>07</span>工作階段的儲存與續寫</a></li>
+          </ol>
+          <p class="bluebook-module__result"><span>完成標誌</span>知道 Agent 說“完成了”不等於真的完成。</p>
+        </div>
+      </article>
+      <article class="bluebook-module">
+        <div class="bluebook-module__number">03</div>
+        <div class="bluebook-module__body">
+          <p class="bluebook-module__meta">MODULE THREE · 2 LESSONS</p>
+          <h3>長任務與上下文</h3>
+          <ol>
+            <li><a href="/zh-TW/guide/context-and-compaction"><span>08</span>上下文與壓縮</a></li>
+            <li><a href="/zh-TW/guide/prompt-caching"><span>09</span>提示快取入門</a></li>
+          </ol>
+          <p class="bluebook-module__result"><span>完成標誌</span>任務變長以後，仍然知道什麼必須留下。</p>
+        </div>
+      </article>
+      <article class="bluebook-module">
+        <div class="bluebook-module__number">04</div>
+        <div class="bluebook-module__body">
+          <p class="bluebook-module__meta">MODULE FOUR · 3 LESSONS</p>
+          <h3>擴充自己的 Pi</h3>
+          <ol>
+            <li><a href="/zh-TW/guide/skills-extensions-packages"><span>10</span>技能、擴充功能 與 套件（Package）</a></li>
+            <li><a href="/zh-TW/guide/first-extension"><span>11</span>擴充功能 的需求與驗收</a></li>
+            <li><a href="/zh-TW/guide/subagents"><span>12</span>子代理（Subagent） 如何分工</a></li>
+          </ol>
+          <p class="bluebook-module__result"><span>完成標誌</span>從自己的需求出發，而不是堆滿外掛程式。</p>
+        </div>
+      </article>
+      <article class="bluebook-module bluebook-module--wide">
+        <div class="bluebook-module__number">05</div>
+        <div class="bluebook-module__body">
+          <p class="bluebook-module__meta">MODULE FIVE · 2 LESSONS</p>
+          <h3>建立穩定工作流</h3>
+          <ol>
+            <li><a href="/zh-TW/guide/vps-and-long-running"><span>13</span>長時間任務與 VPS</a></li>
+            <li><a href="/zh-TW/guide/safety"><span>14</span>權限、隔離與驗收</a></li>
+          </ol>
+          <p class="bluebook-module__result"><span>完成標誌</span>搭出能繼續、能恢復、也能核對的工作方式。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="bluebook-start">
+    <div>
+      <p>START HERE</p>
+      <h2>不用先把所有概念學完。</h2>
+      <span>準備一個練習目錄，完成第一個可以親自驗收的結果。</span>
+    </div>
+    <a class="bluebook-button bluebook-button--primary" href="/zh-TW/guide/introduction">從導論開始</a>
+  </section>
+</main>

@@ -1,0 +1,86 @@
+{
+  "_comment": "繁中名詞表：OpenCC s2twp 之後的覆蓋層。來源：IICM 臺灣用語 + 使用者確認。順序由腳本按字串長度自動處理，此處僅為可讀性排序。",
+  "post_opencc_fixes": {
+    "存取正式網域": "開啟正式網域",
+    "擴充套件": "擴充",
+    "許可權": "權限",
+    "隻能": "只能",
+    "隻要": "只要",
+    "隻有": "只有",
+    "隻需": "只需",
+    "隻是": "只是",
+    "隻好": "只好",
+    "連線": "連接",
+    "訪問": "存取",
+    "域名": "網域",
+    "繫結": "綁定",
+    "網絡": "網路",
+    "攝像頭": "攝影機",
+    "賬號": "帳號",
+    "終端機機": "終端機",
+    "實操": "實作",
+    "會話": "工作階段",
+    "插件": "外掛程式",
+    "插件推薦": "外掛程式推薦",
+    "外掛推薦": "外掛程式推薦"
+  },
+  "prose_terms_first_occurrence": {
+    "Agent Harness": {
+      "first": "代理框架（Agent Harness）",
+      "rest": "代理框架"
+    },
+    "Harness": {
+      "first": "代理框架（Agent Harness）",
+      "rest": "代理框架"
+    },
+    "Session": {
+      "first": "工作階段（Session）",
+      "rest": "工作階段"
+    },
+    "Context": {
+      "first": "上下文（Context）",
+      "rest": "上下文"
+    },
+    "Compaction": {
+      "first": "壓縮（Compaction）",
+      "rest": "壓縮"
+    },
+    "Prompt Caching": {
+      "first": "提示快取（Prompt Caching）",
+      "rest": "提示快取"
+    },
+    "Subagent": {
+      "first": "子代理（Subagent）",
+      "rest": "子代理"
+    },
+    "Provider": {
+      "first": "模型服務商（Provider）",
+      "rest": "模型服務商"
+    },
+    "Project Trust": {
+      "first": "專案信任（Project Trust）",
+      "rest": "專案信任"
+    },
+    "Skill": {
+      "first": "技能（Skill）",
+      "rest": "技能"
+    },
+    "Extension": {
+      "first": "擴充功能（Extension）",
+      "rest": "擴充功能"
+    },
+    "Package": {
+      "first": "套件（Package）",
+      "rest": "套件"
+    }
+  },
+  "lowercase_variants": {
+    "session": "Session",
+    "context": "Context",
+    "skill": "Skill",
+    "extension": "Extension",
+    "package": "Package",
+    "subagent": "Subagent",
+    "provider": "Provider"
+  }
+}
