@@ -26,5 +26,4 @@
 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)
 釋出；頁面保留授權說明、出處與“繁體轉換版”標註，英文原文版權仍歸 Earendil 所有。
 
-繁體中文版在本 fork（Vik1n9/pi-bluebook）維護，上游為 xiaomoBoy/pi-bluebook；
-兩處原創內容的 MIT 權利與保留宣告要求相同。
+繁體中文版與簡體中文版在同一倉庫維護，MIT 權利與保留宣告要求相同。

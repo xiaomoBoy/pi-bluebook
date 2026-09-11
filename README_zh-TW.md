@@ -4,7 +4,7 @@
 
 每一課按“場景 → 概念 → 實作 → 驗收”展開。目標是讓你知道從哪裡開始、每一步應該看到什麼，以及怎樣確認結果，而不只是複製一段命令。
 
-[線上閱讀](https://pi.xiaomovps.com/zh-TW/) · [從導論開始](https://pi.xiaomovps.com/zh-TW/guide/introduction) · [反饋問題](https://github.com/Vik1n9/pi-bluebook/issues) · [簡體中文版](README.md)
+[線上閱讀](https://pi.xiaomovps.com/zh-TW/) · [從導論開始](https://pi.xiaomovps.com/zh-TW/guide/introduction) · [反饋問題](https://github.com/xiaomoBoy/pi-bluebook/issues) · [簡體中文版](README.md)
 
 ## 繁體中文版說明
 
@@ -12,9 +12,7 @@
 
 - 名詞採用臺灣常用說法（參照 IICM 電腦名詞譯名臺灣用語），專有名詞首次出現時中英並列，例如工作階段（Session）、代理框架（Agent Harness）。
 - `docs/translations/` 的十篇授權譯文為簡中譯文之繁體轉換版，授權聲明與出處完整保留。
-- 上游更新後可重跑 `python3 scripts/convert-zh-tw.py`（需先安裝 OpenCC Python 套件）同步轉換，再按 `scripts/zh-tw-glossary.json` 校對名詞。
-
-上游為 [xiaomoBoy/pi-bluebook](https://github.com/xiaomoBoy/pi-bluebook)，繁體中文版在本 fork（[Vik1n9/pi-bluebook](https://github.com/Vik1n9/pi-bluebook)）維護。
+- 上游更新簡中原文後可重跑 `python3 scripts/convert-zh-tw.py`（需先安裝 OpenCC Python 套件）同步轉換，再按 `scripts/zh-tw-glossary.json` 校對名詞。
 
 ## 當前內容與學習路徑
 
@@ -54,7 +52,7 @@
 先準備 Git、Node.js 和 npm。倉庫的 [.nvmrc](.nvmrc) 指定 Node.js 22；這裡是網站開發環境，與課程中 Pi 自身的執行要求分別說明。
 
 ```bash
-git clone https://github.com/Vik1n9/pi-bluebook.git
+git clone https://github.com/xiaomoBoy/pi-bluebook.git
 cd pi-bluebook
 npm ci
 npm run docs:dev
@@ -109,7 +107,7 @@ pi-bluebook/
 
 ## 一起完善這本書
 
-歡迎指出看不懂的步驟、失效命令、缺少的材料或錯誤連結，也歡迎補充有來源的實踐記錄和修正文案。你不需要會寫程式碼才能貢獻：在 [Issues](https://github.com/Vik1n9/pi-bluebook/issues) 寫清所讀章節、卡住的位置和實際現象即可。繁體中文版特有的名詞問題，請註明出自繁中頁面。
+歡迎指出看不懂的步驟、失效命令、缺少的材料或錯誤連結，也歡迎補充有來源的實踐記錄和修正文案。你不需要會寫程式碼才能貢獻：在 [Issues](https://github.com/xiaomoBoy/pi-bluebook/issues) 寫清所讀章節、卡住的位置和實際現象即可。繁體中文版特有的名詞問題，請註明出自繁中頁面。
 
 提交修改前請閱讀 [貢獻指南](CONTRIBUTING_zh-TW.md)。文章從原始材料到釋出的分工與驗收方式見 [文章工作流](EDITORIAL_WORKFLOW.md)。
 
