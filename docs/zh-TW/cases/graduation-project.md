@@ -87,7 +87,7 @@ pi --name "CASE 08 畢業專案" --no-extensions --no-skills --no-context-files 
 ```text
 讀取 ../pi-bluebook-graduation-materials/requirements.md 和
 ../pi-bluebook-graduation-materials/checkpoint-template.md。
-檢查當前倉庫的 README、package.json、參考手冊首頁、VitePress 導航配置，
+檢查當前倉庫的 README、package.json、參考手冊首頁、VitePress 導航設定，
 以及需求提到的三個課程頁面。
 
 這一輪只做兩件事：

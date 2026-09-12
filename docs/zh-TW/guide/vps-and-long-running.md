@@ -50,7 +50,7 @@ VPS 不會自動解決方向跑偏、上下文丟失、憑據不足或輸出品�
 
 ## 用 tmux 保留終端機工作階段
 
-本節只給出最小概念，不包括 VPS 購買、SSH 加固和防火牆配置。在已安裝 `tmux` 的 VPS 中，可以建立一個有名字的終端機工作階段：
+本節只給出最小概念，不包括 VPS 購買、SSH 加固和防火牆設定。在已安裝 `tmux` 的 VPS 中，可以建立一個有名字的終端機工作階段：
 
 ```bash
 tmux new -s pi-work
@@ -72,9 +72,9 @@ tmux attach -t pi-work
 | 工作階段名 `pi-work` 已存在 | 用 `tmux attach -t pi-work` 檢視，不新增同名工作階段 |
 | `can't find session` | 執行 `tmux ls` 核對真實名稱；沒有任何工作階段時說明舊工作階段已結束 |
 | 重新連入後只看到普通 shell | Pi 已經退出或從未啟動；先檢查產物和日誌，不直接宣稱任務仍在執行 |
-| 組合鍵變成普通換行 | 核對 tmux 擴充按鍵配置；不要連續提交未完成的多行任務 |
+| 組合鍵變成普通換行 | 核對 tmux 擴充按鍵設定；不要連續提交未完成的多行任務 |
 
-Pi 官方當前建議 tmux 3.5 及以上啟用 `extended-keys` 和 `csi-u`，以區分 `Enter`、`Shift+Enter` 與 `Ctrl+Enter`。修改 `~/.tmux.conf` 會影響你的遠端終端機環境；先閱讀[官方 tmux 設定](https://pi.dev/docs/latest/tmux)，不要為了本課盲改現有配置。
+Pi 官方當前建議 tmux 3.5 及以上啟用 `extended-keys` 和 `csi-u`，以區分 `Enter`、`Shift+Enter` 與 `Ctrl+Enter`。修改 `~/.tmux.conf` 會影響你的遠端終端機環境；先閱讀[官方 tmux 設定](https://pi.dev/docs/latest/tmux)，不要為了本課盲改現有設定。
 
 ## 一份可複用的長任務說明
 

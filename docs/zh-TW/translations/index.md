@@ -58,7 +58,7 @@ next:
 
 **釋出日期**　2026-07-22
 
-解釋 KV 快取、工作階段親和性、字首匹配、工具配置與 TTL，並說明快取命中如何影響程式設計 Agent 的延遲、價格和設計。
+解釋 KV 快取、工作階段親和性、字首匹配、工具設定與 TTL，並說明快取命中如何影響程式設計 Agent 的延遲、價格和設計。
 
 [閱讀中文譯文](/zh-TW/translations/prompt-caching) · [檢視英文原文](https://earendil.com/posts/prompt-caching/)
 

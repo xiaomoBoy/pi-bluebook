@@ -91,7 +91,7 @@ pi --no-extensions -e ./bluebook-examples/bluebook-check-custom.ts
 
 在 Pi 中執行 `/bluebook-check-custom`，應看到自己的新文字。舊的 `/bluebook-check` 不應在本次命令行表中註冊。退出後以 `pi --no-extensions` 重啟，兩個教學命令都不應註冊。
 
-對照修改前後的兩處差異：命令名決定怎樣呼叫，通知文字決定可觀察的結果。真實桌面通知還需要系統介面和前後臺判斷，見[第 11 課](/zh-TW/guide/first-extension)的進階邊界。
+對照修改前後的兩處差異：命令名決定怎樣呼叫，通知文字決定可觀察的結果。真實桌面通知還需要系統介面和前後台判斷，見[第 11 課](/zh-TW/guide/first-extension)的進階邊界。
 
 ## 失敗恢復
 

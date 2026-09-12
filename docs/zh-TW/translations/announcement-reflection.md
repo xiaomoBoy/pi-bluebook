@@ -61,7 +61,7 @@ Pi 身處 AI 最熾熱的中心，同時又是手工打磨軟體的傑出範例�
 - [Mario 講述為什麼加入 Earendil](https://mariozechner.at/posts/2026-04-08-ive-sold-out/)
 - [Armin 關於 Pi 許可計劃的 RFC](https://rfc.earendil.com/0015/)
 - [Armin 寫 Mario 與 Earendil](https://lucumr.pocoo.org/2026/4/8/mario-and-earendil/)
-- [Colin 談合作伙伴關係](https://www.foggynotions.day/)
+- [Colin 談合作夥伴關係](https://www.foggynotions.day/)
 - [Earendil 新聞稿](/zh-TW/translations/announcing-pi-and-lefos)
 
 ::: info 譯者說明

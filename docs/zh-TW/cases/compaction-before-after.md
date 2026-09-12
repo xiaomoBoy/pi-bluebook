@@ -23,7 +23,7 @@ next: { text: CASE 03 · 第一個技能, link: /zh-TW/cases/first-skill }
 - <a href="/examples-tw/compaction/checkpoint.md" download>下載檢查點 checkpoint.md</a>
 - <a href="/examples-tw/compaction/settings.json" download>下載實驗專用 settings.json</a>
 
-前兩份材料只包含固定教學文字，不含指令碼、憑據和私人資料。`settings.json` 只把本實驗目錄的 `keepRecentTokens` 降到 `200`，讓短工作階段也有可壓縮的較早內容；不要把它複製到日常專案或使用者級配置。
+前兩份材料只包含固定教學文字，不含指令碼、憑據和私人資料。`settings.json` 只把本實驗目錄的 `keepRecentTokens` 降到 `200`，讓短工作階段也有可壓縮的較早內容；不要把它複製到日常專案或使用者級設定。
 
 ## 1. 建立獨立實驗目錄
 
