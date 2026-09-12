@@ -24,7 +24,7 @@ next:
 | [Pi](#pi) | [上下文（Context）](#上下文) | [Agent Loop](#agent-loop) | [Tool / Tool Call](#tool-tool-call) |
 | [Pi Coding Agent](#pi-coding-agent) | [上下文 Window](#context-window) | [System Prompt](#system-prompt) | [技能（Skill）](#技能) |
 | [Coding Agent](#coding-agent) | [工作階段（Session）](#工作階段) | [Token](#token) | [擴充功能（Extension）](#擴充功能) |
-| [代理框架（Agent Harness）](#agent-harness) | [工作階段 Tree](#session-tree) | [Prompt Cache](#prompt-cache) | [套件（Package）](#套件) |
+| [代理框架（Agent Harness）](#agent-harness) | [工作階段 Tree](#session-tree) | [Prompt Cache](#prompt-cache) | [包（Package）](#包) |
 | [Agent Runtime](#agent-runtime) | [壓縮（Compaction）](#壓縮) | [Cache Hit](#cache-hit) | [子代理（Subagent）](#子代理) |
 
 ## Pi {#pi}
@@ -85,13 +85,13 @@ next:
 
 **在 Pi 裡意味著什麼：** Pi 刻意保持預設 System Prompt 較短，並允許透過配置和擴充功能調整。專案裡的 `AGENTS.md`、`CLAUDE.md` 等上下文檔案會繼續補充專案要求，但它們不是作業系統權限。System Prompt 變長或頻繁變化，也會增加上下文佔用並影響提示快取字首。
 
-**相關：** [上下文](#上下文) · [Prompt Cache](#prompt-cache) · [專案信任（Project Trust）不是沙箱](/zh-TW/guide/safety)
+**相關：** [上下文](#上下文) · [Prompt Cache](#prompt-cache) · [專案信賴（Project Trust）不是沙箱](/zh-TW/guide/safety)
 
 ## Token {#token}
 
 **人話解釋：** Token 是模型處理輸入和生成輸出時使用的計量單位。它不等同於漢字或單詞，一個詞、符號或程式碼片段可能被拆成不同數量的 Token。
 
-**在 Pi 裡意味著什麼：** System Prompt、工具說明、對話、檔案內容和工具結果都會佔用輸入 Token，模型回覆則產生輸出 Token。Token 會影響上下文容量、速度和可能的 API 成本，但“用得少”不等於任務質量高。判斷結果仍要回到檔案、測試和真實業務狀態。
+**在 Pi 裡意味著什麼：** System Prompt、工具說明、對話、檔案內容和工具結果都會佔用輸入 Token，模型回覆則產生輸出 Token。Token 會影響上下文容量、速度和可能的 API 成本，但“用得少”不等於任務品質高。判斷結果仍要回到檔案、測試和真實業務狀態。
 
 **相關：** [上下文 Window](#context-window) · [Prompt Cache](#prompt-cache) · [為什麼說 Pi 比較省 Token？](/zh-TW/reference/faq#why-pi-uses-fewer-tokens)
 
@@ -149,7 +149,7 @@ next:
 
 ## Cache Hit {#cache-hit}
 
-**人話解釋：** Cache Hit 表示當前請求有一部分輸入成功複用了已有快取。它描述“重複計算省下了多少”，不是給回答質量打的分數。
+**人話解釋：** Cache Hit 表示當前請求有一部分輸入成功複用了已有快取。它描述“重複計算省下了多少”，不是給回答品質打的分數。
 
 **在 Pi 裡意味著什麼：** 高命中可能降低延遲或輸入成本，但輸出仍可能漏項；低命中也可能只是剛換模型、剛壓縮或快取已過期。不同模型服務商返回的快取欄位並不統一，介面沒有顯示命中資料也不必然是故障。任務是否完成仍應檢查真實產物。
 
@@ -169,25 +169,25 @@ next:
 
 **在 Pi 裡意味著什麼：** Pi 啟動時通常只把技能的名稱和描述放入上下文，任務匹配後再讀取完整 `SKILL.md`，這叫漸進式披露。技能適合固化已經跑通的工作流程，但它不是權限隔離層；技能也可能帶指令碼，或引導 Agent 執行有副作用的操作，使用前仍要審查來源。
 
-**相關：** [擴充功能](#擴充功能) · [套件](#套件) · [技能、擴充功能與套件](/zh-TW/guide/skills-extensions-packages)
+**相關：** [擴充功能](#擴充功能) · [包](#包) · [技能、擴充功能與包](/zh-TW/guide/skills-extensions-packages)
 
 ## 擴充功能 {#擴充功能}
 
 **人話解釋：** 擴充功能是載入到 Pi 程序中的 TypeScript 擴充程式碼，可以新增工具、命令、介面和事件處理，也能改變部分執行行為。
 
-**在 Pi 裡意味著什麼：** 當文字說明不足以實現目標，例如需要攔截危險命令、增加自定義工具或儲存擴充狀態，才適合考慮擴充功能。它以啟動 Pi 的當前使用者權限執行，能夠執行任意程式碼；專案級擴充功能受專案信任的載入決定影響，但被載入後並不會進入沙箱。
+**在 Pi 裡意味著什麼：** 當文字說明不足以實現目標，例如需要攔截危險命令、增加自定義工具或儲存擴充狀態，才適合考慮擴充功能。它以啟動 Pi 的當前使用者權限執行，能夠執行任意程式碼；專案級擴充功能受專案信賴的載入決定影響，但被載入後並不會進入沙箱。
 
-**相關：** [技能](#技能) · [套件](#套件) · [Pi 擴充功能官方說明](https://pi.dev/docs/latest/extensions)
+**相關：** [技能](#技能) · [包](#包) · [Pi 擴充功能官方說明](https://pi.dev/docs/latest/extensions)
 
-## 套件 {#套件}
+## 包 {#包}
 
-**人話解釋：** Pi 套件是分發容器，可以把擴充功能、技能、提示模板和主題組合起來，透過 npm 或 Git 安裝和共享。
+**人話解釋：** Pi 包是分發容器，可以把擴充功能、技能、提示模板和主題組合起來，透過 npm 或 Git 安裝和共享。
 
-**在 Pi 裡意味著什麼：** 套件解決的是“怎樣配送一組資源”，不是新的能力層級，也不是安全容器。安裝一個套件後，實際載入的可能是可執行擴充功能，也可能是會影響 Agent 行為的技能。新手應先確認真實需求、檢查來源與包含內容，再一次只啟用一個最接近問題的資源。
+**在 Pi 裡意味著什麼：** 包解決的是“怎樣配送一組資源”，不是新的能力層級，也不是安全容器。安裝一個包後，實際載入的可能是可執行擴充功能，也可能是會影響 Agent 行為的技能。新手應先確認真實需求、檢查來源與包含內容，再一次只啟用一個最接近問題的資源。
 
-![技能負責方法，擴充功能負責執行能力，套件負責打包和分發。](/images/diagrams/skill-extension-package.svg)
+![技能負責方法，擴充功能負責執行能力，包負責打包和分發。](/images/diagrams/skill-extension-package.svg)
 
-*圖解：三者不是能力等級，套件也不是安全容器。*
+*圖解：三者不是能力等級，包也不是安全容器。*
 
 **相關：** [技能](#技能) · [擴充功能](#擴充功能) · [外掛程式推薦](/zh-TW/plugins/)
 
@@ -195,7 +195,7 @@ next:
 
 **人話解釋：** 子代理是主代理（Main Agent）為一個邊界清楚的子任務啟動或委派的輔助 Agent，通常擁有獨立上下文，並把結果交回主代理合併。
 
-**在 Pi 裡意味著什麼：** Pi 核心當前不內建子代理功能；可以用獨立工作階段練習分工，也可以透過擴充功能或第三方套件實現自動委派。多個 Agent 會增加模型呼叫、交接和衝突處理成本。只有子任務能夠獨立完成、交付格式清楚並有統一驗收人時，並行才真正有價值。
+**在 Pi 裡意味著什麼：** Pi 核心當前不內建子代理功能；可以用獨立工作階段練習分工，也可以透過擴充功能或第三方包實現自動委派。多個 Agent 會增加模型呼叫、交接和衝突處理成本。只有子任務能夠獨立完成、交付格式清楚並有統一驗收人時，並行才真正有價值。
 
 **相關：** [上下文](#上下文) · [Agent Loop](#agent-loop) · [子代理如何分工](/zh-TW/guide/subagents)
 
@@ -207,7 +207,7 @@ next:
 - [Pi 壓縮](https://pi.dev/docs/latest/compaction)
 - [Pi 技能](https://pi.dev/docs/latest/skills)
 - [Pi 擴充功能](https://pi.dev/docs/latest/extensions)
-- [Pi 套件](https://pi.dev/docs/latest/packages)
+- [Pi 包](https://pi.dev/docs/latest/packages)
 - [Pi Security](https://pi.dev/docs/latest/security)
 - [什麼是代理框架？](/zh-TW/translations/what-is-a-harness)
 - [98 條推文學習目錄](/zh-TW/tweets/)

@@ -21,7 +21,7 @@
 
 - 名詞採用臺灣常用說法（參照 IICM 電腦名詞譯名臺灣用語），專有名詞首次出現時中英並列，例如工作階段（Session）、代理框架（Agent Harness）。
 - `docs/translations/` 的十一篇授權譯文為簡中譯文之繁體轉換版，授權聲明與出處完整保留。
-- 上游更新簡中原文後可執行 `npm run sync:zh-tw` 同步頁面、練習材料與導航，再按 `scripts/zh-tw-glossary.json` 校對名詞。
+- 上游更新簡中原文後可執行 `npm run sync:zh-tw` 同步頁面、練習材料與導航，名詞覆蓋層（`scripts/zh-tw-glossary.json`，以《電子計算機名詞》為準）會自動套用，無需重跑人工校稿；`npm run check:terms` 會擋下已淘汰用字復發。
 
 ## 當前內容與學習路徑
 
@@ -70,7 +70,7 @@ npm ci
 npm run docs:dev
 ```
 
-開啟終端機顯示的本地地址即可預覽；修改 `docs/` 下的檔案後，頁面會自動更新。停止預覽時，在該終端機按 `Ctrl+C`。只維護網站或預覽內容不需要 Python；同步繁體版本時，先執行 `python3 -m pip install -r requirements-dev.txt`，再執行 `npm run sync:zh-tw` 並進行人工校對。`npm run check:translations` 會只讀比對生成內容，CI 也會執行這項檢查。
+開啟終端機顯示的本地地址即可預覽；修改 `docs/` 下的檔案後，頁面會自動更新。停止預覽時，在該終端機按 `Ctrl+C`。只維護網站或預覽內容不需要 Python；同步繁體版本時，先執行 `python3 -m pip install -r requirements-dev.txt`，再執行 `npm run sync:zh-tw`，名詞已由詞表自動收斂，`npm run check:translations` 與 `npm run check:terms` 通過即代表與詞表一致，CI 也會執行這些檢查；人工只需複核授權譯文說明與關鍵頁面排版。
 
 檢查正式構建並預覽構建結果：
 

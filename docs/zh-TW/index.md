@@ -2,7 +2,7 @@
 layout: home
 title: Pi Coding Agent 學習藍皮書
 titleTemplate: ':title｜中文初學者實戰路線'
-description: 面向中文初學者的 Pi Coding Agent 系統教程，從安裝和第一次可驗收任務開始，逐步掌握工作階段、上下文、技能、擴充功能與長期 Agent 工作流。
+description: 面向中文初學者的 Pi Coding Agent 系統教學，從安裝和第一次可驗收任務開始，逐步掌握工作階段、上下文、技能、擴充功能與長期 Agent 工作流。
 ---
 
 <main class="bluebook-home">
@@ -76,7 +76,7 @@ description: 面向中文初學者的 Pi Coding Agent 系統教程，從安裝�
     </div>
     <aside class="bluebook-notes-strip">
       <span>AUTHOR'S NOTES</span>
-      <p><strong>小墨札記</strong>保留 98 條推文、個人感悟和判斷變化。它是藍皮書的素材檔案，不替代經過核驗的教程。</p>
+      <p><strong>小墨札記</strong>保留 98 條推文、個人感悟和判斷變化。它是藍皮書的素材檔案，不替代經過核驗的教學。</p>
       <a href="/zh-TW/journey/">閱讀札記 →</a>
     </aside>
   </section>
@@ -136,7 +136,7 @@ description: 面向中文初學者的 Pi Coding Agent 系統教程，從安裝�
           <p class="bluebook-module__meta">MODULE FOUR · 3 LESSONS + PRINCIPLES</p>
           <h3>擴充自己的 Pi</h3>
           <ol>
-            <li><a href="/zh-TW/guide/skills-extensions-packages"><span>10</span>技能、擴充功能與套件（Package）</a></li>
+            <li><a href="/zh-TW/guide/skills-extensions-packages"><span>10</span>技能、擴充功能與包（Package）</a></li>
             <li><a href="/zh-TW/guide/first-extension"><span>11</span>擴充功能的需求與驗收</a></li>
             <li><a href="/zh-TW/guide/subagents"><span>12</span>子代理（Subagent）如何分工</a></li>
             <li><a href="/zh-TW/guide/how-pi-works"><span>原理</span>從 Prompt 到 Agent Loop</a></li>

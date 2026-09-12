@@ -1,8 +1,8 @@
 ---
 title: Pi 外掛程式推薦
-description: 從小墨的 Pi 推文實踐中整理外掛程式、套件與配套工具，並按需求、風險和當前可核驗來源給出選擇建議。
+description: 從小墨的 Pi 推文實踐中整理外掛程式、包與配套工具，並按需求、風險和當前可核驗來源給出選擇建議。
 prev:
-  text: 技能、擴充功能與套件
+  text: 技能、擴充功能與包
   link: /zh-TW/guide/skills-extensions-packages
 next:
   text: 安裝後生命週期管理
@@ -17,8 +17,8 @@ next:
 
 這一頁把[推文檔案](/zh-TW/tweets/04-skills-extensions)裡的零散推薦重新整理，並在 2026 年 9 月 9 日核對了仍能確認的專案來源、安裝入口和主要風險。它是一張選擇地圖，不是必裝清單。
 
-::: warning 安裝第三方套件（Package）前先看原始碼
-Pi 套件可以在當前使用者權限下執行程式碼。名字裡帶 `safe`、`permission` 或 `sandbox`，也不代表它天然可信。先確認倉庫和維護者，再看原始碼、依賴與權限；來源不明確的舊推薦，本頁不提供安裝命令。
+::: warning 安裝第三方包（Package）前先看原始碼
+Pi 包可以在當前使用者權限下執行程式碼。名字裡帶 `safe`、`permission` 或 `sandbox`，也不代表它天然可信。先確認倉庫和維護者，再看原始碼、依賴與權限；來源不明確的舊推薦，本頁不提供安裝命令。
 :::
 
 ## 如果你只想先選一個
@@ -26,8 +26,8 @@ Pi 套件可以在當前使用者權限下執行程式碼。名字裡帶 `safe`�
 | 你的實際需求 | 先看哪個 | 為什麼 | 我的建議 |
 | --- | --- | --- | --- |
 | 隨時看模型、上下文、Token、費用和 Git 狀態 | [pi-footer](#pi-footer-狀態列) | 資訊集中，最容易立即感受到價值 | **入門首選**；先臨時載入 |
-| 想讓終端機輸出、Diff、Mermaid 和狀態顯示更完整 | [pi-cc-extensions](#pi-cc-extensions-終端機體驗套件) | 一套覆蓋多個互動細節 | 與其他介面增強外掛程式分開試 |
-| 讓 Pi 操作瀏覽器 | [三種瀏覽器方案](#瀏覽器外掛程式只選一種) | 三者連接方式和權限邊界不同 | **只選一種**，先用測試帳號 |
+| 想讓終端機輸出、Diff、Mermaid 和狀態顯示更完整 | [pi-cc-extensions](#pi-cc-extensions-終端機體驗包) | 一套覆蓋多個互動細節 | 與其他介面增強外掛程式分開試 |
+| 讓 Pi 操作瀏覽器 | [三種瀏覽器方案](#瀏覽器外掛程式只選一種) | 三者連接方式和權限邊界不同 | **只選一種**，先用測試使用者帳戶 |
 | 自動反覆實驗，最佳化一個可量化指標 | [pi-autoresearch](#pi-autoresearch-自動實驗迴圈) | 適合有測試命令和明確分數的任務 | 僅在獨立分支或 worktree 使用 |
 | 在瀏覽器裡審批計劃、標註程式碼差異 | [Plannotator](#plannotator-計劃與程式碼審閱) | 把“先審後做”變成可視流程 | 功能較重，穩定使用後再裝 |
 | 把圖表、架構圖或互動介面直接渲染出來 | [pi-generative-ui](#pi-generative-ui-生成式介面) | 適合視覺化結果 | 先檢查系統依賴 |
@@ -61,9 +61,9 @@ pi -e npm:pi-footer
 pi install npm:pi-footer
 ```
 
-### pi-cc-extensions：終端機體驗套件
+### pi-cc-extensions：終端機體驗包
 
-`pi-cc-extensions` 更像一組介面增強：格式化輸出、富文字 Diff、Mermaid、上下文與狀態展示集中在一套套件裡。
+`pi-cc-extensions` 更像一組介面增強：格式化輸出、富文字 Diff、Mermaid、上下文與狀態展示集中在一套包裡。
 
 - 當前核對來源：[minuque/pi-cc-extensions](https://github.com/minuque/pi-cc-extensions)
 - 適合：經常閱讀程式碼差異、圖表和較長輸出。
@@ -87,9 +87,9 @@ pi install npm:pi-cc-extensions
 
 | 專案 | 更適合的場景 | 前置條件與邊界 | 當前來源 |
 | --- | --- | --- | --- |
-| `pi-browser-harness` | 日常網頁操作，希望能力較完整 | 瀏覽器自動化本身能讀取頁面和執行操作；先用測試帳號與非敏感環境 | [amankumarsingh77/pi-browser-harness](https://github.com/amankumarsingh77/pi-browser-harness) |
+| `pi-browser-harness` | 日常網頁操作，希望能力較完整 | 瀏覽器自動化本身能讀取頁面和執行操作；先用測試使用者帳戶與非敏感環境 | [amankumarsingh77/pi-browser-harness](https://github.com/amankumarsingh77/pi-browser-harness) |
 | `pi-agent-browser-native` | 想要較輕的原生橋接 | 需要先安裝上游 `agent-browser`，並滿足專案註明的 Pi 版本要求 | [fitchmultz/pi-agent-browser-native](https://github.com/fitchmultz/pi-agent-browser-native) |
-| `pi-chrome` | 想連接已有的真實 Chrome | Chrome 擴充需要標籤頁與指令碼等較寬權限；不要先連接常用主帳號 | [tianrendong/pi-chrome](https://github.com/tianrendong/pi-chrome) |
+| `pi-chrome` | 想連接已有的真實 Chrome | Chrome 擴充需要標籤頁與指令碼等較寬權限；不要先連接常用主帳戶 | [tianrendong/pi-chrome](https://github.com/tianrendong/pi-chrome) |
 
 我的選擇順序：普通網頁任務先看 `pi-browser-harness`；已經在使用 `agent-browser` 時再看 native 橋接；確實需要現有 Chrome 工作階段時才考慮 `pi-chrome`。
 
@@ -126,7 +126,7 @@ pi -e npm:pi-autoresearch
 Plannotator 為 Pi 增加瀏覽器裡的計劃審批和程式碼差異標註。它適合需要“Agent 先交計劃，人確認後再執行”的專案，也能把具體行的意見送回 Pi。
 
 - 當前核對來源：[CodeByPeete/plannotator-pi](https://github.com/CodeByPeete/plannotator-pi)
-- 適合：較大改動、多人審閱、需要留下結構化反饋的任務。
+- 適合：較大改動、多人審閱、需要留下結構化回饋的任務。
 - 注意：它會引入計劃階段、瀏覽器介面和更多操作入口，剛開始學 Pi 時沒有必要先裝。
 
 它當前提供帶版本的 Git 安裝方式。請以倉庫 README 的最新版本為準，不要複製舊推文裡的版本號。
@@ -155,7 +155,7 @@ pi -e npm:pi-extension-doctor
 pi -e npm:remote-pi
 ```
 
-官方 SSH 擴充功能、`pi-mobile`、Pi Web、`tmux + Tailscale` 也在推文裡出現過，但它們分別屬於官方示例、客戶端或遠端工作流，不應和普通套件混成一個“外掛程式榜單”。
+官方 SSH 擴充功能、`pi-mobile`、Pi Web、`tmux + Tailscale` 也在推文裡出現過，但它們分別屬於官方示例、客戶端或遠端工作流，不應和普通包混成一個“外掛程式榜單”。
 
 ## 推文提過，但暫不提供安裝命令
 
@@ -170,13 +170,13 @@ pi -e npm:remote-pi
 
 它們表達的需求仍然重要：限制危險命令、保護敏感路徑、隔離執行環境、控制瀏覽器。但本輪核對沒有把每個名字唯一對應到一個仍可確認的當前來源。這裡保留檢索線索，不依據舊推文直接給出安裝命令。
 
-如果目標是安全，先使用系統賬戶權限、獨立測試目錄、Git 分支或 worktree、容器，以及 Pi 自帶的專案信任（Project Trust）和資源禁用引數。第三方“安全外掛程式”只能作為額外一層，不能替代這些邊界。
+如果目標是安全，先使用系統帳戶權限、獨立測試目錄、Git 分支或 worktree、容器，以及 Pi 自帶的專案信賴（Project Trust）和資源停用引數。第三方“安全外掛程式”只能作為額外一層，不能替代這些邊界。
 
 ## 這些是技能（Skill）或獨立工具，不是外掛程式
 
 推文裡還推薦過 `browser-tools`、`brave-search`、`youtube-transcript`、`gmcli`、`gdcli`、`transcribe` 等技能。技能主要提供工作說明和配套資源；它可能呼叫工具，但不等同於在 Pi 程序中執行的擴充功能。
 
-Pi Desktop、Pi Web、`pi-mobile`、Steel Browser，以及 `tmux + Tailscale + Pi` 則是客戶端、瀏覽器服務或組合工作流。它們有價值，只是不應該用同一套“安裝外掛程式”的方法管理。先讀[技能、擴充功能與套件](/zh-TW/guide/skills-extensions-packages)，再決定自己真正需要哪一類能力。
+Pi Desktop、Pi Web、`pi-mobile`、Steel Browser，以及 `tmux + Tailscale + Pi` 則是客戶端、瀏覽器服務或組合工作流。它們有價值，只是不應該用同一套“安裝外掛程式”的方法管理。先讀[技能、擴充功能與包](/zh-TW/guide/skills-extensions-packages)，再決定自己真正需要哪一類能力。
 
 ## 推文提及專案總表
 
@@ -187,7 +187,7 @@ Pi Desktop、Pi Web、`pi-mobile`、Steel Browser，以及 `tmux + Tailscale + P
 | 介面與上下文觀察 | `pi-footer`、`pi-cc-extensions`、`pi-generative-ui`、`pi-context-view` | 前三個已有當前來源；`pi-context-view` 留待複核 |
 | 瀏覽器與網頁 | `pi-browser-harness`、`pi-agent-browser-native`、`pi-chrome`、`pi-browser-cdp-extension`、`pi-web-access` | 三個瀏覽器擴充功能已分路線整理；後兩個暫作歷史線索 |
 | 子代理（Subagent）與工作流 | `pi-subagents`、Plannotator、`pi-autoresearch`、`pi-extension-doctor` | 後三個已有當前來源；`pi-subagents` 回到子代理專題繼續核對 |
-| 遠端控制 | `remote-pi`、`pi-telegram`、Pi Web、`pi-mobile`、官方 SSH 擴充功能 | 只把 `remote-pi` 作為實驗性套件；其餘按客戶端或遠端方案另行整理 |
+| 遠端控制 | `remote-pi`、`pi-telegram`、Pi Web、`pi-mobile`、官方 SSH 擴充功能 | 只把 `remote-pi` 作為實驗性包；其餘按客戶端或遠端方案另行整理 |
 | 上下文壓縮 | `pi-smart-compact`、`pi-context`、`pi-press`、Hypa | 保留在[上下文推文](/zh-TW/tweets/03-sessions-context)中，之後單開橫向實測 |
 | 長期記憶 | `pi-memory`、`pi-hermes-memory`、`pi-honcho`、`pi-hindsight` | 屬於高影響能力，暫不依據功能描述直接推薦安裝 |
 | 安全與權限 | `safe-coder`、`pi-permission-gate`、`pi-protected-paths`、`pi-sandbox`、`pi-permission-modes` | 當前來源未逐一確認，不提供安裝命令 |
@@ -198,8 +198,8 @@ Pi Desktop、Pi Web、`pi-mobile`、Steel Browser，以及 `tmux + Tailscale + P
 ## 安裝與驗收：固定走這五步
 
 1. **確認來源**：開啟倉庫，核對維護者、最近更新、README、許可證、依賴和安裝字串。
-2. **先臨時載入**：支援 npm 套件時，優先用 `pi -e npm:包名`，不要一上來永久安裝。
-3. **只做一個測試**：在空目錄或測試專案裡給出單一、可觀察的任務，不連接生產帳號。
+2. **先臨時載入**：支援 npm 包時，優先用 `pi -e npm:包名`，不要一上來永久安裝。
+3. **只做一個測試**：在空目錄或測試專案裡給出單一、可觀察的任務，不連接生產使用者帳戶。
 4. **檢查副作用**：確認新增檔案、網路連接、瀏覽器權限、快捷鍵和介面沒有超出預期。
 5. **再決定保留**：有持續價值才 `pi install`；不需要時用同一來源字串移除。
 
@@ -211,7 +211,7 @@ pi install npm:pi-footer
 pi remove npm:pi-footer
 ```
 
-安裝、更新、停用與刪除本地資料的完整邊界，見[安裝後生命週期管理](/zh-TW/guide/lifecycle-management)。套件的官方規則與安全提示以 [Pi 套件文件](https://pi.dev/docs/latest/packages)為準。
+安裝、更新、停用與刪除本地資料的完整邊界，見[安裝後生命週期管理](/zh-TW/guide/lifecycle-management)。包的官方規則與安全提示以 [Pi 包文件](https://pi.dev/docs/latest/packages)為準。
 
 ## 我會怎樣繼續維護這份清單
 

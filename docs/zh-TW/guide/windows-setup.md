@@ -171,7 +171,7 @@ Pi 官方還提供可選的 `powershell` 工具，但它不是本書入門路線
 
 透過後，不需要再照抄 macOS 的第 1、2 課，直接繼續登入。
 
-[下一課，登入帳號並選擇模型 →](/zh-TW/guide/connect-model)
+[下一課，登入使用者帳戶並選擇模型 →](/zh-TW/guide/connect-model)
 
 已經安裝完成、現在需要升級或解除安裝？檢視 [安裝後生命週期管理](/zh-TW/guide/lifecycle-management)。
 

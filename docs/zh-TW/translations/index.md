@@ -108,7 +108,7 @@ Earendil 宣佈收購 Pi、Mario Zechner 加入團隊，以及 Lefos 進入公�
 
 **釋出日期**　2026-04-08
 
-Armin 與 Colin 回顧 Earendil 的起點，說明 Pi、Lefos 和早期支持者背後共同的長期主義與信任原則。
+Armin 與 Colin 回顧 Earendil 的起點，說明 Pi、Lefos 和早期支持者背後共同的長期主義與信賴原則。
 
 [閱讀中文譯文](/zh-TW/translations/announcement-reflection) · [檢視英文原文](https://earendil.com/posts/announcement-reflection/)
 
@@ -118,7 +118,7 @@ Armin 與 Colin 回顧 Earendil 的起點，說明 Pi、Lefos 和早期支持者
 
 **釋出日期**　2026-02-12
 
-討論 2026 至 2031 年軟體與計算的變化，並提出未來制高點位於能力、定製、個性化、愉悅、簡單和信任的交匯處。
+討論 2026 至 2031 年軟體與計算的變化，並提出未來制高點位於能力、定製、個性化、愉悅、簡單和信賴的交匯處。
 
 [閱讀中文譯文](/zh-TW/translations/the-high-ground) · [檢視英文原文](https://earendil.com/posts/the-high-ground/)
 

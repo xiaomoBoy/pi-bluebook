@@ -48,7 +48,7 @@ npm run docs:check
 
 只想快速检查内容引用时，可运行 `npm run check:content`。只检查已经生成的正式产物，可运行 `npm run check:seo`。
 
-简体正文更新后，运行 `npm run sync:zh-tw` 重新生成繁体页面、练习材料和繁体导航。运行 `npm run check:translations` 可在临时目录重新生成并比较内容，不修改工作区。CI 同时执行这项检查，防止文件名齐全但正文已经落后。转换依赖锁定在 `requirements-dev.txt`；生成后仍需人工检查术语、授权译文说明和关键页面排版。
+简体正文更新后，运行 `npm run sync:zh-tw` 重新生成繁体页面、练习材料和繁体导航。转换管线为 OpenCC s2twp 加 `scripts/zh-tw-glossary.json` 名词覆盖层：词表以《电子计算机名词》为准收敛简中用字（如账号、回车、菜单类用字），有冲突的名词经使用者确认后保留并记入词表 `_comment`。不要手工改生成文件，改词表后重跑即可。`npm run check:translations` 只读比对生成内容，`npm run check:terms` 回归检查 38 组已淘汰用字是否复发，两项都进 `npm run docs:check` 与 CI。转换依赖锁定在 `requirements-dev.txt`；生成后仍需人工检查授权译文说明和关键页面排版，名词问题一般不需要再人工逐项校对。
 
 ## 新增页面
 

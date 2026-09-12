@@ -83,11 +83,18 @@ def apply_post_fixes(text: str) -> str:
         "",
         text,
     )
-    for k in sorted(POST_FIXES.keys(), key=len, reverse=True):
-        text = text.replace(k, POST_FIXES[k])
-    # 正則收尾（避免字典取代造成重複後綴）
-    text = re.sub(r"終端(?!機)", "終端機", text)
-    text = re.sub(r"外掛(?!程式)", "外掛程式", text)
+    # 收斂迴圈：等長鍵之間有鏈式關係（如 賬號→帳號→使用者帳戶），
+    # 單次遍歷的先後順序會漏改；迭代至不變為止（有上限，避免震盪）。
+    for _ in range(10):
+        new_text = text
+        for k in sorted(POST_FIXES.keys(), key=len, reverse=True):
+            new_text = new_text.replace(k, POST_FIXES[k])
+        # 正則收尾（避免字典取代造成重複後綴）
+        new_text = re.sub(r"終端(?!機)", "終端機", new_text)
+        new_text = re.sub(r"外掛(?!程式)", "外掛程式", new_text)
+        if new_text == text:
+            return new_text
+        text = new_text
     return text
 
 

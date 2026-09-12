@@ -15,7 +15,7 @@ next:
 
 這部分負責完整、連續、經過核驗的學習過程。想先動手，從[從零開始操作](/zh-TW/guide/start-here)選擇平台入口；想系統閱讀，再從導論、凡例和序章進入。已經能夠安裝、登入並正常使用 Pi 的讀者，可以從第二模組進入真實任務。
 
-個人推文和使用感悟不會直接當作教程結論。能夠進入主線的內容，需要重新檢查來源、操作方式、風險邊界與成功訊號。每個模組同時標出配套實作與延伸閱讀，但它們不會打斷主線順序。做完基礎案例後，可選[內容整理](/zh-TW/cases/content-workflow)或[小型程式碼修復](/zh-TW/cases/code-repair)，練習把同一方法遷移到其他任務。
+個人推文和使用感悟不會直接當作教學結論。能夠進入主線的內容，需要重新檢查來源、操作方式、風險邊界與成功訊號。每個模組同時標出配套實作與延伸閱讀，但它們不會打斷主線順序。做完基礎案例後，可選[內容整理](/zh-TW/cases/content-workflow)或[小型程式碼修復](/zh-TW/cases/code-repair)，練習把同一方法遷移到其他任務。
 
 ## 開篇 · 先知道為什麼讀
 
@@ -42,7 +42,7 @@ next:
 
 **完成標誌：** 能在獨立練習目錄啟動 Pi，並獲得一次真實回覆。
 
-安裝完成後不必立即停下來學習維護命令；需要升級、換帳號、解除安裝或處理本地資料時，進入 [安裝後生命週期管理](/zh-TW/guide/lifecycle-management)。
+安裝完成後不必立即停下來學習維護命令；需要升級、換使用者帳戶、解除安裝或處理本地資料時，進入 [安裝後生命週期管理](/zh-TW/guide/lifecycle-management)。
 
 ## 模組二 · 完成真實任務
 
@@ -67,7 +67,7 @@ next:
 
 ## 模組四 · 擴充自己的 Pi
 
-10. [技能（Skill）、擴充功能（Extension）與套件（Package）](/zh-TW/guide/skills-extensions-packages)
+10. [技能（Skill）、擴充功能（Extension）與包（Package）](/zh-TW/guide/skills-extensions-packages)
 11. [擴充功能的需求與驗收](/zh-TW/guide/first-extension)
 12. [子代理（Subagent）如何分工](/zh-TW/guide/subagents)
 

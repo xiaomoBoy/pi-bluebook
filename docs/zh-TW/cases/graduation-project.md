@@ -161,7 +161,7 @@ pi --name "CASE 08 獨立審閱" --no-extensions --no-skills --no-context-files 
 逐項給出透過、失敗或證據不足，並附路徑與行號。
 ```
 
-在另一個普通終端機執行 `git status --short`、`git diff --check`、`git diff`、`npm run check:translations` 和 `npm run docs:check`，把結果交給審閱工作階段。新檔案不會顯示在普通 `git diff` 中，要逐一開啟新建的簡繁頁面核對。
+在另一個普通終端機執行 `git status --short`、`git diff --check`、`git diff`、`npm run check:translations` 和 `npm run docs:check`，把結果交給審閱工作階段。新檔案不會顯示在普通 `git diff` 中，要逐一開啟新增的簡繁頁面核對。
 
 一份可信審閱不應該只說“透過”。例如，它可以確認當前差異只包含允許路徑，卻無法僅憑最終工作樹證明過去從未執行過某個禁止命令；後一項應該誠實標為“證據不足”。
 

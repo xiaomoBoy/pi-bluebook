@@ -13,7 +13,7 @@ next:
 
 # Pi 常見問題 FAQ
 
-這裡優先給結論，不在同一頁複製一遍完整教程。找到與你相同的問題後，先讀短答，再沿“繼續閱讀”進入對應熱詞或課程。
+這裡優先給結論，不在同一頁複製一遍完整教學。找到與你相同的問題後，先讀短答，再沿“繼續閱讀”進入對應熱詞或課程。
 
 涉及 Pi 產品、工具、模型服務商（Provider）、權限和版本行為的回答核驗於 **2026-09-11**。實際介面與本頁不一致時，以 [Pi 最新官方文件](https://pi.dev/docs/latest) 和你本機 `pi --help` 為準。
 
@@ -45,11 +45,11 @@ next:
 
 ### 擴充與安全
 
-16. [技能（Skill）、擴充功能（Extension）和套件（Package）有什麼區別？](#skill-extension-package)
+16. [技能（Skill）、擴充功能（Extension）和包（Package）有什麼區別？](#skill-extension-package)
 17. [技能和 MCP 應該怎麼選？](#skill-vs-mcp)
 18. [擴充功能是不是裝得越多越好？](#more-extensions-better)
 19. [Pi 安裝第三方外掛程式安全嗎？](#are-third-party-packages-safe)
-20. [專案信任（Project Trust）是不是沙箱？](#is-project-trust-a-sandbox)
+20. [專案信賴（Project Trust）是不是沙箱？](#is-project-trust-a-sandbox)
 
 ## Pi 到底是什麼？ {#what-is-pi}
 
@@ -75,7 +75,7 @@ next:
 
 **短答：它們都能把模型帶進真實工作，但預設能力、產品邊界和定製方式不同，不能只做“誰更強”的排名。**
 
-Pi 的核心取向是保持小，把子代理（Subagent）、計劃模式、權限彈窗等工作流選擇留給使用者透過擴充功能、套件或外部隔離環境補充。Claude Code 和 Codex 的功能會持續更新，真正比較時應固定日期、模型、任務、權限與驗收標準，而不是把模型能力和代理框架能力混在一起。
+Pi 的核心取向是保持小，把子代理（Subagent）、計劃模式、權限彈窗等工作流選擇留給使用者透過擴充功能、包或外部隔離環境補充。Claude Code 和 Codex 的功能會持續更新，真正比較時應固定日期、模型、任務、權限與驗收標準，而不是把模型能力和代理框架能力混在一起。
 
 **繼續閱讀：** [Coding Agent](/zh-TW/reference/glossary#coding-agent) · [從 98 條推文留下的十條判斷](/zh-TW/guide/lasting-principles)
 
@@ -179,29 +179,29 @@ Pi 會寫入壓縮摘要和保留邊界，原工作階段仍用於記錄歷史�
 
 **短答：Pi 原生有可恢復的工作階段，但不要把它等同於會跨任務自動整理經驗的長期 Memory 系統。**
 
-工作階段讓你續寫同一工作歷史，上下文決定模型本輪能看到什麼；跨工作階段、跨專案保留偏好和經驗，通常需要檔案、技能、自建擴充功能或第三方套件。重要知識最好儲存為可讀、可審查、可版本管理的專案檔案。
+工作階段讓你續寫同一工作歷史，上下文決定模型本輪能看到什麼；跨工作階段、跨專案保留偏好和經驗，通常需要檔案、技能、自建擴充功能或第三方包。重要知識最好儲存為可讀、可審查、可版本管理的專案檔案。
 
 **繼續閱讀：** [工作階段](/zh-TW/reference/glossary#工作階段) · [上下文](/zh-TW/reference/glossary#上下文) · [無法隨身帶走的工作階段](/zh-TW/translations/session-portability)
 
-## 技能、擴充功能和套件有什麼區別？ {#skill-extension-package}
+## 技能、擴充功能和包有什麼區別？ {#skill-extension-package}
 
-**短答：技能教它怎麼做，擴充功能增加或改變執行能力，套件負責打包和分發這些資源。**
+**短答：技能教它怎麼做，擴充功能增加或改變執行能力，包負責打包和分發這些資源。**
 
-同一需求先手動跑通，重複流程再整理成技能；只有確實缺少可執行能力時才開發或安裝擴充功能；準備跨專案或給別人複用時再考慮套件。三者沒有由低到高的等級關係。
+同一需求先手動跑通，重複流程再整理成技能；只有確實缺少可執行能力時才開發或安裝擴充功能；準備跨專案或給別人複用時再考慮包。三者沒有由低到高的等級關係。
 
-![缺少方法時選擇技能，缺少執行能力時考慮擴充功能，需要分發時再使用套件。](/images/diagrams/skill-extension-package.svg)
+![缺少方法時選擇技能，缺少執行能力時考慮擴充功能，需要分發時再使用包。](/images/diagrams/skill-extension-package.svg)
 
 *圖解：先確認真實需求，再決定是否需要程式碼能力和分發。*
 
-**繼續閱讀：** [技能](/zh-TW/reference/glossary#技能) · [擴充功能](/zh-TW/reference/glossary#擴充功能) · [套件](/zh-TW/reference/glossary#套件)
+**繼續閱讀：** [技能](/zh-TW/reference/glossary#技能) · [擴充功能](/zh-TW/reference/glossary#擴充功能) · [包](/zh-TW/reference/glossary#包)
 
 ## 技能和 MCP 應該怎麼選？ {#skill-vs-mcp}
 
 **短答：先判斷你缺的是“做事方法”，還是一個需要穩定呼叫的外部工具介面。**
 
-固定流程、檢查標準和參考資料優先寫成技能；已有 CLI 能清楚完成的工作，可以先讓 Pi 讀取幫助並呼叫 CLI。Pi 核心當前不內建 MCP；只有確實需要結構化暴露外部能力、並願意承擔工具說明、認證和維護成本時，再透過擴充功能或套件接入 MCP。
+固定流程、檢查標準和參考資料優先寫成技能；已有 CLI 能清楚完成的工作，可以先讓 Pi 讀取幫助並呼叫 CLI。Pi 核心當前不內建 MCP；只有確實需要結構化暴露外部能力、並願意承擔工具說明、認證和維護成本時，再透過擴充功能或包接入 MCP。
 
-**繼續閱讀：** [技能](/zh-TW/reference/glossary#技能) · [Tool / Tool Call](/zh-TW/reference/glossary#tool-tool-call) · [技能、擴充功能與套件](/zh-TW/guide/skills-extensions-packages)
+**繼續閱讀：** [技能](/zh-TW/reference/glossary#技能) · [Tool / Tool Call](/zh-TW/reference/glossary#tool-tool-call) · [技能、擴充功能與包](/zh-TW/guide/skills-extensions-packages)
 
 ## 擴充功能是不是裝得越多越好？ {#more-extensions-better}
 
@@ -217,15 +217,15 @@ Pi 會寫入壓縮摘要和保留邊界，原工作階段仍用於記錄歷史�
 
 擴充功能以當前使用者權限執行並可執行任意程式碼，技能也可能引導 Agent 執行指令碼或產生副作用。安裝前檢查作者、倉庫、實際包含資源、依賴和權限；處理重要檔案時使用最小權限、備份或隔離環境，並在安裝後做一次可逆的小範圍驗證。
 
-**繼續閱讀：** [套件](/zh-TW/reference/glossary#套件) · [權限、隔離與驗收](/zh-TW/guide/safety) · [Pi 套件安全說明](https://pi.dev/docs/latest/packages)
+**繼續閱讀：** [包](/zh-TW/reference/glossary#包) · [權限、隔離與驗收](/zh-TW/guide/safety) · [Pi 包安全說明](https://pi.dev/docs/latest/packages)
 
-## 專案信任是不是沙箱？ {#is-project-trust-a-sandbox}
+## 專案信賴是不是沙箱？ {#is-project-trust-a-sandbox}
 
-**短答：不是。專案信任只控制是否載入專案級設定、資源、套件和擴充功能。**
+**短答：不是。專案信賴只控制是否載入專案級設定、資源、包和擴充功能。**
 
-一旦開始在目錄中工作，Pi 的內建工具和已載入擴充功能仍以當前使用者權限執行；`AGENTS.md`、`CLAUDE.md` 等上下文檔案也有單獨的載入規則。真正隔離不可信專案，需要容器、虛擬機器、受限賬戶或其他作業系統級邊界，不能只依賴“拒絕信任”。
+一旦開始在目錄中工作，Pi 的內建工具和已載入擴充功能仍以當前使用者權限執行；`AGENTS.md`、`CLAUDE.md` 等上下文檔案也有單獨的載入規則。真正隔離不可信專案，需要容器、虛擬機器、受限帳戶或其他作業系統級邊界，不能只依賴“拒絕信賴”。
 
-![專案信任只決定是否載入專案資源，Pi 的檔案、命令和網路能力仍由賬戶、容器或虛擬機器限制。](/images/diagrams/project-trust-boundary.svg)
+![專案信賴只決定是否載入專案資源，Pi 的檔案、命令和網路能力仍由帳戶、容器或虛擬機器限制。](/images/diagrams/project-trust-boundary.svg)
 
 *圖解：Trust 管“是否載入”，隔離環境管“能夠做什麼”。*
 
