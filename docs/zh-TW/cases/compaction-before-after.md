@@ -32,11 +32,11 @@ macOS 在普通終端機中執行：
 ```bash
 cd ~/Downloads/pi-practice
 mkdir -p compaction-lab/.pi compaction-lab/results
-curl -fL https://pi.xiaomovps.com/examples/compaction/brief.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/compaction/brief.md \
   -o compaction-lab/brief.md
-curl -fL https://pi.xiaomovps.com/examples/compaction/checkpoint.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/compaction/checkpoint.md \
   -o compaction-lab/checkpoint.md
-curl -fL https://pi.xiaomovps.com/examples/compaction/settings.json \
+curl -fL https://pi.xiaomovps.com/examples-tw/compaction/settings.json \
   -o compaction-lab/.pi/settings.json
 cd compaction-lab
 shasum -a 256 brief.md checkpoint.md > input-before.sha256

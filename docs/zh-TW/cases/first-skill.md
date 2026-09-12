@@ -25,9 +25,9 @@ next: { text: CASE 04 · 最小擴充功能, link: /zh-TW/cases/first-extension 
 ```bash
 cd ~/Downloads/pi-practice
 mkdir -p input output bluebook-examples/action-list-review
-curl -fL https://pi.xiaomovps.com/examples/first-task/meeting-notes.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/first-task/meeting-notes.md \
   -o input/專案會議記錄.md
-curl -fL https://pi.xiaomovps.com/examples/skill/action-list-review/SKILL.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/skill/action-list-review/SKILL.md \
   -o bluebook-examples/action-list-review/SKILL.md
 shasum -a 256 input/專案會議記錄.md > input-before.sha256
 sed -n '1,160p' bluebook-examples/action-list-review/SKILL.md

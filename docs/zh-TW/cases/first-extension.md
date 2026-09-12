@@ -24,7 +24,7 @@ next: { text: CASE 05 · 獨立分工, link: /zh-TW/cases/independent-review }
 ```bash
 cd ~/Downloads/pi-practice
 mkdir -p bluebook-examples
-curl -fL https://pi.xiaomovps.com/examples/extension/bluebook-check.ts \
+curl -fL https://pi.xiaomovps.com/examples-tw/extension/bluebook-check.ts \
   -o bluebook-examples/bluebook-check.ts
 sed -n '1,160p' bluebook-examples/bluebook-check.ts
 ```

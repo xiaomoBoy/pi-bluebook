@@ -27,10 +27,10 @@ next: { text: CASE 07 · 安全邊界, link: /zh-TW/cases/safe-review }
 ```bash
 cd ~/Downloads/pi-practice
 mkdir -p long-task/source long-task/output
-curl -fL https://pi.xiaomovps.com/examples/long-task/source/article-a.md -o long-task/source/article-a.md
-curl -fL https://pi.xiaomovps.com/examples/long-task/source/article-b.md -o long-task/source/article-b.md
-curl -fL https://pi.xiaomovps.com/examples/long-task/source/article-c.md -o long-task/source/article-c.md
-curl -fL https://pi.xiaomovps.com/examples/long-task/progress-template.md -o long-task/progress.md
+curl -fL https://pi.xiaomovps.com/examples-tw/long-task/source/article-a.md -o long-task/source/article-a.md
+curl -fL https://pi.xiaomovps.com/examples-tw/long-task/source/article-b.md -o long-task/source/article-b.md
+curl -fL https://pi.xiaomovps.com/examples-tw/long-task/source/article-c.md -o long-task/source/article-c.md
+curl -fL https://pi.xiaomovps.com/examples-tw/long-task/progress-template.md -o long-task/progress.md
 find long-task -type f -print
 ```
 

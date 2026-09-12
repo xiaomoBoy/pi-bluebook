@@ -48,7 +48,7 @@ next:
 
 ```bash
 mkdir -p bluebook-examples/action-list-review
-curl -fL https://pi.xiaomovps.com/examples/skill/action-list-review/SKILL.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/skill/action-list-review/SKILL.md \
   -o bluebook-examples/action-list-review/SKILL.md
 ```
 

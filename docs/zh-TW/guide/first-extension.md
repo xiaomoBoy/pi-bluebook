@@ -50,7 +50,7 @@ Pi 可以載入使用者級或專案級的擴充功能。初學時建議從獨�
 
 ```bash
 mkdir -p bluebook-examples
-curl -fL https://pi.xiaomovps.com/examples/extension/bluebook-check.ts \
+curl -fL https://pi.xiaomovps.com/examples-tw/extension/bluebook-check.ts \
   -o bluebook-examples/bluebook-check.ts
 ```
 

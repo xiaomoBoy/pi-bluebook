@@ -38,7 +38,7 @@ cd ~/Downloads/pi-practice
 在當前練習目錄執行下面的命令，把練習材料直接儲存到 `input`。
 
 ```bash
-curl -fL https://pi.xiaomovps.com/examples/first-task/meeting-notes.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/first-task/meeting-notes.md \
   -o input/專案會議記錄.md
 ls input
 sed -n '1,12p' input/專案會議記錄.md

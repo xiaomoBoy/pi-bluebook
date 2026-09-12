@@ -97,10 +97,10 @@ cd ~/Downloads/pi-practice
 pwd
 mkdir -p long-task/source long-task/output
 for name in article-a article-b article-c; do
-  curl -fL "https://pi.xiaomovps.com/examples/long-task/source/${name}.md" \
+  curl -fL "https://pi.xiaomovps.com/examples-tw/long-task/source/${name}.md" \
     -o "long-task/source/${name}.md"
 done
-curl -fL https://pi.xiaomovps.com/examples/long-task/progress-template.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/long-task/progress-template.md \
   -o long-task/progress.md
 ```
 

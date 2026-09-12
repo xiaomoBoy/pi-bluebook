@@ -19,8 +19,8 @@ next: { text: 小型程式碼修復, link: /zh-TW/cases/code-repair }
 mkdir ~/pi-content-workflow
 cd ~/pi-content-workflow
 mkdir source output
-curl -fL https://pi.xiaomovps.com/examples/content-workflow/confirmed-brief.md -o source/confirmed-brief.md
-curl -fL https://pi.xiaomovps.com/examples/content-workflow/old-note.md -o source/old-note.md
+curl -fL https://pi.xiaomovps.com/examples-tw/content-workflow/confirmed-brief.md -o source/confirmed-brief.md
+curl -fL https://pi.xiaomovps.com/examples-tw/content-workflow/old-note.md -o source/old-note.md
 cp source/confirmed-brief.md confirmed-before.txt
 cp source/old-note.md old-before.txt
 ```
@@ -39,7 +39,7 @@ pi --no-extensions --no-skills --no-context-files
 
 ```text
 讀取 source 中兩份虛構資料，只寫 output/brief.md。
-先做事實表，列出事項、採用的值、來原始檔與原文短句、衝突或未知。
+先做事實表，列出事項、採用的值、來源檔案與原文短句、衝突或未知。
 已確認簡報優先於舊討論；舊提議不能變成既定事實。
 再寫一段待確認的活動介紹，並單獨列出釋出前必須確認的問題。
 不要編造地點、開始時間、報名連結或禮物承諾，不要聲稱已開放報名。

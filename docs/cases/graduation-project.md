@@ -23,7 +23,7 @@ next: { text: 回到课程, link: /guide/ }
 
 练习仓库使用 [Pi 学习蓝皮书](https://github.com/xiaomoBoy/pi-bluebook)。任务是在参考手册中新增“任务完成检查表”，同时接入首页与侧栏。需求刻意限制为三个简体源文件、三个对应的繁体生成文件和一个本地检查点，足以练习真实项目流程，又不会把注意力带到复杂业务代码上。
 
-先下载三份固定材料：
+可以先预览这三份材料；正式练习会从固定版本的克隆中复制它们：
 
 - <a href="/examples/graduation-project/requirements.md" download>毕业项目需求</a>
 - <a href="/examples/graduation-project/checkpoint-template.md" download>检查点模板</a>
@@ -35,34 +35,41 @@ next: { text: 回到课程, link: /guide/ }
 
 ## 第 0 阶段 · 准备隔离副本
 
-在普通终端执行：
+在普通终端执行。下面的激活命令用于 macOS / Linux；Windows Git Bash 将 `source .venv/bin/activate` 换成 `source .venv/Scripts/activate`：
 
 ```bash
 cd ~/Downloads
 git clone https://github.com/xiaomoBoy/pi-bluebook.git pi-bluebook-graduation
 cd pi-bluebook-graduation
+git checkout --detach ea68e5f
 npm ci
+python3 -m venv .venv
+source .venv/bin/activate
 python3 -m pip install -r requirements-dev.txt
 npm run check:translations
 git rev-parse HEAD
 git status --short
 ```
 
-如果 `pi-bluebook-graduation` 已存在，换一个新目录名，不要覆盖旧目录。初始 `git status --short` 应该没有输出。保存 `git rev-parse HEAD` 的提交号，作为这次练习的基线；材料与仓库不一致时先停止。Windows Git Bash 同样可以使用 `~/Downloads`，这里新克隆的仓库不放在前面课程的 `pi-practice` 中。`python3 --version` 必须可用；若只提供 `python`，本页和 npm 同步脚本使用的 Python 命令需要先由你统一确认，不能带着缺失环境继续。
+如果 `pi-bluebook-graduation` 已存在，换一个新目录名，不要覆盖旧目录。初始 `git status --short` 应该没有输出。本页固定使用 `ea68e5f` 作为练习基线，准备阶段的 `checkout` 只用于切换到已验证版本；进入 Pi 以后不再执行 Git 写操作。保存 `git rev-parse HEAD` 的完整提交号，材料与仓库不一致时先停止。Windows Git Bash 同样可以使用 `~/Downloads`，这里新克隆的仓库不放在前面课程的 `pi-practice` 中。`python3 --version` 必须可用；若只提供 `python`，本页和 npm 同步脚本使用的 Python 命令需要先由你统一确认，不能带着缺失环境继续。
+
+`.venv/` 是仓库已忽略的本地 Python 环境。后续另开普通终端时，也要先进入练习仓库并执行对应的激活命令，再启动 Pi 或运行同步检查。
 
 把三份材料放在仓库旁边，而不是放进仓库：
 
 ```bash
 cd ..
 mkdir -p pi-bluebook-graduation-materials/bluebook-graduation-review
-curl -fL https://pi.xiaomovps.com/examples/graduation-project/requirements.md \
-  -o pi-bluebook-graduation-materials/requirements.md
-curl -fL https://pi.xiaomovps.com/examples/graduation-project/checkpoint-template.md \
-  -o pi-bluebook-graduation-materials/checkpoint-template.md
-curl -fL https://pi.xiaomovps.com/examples/graduation-project/bluebook-graduation-review/SKILL.md \
-  -o pi-bluebook-graduation-materials/bluebook-graduation-review/SKILL.md
+cp pi-bluebook-graduation/docs/public/examples/graduation-project/requirements.md \
+  pi-bluebook-graduation-materials/requirements.md
+cp pi-bluebook-graduation/docs/public/examples/graduation-project/checkpoint-template.md \
+  pi-bluebook-graduation-materials/checkpoint-template.md
+cp pi-bluebook-graduation/docs/public/examples/graduation-project/bluebook-graduation-review/SKILL.md \
+  pi-bluebook-graduation-materials/bluebook-graduation-review/SKILL.md
 cd pi-bluebook-graduation
 ```
+
+本案例以仓库简体原文为需求合同，繁体读者也使用同一份源材料，不要自行翻译需求规定的页面标题；同步脚本负责生成繁体页面。
 
 打开三份材料检查内容。需求文件是验收合同，模板规定检查点字段，Skill 只规定审阅方法；任何一份都不应包含安装或部署指令。
 
@@ -203,7 +210,9 @@ sed -n '1,200p' docs/zh-TW/reference/task-completion-checklist.md
 
 早期单语言练习在 2026 年 9 月 11 日用 Pi `0.80.10` 复现过。随后仓库增加了繁体同步要求，旧的“三文件”范围已经不适用；不能用旧检查页数证明新版通过。
 
-本页现在采用双语范围，并把 Git 与构建交给人工执行、审阅 Session 仅开放读取工具。复现时请在检查点记录你的 Pi 版本、仓库提交号、日期，以及每条检查命令的真实结果。
+2026 年 9 月 12 日，维护者通过自动化操作，在 macOS 全新克隆 `ea68e5f` 上用 Pi `0.84.3` 重跑了新版流程：计划阶段仅写检查点，批准后生成简繁页面，独立审阅只开放 `read,grep,find,ls`。另行运行 `check:translations`、`docs:check` 和 `git diff --check` 均通过；练习产物为 123 个构建页面、1654 个有效锚点，两套搜索索引通过检查。实际差异仅为需求允许的七个路径。审阅保留了“最终工作树不能证明全部历史操作”的证据边界。
+
+这次验证的是自动化维护复现，不是 Windows 实机记录，也不代替读者自己的人工验收。复现时请在检查点记录你的 Pi 版本、仓库提交号、日期，以及每条检查命令的真实结果。
 
 ![早期隔离克隆中实际生成的任务完成检查表页面](/images/cases/graduation-project-output.png)
 

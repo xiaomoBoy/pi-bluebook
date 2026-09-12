@@ -222,6 +222,22 @@ function scheduleEnhancement() {
 
 export default {
   extends: DefaultTheme,
+  enhanceApp() {
+    if (typeof window === 'undefined') return
+    // VitePress also decodes the fragment while rendering language links.
+    // Drop an invalid incoming fragment before those components render.
+    const normalizeHash = () => {
+      try {
+        decodeURIComponent(window.location.hash)
+      } catch {
+        window.history.replaceState(
+          window.history.state, '', window.location.pathname + window.location.search
+        )
+      }
+    }
+    normalizeHash()
+    window.addEventListener('hashchange', normalizeHash)
+  },
   setup() {
     const route = useRoute()
     const onHashChange = () => openHashTarget(true)

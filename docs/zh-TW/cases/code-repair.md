@@ -18,8 +18,8 @@ next: { text: 畢業專案, link: /zh-TW/cases/graduation-project }
 ```bash
 mkdir ~/pi-code-repair
 cd ~/pi-code-repair
-curl -fL https://pi.xiaomovps.com/examples/code-repair/action-list.mjs -o action-list.mjs
-curl -fL https://pi.xiaomovps.com/examples/code-repair/action-list.test.mjs -o action-list.test.mjs
+curl -fL https://pi.xiaomovps.com/examples-tw/code-repair/action-list.mjs -o action-list.mjs
+curl -fL https://pi.xiaomovps.com/examples-tw/code-repair/action-list.test.mjs -o action-list.test.mjs
 node --test action-list.test.mjs
 ```
 

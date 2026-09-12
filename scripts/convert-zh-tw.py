@@ -178,8 +178,11 @@ def convert_prose_segment(text: str, counters: dict, with_first_occurrence: bool
 
 
 def convert_code_segment(text: str) -> str:
-    """程式碼圍欄/行內碼：只做 OpenCC + 修正，不做專有名詞並列與連結改寫。"""
-    return apply_post_fixes(CONVERTER.convert(text))
+    """保留命令與第三方 URL；本站下載材料必須與繁體驗收文字一致。"""
+    converted = apply_post_fixes(CONVERTER.convert(text))
+    return converted.replace(
+        "https://pi.xiaomovps.com/examples/", "https://pi.xiaomovps.com/examples-tw/"
+    )
 
 
 def convert_fragment(fragment: str) -> str:

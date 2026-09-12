@@ -68,7 +68,9 @@ function extractReferences(source, isNavigationFile) {
     ? [/\blink:\s*['"]([^'"]+)['"]/g]
     : [
         /!?\[[^\]]*\]\((?:<([^>]+)>|([^\s)]+))(?:\s+['"][^'"]*['"])?\)/g,
-        /\b(?:href|src)=["']([^"']+)["']/g
+        /\b(?:href|src)=["']([^"']+)["']/g,
+        // Download commands in code fences are part of the reader's workflow.
+        /https:\/\/pi\.xiaomovps\.com(\/examples(?:-tw)?\/[^\s`"'<>)]*)/g
       ]
 
   const references = []
@@ -76,6 +78,8 @@ function extractReferences(source, isNavigationFile) {
     for (const match of source.matchAll(pattern)) {
       const target = match.slice(1).find(Boolean)
       if (!target) continue
+      // Shell loops resolve these names at runtime; check their concrete files separately.
+      if (target.includes('${')) continue
 
       references.push({
         target,

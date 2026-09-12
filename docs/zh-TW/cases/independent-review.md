@@ -24,7 +24,7 @@ next: { text: CASE 06 · 中斷恢復, link: /zh-TW/cases/checkpoint-recovery }
 ```bash
 cd ~/Downloads/pi-practice
 mkdir -p input reviews
-curl -fL https://pi.xiaomovps.com/examples/first-task/meeting-notes.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/first-task/meeting-notes.md \
   -o input/專案會議記錄.md
 shasum -a 256 input/專案會議記錄.md > input-before.sha256
 ```

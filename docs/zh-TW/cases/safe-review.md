@@ -24,9 +24,9 @@ next: { text: CASE 08 · 畢業專案, link: /zh-TW/cases/graduation-project }
 cd ~/Downloads/pi-practice
 pwd
 mkdir -p safety-review
-curl -fL https://pi.xiaomovps.com/examples/safety/review-brief.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/safety/review-brief.md \
   -o safety-review/review-brief.md
-curl -fL https://pi.xiaomovps.com/examples/safety/plan-template.md \
+curl -fL https://pi.xiaomovps.com/examples-tw/safety/plan-template.md \
   -o safety-review/plan-template.md
 ```
 
