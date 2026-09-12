@@ -5,9 +5,11 @@
 保護：frontmatter link 欄、程式碼圍欄、行內程式碼、連結目標、URL 不做名詞替換。
 """
 import json
+import argparse
 import re
 import shutil
 import sys
+import tempfile
 from pathlib import Path
 
 import opencc
@@ -304,10 +306,11 @@ def convert_file(src: Path, dst: Path) -> None:
     dst.write_text(normalize_eof("---\n" + new_fm + "\n---\n" + new_body), encoding="utf-8")
 
 
-def convert_navigation() -> None:
+def convert_navigation(output_docs: Path) -> None:
     """從簡中站點地圖產生同結構的繁中導航，避免兩份選單各自漂移。"""
     src = DOCS / ".vitepress" / "config" / "navigation.mts"
-    dst = DOCS / ".vitepress" / "config" / "navigation.zh-tw.mts"
+    dst = output_docs / ".vitepress" / "config" / "navigation.zh-tw.mts"
+    dst.parent.mkdir(parents=True, exist_ok=True)
     raw = src.read_text(encoding="utf-8")
 
     raw = raw.replace("export const nav =", "export const navTW =", 1)
@@ -335,10 +338,10 @@ def convert_navigation() -> None:
     raw = NAV_LINK_RE.sub(convert_link, raw)
     raw = NAV_SECTION_RE.sub(convert_section, raw)
     dst.write_text(normalize_eof(raw), encoding="utf-8")
-    print(f"  導航 {src.relative_to(ROOT)} -> {dst.relative_to(ROOT)}")
+    print("  導航 navigation.mts -> navigation.zh-tw.mts")
 
 
-def main() -> int:
+def generate(output_docs: Path) -> None:
     # 內容頁：排除 public 與 zh-TW 本身
     sources = sorted(
         p
@@ -349,15 +352,15 @@ def main() -> int:
     )
     print(f"來源 {len(sources)} 篇")
     for src in sources:
-        dst = DST / src.relative_to(DOCS)
+        dst = output_docs / "zh-TW" / src.relative_to(DOCS)
         convert_file(src, dst)
-        print(f"  {src.relative_to(DOCS)} -> {dst.relative_to(DOCS)}")
+        print(f"  {src.relative_to(DOCS)} -> {dst.relative_to(output_docs)}")
 
-    convert_navigation()
+    convert_navigation(output_docs)
 
     # 範例檔：docs/public/examples -> docs/public/examples-tw（.md 轉換，其餘原樣複製）
     src_ex = DOCS / "public" / "examples"
-    dst_ex = DOCS / "public" / "examples-tw"
+    dst_ex = output_docs / "public" / "examples-tw"
     if dst_ex.exists():
         shutil.rmtree(dst_ex)
     shutil.copytree(src_ex, dst_ex)
@@ -365,11 +368,40 @@ def main() -> int:
         raw = p.read_text(encoding="utf-8")
         counters: dict = {}
         p.write_text(normalize_eof(convert_text_with_protection(raw, counters, True)), encoding="utf-8")
-        print(f"  範例 {p.relative_to(DOCS)}")
+        print(f"  範例 {p.relative_to(output_docs)}")
     for p in sorted(dst_ex.rglob("*.ts")):
         raw = p.read_text(encoding="utf-8")
         p.write_text(normalize_eof(convert_code_segment(raw)), encoding="utf-8")
-        print(f"  範例程式 {p.relative_to(DOCS)}")
+        print(f"  範例程式 {p.relative_to(output_docs)}")
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="只核對生成內容，不修改工作區")
+    args = parser.parse_args()
+    if args.check:
+        with tempfile.TemporaryDirectory(prefix="pi-bluebook-locales-") as directory:
+            expected = Path(directory)
+            generate(expected)
+            errors = []
+            for generated in expected.rglob("*"):
+                if not generated.is_file():
+                    continue
+                relative = generated.relative_to(expected)
+                actual = DOCS / relative
+                if not actual.exists() or actual.read_bytes() != generated.read_bytes():
+                    errors.append(str(relative))
+            for tree in ["zh-TW", "public/examples-tw"]:
+                for actual in (DOCS / tree).rglob("*"):
+                    if actual.is_file() and not (expected / actual.relative_to(DOCS)).exists():
+                        errors.append(f"orphan: {actual.relative_to(DOCS)}")
+            if errors:
+                print("繁體生成內容不一致，請執行 npm run sync:zh-tw：", file=sys.stderr)
+                print("\n".join(errors), file=sys.stderr)
+                return 1
+            print("Translation check passed: generated content matches source and glossary")
+            return 0
+    generate(DOCS)
 
     print("完成")
     return 0

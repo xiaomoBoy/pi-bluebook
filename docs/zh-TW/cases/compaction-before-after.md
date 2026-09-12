@@ -173,7 +173,7 @@ Windows Git Bash 把 `shasum -a 256 -c` 換成 `sha256sum -c`，其餘命令不�
 
 ## 這個案例對應哪兩條判斷
 
-- [第 6 條：工作階段可儲存，不等於模型始終記得全部內容](/zh-TW/guide/lasting-principles#_6-session-可儲存-不等於模型始終記得全部內容)
-- [第 7 條：壓縮與提示快取必須分開理解](/zh-TW/guide/lasting-principles#_7-壓縮與提示快取必須分開理解)
+- [第 6 條：工作階段可儲存，不等於模型始終記得全部內容](/zh-TW/guide/lasting-principles#session-and-context)
+- [第 7 條：壓縮與提示快取必須分開理解](/zh-TW/guide/lasting-principles#compaction-and-cache)
 
 官方機制依據：[Pi 壓縮（Compaction）](https://pi.dev/docs/latest/compaction) · [Pi 工作階段](https://pi.dev/docs/latest/sessions)

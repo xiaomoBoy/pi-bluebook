@@ -9,6 +9,7 @@ export const nav = [
           {
             text: '学习入口',
             items: [
+              { text: '从零开始操作', link: '/guide/start-here' },
               { text: '完整学习目录', link: '/guide/' },
               { text: '从导论开始', link: '/guide/introduction' },
               { text: 'Pi 完整运行原理', link: '/guide/how-pi-works' }
@@ -86,6 +87,7 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '完整学习目录', link: '/guide/' },
+            { text: '从零开始操作', link: '/guide/start-here' },
             { text: '导论 · 为什么读这本书', link: '/guide/introduction' },
             { text: '十条仍然成立的判断', link: '/guide/lasting-principles' },
             { text: '凡例与本版说明', link: '/guide/edition-2026' },
@@ -174,6 +176,14 @@ export const sidebar = {
             { text: 'CASE 05 · 两路独立审阅', link: '/cases/independent-review' },
             { text: 'CASE 06 · 从检查点恢复', link: '/cases/checkpoint-recovery' },
             { text: 'CASE 07 · 任务前安全审阅', link: '/cases/safe-review' }
+          ]
+        },
+        {
+          text: '迁移练习',
+          collapsed: true,
+          items: [
+            { text: '从资料到可核对的草稿', link: '/cases/content-workflow' },
+            { text: '修复一个小程序', link: '/cases/code-repair' }
           ]
         },
         {

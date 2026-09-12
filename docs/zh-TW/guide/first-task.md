@@ -150,7 +150,7 @@ Linux 和 Windows Git Bash 把第一條替換為 `sha256sum -c input-before.sha2
 
 第一次練習不需要記住所有命令。照著同一個順序做就夠了。準備可核對的材料，寫清動作與範圍，觀察實際讀寫，再獨立檢查結果。
 
-下一課會把 [`@檔案` 與工作目錄](/zh-TW/guide/files-and-context) 單獨練一遍。想先看作者原始記錄，也可以閱讀 [`@檔案` 解決的是什麼問題](/zh-TW/tweets/#at-files)。
+下一課會把 [`@檔案` 與工作目錄](/zh-TW/guide/files-and-context) 單獨練一遍。想先看作者原始記錄，也可以閱讀 [第一次任務的原始學習記錄](/zh-TW/tweets/02-first-tasks)。
 
 **Agent 的總結只是線索，能夠獨立驗證的結果才算完成。**
 

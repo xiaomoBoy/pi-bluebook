@@ -13,8 +13,8 @@ description: 面向中文初學者的 Pi Coding Agent 系統教程，從安裝�
       <p class="bluebook-deck">從安裝和第一次可驗收任務開始，逐步理解工作階段（Session）、上下文（Context）、技能（Skill）、擴充功能（Extension）與長期工作流。</p>
       <p class="bluebook-intro">一條為中文初學者重新編排的終端機 Coding 代理框架（Agent Harness）學習路線。先把一件真實的小事做完整，再一層一層搭出自己的 Pi。</p>
       <div class="bluebook-actions">
-        <a class="bluebook-button bluebook-button--primary" href="/zh-TW/guide/introduction">從導論開始</a>
-        <a class="bluebook-button" href="#reading-map">檢視內容地圖</a>
+        <a class="bluebook-button bluebook-button--primary" href="/zh-TW/guide/start-here">從零開始操作</a>
+        <a class="bluebook-button" href="/zh-TW/guide/introduction">系統閱讀全書</a>
       </div>
     </div>
     <aside class="bluebook-edition" aria-label="本書概況">
@@ -165,6 +165,6 @@ description: 面向中文初學者的 Pi Coding Agent 系統教程，從安裝�
       <h2>不用先把所有概念學完。</h2>
       <span>準備一個練習目錄，完成第一個可以親自驗收的結果。</span>
     </div>
-    <a class="bluebook-button bluebook-button--primary" href="/zh-TW/guide/introduction">從導論開始</a>
+    <a class="bluebook-button bluebook-button--primary" href="/zh-TW/guide/start-here">從零開始操作</a>
   </section>
 </main>

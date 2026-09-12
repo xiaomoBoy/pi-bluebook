@@ -5,8 +5,8 @@ prev:
   text: 长时间任务与 VPS
   link: /guide/vps-and-long-running
 next:
-  text: 从好奇到搭工作台
-  link: /journey/
+  text: CASE 08 · 毕业项目
+  link: /cases/graduation-project
 ---
 
 <span class="library-status">MODULE 05 · STEP 14 · 可练习</span>

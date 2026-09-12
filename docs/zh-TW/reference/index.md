@@ -86,7 +86,7 @@ FAQ、故障排查手冊與熱詞表會互相引用，並繼續連接主線課�
 
 套件管理命令輸入在普通終端機：`pi install <來源>` 安裝，`pi list` 檢視，`pi config` 啟用或停用資源，`pi remove <來源>` 移除。套件可能包含可執行擴充功能與會引導 Agent 執行操作的技能；看不清來源和完整內容時不要安裝。
 
-命令列為會隨版本變化；本表核驗於 2026-09-09。遇到不一致時先執行 `pi --help`，再查 [Using Pi](https://pi.dev/docs/latest/usage) 和對應專題頁。
+命令行為會隨版本變化；本表核驗於 2026-09-09。遇到不一致時先執行 `pi --help`，再查 [Using Pi](https://pi.dev/docs/latest/usage) 和對應專題頁。
 
 ## 檔案與配置位置
 

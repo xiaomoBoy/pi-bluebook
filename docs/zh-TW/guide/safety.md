@@ -5,8 +5,8 @@ prev:
   text: 長時間任務與 VPS
   link: /zh-TW/guide/vps-and-long-running
 next:
-  text: 從好奇到搭工作臺
-  link: /zh-TW/journey/
+  text: CASE 08 · 畢業專案
+  link: /zh-TW/cases/graduation-project
 ---
 
 <span class="library-status">MODULE 05 · STEP 14 · 可練習</span>

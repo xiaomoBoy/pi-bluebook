@@ -21,7 +21,7 @@ next: { text: 回到课程, link: /guide/ }
 
 ## 这次要改什么
 
-练习仓库使用 [Pi 学习蓝皮书](https://github.com/xiaomoBoy/pi-bluebook)。任务是在参考手册中新增“任务完成检查表”，同时接入首页与侧栏。需求刻意限制为三个网站文件和一个本地检查点，足以练习真实项目流程，又不会把注意力带到复杂业务代码上。
+练习仓库使用 [Pi 学习蓝皮书](https://github.com/xiaomoBoy/pi-bluebook)。任务是在参考手册中新增“任务完成检查表”，同时接入首页与侧栏。需求刻意限制为三个简体源文件、三个对应的繁体生成文件和一个本地检查点，足以练习真实项目流程，又不会把注意力带到复杂业务代码上。
 
 先下载三份固定材料：
 
@@ -42,10 +42,13 @@ cd ~/Downloads
 git clone https://github.com/xiaomoBoy/pi-bluebook.git pi-bluebook-graduation
 cd pi-bluebook-graduation
 npm ci
+python3 -m pip install -r requirements-dev.txt
+npm run check:translations
+git rev-parse HEAD
 git status --short
 ```
 
-如果 `pi-bluebook-graduation` 已存在，换一个新目录名，不要覆盖旧目录。初始 `git status --short` 应该没有输出。
+如果 `pi-bluebook-graduation` 已存在，换一个新目录名，不要覆盖旧目录。初始 `git status --short` 应该没有输出。保存 `git rev-parse HEAD` 的提交号，作为这次练习的基线；材料与仓库不一致时先停止。Windows Git Bash 同样可以使用 `~/Downloads`，这里新克隆的仓库不放在前面课程的 `pi-practice` 中。`python3 --version` 必须可用；若只提供 `python`，本页和 npm 同步脚本使用的 Python 命令需要先由你统一确认，不能带着缺失环境继续。
 
 把三份材料放在仓库旁边，而不是放进仓库：
 
@@ -68,7 +71,7 @@ cd pi-bluebook-graduation
 启动一个有名字的 Session：
 
 ```bash
-pi --name "CASE 08 毕业项目" --no-extensions --no-skills \
+pi --name "CASE 08 毕业项目" --no-extensions --no-skills --no-context-files \
   --tools read,write,edit,grep,find,ls,bash
 ```
 
@@ -98,7 +101,7 @@ git status --short
 sed -n '1,220p' worklog/graduation-checkpoint.md
 ```
 
-此时只应出现 `worklog/`。检查点应准确列出三个网站文件、一个本地记录、项目自带检查命令和禁止动作；仓库结构不一致的地方必须写成未知。范围正确后，才批准实施。
+此时只应出现 `worklog/`。检查点应准确列出三个简体源文件、三个繁体生成文件、一个本地记录、项目自带检查命令和禁止动作；仓库结构不一致的地方必须写成未知。范围正确后，才批准实施。
 
 ## 第 2 阶段 · 在同一 Session 实施
 
@@ -106,9 +109,10 @@ sed -n '1,220p' worklog/graduation-checkpoint.md
 
 ```text
 计划已批准。继续读取需求和 worklog/graduation-checkpoint.md，
-只实施需求允许的三个网站文件。
+只实施需求允许的三个简体源文件，再运行 npm run sync:zh-tw 生成对应繁体文件。
+不要手工改写繁体正文。
 
-完成后运行 npm run docs:check、git diff --check 和 git status --short，
+完成后运行 npm run check:translations、npm run docs:check、git diff --check 和 git status --short，
 把真实命令结果、实际变更、失败或未知写回检查点。
 如果检查失败，只做需求范围内的最小修正；如果需要扩大范围，停止并说明原因。
 
@@ -133,21 +137,24 @@ Compaction 会把较早内容整理成摘要并保留较新的消息，不会替
 主 Session 的“全部完成”只能当线索。另开一个普通终端，在同一个练习仓库启动第二个 Session：
 
 ```bash
-pi --name "CASE 08 独立审阅" --no-extensions --no-skills \
+pi --name "CASE 08 独立审阅" --no-extensions --no-skills --no-context-files \
   --skill ../pi-bluebook-graduation-materials/bluebook-graduation-review/SKILL.md \
-  --tools read,grep,find,ls,bash
+  --tools read,grep,find,ls
 ```
 
-`--no-skills` 关闭自动发现，显式 `--skill` 仍会加载指定 Skill。审阅 Session 没有 `write` 和 `edit`，职责上相当于只读 Sub-agent：它只交付发现，不替主 Session 修正。发送：
+`--no-skills` 关闭自动发现，显式 `--skill` 仍会加载指定 Skill。审阅 Session 不开放 `write`、`edit` 或 `bash`，只通过内置读取和搜索工具交付发现。它不能自行运行 Git 或构建；相关检查由人在普通终端执行。这限制了工具能力，但仍不等于操作系统沙箱。发送：
 
 ```text
 使用 bluebook-graduation-review 审阅当前工作树。
 需求文件是 ../pi-bluebook-graduation-materials/requirements.md。
 
-bash 只允许运行 git status --short、git diff、git diff --check 和 npm run docs:check；
-不得写文件、部署、安装依赖或执行 Git 写操作。
+读取需求中允许的文件，检查正文、导航和对应繁体页是否一致。
+不要写文件、运行命令或安装依赖。Git 差异和构建结果由我提供；
+未提供或无法独立核对的过程证据必须标为“证据不足”。
 逐项给出通过、失败或证据不足，并附路径与行号。
 ```
+
+在另一个普通终端运行 `git status --short`、`git diff --check`、`git diff`、`npm run check:translations` 和 `npm run docs:check`，把结果交给审阅 Session。新文件不会显示在普通 `git diff` 中，要逐一打开新建的简繁页面核对。
 
 一份可信审阅不应该只说“通过”。例如，它可以确认当前差异只包含允许路径，却无法仅凭最终工作树证明过去从未执行过某个禁止命令；后一项应该诚实标为“证据不足”。
 
@@ -170,18 +177,22 @@ bash 只允许运行 git status --short、git diff、git diff --check 和 npm ru
 最后不要问 Pi“真的完成了吗”。在普通终端亲自执行：
 
 ```bash
+npm run check:translations
 npm run docs:check
 git diff --check
 git status --short
-git diff -- docs/reference/task-completion-checklist.md \
-  docs/reference/index.md docs/.vitepress/config/navigation.mts
+git diff -- docs/reference/index.md docs/.vitepress/config/navigation.mts \
+  docs/zh-TW/reference/index.md docs/.vitepress/config/navigation.zh-tw.mts
+sed -n '1,200p' docs/reference/task-completion-checklist.md
+sed -n '1,200p' docs/zh-TW/reference/task-completion-checklist.md
 ```
 
 逐项打开并确认：
 
 - 新页面有 frontmatter、一个一级标题和四个指定二级标题；
 - 三个课程链接在项目中都有对应页面；
-- 参考手册首页和侧栏指向同一个新地址；
+- 简繁两种语言的参考手册首页和侧栏都指向本语言的新页面；
+- 繁体内容由同步脚本生成，`check:translations` 通过；
 - 检查结果来自这次真实运行，不是复制的文字；
 - `worklog/` 仍是本地记录，没有进入提交；
 - 没有构建产物、依赖目录或缓存混入 Git 状态。
@@ -190,20 +201,13 @@ git diff -- docs/reference/task-completion-checklist.md \
 
 ## 维护者真实复现记录
 
-这套流程在一个全新克隆中用 Pi `0.80.10` 实际跑过一次，日期为 2026 年 9 月 11 日：
+早期单语言练习在 2026 年 9 月 11 日用 Pi `0.80.10` 复现过。随后仓库增加了繁体同步要求，旧的“三文件”范围已经不适用；不能用旧检查页数证明新版通过。
 
-- 主 Session 先只生成检查点，经人工核对后才实施；
-- 第二轮只修改三个网站路径，并更新本地 `worklog/`；
-- `npm run docs:check` 与 `git diff --check` 均真实通过；
-- SEO 检查报告 `52 indexable pages`；
-- 独立只读 Session 逐项审阅后没有发现范围外变化和验收阻塞项；
-- 审阅者把“无法从工作树证明全部历史操作”保留为证据不足。
+本页现在采用双语范围，并把 Git 与构建交给人工执行、审阅 Session 仅开放读取工具。复现时请在检查点记录你的 Pi 版本、仓库提交号、日期，以及每条检查命令的真实结果。
 
-![隔离克隆中实际生成的任务完成检查表页面，参考手册首页和侧栏均已出现入口](/images/cases/graduation-project-output.png)
+![早期隔离克隆中实际生成的任务完成检查表页面](/images/cases/graduation-project-output.png)
 
-<small>真实练习输出截图：全新克隆在本地运行，页面没有部署，也没有提交。</small>
-
-这些结果证明练习要求可以完成，不代表你的运行自动通过。版本、仓库内容和本地环境变化后，仍以你当次看到的文件和命令结果为准。
+<small>历史练习输出，展示页面形态；当前验收以简繁两套页面和当次检查结果为准。</small>
 
 ## 前 14 课在这里怎样汇合
 
@@ -222,7 +226,7 @@ git diff -- docs/reference/task-completion-checklist.md \
 1. **范围通过：** 只出现需求允许的路径；
 2. **过程通过：** 先计划、人工批准、再实施，检查点能支持中断恢复；
 3. **结果通过：** 项目检查与差异检查由你亲自运行并通过；
-4. **审阅通过：** 独立 Session 没有修改权限，发现被逐项处理；
+4. **审阅通过：** 独立 Session 只开放读取与搜索工具，人工检查与审阅发现被逐项处理；
 5. **解释通过：** 你能说明 Session 与 Context、Skill 与 Extension、压缩与检查点、Agent 自述与真实证据的区别。
 
 如果你只能展示最终页面，却说不清中间的边界，这次任务完成了，但课程还没有毕业。

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { nav, sidebar } from './config/navigation.mjs'
 import { navTW, sidebarTW } from './config/navigation.zh-tw.mjs'
+import { miniSearch } from './config/search.mjs'
 
 const siteUrl = 'https://pi.xiaomovps.com'
 const ogImageUrl = `${siteUrl}/og-image.png`
@@ -110,7 +111,10 @@ const sharedThemeConfig = {
     }
   },
   search: {
-    provider: 'local' as const
+    provider: 'local' as const,
+    options: {
+      miniSearch
+    }
   }
 }
 
@@ -170,12 +174,15 @@ export default defineConfig({
         search: {
           ...sharedThemeConfig.search,
           options: {
+            ...sharedThemeConfig.search.options,
             translations: {
               button: {
                 buttonText: '搜索',
                 buttonAriaLabel: '搜索内容'
               },
               modal: {
+                displayDetails: '显示详细内容',
+                backButtonTitle: '关闭搜索',
                 noResultsText: '没有找到相关内容',
                 resetButtonTitle: '清除查询',
                 footer: {
@@ -216,12 +223,15 @@ export default defineConfig({
         search: {
           ...sharedThemeConfig.search,
           options: {
+            ...sharedThemeConfig.search.options,
             translations: {
               button: {
                 buttonText: '搜尋',
                 buttonAriaLabel: '搜尋內容'
               },
               modal: {
+                displayDetails: '顯示詳細內容',
+                backButtonTitle: '關閉搜尋',
                 noResultsText: '沒有找到相關內容',
                 resetButtonTitle: '清除查詢',
                 footer: {
@@ -317,6 +327,9 @@ export default defineConfig({
     )
   },
   themeConfig: {
+    // VitePress enables the search index at build time from the root config.
+    // Locale configs above provide the translated UI labels.
+    search: sharedThemeConfig.search,
     logo: '/brand-mark.svg',
     siteTitle: 'PI BLUEBOOK'
   }

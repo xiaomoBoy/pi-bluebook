@@ -73,6 +73,26 @@ pi --no-extensions
 - 不带 `-e` 重启后，教学命令不再可用。
 - 加载错误可以通过不加载该文件恢复，练习材料和会话不需要删除。
 
+## 再走一步：改成自己的命令
+
+复制原文件，保留可以比较的基线：
+
+```bash
+cp bluebook-examples/bluebook-check.ts bluebook-examples/bluebook-check-custom.ts
+```
+
+打开新文件，只修改两处：把 `registerCommand` 的命令名改为 `bluebook-check-custom`；把通知文字改为“自定义核对完成；请继续检查真实产物。”不要增加文件、网络或系统调用。
+
+先退出旧进程，再加载副本：
+
+```bash
+pi --no-extensions -e ./bluebook-examples/bluebook-check-custom.ts
+```
+
+在 Pi 中执行 `/bluebook-check-custom`，应看到自己的新文字。旧的 `/bluebook-check` 不应在本次命令列表中注册。退出后以 `pi --no-extensions` 重启，两个教学命令都不应注册。
+
+对照修改前后的两处差异：命令名决定怎样调用，通知文字决定可观察的结果。真实桌面通知还需要系统接口和前后台判断，见[第 11 课](/guide/first-extension)的进阶边界。
+
 ## 失败恢复
 
 保留完整加载错误与文件路径。不要把文件复制到多个自动发现目录反复尝试；先用 `--no-extensions` 回到干净状态，再核对下载内容。

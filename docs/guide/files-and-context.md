@@ -154,4 +154,4 @@ Linux 和 Windows Git Bash 同样把 `shasum -a 256 -c` 替换为 `sha256sum -c`
 ### 本章依据
 
 - [Pi 使用说明](https://pi.dev/docs/latest/usage)
-- [第一次任务为什么必须可以验收](/tweets/#first-task)
+- [第一次任务为什么必须可以验收](/tweets/02-first-tasks)

@@ -30,5 +30,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify generated translations
+        run: |
+          python -m pip install -r requirements-dev.txt
+          npm run check:translations
+
       - name: Check content and build site
         run: npm run docs:check

@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
-import { nextTick, onMounted, watch } from 'vue'
+import { nextTick, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vitepress'
 import './custom.css'
 
@@ -44,11 +44,19 @@ function tweetStrings() {
   return isTraditionalPath() ? tweetStringsTW : tweetStringsCN
 }
 
+function hashTarget() {
+  try {
+    return document.getElementById(decodeURIComponent(window.location.hash.slice(1)))
+  } catch {
+    // A malformed URL fragment must not prevent the archive from rendering.
+    return null
+  }
+}
+
 function openHashTarget(shouldScroll = false) {
   if (!window.location.hash) return
 
-  const targetId = decodeURIComponent(window.location.hash.slice(1))
-  const target = document.getElementById(targetId)
+  const target = hashTarget()
   const entry = target?.closest<HTMLElement>('.tweet-entry')
   if (!entry) return
 
@@ -202,10 +210,8 @@ function enhanceTweetArchive() {
   entries[0].insertAdjacentElement('beforebegin', tools)
   entries.at(-1)?.insertAdjacentElement('afterend', bottomPagination)
 
-  const hashTarget = window.location.hash
-    ? document.getElementById(decodeURIComponent(window.location.hash.slice(1)))?.closest<HTMLElement>('.tweet-entry')
-    : null
-  const initialPage = hashTarget ? Number(hashTarget.dataset.archivePage || 0) : 0
+  const initialEntry = hashTarget()?.closest<HTMLElement>('.tweet-entry')
+  const initialPage = initialEntry ? Number(initialEntry.dataset.archivePage || 0) : 0
   renderPage(initialPage, false)
   openHashTarget(true)
 }
@@ -218,11 +224,13 @@ export default {
   extends: DefaultTheme,
   setup() {
     const route = useRoute()
+    const onHashChange = () => openHashTarget(true)
 
     onMounted(() => {
       scheduleEnhancement()
       watch(() => route.path, scheduleEnhancement)
-      window.addEventListener('hashchange', () => openHashTarget())
+      window.addEventListener('hashchange', onHashChange)
     })
+    onUnmounted(() => window.removeEventListener('hashchange', onHashChange))
   }
 }

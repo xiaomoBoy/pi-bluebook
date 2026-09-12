@@ -6,7 +6,7 @@
 
 <img src="docs/public/pi-bluebook-tour.gif" alt="Pi Coding Agent 中文学习蓝皮书网站浏览演示" width="900">
 
-[在线阅读](https://pi.xiaomovps.com) · [从导论开始](https://pi.xiaomovps.com/guide/introduction) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues) · [繁體中文版](README_zh-TW.md)
+[在线阅读](https://pi.xiaomovps.com) · [直接开始操作](https://pi.xiaomovps.com/guide/start-here) · [系统阅读](https://pi.xiaomovps.com/guide/introduction) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues) · [繁體中文版](README_zh-TW.md)
 
 ## 这是什么
 
@@ -42,6 +42,8 @@
 | 小墨札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
 | Earendil 官方授权译文 | [译文专区](docs/translations/index.md) | 经 Earendil 授权发布的十一篇 Pi、Harness、会话机制、代码质量与公司愿景文章完整中文译文 |
 
+另有[内容整理](docs/cases/content-workflow.md)和[小型代码修复](docs/cases/code-repair.md)两项迁移练习，帮助读者把验收方法用到不同任务。
+
 已经能够启动 Pi 并获得回复的读者，可以先检查第 4 课的前置条件，再进入第一次任务。主线以 macOS 为基础，Windows 用户可通过独立中文路径完成安装，再使用 Git Bash 继续后续课程。
 
 当前仍未验收的是 Windows 真实界面截图，以及 Extension 桌面通知的完整系统证据；取得对应实机后再补入，不用模拟图或终端文字代替。新的个人实践只有在来源和操作重新核验后才会进入本版。
@@ -61,7 +63,7 @@ npm run docs:dev
 
 打开终端显示的本地地址即可预览；修改 `docs/` 下的文件后，页面会自动更新。停止预览时，在该终端按 `Ctrl+C`。
 
-只维护网站或预览内容不需要 Python。需要同步繁体版本时，先运行 `python3 -m pip install -r requirements-dev.txt`，再运行 `npm run sync:zh-tw`；生成结果仍需人工校对台湾常用术语和页面排版。
+只维护网站或预览内容不需要 Python。需要同步繁体版本时，先运行 `python3 -m pip install -r requirements-dev.txt`，再运行 `npm run sync:zh-tw`；生成结果仍需人工校对台湾常用术语和页面排版。运行 `npm run check:translations` 可只读检查繁体生成内容是否与当前简体和词表一致，CI 也会执行这一检查。
 
 检查正式构建并预览构建结果：
 
@@ -70,7 +72,7 @@ npm run docs:check
 npm run docs:preview
 ```
 
-`docs:check` 会依次检查内容资源引用、完成正式构建并核对 SEO 产物。构建结果生成在 `docs/.vitepress/dist/`，无需提交到仓库。`docs:preview` 预览的是上一次构建结果，内容有变化时请重新检查。
+`docs:check` 会依次检查内容资源引用和双语结构、完成正式构建，并核对 SEO、页面锚点与搜索产物。构建结果生成在 `docs/.vitepress/dist/`，无需提交到仓库。`docs:preview` 预览的是上一次构建结果，内容有变化时请重新检查。
 
 ## 目录结构
 

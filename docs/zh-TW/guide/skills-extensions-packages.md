@@ -101,6 +101,6 @@ Pi 套件以當前使用者的完整系統權限執行。除了可執行的擴�
 - [Pi 技能](https://pi.dev/docs/latest/skills)
 - [Pi 擴充功能](https://pi.dev/docs/latest/extensions)
 - [Pi 套件](https://pi.dev/docs/latest/packages)
-- [技能、擴充功能和 Pi 套件的區別](/zh-TW/tweets/#skill-extension-package)
+- [技能、擴充功能和 Pi 套件的區別](/zh-TW/tweets/04-skills-extensions)
 
 以上動態行為核驗於 2026-09-09。教學技能已在本機 Pi 0.80.10 中驗證為臨時載入，並出現在 `skill:action-list-review` 命令列表；Pi 的資源位置和命令可能更新，以對應官方頁面為準。

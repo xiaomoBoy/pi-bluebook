@@ -173,7 +173,7 @@ Windows Git Bash 把 `shasum -a 256 -c` 换成 `sha256sum -c`，其余命令不�
 
 ## 这个案例对应哪两条判断
 
-- [第 6 条：Session 可保存，不等于模型始终记得全部内容](/guide/lasting-principles#_6-session-可保存-不等于模型始终记得全部内容)
-- [第 7 条：压缩与提示缓存必须分开理解](/guide/lasting-principles#_7-压缩与提示缓存必须分开理解)
+- [第 6 条：Session 可保存，不等于模型始终记得全部内容](/guide/lasting-principles#session-and-context)
+- [第 7 条：压缩与提示缓存必须分开理解](/guide/lasting-principles#compaction-and-cache)
 
 官方机制依据：[Pi Compaction](https://pi.dev/docs/latest/compaction) · [Pi Sessions](https://pi.dev/docs/latest/sessions)

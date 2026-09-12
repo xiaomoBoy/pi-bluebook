@@ -73,6 +73,26 @@ pi --no-extensions
 - 不帶 `-e` 重啟後，教學命令不再可用。
 - 載入錯誤可以透過不載入該檔案恢復，練習材料和工作階段不需要刪除。
 
+## 再走一步：改成自己的命令
+
+複製原檔案，保留可以比較的基線：
+
+```bash
+cp bluebook-examples/bluebook-check.ts bluebook-examples/bluebook-check-custom.ts
+```
+
+開啟新檔案，只修改兩處：把 `registerCommand` 的命令名改為 `bluebook-check-custom`；把通知文字改為“自定義核對完成；請繼續檢查真實產物。”不要增加檔案、網路或系統呼叫。
+
+先退出舊程序，再載入副本：
+
+```bash
+pi --no-extensions -e ./bluebook-examples/bluebook-check-custom.ts
+```
+
+在 Pi 中執行 `/bluebook-check-custom`，應看到自己的新文字。舊的 `/bluebook-check` 不應在本次命令列表中註冊。退出後以 `pi --no-extensions` 重啟，兩個教學命令都不應註冊。
+
+對照修改前後的兩處差異：命令名決定怎樣呼叫，通知文字決定可觀察的結果。真實桌面通知還需要系統介面和前後臺判斷，見[第 11 課](/zh-TW/guide/first-extension)的進階邊界。
+
 ## 失敗恢復
 
 保留完整載入錯誤與檔案路徑。不要把檔案複製到多個自動發現目錄反覆嘗試；先用 `--no-extensions` 回到乾淨狀態，再核對下載內容。

@@ -25,6 +25,13 @@ next:
 
 前六篇最贴近 Pi 学习：先理解会话、压缩和缓存，再认识 Harness，并从非工程师和性能案例两个角度理解 Pi。第七至十篇记录 Pi 加入 Earendil 的背景，以及 Earendil 对可信、个性化软件的长期愿景。第十一篇进一步讨论 AI 代码的质量评估。
 
+| 你现在想弄清什么 | 建议先读 | 读完回到哪里 |
+| --- | --- | --- |
+| Pi 为什么这样设计 | 《什么是 Agent Harness？》《这个 Harness 属于我》 | [导论](/guide/introduction)、[运行原理](/guide/how-pi-works) |
+| 长对话为什么会丢细节 | 会话可移植性、压缩、提示缓存三篇 | [模块三](/guide/context-and-compaction)、[压缩实验](/cases/compaction-before-after) |
+| Agent 能运行，代码就合格了吗 | 《衡量代码的粗糙程度》《Pi：极简而高效》 | [代码修复](/cases/code-repair)、[毕业项目](/cases/graduation-project) |
+| 想了解作者与公司的背景 | 公告、反思、制高点、通信邀请 | 作为选读，不是安装前置条件 |
+
 ### 01 无法随身带走的会话
 
 **原文标题**　*The Session You Cannot Take With You*

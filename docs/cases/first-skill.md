@@ -82,6 +82,27 @@ Windows Git Bash 把 `shasum -a 256 -c` 换成 `sha256sum -c`。
 - 三项均有事项、负责人、日期、限制；缺失信息不会被编造。
 - 退出本次 Pi 后不再传入 `--skill`，该教学 Skill 不会继续加载。
 
+## 再走一步：修改自己的核对规则
+
+先保留原 Skill，复制成一个新练习：
+
+```bash
+mkdir -p bluebook-examples/action-list-latest
+cp bluebook-examples/action-list-review/SKILL.md bluebook-examples/action-list-latest/SKILL.md
+```
+
+打开新文件，把 frontmatter 的 `name` 改成 `action-list-latest`，并增加一条：“结果按截止日期从晚到早排列；未知日期放在最后，不补写日期。”其他规则保留。
+
+重新启动，只显式加载新文件：
+
+```bash
+pi --no-extensions --no-skills --skill ./bluebook-examples/action-list-latest/SKILL.md
+```
+
+在 Pi 输入 `/skill:action-list-latest`，要求读取同一输入，写入 `output/行动清单-倒序版.md`。验收时负责人顺序应是小陈、小周、小林，日期分别为 2026-09-01、2026-08-30、2026-08-28；三项的限制不能因排序丢失。
+
+最后重新核对输入指纹，确认旧 Skill 没被改写。这样你练习的是“把重复规则变成自己的方法”，而不仅是加载别人提供的文件。想换一种输入，继续做[内容整理迁移练习](/cases/content-workflow)。
+
 ## 失败恢复
 
 Skill 没被使用时，核对路径、元数据和启动参数；结果错误时回到原文验收，不先改 Skill 来掩盖一次任务错误。来源或内容异常时停止加载。

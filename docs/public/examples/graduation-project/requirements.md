@@ -15,9 +15,12 @@
 1. 新建 `docs/reference/task-completion-checklist.md`
 2. 修改 `docs/reference/index.md`
 3. 修改 `docs/.vitepress/config/navigation.mts`
-4. 新建或更新 `worklog/graduation-checkpoint.md`
+4. 由 `npm run sync:zh-tw` 生成 `docs/zh-TW/reference/task-completion-checklist.md`
+5. 由同一脚本更新 `docs/zh-TW/reference/index.md`
+6. 由同一脚本更新 `docs/.vitepress/config/navigation.zh-tw.mts`
+7. 新建或更新 `worklog/graduation-checkpoint.md`
 
-除上述路径外，不修改其他项目文件。`worklog/` 是本次本地练习记录，不应加入提交。
+简体是内容源，繁体必须由脚本生成。除上述路径外，不修改其他项目文件。`worklog/` 是本次本地练习记录，不应加入提交。
 
 ## 页面要求
 
@@ -44,9 +47,9 @@
 
 ## 验收要求
 
-1. `npm run docs:check` 通过。
+1. `npm run check:translations` 与 `npm run docs:check` 均通过。
 2. Git 差异只包含本需求允许的项目文件；依赖目录、构建产物与缓存不得进入差异。
-3. 新页面能从参考手册首页和侧栏到达。
+3. 简体和繁体的新页面都能从各自语言的参考手册首页和侧栏到达。
 4. 三个课程链接都能在项目中找到对应页面。
 5. 页面四个阶段完整，没有把“Pi 回复完成”写成最终证据。
 

@@ -9,6 +9,7 @@ export const navTW = [
           {
             text: '學習入口',
             items: [
+              { text: '從零開始操作', link: '/zh-TW/guide/start-here' },
               { text: '完整學習目錄', link: '/zh-TW/guide/' },
               { text: '從導論開始', link: '/zh-TW/guide/introduction' },
               { text: 'Pi 完整執行原理', link: '/zh-TW/guide/how-pi-works' }
@@ -86,6 +87,7 @@ export const sidebarTW = {
           collapsed: true,
           items: [
             { text: '完整學習目錄', link: '/zh-TW/guide/' },
+            { text: '從零開始操作', link: '/zh-TW/guide/start-here' },
             { text: '導論 · 為什麼讀這本書', link: '/zh-TW/guide/introduction' },
             { text: '十條仍然成立的判斷', link: '/zh-TW/guide/lasting-principles' },
             { text: '凡例與本版說明', link: '/zh-TW/guide/edition-2026' },
@@ -174,6 +176,14 @@ export const sidebarTW = {
             { text: 'CASE 05 · 兩路獨立審閱', link: '/zh-TW/cases/independent-review' },
             { text: 'CASE 06 · 從檢查點恢復', link: '/zh-TW/cases/checkpoint-recovery' },
             { text: 'CASE 07 · 任務前安全審閱', link: '/zh-TW/cases/safe-review' }
+          ]
+        },
+        {
+          text: '遷移練習',
+          collapsed: true,
+          items: [
+            { text: '從資料到可核對的草稿', link: '/zh-TW/cases/content-workflow' },
+            { text: '修復一個小程式', link: '/zh-TW/cases/code-repair' }
           ]
         },
         {

@@ -44,10 +44,11 @@ npm run docs:check
 1. 校验 Markdown、HTML 和导航中的本地页面、图片及下载链接。
 2. 执行 VitePress 正式构建，捕获死链和渲染错误。
 3. 检查正式产物中的 canonical、Open Graph、Twitter Card、JSON-LD 和 sitemap。
+4. 核对所有页面的站内锚点、搜索入口及两种语言的搜索索引。
 
 只想快速检查内容引用时，可运行 `npm run check:content`。只检查已经生成的正式产物，可运行 `npm run check:seo`。
 
-简体正文更新后，运行 `npm run sync:zh-tw` 重新生成繁体页面、练习材料和繁体导航。转换依赖锁定在 `requirements-dev.txt`；生成后仍需人工检查术语、授权译文说明和关键页面排版。
+简体正文更新后，运行 `npm run sync:zh-tw` 重新生成繁体页面、练习材料和繁体导航。运行 `npm run check:translations` 可在临时目录重新生成并比较内容，不修改工作区。CI 同时执行这项检查，防止文件名齐全但正文已经落后。转换依赖锁定在 `requirements-dev.txt`；生成后仍需人工检查术语、授权译文说明和关键页面排版。
 
 ## 新增页面
 

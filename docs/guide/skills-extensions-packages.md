@@ -101,6 +101,6 @@ Pi Package 以当前用户的完整系统权限运行。除了可执行的 Exten
 - [Pi Skills](https://pi.dev/docs/latest/skills)
 - [Pi Extensions](https://pi.dev/docs/latest/extensions)
 - [Pi Packages](https://pi.dev/docs/latest/packages)
-- [Skill、Extension 和 Pi Package 的区别](/tweets/#skill-extension-package)
+- [Skill、Extension 和 Pi Package 的区别](/tweets/04-skills-extensions)
 
 以上动态行为核验于 2026-09-09。教学 Skill 已在本机 Pi 0.80.10 中验证为临时加载，并出现在 `skill:action-list-review` 命令列表；Pi 的资源位置和命令可能更新，以对应官方页面为准。

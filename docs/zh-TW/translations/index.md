@@ -25,6 +25,13 @@ next:
 
 前六篇最貼近 Pi 學習：先理解工作階段、壓縮和快取，再認識代理框架，並從非工程師和效能案例兩個角度理解 Pi。第七至十篇記錄 Pi 加入 Earendil 的背景，以及 Earendil 對可信、個性化軟體的長期願景。第十一篇進一步討論 AI 程式碼的品質評估。
 
+| 你現在想弄清什麼 | 建議先讀 | 讀完回到哪裡 |
+| --- | --- | --- |
+| Pi 為什麼這樣設計 | 《什麼是代理框架？》《這個代理框架屬於我》 | [導論](/zh-TW/guide/introduction)、[執行原理](/zh-TW/guide/how-pi-works) |
+| 長對話為什麼會丟細節 | 工作階段可移植性、壓縮、提示快取三篇 | [模組三](/zh-TW/guide/context-and-compaction)、[壓縮實驗](/zh-TW/cases/compaction-before-after) |
+| Agent 能執行，程式碼就合格了嗎 | 《衡量程式碼的粗糙程度》《Pi：極簡而高效》 | [程式碼修復](/zh-TW/cases/code-repair)、[畢業專案](/zh-TW/cases/graduation-project) |
+| 想了解作者與公司的背景 | 公告、反思、制高點、通訊邀請 | 作為選讀，不是安裝前置條件 |
+
 ### 01 無法隨身帶走的工作階段
 
 **原文標題**　*The 工作階段（Session） You Cannot Take With You*
