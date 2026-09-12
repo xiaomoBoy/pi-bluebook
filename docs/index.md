@@ -1,17 +1,17 @@
 ---
 layout: home
-title: Pi 学习蓝皮书
-titleTemplate: ':title｜中文初学者 Agent 学习路线'
-description: 面向中文初学者的 Pi 系统学习手册，先理解 Pi，再从第一次任务走向可控的 Agent 工作流。
+title: Pi Coding Agent 学习蓝皮书
+titleTemplate: ':title｜中文初学者实战路线'
+description: 面向中文初学者的 Pi Coding Agent 系统教程，从安装和第一次可验收任务开始，逐步掌握 Session、Context、Skill、Extension 与长期 Agent 工作流。
 ---
 
 <main class="bluebook-home">
   <section class="bluebook-hero" aria-labelledby="bluebook-title">
     <div class="bluebook-hero__main">
       <p class="bluebook-kicker"><span>PI BLUEBOOK</span><span>开放学习版 · 2026</span></p>
-      <h1 id="bluebook-title">Pi 学习蓝皮书</h1>
-      <p class="bluebook-deck">从第一次可验收的任务开始，逐步理解 Session、Context、Skill、Extension 与长期工作流。</p>
-      <p class="bluebook-intro">一条为中文初学者重新编排的系统学习路线。先把一件真实的小事做完整，再一层一层搭出自己的 Pi。</p>
+      <h1 id="bluebook-title">Pi Coding Agent 学习蓝皮书</h1>
+      <p class="bluebook-deck">从安装和第一次可验收任务开始，逐步理解 Session、Context、Skill、Extension 与长期工作流。</p>
+      <p class="bluebook-intro">一条为中文初学者重新编排的终端 Coding Harness 学习路线。先把一件真实的小事做完整，再一层一层搭出自己的 Pi。</p>
       <div class="bluebook-actions">
         <a class="bluebook-button bluebook-button--primary" href="/guide/introduction">从导论开始</a>
         <a class="bluebook-button" href="#reading-map">查看内容地图</a>

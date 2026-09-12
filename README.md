@@ -1,10 +1,19 @@
-# Pi 学习蓝皮书
+# Pi 学习蓝皮书｜Pi Coding Agent 中文学习路线
 
-一本面向中文初学者的非官方 Pi 学习手册。先理解 Pi 是什么、适合谁和真实使用门槛，再从安装与登录开始，完成第一个可以独立验收的文件任务，逐步学习上下文、工作流和扩展。
+一本面向中文初学者的非官方 Pi Coding Agent（极简终端 Coding Harness）学习手册。从安装、登录和第一个可验收任务开始，逐步掌握 Session、Context、Skill、Extension、Subagent 与长期 Agent 工作流。
 
-每一课按“场景 → 概念 → 实操 → 验收”展开。目标是让你知道从哪里开始、每一步应该看到什么，以及怎样确认结果，而不只是复制一段命令。
+[![Quality checks](https://github.com/xiaomoBoy/pi-bluebook/actions/workflows/quality.yml/badge.svg)](https://github.com/xiaomoBoy/pi-bluebook/actions/workflows/quality.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-276d89.svg)](LICENSE)
+
+<img src="docs/public/github-social-preview.png" alt="Pi Coding Agent 中文学习蓝皮书：从第一次可验收的任务开始，走向可控的 Agent 工作流" width="1280">
 
 [在线阅读](https://pi.xiaomovps.com) · [从导论开始](https://pi.xiaomovps.com/guide/introduction) · [反馈问题](https://github.com/xiaomoBoy/pi-bluebook/issues) · [繁體中文版](README_zh-TW.md)
+
+## 这是什么
+
+- **真实学习路线**：不从功能清单开始，而是先完成一件可以亲自检查结果的小任务，再逐步进入会话、上下文、扩展和长期工作流。
+- **面向中文初学者**：同时提供 macOS 与 Windows Git Bash 路径，命令、Pi 内部操作和任务文字分开说明。
+- **强调独立验收**：每一课按“场景 → 概念 → 实操 → 验收”展开，不把 Agent 自述“完成了”当作完成。
+- **持续核验更新**：版本、认证、模型和命令等易变化信息会标注核验日期，并以 [Pi 官方文档](https://pi.dev/docs/latest) 和 [官方源码](https://github.com/earendil-works/pi-mono) 为准。
 
 ## 当前内容与学习路径
 

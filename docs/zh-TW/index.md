@@ -1,17 +1,17 @@
 ---
 layout: home
-title: Pi 學習藍皮書
-titleTemplate: ':title｜中文初學者 Agent 學習路線'
-description: 面向中文初學者的 Pi 系統學習手冊，先理解 Pi，再從第一次任務走向可控的 Agent 工作流。
+title: Pi Coding Agent 學習藍皮書
+titleTemplate: ':title｜中文初學者實戰路線'
+description: 面向中文初學者的 Pi Coding Agent 系統教程，從安裝和第一次可驗收任務開始，逐步掌握工作階段、上下文、技能、擴充功能與長期 Agent 工作流。
 ---
 
 <main class="bluebook-home">
   <section class="bluebook-hero" aria-labelledby="bluebook-title">
     <div class="bluebook-hero__main">
       <p class="bluebook-kicker"><span>PI BLUEBOOK</span><span>開放學習版 · 2026</span></p>
-      <h1 id="bluebook-title">Pi 學習藍皮書</h1>
-      <p class="bluebook-deck">從第一次可驗收的任務開始，逐步理解工作階段（Session）、上下文（Context）、技能（Skill）、擴充功能（Extension）與長期工作流。</p>
-      <p class="bluebook-intro">一條為中文初學者重新編排的系統學習路線。先把一件真實的小事做完整，再一層一層搭出自己的 Pi。</p>
+      <h1 id="bluebook-title">Pi Coding Agent 學習藍皮書</h1>
+      <p class="bluebook-deck">從安裝和第一次可驗收任務開始，逐步理解工作階段（Session）、上下文（Context）、技能（Skill）、擴充功能（Extension）與長期工作流。</p>
+      <p class="bluebook-intro">一條為中文初學者重新編排的終端機 Coding 代理框架（Agent Harness）學習路線。先把一件真實的小事做完整，再一層一層搭出自己的 Pi。</p>
       <div class="bluebook-actions">
         <a class="bluebook-button bluebook-button--primary" href="/zh-TW/guide/introduction">從導論開始</a>
         <a class="bluebook-button" href="#reading-map">檢視內容地圖</a>

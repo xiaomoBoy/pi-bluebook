@@ -1,10 +1,19 @@
-# Pi 學習藍皮書
+# Pi 學習藍皮書｜Pi Coding Agent 中文學習路線
 
-一本面向中文初學者的非官方 Pi 學習手冊。先理解 Pi 是什麼、適合誰和真實使用門檻，再從安裝與登入開始，完成第一個可以獨立驗收的檔案任務，逐步學習上下文、工作流和擴充。
+一本面向中文初學者的非官方 Pi Coding Agent（極簡終端機 Coding Harness）學習手冊。從安裝、登入和第一個可驗收任務開始，逐步掌握工作階段（Session）、上下文（Context）、技能（Skill）、擴充功能（Extension）、子代理（Subagent）與長期 Agent 工作流。
 
-每一課按“場景 → 概念 → 實作 → 驗收”展開。目標是讓你知道從哪裡開始、每一步應該看到什麼，以及怎樣確認結果，而不只是複製一段命令。
+[![Quality checks](https://github.com/xiaomoBoy/pi-bluebook/actions/workflows/quality.yml/badge.svg)](https://github.com/xiaomoBoy/pi-bluebook/actions/workflows/quality.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-276d89.svg)](LICENSE)
 
-[線上閱讀](https://pi.xiaomovps.com/zh-TW/) · [從導論開始](https://pi.xiaomovps.com/zh-TW/guide/introduction) · [反饋問題](https://github.com/xiaomoBoy/pi-bluebook/issues) · [簡體中文版](README.md)
+<img src="docs/public/github-social-preview.png" alt="Pi Coding Agent 中文學習藍皮書：從第一次可驗收的任務開始，走向可控的 Agent 工作流" width="1280">
+
+[線上閱讀](https://pi.xiaomovps.com/zh-TW/) · [從導論開始](https://pi.xiaomovps.com/zh-TW/guide/introduction) · [回報問題](https://github.com/xiaomoBoy/pi-bluebook/issues) · [簡體中文版](README.md)
+
+## 這是什麼
+
+- **真實學習路線**：不從功能清單開始，而是先完成一件可以親自檢查結果的小任務，再逐步進入工作階段、上下文、擴充功能和長期工作流。
+- **面向中文初學者**：同時提供 macOS 與 Windows Git Bash 路徑，命令、Pi 內部操作和任務文字分開說明。
+- **強調獨立驗收**：每一課按“場景 → 概念 → 實作 → 驗收”展開，不把 Agent 自述“完成了”當作完成。
+- **持續核驗更新**：版本、認證、模型和命令等易變資訊會標註核驗日期，並以 [Pi 官方文件](https://pi.dev/docs/latest) 和 [官方原始碼](https://github.com/earendil-works/pi-mono) 為準。
 
 ## 繁體中文版說明
 

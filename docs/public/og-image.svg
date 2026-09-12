@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Pi 学习蓝皮书分享封面</title>
-  <desc id="desc">米白色网格纸上的 Pi 学习蓝皮书标题、学习路线说明和深蓝色版本信息栏</desc>
+  <title id="title">Pi Coding Agent 学习蓝皮书分享封面</title>
+  <desc id="desc">米白色网格纸上的 Pi Coding Agent 中文学习蓝皮书标题、学习路线说明和深蓝色版本信息栏</desc>
   <defs>
     <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
       <path d="M20 0H0V20" fill="none" stroke="#26313a" stroke-opacity=".055" stroke-width="1"/>
@@ -15,13 +15,13 @@
   <text x="704" y="106" fill="#276d89" font-family="SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" text-anchor="end" letter-spacing="2">开放学习版 · 2026</text>
   <line x1="96" y1="135" x2="704" y2="135" stroke="#c9c7c0" stroke-width="2"/>
 
-  <text x="94" y="258" fill="#26313a" font-family="Iowan Old Style, Songti SC, STSong, serif" font-size="78" font-style="italic" font-weight="600">Pi 学习蓝皮书</text>
-  <text x="96" y="332" fill="#26313a" font-family="Iowan Old Style, Songti SC, STSong, serif" font-size="32" font-weight="600">从第一次可验收的任务开始，</text>
-  <text x="96" y="378" fill="#26313a" font-family="Iowan Old Style, Songti SC, STSong, serif" font-size="32" font-weight="600">走向可控的 Agent 工作流。</text>
+  <text x="94" y="235" fill="#26313a" font-family="Iowan Old Style, Songti SC, STSong, serif" font-size="62" font-style="italic" font-weight="600">Pi Coding Agent</text>
+  <text x="96" y="307" fill="#26313a" font-family="Iowan Old Style, Songti SC, STSong, serif" font-size="56" font-weight="600">中文学习蓝皮书</text>
+  <text x="96" y="362" fill="#26313a" font-family="Iowan Old Style, Songti SC, STSong, serif" font-size="27" font-weight="600">从第一次可验收的任务开始，走向可控的 Agent 工作流。</text>
 
-  <rect x="96" y="438" width="116" height="38" fill="#276d89"/>
-  <text x="154" y="463" fill="#fbfaf6" font-family="SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">场景</text>
-  <text x="230" y="464" fill="#65727d" font-family="SFMono-Regular, Menlo, monospace" font-size="17">→ 概念 → 实操 → 验收</text>
+  <rect x="96" y="423" width="116" height="38" fill="#276d89"/>
+  <text x="154" y="448" fill="#fbfaf6" font-family="SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">场景</text>
+  <text x="230" y="449" fill="#65727d" font-family="SFMono-Regular, Menlo, monospace" font-size="17">→ 概念 → 实操 → 验收</text>
   <text x="96" y="538" fill="#65727d" font-family="SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="2">pi.xiaomovps.com</text>
 
   <text x="848" y="206" fill="#f8f5ed" font-family="Iowan Old Style, Baskerville, serif" font-size="142">P</text>

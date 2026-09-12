@@ -1,7 +1,7 @@
 {
-  "name": "Pi 学习蓝皮书",
+  "name": "Pi Coding Agent 学习蓝皮书",
   "short_name": "PI BLUEBOOK",
-  "description": "面向中文初学者的 Pi 系统学习路线。",
+  "description": "面向中文初学者的 Pi Coding Agent 系统学习路线。",
   "lang": "zh-CN",
   "start_url": "/",
   "display": "standalone",

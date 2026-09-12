@@ -1,0 +1,32 @@
+name: 内容错误或表达问题
+description: 报告错字、事实错误、链接失效或难以理解的内容
+title: "[内容] "
+labels: [documentation]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 页面或章节
+      description: 请填写页面链接或章节标题。
+      placeholder: https://pi.xiaomovps.com/guide/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 发现的问题
+      description: 请说明哪里不准确、不清楚或已经失效。
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议修改方式
+      description: 可选；如果有官方来源或更清楚的表达，请一并提供。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 提交前检查
+      options:
+        - label: 我已移除账号、API Key、私人路径和其他敏感信息。
+          required: true
