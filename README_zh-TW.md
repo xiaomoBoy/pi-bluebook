@@ -4,7 +4,7 @@
 
 [![Quality checks](https://github.com/xiaomoBoy/pi-bluebook/actions/workflows/quality.yml/badge.svg)](https://github.com/xiaomoBoy/pi-bluebook/actions/workflows/quality.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-276d89.svg)](LICENSE)
 
-<img src="docs/public/github-social-preview.png" alt="Pi Coding Agent 中文學習藍皮書：從第一次可驗收的任務開始，走向可控的 Agent 工作流" width="1280">
+<img src="docs/public/pi-bluebook-tour.gif" alt="Pi Coding Agent 中文學習藍皮書網站瀏覽示範" width="900">
 
 [線上閱讀](https://pi.xiaomovps.com/zh-TW/) · [從導論開始](https://pi.xiaomovps.com/zh-TW/guide/introduction) · [回報問題](https://github.com/xiaomoBoy/pi-bluebook/issues) · [簡體中文版](README.md)
 
