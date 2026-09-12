@@ -40,6 +40,14 @@ for (const asset of requiredAssets) {
 
 walk(distDir)
 
+const notFoundHtml = fs.readFileSync(path.join(distDir, '404.html'), 'utf8')
+if (
+  count(notFoundHtml, 'name="robots"') !== 1 ||
+  !notFoundHtml.includes('name="robots" content="noindex, follow"')
+) {
+  fail('404 page must have one noindex robots directive')
+}
+
 for (const filePath of htmlFiles) {
   const html = fs.readFileSync(filePath, 'utf8')
   const relativePath = path.relative(distDir, filePath)

@@ -247,6 +247,11 @@ export default defineConfig({
       }
     }
   },
+  transformHead({ page }) {
+    return page === '404.md'
+      ? [['meta', { name: 'robots', content: 'noindex, follow' }]]
+      : []
+  },
   transformPageData(pageData) {
     const isTW = pageData.relativePath.startsWith('zh-TW/')
     const locale = isTW ? localeContent['zh-TW'] : localeContent.root
