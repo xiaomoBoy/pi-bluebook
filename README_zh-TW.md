@@ -21,7 +21,7 @@
 
 - 名詞採用臺灣常用說法（參照 IICM 電腦名詞譯名臺灣用語），專有名詞首次出現時中英並列，例如工作階段（Session）、代理框架（Agent Harness）。
 - `docs/translations/` 的十一篇授權譯文為簡中譯文之繁體轉換版，授權聲明與出處完整保留。
-- 上游更新簡中原文後可執行 `npm run sync:zh-tw` 同步頁面、練習材料與導航，名詞覆蓋層（`scripts/zh-tw-glossary.json`，以《電子計算機名詞》為準）會自動套用，無需重跑人工校稿；`npm run check:terms` 會擋下已淘汰用字復發。
+- 上游更新簡中原文後可執行 `npm run sync:zh-tw` 同步頁面、練習材料與導航，名詞覆蓋層（`scripts/zh-tw-glossary.json`，以[樂詞網](https://terms.naer.edu.tw/)電子計算機名詞為準）會自動套用，無需重跑人工校稿；`npm run check:terms` 會擋下已淘汰用字復發。
 
 ## 當前內容與學習路徑
 

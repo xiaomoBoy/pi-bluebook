@@ -1,5 +1,5 @@
 {
-  "_comment": "繁中名詞表：OpenCC s2twp 之後的覆蓋層。來源：IICM 臺灣用語 + 使用者確認 + 電子計算機名詞（2026-09-12 使用者確認：package=包、kit=套件、user account=使用者帳戶、單獨 account=帳戶、enter key=輸入鍵、command line=命令行、trust=信賴；session/extension/compaction/agent/token/倉庫維持現行；第二批：新建=新增、列表=清單、教程=教學、反饋=回饋、禁用=停用、賬單=帳單、套餐=方案、運營商分拆、粘=貼；迭代維持迭代（2026-09-13 使用者更正，不用疊代）；第三批使用者盤點確認：云端=雲端（OpenCC 上下文漏轉）、合作伙伴=合作夥伴、全局被 OpenCC 誤轉全域性故修正為全域、後臺=後台、配置=設定、里後置詞=裡）。順序由腳本按字串長度自動處理，此處僅為可讀性排序。",
+  "_comment": "繁中名詞表：OpenCC s2twp 之後的覆蓋層。來源：IICM 臺灣用語 + 使用者確認 + [樂詞網](https://terms.naer.edu.tw/)電子計算機名詞（2026-09-12 使用者確認：package=包、kit=套件、user account=使用者帳戶、單獨 account=帳戶、enter key=輸入鍵、command line=命令行、trust=信賴；session/extension/compaction/agent/token/倉庫維持現行；第二批：新建=新增、列表=清單、教程=教學、反饋=回饋、禁用=停用、賬單=帳單、套餐=方案、運營商分拆、粘=貼；迭代維持迭代（2026-09-13 使用者更正，不用疊代）；第三批使用者盤點確認：云端=雲端（OpenCC 上下文漏轉）、合作伙伴=合作夥伴、全局被 OpenCC 誤轉全域性故修正為全域、後臺=後台、配置=設定、里後置詞=裡）。順序由腳本按字串長度自動處理，此處僅為可讀性排序。",
   "post_opencc_fixes": {
     "來原始檔": "原始檔案",
     "來源檔案": "原始檔案",
