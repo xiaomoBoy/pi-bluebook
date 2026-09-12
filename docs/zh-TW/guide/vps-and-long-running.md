@@ -41,7 +41,7 @@ next:
 
 ## 遠端穩定不等於任務可靠
 
-VPS 不會自動解決方向跑偏、上下文丟失、憑據不足或輸出質量不合格。它只是讓程序更容易持續執行。每個長任務仍然需要：
+VPS 不會自動解決方向跑偏、上下文丟失、憑據不足或輸出品質不合格。它只是讓程序更容易持續執行。每個長任務仍然需要：
 
 1. 可以檢視的階段產物。
 2. 明確的停止條件和失敗處理。
@@ -50,7 +50,7 @@ VPS 不會自動解決方向跑偏、上下文丟失、憑據不足或輸出質�
 
 ## 用 tmux 保留終端機工作階段
 
-本節只給出最小概念，不包括 VPS 購買、SSH 加固和防火牆配置。在已安裝 `tmux` 的 VPS 中，可以建立一個有名字的終端機工作階段：
+本節只給出最小概念，不包括 VPS 購買、SSH 加固和防火牆設定。在已安裝 `tmux` 的 VPS 中，可以建立一個有名字的終端機工作階段：
 
 ```bash
 tmux new -s pi-work
@@ -69,12 +69,12 @@ tmux attach -t pi-work
 | 現象 | 下一步 |
 | --- | --- |
 | `tmux: command not found` | 不繼續照抄命令；按 VPS 系統的官方包管理說明安裝，或先只做本地練習 |
-| 工作階段名 `pi-work` 已存在 | 用 `tmux attach -t pi-work` 檢視，不新建同名工作階段 |
+| 工作階段名 `pi-work` 已存在 | 用 `tmux attach -t pi-work` 檢視，不新增同名工作階段 |
 | `can't find session` | 執行 `tmux ls` 核對真實名稱；沒有任何工作階段時說明舊工作階段已結束 |
 | 重新連入後只看到普通 shell | Pi 已經退出或從未啟動；先檢查產物和日誌，不直接宣稱任務仍在執行 |
-| 組合鍵變成普通換行 | 核對 tmux 擴充按鍵配置；不要連續提交未完成的多行任務 |
+| 組合鍵變成普通換行 | 核對 tmux 擴充按鍵設定；不要連續提交未完成的多行任務 |
 
-Pi 官方當前建議 tmux 3.5 及以上啟用 `extended-keys` 和 `csi-u`，以區分 `Enter`、`Shift+Enter` 與 `Ctrl+Enter`。修改 `~/.tmux.conf` 會影響你的遠端終端機環境；先閱讀[官方 tmux 設定](https://pi.dev/docs/latest/tmux)，不要為了本課盲改現有配置。
+Pi 官方當前建議 tmux 3.5 及以上啟用 `extended-keys` 和 `csi-u`，以區分 `Enter`、`Shift+Enter` 與 `Ctrl+Enter`。修改 `~/.tmux.conf` 會影響你的遠端終端機環境；先閱讀[官方 tmux 設定](https://pi.dev/docs/latest/tmux)，不要為了本課盲改現有設定。
 
 ## 一份可複用的長任務說明
 
@@ -83,7 +83,7 @@ Pi 官方當前建議 tmux 3.5 及以上啟用 `extended-keys` 和 `csi-u`，以
 範圍：只讀 source，只寫 output。
 階段產物：每處理 20 篇，更新 output/progress.md。
 停止條件：遇到損壞檔案、需要登入或準備存取其他目錄時停止。
-驗收：給出檔案數、失敗列表、生成檔案和複核命令。
+驗收：給出檔案數、失敗清單、生成檔案和複核命令。
 ```
 
 如果這些邊界在本地還沒跑通，換到 VPS 只會讓除錯更遠。先用小樣本驗證，再把同一套工作流搬到遠端。
@@ -121,7 +121,7 @@ pi --name "檢查點練習-第一步"
 只處理這一篇，然後停止等待我驗收。
 ```
 
-輸入 `/quit` 退出 Pi，獨立開啟 `long-task/output/index.md` 與 `long-task/progress.md`。確認已完成數是 1、已處理列表只有 `article-a.md`、下一步指向尚未處理的檔案。隨後在同一個普通終端機確認 `pwd`，啟動新工作階段：
+輸入 `/quit` 退出 Pi，獨立開啟 `long-task/output/index.md` 與 `long-task/progress.md`。確認已完成數是 1、已處理清單只有 `article-a.md`、下一步指向尚未處理的檔案。隨後在同一個普通終端機確認 `pwd`，啟動新工作階段：
 
 ```bash
 pwd
@@ -134,7 +134,7 @@ pi --name "檢查點練習-恢復"
 先讀取 long-task/progress.md，再列出 long-task/source 中尚未處理的檔案。
 逐篇完成剩餘檔案；在 long-task/output/index.md 中繼續用“## 檔名”作二級標題，
 每完成一篇就同時更新 long-task/output/index.md 和 long-task/progress.md。
-不要重複已經記錄為完成的檔案。遇到損壞或無法讀取的檔案時記錄到失敗列表並停止。
+不要重複已經記錄為完成的檔案。遇到損壞或無法讀取的檔案時記錄到失敗清單並停止。
 ```
 
 最後在普通終端機檢查數量：
@@ -144,7 +144,7 @@ find long-task/source -type f -name '*.md' | wc -l
 grep -c '^## ' long-task/output/index.md
 ```
 
-兩個數字都應為 `3`，並且 `long-task/progress.md` 的已完成數、已處理檔案和失敗列表與實際檔案一致。數字一致仍不代表摘要正確，還要逐篇開啟原文與索引核對。
+兩個數字都應為 `3`，並且 `long-task/progress.md` 的已完成數、已處理檔案和失敗清單與實際檔案一致。數字一致仍不代表摘要正確，還要逐篇開啟原文與索引核對。
 
 ![在真實終端機中核對原始檔、索引條目與檢查點](/images/07-Pi-长任务检查点-实操图.png)
 

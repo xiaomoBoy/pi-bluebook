@@ -31,7 +31,7 @@ export const navTW = [
             items: [
               { text: '實作案例庫', link: '/zh-TW/cases/' },
               { text: '外掛程式推薦與選擇', link: '/zh-TW/plugins/' },
-              { text: '技能、擴充功能與套件', link: '/zh-TW/guide/skills-extensions-packages' }
+              { text: '技能、擴充功能與包', link: '/zh-TW/guide/skills-extensions-packages' }
             ]
           },
           {
@@ -127,7 +127,7 @@ export const sidebarTW = {
           text: '模組四 · 擴充自己的 Pi',
           collapsed: true,
           items: [
-            { text: '10. 技能、擴充功能與套件', link: '/zh-TW/guide/skills-extensions-packages' },
+            { text: '10. 技能、擴充功能與包', link: '/zh-TW/guide/skills-extensions-packages' },
             { text: '11. 擴充功能的需求與驗收', link: '/zh-TW/guide/first-extension' },
             { text: '12. 子代理如何分工', link: '/zh-TW/guide/subagents' }
           ]
@@ -205,7 +205,7 @@ export const sidebarTW = {
           collapsed: true,
           items: [
             { text: '推薦總覽與選擇方法', link: '/zh-TW/plugins/' },
-            { text: '技能、擴充功能與套件', link: '/zh-TW/guide/skills-extensions-packages' }
+            { text: '技能、擴充功能與包', link: '/zh-TW/guide/skills-extensions-packages' }
           ]
         },
         {
@@ -258,7 +258,7 @@ export const sidebarTW = {
           text: '能力與邊界',
           collapsed: true,
           items: [
-            { text: '技能、擴充功能與套件', link: '/zh-TW/guide/skills-extensions-packages' },
+            { text: '技能、擴充功能與包', link: '/zh-TW/guide/skills-extensions-packages' },
             { text: '外掛程式推薦與選擇', link: '/zh-TW/plugins/' },
             { text: '子代理', link: '/zh-TW/guide/subagents' },
             { text: '權限、隔離與驗收', link: '/zh-TW/guide/safety' }

@@ -18,7 +18,7 @@ next:
 這條中文路徑把 Windows 獨有的準備工作集中在一頁完成。透過本頁驗收後，直接進入[第 3 課：登入與模型設定](/zh-TW/guide/connect-model)，再回到共同主線。
 
 ::: info 本頁採用的路線
-Pi 在 Windows 上預設使用 **Git Bash**。官方依次查詢自定義 Bash 路徑、Git for Windows 的預設安裝位置 `C:\Program Files\Git\bin\bash.exe`，最後才查詢 PATH 中的其他 `bash.exe`。本頁面向第一次安裝的讀者，只使用官方推薦的 Git for Windows 預設路線，不配置 Cygwin、MSYS2、WSL 或可選 PowerShell 工具。
+Pi 在 Windows 上預設使用 **Git Bash**。官方依次查詢自定義 Bash 路徑、Git for Windows 的預設安裝位置 `C:\Program Files\Git\bin\bash.exe`，最後才查詢 PATH 中的其他 `bash.exe`。本頁面向第一次安裝的讀者，只使用官方推薦的 Git for Windows 預設路線，不設定 Cygwin、MSYS2、WSL 或可選 PowerShell 工具。
 :::
 
 ## 先分清兩個輸入位置
@@ -48,7 +48,7 @@ test -f "/c/Program Files/Git/bin/bash.exe" && echo "PASS: Pi 能找到預設 Gi
 
 透過時應看到 Git 版本、Bash 版本，最後再看到一行 `PASS`。版本數字可以不同。
 
-如果前兩條有版本號、最後一條沒有輸出，說明 Git Bash 可能裝在了其他位置。這不等於 Git 已損壞，但本頁的預設路線尚未透過。第一次安裝建議重新使用預設位置；已經明確維護自定義環境的讀者，再參考 [Pi 官方 Windows 設定](https://pi.dev/docs/latest/windows)配置 `shellPath`。
+如果前兩條有版本號、最後一條沒有輸出，說明 Git Bash 可能裝在了其他位置。這不等於 Git 已損壞，但本頁的預設路線尚未透過。第一次安裝建議重新使用預設位置；已經明確維護自定義環境的讀者，再參考 [Pi 官方 Windows 設定](https://pi.dev/docs/latest/windows)設定 `shellPath`。
 
 ### 小檢查
 
@@ -171,7 +171,7 @@ Pi 官方還提供可選的 `powershell` 工具，但它不是本書入門路線
 
 透過後，不需要再照抄 macOS 的第 1、2 課，直接繼續登入。
 
-[下一課，登入帳號並選擇模型 →](/zh-TW/guide/connect-model)
+[下一課，登入使用者帳戶並選擇模型 →](/zh-TW/guide/connect-model)
 
 已經安裝完成、現在需要升級或解除安裝？檢視 [安裝後生命週期管理](/zh-TW/guide/lifecycle-management)。
 

@@ -14,7 +14,7 @@ next: { text: CASE 03 · 第一個技能, link: /zh-TW/cases/first-skill }
 在同一條 Pi 工作階段（Session）中留下三份記錄：壓縮前回答、壓縮後的記憶回答、重新讀取檢查點後的回答。實驗不預設“壓縮後一定忘記”，而是讓你用實際差異理解：工作階段、當前上下文（Context）、磁碟檔案和提示快取是不同證據。
 
 ::: warning 費用提醒
-本案例會呼叫模型並手動執行一次 `/compact`。壓縮本身也需要模型生成摘要，可能消耗套餐額度或產生 API 費用。先完成[登入課的費用檢查](/zh-TW/guide/connect-model)，不確定時不要為了做實驗繼續。
+本案例會呼叫模型並手動執行一次 `/compact`。壓縮本身也需要模型生成摘要，可能消耗方案額度或產生 API 費用。先完成[登入課的費用檢查](/zh-TW/guide/connect-model)，不確定時不要為了做實驗繼續。
 :::
 
 ## 固定材料
@@ -23,7 +23,7 @@ next: { text: CASE 03 · 第一個技能, link: /zh-TW/cases/first-skill }
 - <a href="/examples-tw/compaction/checkpoint.md" download>下載檢查點 checkpoint.md</a>
 - <a href="/examples-tw/compaction/settings.json" download>下載實驗專用 settings.json</a>
 
-前兩份材料只包含固定教學文字，不含指令碼、憑據和私人資料。`settings.json` 只把本實驗目錄的 `keepRecentTokens` 降到 `200`，讓短工作階段也有可壓縮的較早內容；不要把它複製到日常專案或使用者級配置。
+前兩份材料只包含固定教學文字，不含指令碼、憑據和私人資料。`settings.json` 只把本實驗目錄的 `keepRecentTokens` 降到 `200`，讓短工作階段也有可壓縮的較早內容；不要把它複製到日常專案或使用者級設定。
 
 ## 1. 建立獨立實驗目錄
 
@@ -60,7 +60,7 @@ pi --name "壓縮前後對照" --no-extensions --no-skills --no-context-files
 
 進入 Pi 後輸入 `/session`，確認工作階段名稱是“壓縮前後對照”。記下介面顯示的工作階段 ID；它只用於稍後確認仍在同一條工作階段中，不需要釋出或上傳工作階段檔案。
 
-如果首次進入該目錄時出現專案信任（Project Trust）提示，只在已經核對三份下載材料後信任這個隔離練習目錄。專案信任允許 Pi 採用目錄內設定，不會把它變成沙箱；目錄或檔案與本頁不一致時退出，不要確認。
+如果首次進入該目錄時出現專案信賴（Project Trust）提示，只在已經核對三份下載材料後信賴這個隔離練習目錄。專案信賴允許 Pi 採用目錄內設定，不會把它變成沙箱；目錄或檔案與本頁不一致時退出，不要確認。
 
 ## 3. 留出可壓縮的較早內容
 
@@ -89,7 +89,7 @@ pi --name "壓縮前後對照" --no-extensions --no-skills --no-context-files
 
 ```text
 不要重新讀取檔案。只根據當前上下文，把六項資訊逐行寫入
-results/before.md，格式必須與 checkpoint.md 的列表一致。
+results/before.md，格式必須與 checkpoint.md 的清單一致。
 最後只回複寫入路徑；不知道的內容寫“未知”，不要猜測，不要存取網路。
 ```
 
@@ -122,7 +122,7 @@ results/after-memory.md，格式與壓縮前相同。
 
 ```text
 現在讀取 checkpoint.md，以檔案為準，把六項固定資訊寫入
-results/after-file.md。格式與 checkpoint.md 的列表一致。
+results/after-file.md。格式與 checkpoint.md 的清單一致。
 如果它和 after-memory.md 不同，在回覆中指出哪些欄位不同；不要修改任何已有記錄。
 ```
 
@@ -135,7 +135,7 @@ results/after-file.md。格式與 checkpoint.md 的列表一致。
 | 工作階段 | `/session` 前後的 ID 是否相同 | 對話仍屬於同一條已儲存工作階段 |
 | 當前上下文 | `after-memory.md` 與壓縮前記錄是否一致 | 摘要和近期訊息為這一輪保留了哪些資訊 |
 | 磁碟檔案 | 兩份輸入的指紋是否不變；`after-file.md` 是否完整 | 檔案可獨立儲存並重新提供約束 |
-| 提示快取 | 模型服務商（Provider）是否顯示快取資料、壓縮前後是否變化 | 僅記錄當前服務的快取現象，不代表記憶或任務質量 |
+| 提示快取 | 模型服務商（Provider）是否顯示快取資料、壓縮前後是否變化 | 僅記錄當前服務的快取現象，不代表記憶或任務品質 |
 
 壓縮後六項全部保留是有效結果；出現“未知”或差異也是有效結果。實驗失敗只有兩類：沒有留下可比較記錄，或在記憶回答階段偷偷重新讀取了檔案。
 
@@ -163,10 +163,10 @@ Windows Git Bash 把 `shasum -a 256 -c` 換成 `sha256sum -c`，其餘命令不�
 
 ## 失敗恢復
 
-- `/compact` 顯示 `Nothing to compact (session too small)`：確認當前目錄末尾是 `compaction-lab`、`.pi/settings.json` 內容正確，而且第 3、4 步均已完成；修正後新建工作階段重做，不在原工作階段連續試。
+- `/compact` 顯示 `Nothing to compact (session too small)`：確認當前目錄末尾是 `compaction-lab`、`.pi/settings.json` 內容正確，而且第 3、4 步均已完成；修正後新增工作階段重做，不在原工作階段連續試。
 - `/compact` 發生其他錯誤或一直沒有回到輸入區：按 `Esc` 停止，保留錯誤文字和已有檔案，不連續重試。
-- 記憶回答階段讀取了檔案：保留該記錄並標註“本輪無效”，新建工作階段重新實驗，不覆蓋舊檔案。
-- 找不到原工作階段：不要宣稱工作階段已恢復；新建工作階段，從 `checkpoint.md` 和已有記錄繼續核對。
+- 記憶回答階段讀取了檔案：保留該記錄並標註“本輪無效”，新增工作階段重新實驗，不覆蓋舊檔案。
+- 找不到原工作階段：不要宣稱工作階段已恢復；新增工作階段，從 `checkpoint.md` 和已有記錄繼續核對。
 - 輸入指紋變化：停止比較，保留現場；重新下載到新的實驗目錄，不覆蓋已經改變的材料。
 - `after-file.md` 仍缺欄位：開啟 `checkpoint.md` 人工核對，記錄遺漏；不要讓 Agent 反覆改到測試透過。
 - 實驗結束後不想保留低閾值：退出 Pi，刪除整個 `compaction-lab`；或只刪除其中的 `.pi/settings.json`。這不會改使用者級設定。
