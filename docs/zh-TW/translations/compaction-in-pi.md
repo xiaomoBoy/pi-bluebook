@@ -101,7 +101,7 @@ Pi 會在一個輪次結束後檢查是否需要自動壓縮。在此之前，�
 [系統 + 工具][較早輪次][近期保留的訊息]
 ```
 
-由於 Pi 使用[可配置的 token 預算](https://pi.dev/docs/latest/compaction#when-it-triggers)，實際保留的訊息數量並不固定。Pi 當前預設保留 2 萬 token，大約相當於 5 到 20 個輪次。在這個分界點之前的所有訊息都會被提取、序列化並接受總結。
+由於 Pi 使用[可設定的 token 預算](https://pi.dev/docs/latest/compaction#when-it-triggers)，實際保留的訊息數量並不固定。Pi 當前預設保留 2 萬 token，大約相當於 5 到 20 個輪次。在這個分界點之前的所有訊息都會被提取、序列化並接受總結。
 
 ## Pi 的壓縮提示
 

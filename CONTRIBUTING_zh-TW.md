@@ -30,7 +30,7 @@
 繁體中文版（`docs/zh-TW/`、`docs/public/examples-tw/`）由轉換管線生成，
 轉換規則見 `scripts/convert-zh-tw.py`，名詞對照見 `scripts/zh-tw-glossary.json`。
 
-- 繁中特有的名詞、用字問題，請在 Issue 中註明出自繁中頁面，或直接修改名詞表後執行 `npm run sync:zh-tw` 並檢查構建（`npm run docs:check`）。
+- 繁中特有的名詞、用字問題，請在 Issue 中註明出自繁中頁面，或直接修改名詞表後執行 `npm run sync:zh-tw` 並檢查構建（`npm run docs:check`）。新增規則以[樂詞網](https://terms.naer.edu.tw/)電子計算機名詞為據；與名詞庫明顯衝突時先提出確認再改，刻意保留的例外記入詞表 `_comment` 並同步調整 `scripts/check-zh-tw-terms.py` 的違禁表。
 - 不要只改 `docs/zh-TW/` 下的生成檔案而不改詞表或管線：下次重跑會覆蓋這類手工修改；管線處理不了的特例除外，提交時請說明原因。
 - 繁體中文版與簡體中文版在同一倉庫維護；反饋時請註明出自繁中頁面還是簡中原文。
 

@@ -20,7 +20,7 @@ next: { text: 安裝前檢查, link: /zh-TW/guide/before-install }
 | 已安裝，但還不能回覆 | [登入與模型設定](/zh-TW/guide/connect-model) | 確認存取方式和費用，收到一次真實回覆 |
 | 已經能收到回覆 | [從練習目錄開始](/zh-TW/guide/ready-to-work) → [第一次任務](/zh-TW/guide/first-task) | 產生行動清單，三條事項完整，輸入檔案未變 |
 
-Linux 使用者可以跟隨 macOS/Linux 通用命令，檔案指紋使用 `sha256sum`。本書不提供 Linux 桌面介面的逐屏教程。
+Linux 使用者可以跟隨 macOS/Linux 通用命令，檔案指紋使用 `sha256sum`。本書不提供 Linux 桌面介面的逐屏教學。
 
 ## 第一次成功應該留下什麼
 

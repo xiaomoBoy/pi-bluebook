@@ -17,7 +17,7 @@ next: { text: CASE 06 · 中斷恢復, link: /zh-TW/cases/checkpoint-recovery }
 
 - 輸入：<a href="/examples-tw/first-task/meeting-notes.md" download>虛構會議記錄</a>
 
-本案例用兩個命名、只讀的 Pi 工作階段練習分工結構，不要求安裝套件（Package），也不宣稱 Pi 核心內建子代理（Subagent）。
+本案例用兩個命名、只讀的 Pi 工作階段練習分工結構，不要求安裝包（Package），也不宣稱 Pi 核心內建子代理（Subagent）。
 
 ## 1. 準備目錄
 
@@ -61,7 +61,7 @@ pi --name "安全審閱" --no-extensions --tools read,grep,find,ls
 
 ```text
 只讀檢查 input/專案會議記錄.md。
-只列出涉及帳號、私人路徑、憑據、釋出前檢查和驗收的限制。
+只列出涉及使用者帳戶、私人路徑、憑據、釋出前檢查和驗收的限制。
 不要修改檔案；每條結論附原文短句與行號，不確定就標記“未知”。
 ```
 

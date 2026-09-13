@@ -45,7 +45,7 @@ Mario Zechner 是一名軟體開發者、教練、演講者和天使投資人。
 
 ## 2010—2014：libGDX 從個人工具變成開源框架
 
-2010 年 3 月，Mario 將 AFX 以 LGPL 許可證開源；2010 年 3 月 6 日，第一批 libGDX 程式碼公開。專案很快迎來貢獻者，並在教程、安裝體驗和功能逐步完善後被更多 Android 遊戲開發者採用。
+2010 年 3 月，Mario 將 AFX 以 LGPL 許可證開源；2010 年 3 月 6 日，第一批 libGDX 程式碼公開。專案很快迎來貢獻者，並在教學、安裝體驗和功能逐步完善後被更多 Android 遊戲開發者採用。
 
 ![libGDX 官方歷史頁面](/images/mario-zechner/02-libgdx-history.webp)
 
@@ -85,7 +85,7 @@ RoboVM 後來被 Xamarin 收購，開源核心隨之閉源；Xamarin 再被微�
 
 <p class="image-caption">Mario 於 2025-11-30 釋出長文，系統解釋 Pi 的組成與取捨。截圖中的終端機記錄來自作者頁面。</p>
 
-他的公開原則很直接：如果自己不需要，就不把它做進核心。Pi 因此沒有把計劃模式、子代理（Subagent）、MCP、後臺命令或權限彈窗全部固化成唯一答案，而是提供擴充功能（Extension）、技能（Skill）、模板和主題，讓使用者自己組合。
+他的公開原則很直接：如果自己不需要，就不把它做進核心。Pi 因此沒有把計劃模式、子代理（Subagent）、MCP、後台命令或權限彈窗全部固化成唯一答案，而是提供擴充功能（Extension）、技能（Skill）、模板和主題，讓使用者自己組合。
 
 這不是“功能少所以還沒做完”，而是一種帶立場的產品設計：核心只提供原語，把工作流的決定權留給使用者。
 
@@ -101,7 +101,7 @@ Pi 被越來越多專案採用，其中包括建立在 Pi 之上的 OpenClaw。�
 
 <p class="image-caption">《I've sold out》不是一句簡單的“專案被賣了”。文章主體討論的是家庭選擇、開源持續性、RoboVM 的教訓與 Pi 的治理安排。</p>
 
-專案倉庫隨後從 Mario 的個人帳號遷入 Earendil 組織，軟體包名稱也調整為 `@earendil-works/pi-coding-agent`。截至本頁核驗時，Pi 核心仍使用 MIT License，官方站點是 `pi.dev`。
+專案倉庫隨後從 Mario 的個人帳戶遷入 Earendil 組織，軟體包名稱也調整為 `@earendil-works/pi-coding-agent`。截至本頁核驗時，Pi 核心仍使用 MIT License，官方站點是 `pi.dev`。
 
 ![Pi 官方網站首頁](/images/mario-zechner/07-pi-homepage.webp)
 
@@ -109,11 +109,11 @@ Pi 被越來越多專案採用，其中包括建立在 Pi 之上的 OpenClaw。�
 
 ![Mario Zechner 的 X 主頁](/images/mario-zechner/05-mario-x-profile.webp)
 
-<p class="image-caption">Mario 的公開帳號是 <a href="https://x.com/badlogicgames">@badlogicgames</a>。關注人數和簡介屬於動態資訊，截圖僅代表 2026-09-09 的頁面狀態。</p>
+<p class="image-caption">Mario 的公開帳戶是 <a href="https://x.com/badlogicgames">@badlogicgames</a>。關注人數和簡介屬於動態資訊，截圖僅代表 2026-09-09 的頁面狀態。</p>
 
 ![Pi 的 X 主頁](/images/mario-zechner/06-pi-x-profile.webp)
 
-<p class="image-caption">Pi 的公開帳號是 <a href="https://x.com/pidotdev">@pidotdev</a>；官網與文件仍應以 <a href="https://pi.dev/">pi.dev</a> 為準。</p>
+<p class="image-caption">Pi 的公開帳戶是 <a href="https://x.com/pidotdev">@pidotdev</a>；官網與文件仍應以 <a href="https://pi.dev/">pi.dev</a> 為準。</p>
 
 ## 這條時間線怎樣幫助你理解 Pi
 
