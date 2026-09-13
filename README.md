@@ -111,6 +111,8 @@ pi-bluebook/
 
 提交修改前请阅读 [贡献指南](CONTRIBUTING.md)。文章从原始材料到发布的分工与验收方式见 [文章工作流](EDITORIAL_WORKFLOW.md)。
 
+这本书由小墨整理；写作缘起与交流入口见[关于作者](https://pi.xiaomovps.com/about)。
+
 ## 许可证
 
 本仓库的网站代码、原创书稿、推文整理稿和原创图片统一采用 [MIT License](LICENSE)。

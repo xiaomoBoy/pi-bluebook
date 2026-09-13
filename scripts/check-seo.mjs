@@ -119,6 +119,22 @@ for (const filePath of htmlFiles) {
       ) {
         fail(`${relativePath} is missing WebPage or BreadcrumbList data`)
       }
+      if (relativePath === 'about.html' || relativePath === 'zh-TW/about.html') {
+        const expectedUrl = `https://pi.xiaomovps.com/${isTW ? 'zh-TW/' : ''}about`
+        const person = data['@graph']?.find((item) => item['@type'] === 'Person')
+        const breadcrumb = data['@graph']?.find((item) => item['@type'] === 'BreadcrumbList')
+        if (
+          webPage?.url !== expectedUrl ||
+          webPage?.mainEntity?.['@id'] !== `${expectedUrl}#person` ||
+          person?.['@id'] !== `${expectedUrl}#person` ||
+          person?.name !== '小墨' ||
+          breadcrumb?.itemListElement?.at(-1)?.item !== expectedUrl ||
+          !html.includes(`rel="canonical" href="${expectedUrl}"`) ||
+          !html.includes(`property="og:type" content="profile"`)
+        ) {
+          fail(`${relativePath} has incomplete author profile SEO data`)
+        }
+      }
     }
   } catch (error) {
     fail(`${relativePath} has invalid JSON-LD: ${error.message}`)

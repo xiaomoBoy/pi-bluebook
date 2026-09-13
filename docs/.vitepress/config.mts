@@ -18,6 +18,7 @@ const localeContent = {
     homeSeoTitle: 'Pi Coding Agent 中文教程｜从入门到可控 Agent 工作流',
     homeLabel: '首页',
     sectionNames: {
+      about: '关于作者',
       cases: '实操案例',
       guide: '蓝皮书主线',
       journey: '小墨札记',
@@ -38,6 +39,7 @@ const localeContent = {
     homeSeoTitle: 'Pi Coding Agent 中文教學｜從入門到可控 Agent 工作流',
     homeLabel: '首頁',
     sectionNames: {
+      about: '關於作者',
       cases: '實作案例',
       guide: '藍皮書主線',
       journey: '小墨札記',
@@ -74,7 +76,7 @@ function getBreadcrumbList(
       '@type': 'ListItem',
       position: 2,
       name: sectionName,
-      item: `${localeRoot}${section}/`
+      item: cleanPath === section ? canonicalUrl : `${localeRoot}${section}/`
     }
   ]
 
@@ -119,12 +121,12 @@ const sharedThemeConfig = {
 }
 
 const footerCN = {
-  message: '<span class="pi-footer-brand">PI BLUEBOOK</span><span class="pi-footer-links"><a href="/guide/">学习目录</a><a href="/cases/">实操案例</a><a href="/reference/">参考手册</a><a href="/translations/">授权译文</a><a href="https://github.com/xiaomoBoy/pi-bluebook">GitHub</a></span>',
+  message: '<span class="pi-footer-brand">PI BLUEBOOK</span><span class="pi-footer-links"><a href="/guide/">学习目录</a><a href="/cases/">实操案例</a><a href="/reference/">参考手册</a><a href="/translations/">授权译文</a><a href="/about">关于作者</a><a href="https://github.com/xiaomoBoy/pi-bluebook">GitHub</a></span>',
   copyright: '<span>© 2026 小墨</span><span>网站与原创内容采用 MIT License</span><span>Earendil 授权译文采用 CC BY 4.0 · 第三方内容归原作者所有</span>'
 }
 
 const footerTW = {
-  message: '<span class="pi-footer-brand">PI BLUEBOOK</span><span class="pi-footer-links"><a href="/zh-TW/guide/">學習目錄</a><a href="/zh-TW/cases/">實作案例</a><a href="/zh-TW/reference/">參考手冊</a><a href="/zh-TW/translations/">授權譯文</a><a href="https://github.com/xiaomoBoy/pi-bluebook">GitHub</a></span>',
+  message: '<span class="pi-footer-brand">PI BLUEBOOK</span><span class="pi-footer-links"><a href="/zh-TW/guide/">學習目錄</a><a href="/zh-TW/cases/">實作案例</a><a href="/zh-TW/reference/">參考手冊</a><a href="/zh-TW/translations/">授權譯文</a><a href="/zh-TW/about">關於作者</a><a href="https://github.com/xiaomoBoy/pi-bluebook">GitHub</a></span>',
   copyright: '<span>© 2026 小墨</span><span>網站與原創內容採用 MIT License</span><span>Earendil 授權譯文採用 CC BY 4.0 · 第三方內容歸原作者所有</span>'
 }
 
@@ -267,6 +269,7 @@ export default defineConfig({
       `${siteUrl}/`
     ).href
     const isHome = localePath === 'index.md'
+    const isAbout = localePath === 'about.md'
     const isSectionIndex = isHome || localePath.endsWith('/index.md')
     const pageTitle = isHome
       ? locale.homeSeoTitle
@@ -299,8 +302,16 @@ export default defineConfig({
               name: pageData.title,
               description: pageDescription,
               inLanguage: locale.lang,
+              ...(isAbout ? { mainEntity: { '@id': `${canonicalUrl}#person` } } : {}),
               ...(breadcrumb ? { breadcrumb: { '@id': breadcrumb['@id'] } } : {})
             },
+            ...(isAbout ? [{
+              '@type': 'Person',
+              '@id': `${canonicalUrl}#person`,
+              name: '小墨',
+              url: canonicalUrl,
+              sameAs: ['https://xiaomovps.com/', 'https://x.com/xiaomovps', 'https://github.com/xiaomoBoy']
+            }] : []),
             ...(breadcrumb ? [breadcrumb] : [])
           ]
         }
@@ -311,7 +322,7 @@ export default defineConfig({
       ['link', { rel: 'alternate', hreflang: locale.lang, href: canonicalUrl }],
       ['link', { rel: 'alternate', hreflang: isTW ? 'zh-CN' : 'zh-Hant-TW', href: counterpartUrl }],
       ['link', { rel: 'alternate', hreflang: 'x-default', href: isTW ? counterpartUrl : canonicalUrl }],
-      ['meta', { property: 'og:type', content: isSectionIndex ? 'website' : 'article' }],
+      ['meta', { property: 'og:type', content: isAbout ? 'profile' : isSectionIndex ? 'website' : 'article' }],
       ['meta', { property: 'og:site_name', content: locale.siteName }],
       ['meta', { property: 'og:locale', content: locale.ogLocale }],
       ['meta', { property: 'og:locale:alternate', content: locale.alternateLocale }],
