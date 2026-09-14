@@ -29,17 +29,17 @@ next:
 
 ## Pi {#pi}
 
-**人话解释：** Pi 是一个运行在终端里的极简 Agent Harness。它把模型、工具、会话、上下文和工作目录连接起来，让模型不只回答问题，还能在你的电脑上处理真实任务。
+**人话解释：** Pi 是极简 Agent Harness 项目的名字。普通用户接触到的 Pi Coding Agent 是它的终端应用，把模型、工具、会话和工作目录连接起来，让模型能处理真实任务。
 
-**在 Pi 里意味着什么：** 日常所说的“打开 Pi”“让 Pi 改文件”，通常就是启动 `pi` 命令使用这套 Harness。Pi 不是模型，也不自带模型额度；它需要连接 Provider 提供的模型。官方当前把产品直接称为 Pi，安装包名称则是 `@earendil-works/pi-coding-agent`，不必把两种叫法理解成彼此独立的产品。
+**在 Pi 里意味着什么：** Pi 既是整个开源项目的名字，也是日常对终端产品的简称。说“打开 Pi”“让 Pi 改文件”时，通常是运行 `pi` 命令使用 Pi Coding Agent；说到底层 `pi-agent-core` 时，指的是被应用调用的 Agent 运行库。Pi 不是模型，也不自带模型额度；它需要连接 Provider 提供的模型。
 
 **相关：** [Pi Coding Agent](#pi-coding-agent) · [Agent Harness](#agent-harness) · [Pi 到底是什么？](/reference/faq#what-is-pi)
 
 ## Pi Coding Agent {#pi-coding-agent}
 
-**人话解释：** Pi Coding Agent 是 Pi 的产品与安装包语境名称，强调它主要通过终端完成代码、文件和命令任务。
+**人话解释：** Pi Coding Agent 是建立在 Pi 底层组件之上的完整终端应用，也是本书让你安装和启动的那一层。
 
-**在 Pi 里意味着什么：** 新手看到 `pi`、Pi、Pi Coding Agent 或 npm 包 `@earendil-works/pi-coding-agent` 时，多数情况下是在谈同一个日常使用入口。只有讨论源码包、SDK 或底层模块时，才需要进一步区分仓库中的不同组成部分。它仍然只是 Harness，不是负责推理的模型。
+**在 Pi 里意味着什么：** npm 包 `@earendil-works/pi-coding-agent` 提供 `pi` 命令；它依赖 `pi-agent-core` 等组件，并带有内置工具、会话和扩展加载能力。平时大家会简称它为“Pi”，但不能把这个可安装的应用与单独的 Agent Core 包画等号；可选的 Skill、Extension 也不是应用本体。它仍然是 Harness，不是负责推理的模型。[官方包列表](https://github.com/earendil-works/pi#all-packages)
 
 **相关：** [Pi](#pi) · [Coding Agent](#coding-agent) · [Pi 和 Pi Coding Agent 有什么区别？](/reference/faq#pi-vs-pi-coding-agent)
 

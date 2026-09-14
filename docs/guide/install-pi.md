@@ -19,6 +19,8 @@ next:
 本页的快捷键和目录按 macOS 编写。Windows 用户请改走 [Windows 中文安装路径](/guide/windows-setup)，不要在命令提示符或 PowerShell 中直接照抄本页；独立路径完成安装和第一次启动后，会接回第 3 课。
 :::
 
+Linux 用户使用相同的安装与验证命令，但复制、粘贴请按当前终端的快捷键操作；如果上一课建立的是 `~/pi-practice`，本页的练习目录也统一改为它。页面截图记录的是 Mac 环境，Linux 以实际命令输出和 Pi 状态栏为准。
+
 先打开终端。如果你不确定自己现在在哪，先输入 `pwd` 看一眼。下面第一条安装命令安装的是电脑可调用的 Pi 命令；后面“启动 Pi”时所在的目录，才决定 Pi 会看到哪些文件。
 
 ## 1. 执行官方安装命令
@@ -28,6 +30,8 @@ next:
 ```bash
 npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 ```
+
+这行安装的是 **Pi Coding Agent**，也就是后面用 `pi` 命令打开的完整终端应用。它使用 Pi Agent Core 等底层组件，但不需要你单独安装核心包，再手动拼接一组插件。Skill 和 Extension 是以后按任务增加的能力。名称与层次见[Pi 与 Pi Coding Agent 的区别](/reference/faq#pi-vs-pi-coding-agent)，安装命令见[官方 Quickstart](https://pi.dev/docs/latest/quickstart)。
 
 `-g` 表示把 Pi 安装成这台电脑可以直接调用的命令。`--ignore-scripts` 会禁止依赖包在安装时运行生命周期脚本；Pi 的正常 npm 安装不需要这些脚本。
 

@@ -65,11 +65,13 @@ next:
 
 ## Pi 和 Pi Coding Agent 有什麼區別？ {#pi-vs-pi-coding-agent}
 
-**短答：在日常使用裡，兩者通常指向同一個終端機產品，不需要硬拆成兩個軟體。**
+**短答：日常口語裡的“Pi”常指你開啟的終端機程式；說到原始碼結構時，Pi 是整個專案，Pi Coding Agent 才是我們實際安裝的應用，底層的 Pi Agent Core 是它依賴的元件。**
 
-官方網站直接使用 Pi 這個名字，安裝包則叫 `@earendil-works/pi-coding-agent`。討論安裝、命令和介面時，可以把 Pi Coding Agent 理解為完整名稱；討論原始碼、SDK 或組成模組時，再區分具體包和底層能力。
+[官方倉庫](https://github.com/earendil-works/pi#all-packages)把這些包分開列出：`@earendil-works/pi-agent-core` 負責 Agent 迴圈、工具呼叫和狀態管理；`@earendil-works/pi-ai` 提供模型介面，`@earendil-works/pi-tui` 提供終端機介面元件。`@earendil-works/pi-coding-agent` 在這些底層元件之上，提供 `pi` 命令、內建檔案與命令工具、工作階段，以及載入技能、擴充功能等資源的完整使用入口。[官方安裝說明](https://pi.dev/docs/latest/quickstart)讓普通使用者安裝的就是這個 Coding Agent 包。以上包關係核驗於 **2026 年 9 月 14 日**。
 
-**繼續閱讀：** [Pi Coding Agent](/zh-TW/reference/glossary#pi-coding-agent) · [Pi 官方網站](https://pi.dev/)
+因此，**Pi Coding Agent 不等於單獨的 `pi-agent-core` 包**；它也不是“先裝核心，再手動裝幾個第三方外掛程式”才能拼出的產品。擴充和技能可以後來按需新增。閱讀本書的操作步驟時，“啟動 Pi”指執行已安裝的 Pi Coding Agent；只有討論架構或開發 SDK 時，才需要把核心包和終端機應用分開。
+
+**繼續閱讀：** [Pi Coding Agent](/zh-TW/reference/glossary#pi-coding-agent) · [安裝 Pi](/zh-TW/guide/install-pi) · [Pi 官方倉庫](https://github.com/earendil-works/pi)
 
 ## Pi 和 Claude Code、Codex 有什麼區別？ {#pi-vs-other-agents}
 

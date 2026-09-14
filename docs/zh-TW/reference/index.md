@@ -45,6 +45,7 @@ FAQ、故障排查手冊與熱詞表會互相引用，並繼續連接主線課�
 | --- | --- | --- |
 | 固化方法與新增能力 | [技能（Skill）、擴充功能（Extension）與包（Package）](/zh-TW/guide/skills-extensions-packages) | 技能教它怎麼做，擴充功能給它新的執行能力 |
 | 選擇第三方擴充 | [外掛程式推薦](/zh-TW/plugins/) | 先確認需求和來源，只試一個最接近問題的外掛程式 |
+| 選擇不同 Agent 路線 | [Pi、OMP 與 Selesai Code](/zh-TW/reference/pi-forks) | 區分原版 Pi 與兩個獨立分支，按任務決定是否換工具 |
 | 多工分工 | [子代理（Subagent）](/zh-TW/guide/subagents) | 分工之後仍需統一證據和最終驗收 |
 | 安全地執行任務 | [權限、隔離與驗收](/zh-TW/guide/safety) | 成功返回不等於業務結果已經完成 |
 | 長時間執行 | [VPS 與長期任務](/zh-TW/guide/vps-and-long-running) | 先設計檢查點、恢復路徑和停止條件 |

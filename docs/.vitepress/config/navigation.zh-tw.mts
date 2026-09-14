@@ -11,6 +11,7 @@ export const navTW = [
             items: [
               { text: '從零開始操作', link: '/zh-TW/guide/start-here' },
               { text: '完整學習目錄', link: '/zh-TW/guide/' },
+              { text: 'Pi、OMP 與 Selesai 怎麼選', link: '/zh-TW/reference/pi-forks' },
               { text: '從導論開始', link: '/zh-TW/guide/introduction' },
               { text: 'Pi 完整執行原理', link: '/zh-TW/guide/how-pi-works' }
             ]
@@ -238,6 +239,7 @@ export const sidebarTW = {
           collapsed: true,
           items: [
             { text: '主題索引', link: '/zh-TW/reference/' },
+            { text: 'Pi、OMP 與 Selesai 怎麼選', link: '/zh-TW/reference/pi-forks' },
             { text: '常見問題 FAQ', link: '/zh-TW/reference/faq' },
             { text: 'Pi 故障排查手冊', link: '/zh-TW/reference/troubleshooting' },
             { text: 'AI 與 Agent 熱詞', link: '/zh-TW/reference/glossary' }

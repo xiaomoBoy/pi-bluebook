@@ -21,6 +21,10 @@ next:
 Pi 在 Windows 上預設使用 **Git Bash**。官方依次查詢自定義 Bash 路徑、Git for Windows 的預設安裝位置 `C:\Program Files\Git\bin\bash.exe`，最後才查詢 PATH 中的其他 `bash.exe`。本頁面向第一次安裝的讀者，只使用官方推薦的 Git for Windows 預設路線，不設定 Cygwin、MSYS2、WSL 或可選 PowerShell 工具。
 :::
 
+Windows 讀者也按“四樣準備”開始：現有的 Windows 電腦、Git Bash 終端機、Pi Agent，以及一種可用的模型存取方式。**不需要為了學習 Pi 更換 Mac 或 Linux 裝置，也不需要安裝 iTerm2**；iTerm2 是 macOS 軟體。前兩樣和 Pi 的安裝在本頁完成，訂閱或 API Key 留到[下一課](/zh-TW/guide/connect-model)選擇。
+
+如果已經安裝 [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install)，它可以作為視窗介面，但預設設定通常開啟 PowerShell。第一次跟隨本頁時，直接從開始選單開啟 **Git Bash**，確認自己執行的是同一套命令；不要因為視窗名字叫 Terminal，就在 PowerShell 中照抄 Git Bash 步驟。
+
 ## 先分清兩個輸入位置
 
 這一頁會在兩個地方輸入內容：
@@ -182,4 +186,4 @@ Pi 官方還提供可選的 `powershell` 工具，但它不是本書入門路線
 - [Git for Windows](https://git-scm.com/download/win)
 - [Node.js 下載頁](https://nodejs.org/en/download)
 
-頁面中的動態要求核驗於 2026-09-09。Pi、Node.js 或 Git for Windows 更新後，應優先複查上述官方頁面。
+安裝命令和 Node.js 要求核驗於 2026-09-09；Windows 終端機選擇核驗於 2026-09-14。Pi、Node.js 或 Git for Windows 更新後，應優先複查上述官方頁面。

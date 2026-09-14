@@ -11,6 +11,7 @@ export const nav = [
             items: [
               { text: '从零开始操作', link: '/guide/start-here' },
               { text: '完整学习目录', link: '/guide/' },
+              { text: 'Pi、OMP 与 Selesai 怎么选', link: '/reference/pi-forks' },
               { text: '从导论开始', link: '/guide/introduction' },
               { text: 'Pi 完整运行原理', link: '/guide/how-pi-works' }
             ]
@@ -238,6 +239,7 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '主题索引', link: '/reference/' },
+            { text: 'Pi、OMP 与 Selesai 怎么选', link: '/reference/pi-forks' },
             { text: '常见问题 FAQ', link: '/reference/faq' },
             { text: 'Pi 故障排查手册', link: '/reference/troubleshooting' },
             { text: 'AI 与 Agent 热词', link: '/reference/glossary' }

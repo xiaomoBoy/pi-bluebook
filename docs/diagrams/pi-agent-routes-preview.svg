@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-agent-routes-title pi-agent-routes-desc">
+      <title id="pi-agent-routes-title">Pi 核心、Pi Coding Agent 与两个 fork 的关系</title>
+      <desc id="pi-agent-routes-desc">Pi 的底层组件包括模型接口、Agent Core 和终端界面。官方 Pi Coding Agent 在这些组件上提供 pi 命令、内置工具和会话；OMP 与 Selesai Code 是从 Pi 发展出的独立 fork，不是装进 Pi Coding Agent 的插件。</desc>
+      <defs>
+        <marker id="pi-agent-routes-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#65727d"/></marker>
+      </defs>
+      <rect width="960" height="600" fill="#fbfaf6"/>
+
+      <!-- Connectors are drawn before the nodes. -->
+      <line x1="296" y1="266" x2="344" y2="266" stroke="#65727d" stroke-width="1.2" marker-end="url(#pi-agent-routes-arrow)"/>
+      <path d="M 608,248 H 632 Q 640,248 640,240 V 170 Q 640,162 648,162 H 656" fill="none" stroke="#65727d" stroke-width="1" marker-end="url(#pi-agent-routes-arrow)"/>
+      <path d="M 608,284 H 632 Q 640,284 640,292 V 392 Q 640,400 648,400 H 656" fill="none" stroke="#65727d" stroke-width="1" marker-end="url(#pi-agent-routes-arrow)"/>
+
+      <!-- Pi libraries. -->
+      <rect x="40" y="200" width="256" height="132" rx="6" fill="#ffffff" stroke="#26313a" stroke-width="1"/>
+      <rect x="48" y="208" width="72" height="12" rx="2" fill="none" stroke="#26313a" stroke-opacity="0.38" stroke-width="0.8"/>
+      <text x="84" y="216" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">LIBRARIES</text>
+      <text x="168" y="252" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">Pi 底层组件</text>
+      <text x="168" y="280" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">pi-ai · pi-agent-core</text>
+      <text x="168" y="300" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">pi-tui（终端组件）</text>
+
+      <!-- Official application installed in this guide. -->
+      <rect x="352" y="200" width="256" height="132" rx="8" fill="#4f90aa" fill-opacity="0.10" stroke="#4f90aa" stroke-width="1.2"/>
+      <rect x="364" y="212" width="40" height="16" rx="2" fill="none" stroke="#4f90aa" stroke-opacity="0.55" stroke-width="0.8"/>
+      <text x="384" y="224" fill="#276d89" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">APP</text>
+      <text x="480" y="256" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">Pi Coding Agent</text>
+      <text x="480" y="284" fill="#276d89" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">pi 命令 · 内置工具 · 会话</text>
+      <text x="480" y="304" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">可再加载 Skill / Extension</text>
+
+      <!-- OMP fork. -->
+      <rect x="664" y="96" width="256" height="132" rx="6" fill="#ffffff" stroke="#26313a" stroke-width="1"/>
+      <rect x="672" y="104" width="40" height="12" rx="2" fill="none" stroke="#26313a" stroke-opacity="0.38" stroke-width="0.8"/>
+      <text x="692" y="112" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">FORK</text>
+      <text x="792" y="148" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">OMP</text>
+      <text x="792" y="176" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">代码导航 · 调试</text>
+      <text x="792" y="196" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">独立安装与配置</text>
+
+      <!-- Selesai Code fork. -->
+      <rect x="664" y="336" width="256" height="132" rx="6" fill="#ffffff" stroke="#26313a" stroke-width="1"/>
+      <rect x="672" y="344" width="40" height="12" rx="2" fill="none" stroke="#26313a" stroke-opacity="0.38" stroke-width="0.8"/>
+      <text x="692" y="352" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">FORK</text>
+      <text x="792" y="388" fill="#26313a" font-size="16" font-weight="600" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">Selesai Code</text>
+      <text x="792" y="416" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">分工 · 研究 · 交接</text>
+      <text x="792" y="436" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">独立安装与配置</text>
+
+      <!-- Bottom legend strip. -->
+      <line x1="40" y1="520" x2="920" y2="520" stroke="#26313a" stroke-opacity="0.12" stroke-width="0.8"/>
+      <text x="40" y="544" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" letter-spacing="0.14em">LEGEND</text>
+      <rect x="128" y="532" width="40" height="12" rx="2" fill="none" stroke="#26313a" stroke-opacity="0.38" stroke-width="0.8"/>
+      <text x="148" y="540" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">CORE</text>
+      <text x="176" y="544" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif">底层库</text>
+      <rect x="296" y="532" width="40" height="12" rx="2" fill="#4f90aa" fill-opacity="0.10" stroke="#4f90aa" stroke-width="0.8"/>
+      <text x="316" y="540" fill="#276d89" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">APP</text>
+      <text x="344" y="544" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif">本书安装的应用</text>
+      <rect x="528" y="532" width="40" height="12" rx="2" fill="none" stroke="#26313a" stroke-opacity="0.38" stroke-width="0.8"/>
+      <text x="548" y="540" fill="#65727d" font-size="8" font-family="SFMono-Regular, Consolas, monospace" text-anchor="middle">FORK</text>
+      <text x="576" y="544" fill="#65727d" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif">独立分支</text>
+      <text x="920" y="580" fill="#65727d" font-size="12" font-family="Iowan Old Style, Songti SC, serif" font-style="italic" text-anchor="end">日常说“Pi”，通常指运行中的 Pi Coding Agent。</text>
+    </svg>

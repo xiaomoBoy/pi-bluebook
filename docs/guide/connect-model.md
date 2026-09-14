@@ -25,21 +25,48 @@ Pi 提供交互界面和文件工具，真正生成回复的是你选择的模�
 如果你刚完成 [Windows 中文安装路径](/guide/windows-setup)，本课和后续课程中的“普通终端”都指 Git Bash。下面的 `~/Downloads/pi-practice` 请换成你已建立的 `~/pi-practice`；Pi 编辑区里的 `/login`、`/model` 等命令不变。
 :::
 
+## 先选模型访问方式：官方 API 与订阅
+
+以下价格和接入方式核验于 **2026 年 9 月 14 日**。四种选择适合不同需求，选一种能跑通练习的即可；模型名单、价格、额度和活动可能变化，付款前再打开对应官方页面核对。
+
+**推荐说明：** 这些是我根据入门成本和 Pi 接入方式整理的个人选择，与下列服务商没有赞助、返佣或其他利益关系；文中的链接均指向官方页面，不含我的邀请链接。
+
+### DeepSeek 官方 API · 按量计费
+
+适合想先用一个国内模型、按实际用量付费的读者。到 [DeepSeek 官方平台](https://platform.deepseek.com/)开通 API、创建 Key 并确认余额；Pi 内置 `deepseek` Provider，可在 `/login` 中选择 DeepSeek 输入官方 Key，再用 `/model` 查看当前可选模型。[Pi 官方接入说明](https://pi.dev/docs/latest/providers)列出 `DEEPSEEK_API_KEY`。这**不是包月订阅**：调用按输入、输出 Token 扣费，缓存是否命中、模型以及高峰/低峰时段都会影响价格。[DeepSeek 官方价格表](https://api-docs.deepseek.com/quick_start/pricing)会更新，首次测试前先看当前余额和计费规则。
+
+### ChatGPT Plus · $20/月
+
+适合主要想用 OpenAI 的 Codex 模型，同时也使用 ChatGPT 的读者。[OpenAI 官方价格](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus)为 $20/月。Pi 支持在 `/login` 中选择 **ChatGPT Plus/Pro (Codex)**，但可选模型以当前账号和 Pi 的模型列表为准；不能写成“GPT 全系列都能在 Pi 中使用”。Plus 也不包含单独计费的 OpenAI API 用量。[查看 Pi 接入说明](https://pi.dev/docs/latest/providers)
+
+### OpenCode Go · $10/月
+
+适合想以较低月费使用多种编码模型的读者。[Go 官方说明](https://opencode.ai/docs/go/)列出 $10/月；Pi 内置 `opencode-go` Provider，用 Go 的 API Key 登录。当前名单有 GLM、Kimi、Qwen、DeepSeek、MiniMax、MiMo，也有 GPT、Grok 等，不能概括为“全是国内模型”。不同模型的月度用量上限不同；5 小时和每周窗口分别最多使用该模型月限额的 20% 和 50%。[查看 Pi 接入说明](https://pi.dev/docs/latest/providers)
+
+### Command Code GOAT · $10/月
+
+适合愿意配置自定义 Provider、想在多种模型间切换的读者。[GOAT 官方说明](https://commandcode.ai/docs/plans/goat)列出 $10/月；其 [Provider API](https://commandcode.ai/docs/provider) 可使用套餐内模型和额度。Pi 没有预设的 GOAT 登录项，需要按 [Pi 自定义模型说明](https://pi.dev/docs/latest/models)接入兼容 API。名单同时包括国内开放模型与部分 GPT、Gemini、Grok 等模型。官方列出 5 小时 $14、每周 $35 的用量窗口；每月具体可用量还要看所选模型。
+
+**怎么选：** 想用国内模型且只按实际用量付费，先看 DeepSeek 官方 API；想使用 OpenAI 的 Codex 模型并同时使用 ChatGPT，先看 ChatGPT Plus；想以较低月费试用多种编码模型，再看 OpenCode Go；愿意自己配置接口、也需要 GOAT 模型名单时，最后考虑 Command Code GOAT。“可以高强度使用”只表示部分套餐有一定用量空间，**不表示无限调用**；按量付费的 API 则应自行留意余额与消费。第一次试用仍要查看账户里的额度和是否开启额外付费。
+
+OpenCode Go 的“邀请他人可得 $5”目前没有在其公开的 [Go 官方说明](https://opencode.ai/docs/go/)中找到固定活动条款，因此不计入上述价格或额度。若你的账户显示邀请活动，请以当时后台列出的奖励类型、领取条件和有效期为准；使用额度奖励不等于月费减免。
+
 ## 1. 选择一种登录方式
 
 先用下面这张表决定自己走哪条路。不要因为列表中某个模型看起来更强，就临时开通一项还没理解的付费服务。
 
-| 你已经拥有的访问方式 | 在 `/login` 中选择 | 开始前必须确认 |
+| 你已经拥有的访问方式 | 在 Pi 中的入口 | 开始前必须确认 |
 | --- | --- | --- |
 | Pi 官方当前列出的受支持订阅 | 对应 Provider 的订阅/OAuth 登录 | 订阅等级是否符合要求；Pi 中的调用使用套餐额度、额外用量还是其他余额 |
-| 已启用计费或已有余额的 API 账户 | 对应 Provider 的 API Key | Key 属于哪个账户；计费方式、余额或限额；怎样撤销 Key |
+| 已订阅并取得 API Key，或已有 API 余额；Pi 内置该 Provider | 在 `/login` 中选择对应 Provider 的 API Key | Key 属于哪个账户；计费方式、余额或限额；怎样撤销 Key |
+| 套餐提供兼容 API，但 Pi 未内置该 Provider（如 GOAT） | 先看 [Pi 自定义模型说明](https://pi.dev/docs/latest/models)；本课的登录菜单没有现成入口 | 套餐是否开放 API、怎样配置 Key、模型是否在套餐内以及用量限制 |
 | 只有普通聊天产品账号 | 先不要继续 | 该账号是否真的包含 Pi 支持的模型访问方式 |
 | 两者都没有或无法确认 | 先不要继续 | 先阅读 Provider 当前说明，不为完成教程盲目充值 |
 
-在打开登录菜单前，先完成三个检查：
+在接入前，先完成三个检查：
 
 1. 说清自己使用的是“订阅认证”还是“API Key”，不能只说“我有账号”。
-2. 在对应服务商账户中确认计费或额度状态；本书不提供价格表，因为价格和政策会变化。
+2. 在对应服务商账户中确认计费或额度状态；上面的价格只是注明核验日期的选择参考，不代替付款页和账户余额。
 3. 把本课停止条件设为一次无文件连通测试。没有确认费用前，不开始长任务，也不连续切换多个模型试跑。
 
 如果你上一课后已经退出 Pi，先在终端重新进入练习目录。
@@ -50,7 +77,7 @@ pwd
 pi
 ```
 
-如果你在第 1 课使用了其他练习目录名，先把命令中的 `pi-practice` 替换掉。确认 `pwd` 以你实际的练习目录名结尾。进入 Pi 后输入：
+如果你在第 1 课使用了其他练习目录名，先把命令中的 `pi-practice` 替换掉。确认 `pwd` 以你实际的练习目录名结尾。使用 Pi 内置 Provider 的读者，进入 Pi 后输入：
 
 ```text
 /login
@@ -79,7 +106,7 @@ pi
 
 ## 2. 选择当前账号可用的模型
 
-登录返回 Pi 后，输入：
+接入完成后，输入：
 
 ```text
 /model
@@ -108,7 +135,7 @@ pi
 如果 Pi 准备读写文件或运行命令，按 `Esc` 中止。这次测试不需要任何工具。
 
 ::: warning 没有收到回复
-- 看不到可用模型，先回到 `/login` 检查认证。
+- 看不到可用模型，内置 Provider 先回到 `/login` 检查认证；自定义 Provider 先检查模型配置。
 - 选完模型但状态栏没有变化，先取消当前操作，重新打开 `/model` 核对；不要连续切换多个提供商。
 - 测试请求长时间不返回，先按 `Esc` 停止这一轮，保留状态栏模型名和错误文字，再检查网络与该服务状态。
 - 出现 `unauthorized`、余额或额度错误，保留原始文字，检查当前账号权限。
@@ -119,7 +146,7 @@ pi
 ## 本课验收
 
 - 能明确说出本次使用的是订阅认证还是 API Key，并已查看对应账户的额度或计费状态。
-- `/login` 完成了一种可用的认证。
+- 已通过 `/login` 完成认证，或已配置一种可用的自定义 Provider。
 - 底部状态栏显示当前模型。
 - 测试准确回复“Pi 已连接”，且没有工具调用。
 

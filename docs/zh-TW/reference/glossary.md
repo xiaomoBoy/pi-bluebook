@@ -29,17 +29,17 @@ next:
 
 ## Pi {#pi}
 
-**人話解釋：** Pi 是一個執行在終端機裡的極簡代理框架。它把模型、工具、工作階段、上下文和工作目錄連接起來，讓模型不只回答問題，還能在你的電腦上處理真實任務。
+**人話解釋：** Pi 是極簡代理框架專案的名字。普通使用者接觸到的 Pi Coding Agent 是它的終端機應用，把模型、工具、工作階段和工作目錄連接起來，讓模型能處理真實任務。
 
-**在 Pi 裡意味著什麼：** 日常所說的“開啟 Pi”“讓 Pi 改檔案”，通常就是啟動 `pi` 命令使用這套代理框架。Pi 不是模型，也不自帶模型額度；它需要連接模型服務商（Provider）提供的模型。官方當前把產品直接稱為 Pi，安裝包名稱則是 `@earendil-works/pi-coding-agent`，不必把兩種叫法理解成彼此獨立的產品。
+**在 Pi 裡意味著什麼：** Pi 既是整個開源專案的名字，也是日常對終端機產品的簡稱。說“開啟 Pi”“讓 Pi 改檔案”時，通常是執行 `pi` 命令使用 Pi Coding Agent；說到底層 `pi-agent-core` 時，指的是被應用呼叫的 Agent 執行庫。Pi 不是模型，也不自帶模型額度；它需要連接模型服務商（Provider）提供的模型。
 
 **相關：** [Pi Coding Agent](#pi-coding-agent) · [代理框架](#agent-harness) · [Pi 到底是什麼？](/zh-TW/reference/faq#what-is-pi)
 
 ## Pi Coding Agent {#pi-coding-agent}
 
-**人話解釋：** Pi Coding Agent 是 Pi 的產品與安裝包語境名稱，強調它主要透過終端機完成程式碼、檔案和命令任務。
+**人話解釋：** Pi Coding Agent 是建立在 Pi 底層元件之上的完整終端機應用，也是本書讓你安裝和啟動的那一層。
 
-**在 Pi 裡意味著什麼：** 新手看到 `pi`、Pi、Pi Coding Agent 或 npm 包 `@earendil-works/pi-coding-agent` 時，多數情況下是在談同一個日常使用入口。只有討論原始碼包、SDK 或底層模組時，才需要進一步區分倉庫中的不同組成部分。它仍然只是代理框架，不是負責推理的模型。
+**在 Pi 裡意味著什麼：** npm 包 `@earendil-works/pi-coding-agent` 提供 `pi` 命令；它依賴 `pi-agent-core` 等元件，並帶有內建工具、工作階段和擴充載入能力。平時大家會簡稱它為“Pi”，但不能把這個可安裝的應用與單獨的 Agent Core 包畫等號；可選的技能、擴充功能也不是應用本體。它仍然是代理框架，不是負責推理的模型。[官方包清單](https://github.com/earendil-works/pi#all-packages)
 
 **相關：** [Pi](#pi) · [Coding Agent](#coding-agent) · [Pi 和 Pi Coding Agent 有什麼區別？](/zh-TW/reference/faq#pi-vs-pi-coding-agent)
 
