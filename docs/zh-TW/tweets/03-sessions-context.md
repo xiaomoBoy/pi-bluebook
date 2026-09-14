@@ -1,6 +1,6 @@
 ---
 title: 理解工作階段與上下文
-description: 小墨 Pi 學習記錄第 3 階段，收錄 7 篇推文原文。
+description: 小墨同學 Pi 學習記錄第 3 階段，收錄 7 篇推文原文。
 outline: false
 prev:
   text: 第一次任務
@@ -24,7 +24,7 @@ next:
 
 ## Pi 還有一個大家容易忽視的點，那就是快取命中率🔥
 
-<span class="tweet-meta">2026-08-25 11:29:28 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 11:29:28 · 小墨同學原文</span>
 
 > Pi 還有一個大家容易忽視的點，那就是快取命中率🔥
 >
@@ -46,7 +46,7 @@ next:
 
 ## Pi 為什麼省 Token？其實沒有什麼神奇快取技術🔥
 
-<span class="tweet-meta">2026-08-25 13:58:06 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 13:58:06 · 小墨同學原文</span>
 
 > Pi 為什麼省 Token？其實沒有什麼神奇快取技術🔥
 >
@@ -74,7 +74,7 @@ next:
 
 ## Pi 處理上下文壓縮的方式，比我想象中有意思！
 
-<span class="tweet-meta">2026-08-25 15:55:06 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 15:55:06 · 小墨同學原文</span>
 
 > Pi 處理上下文壓縮的方式，比我想象中有意思！
 >
@@ -108,7 +108,7 @@ next:
 
 ## 研究完Pi 長期記憶，結果比我想象的更復雜🔥
 
-<span class="tweet-meta">2026-08-26 18:52:45 · 小墨原文</span>
+<span class="tweet-meta">2026-08-26 18:52:45 · 小墨同學原文</span>
 
 > 研究完Pi 長期記憶，結果比我想象的更復雜🔥
 >
@@ -142,7 +142,7 @@ next:
 
 ## 我把Pi 上下文壓縮，具象成了一款遊戲🔥
 
-<span class="tweet-meta">2026-08-28 08:05:54 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 08:05:54 · 小墨同學原文</span>
 
 > 我把Pi 上下文壓縮，具象成了一款遊戲🔥
 >
@@ -168,7 +168,7 @@ next:
 
 ## Pi 的上下文其實不是一條聊天記錄，而是從工作階段 Tree 裡面臨時構建出來的一條路徑。
 
-<span class="tweet-meta">2026-08-28 23:26:45 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 23:26:45 · 小墨同學原文</span>
 
 > Pi 的上下文其實不是一條聊天記錄，而是從工作階段 Tree 裡面臨時構建出來的一條路徑。
 >
@@ -222,7 +222,7 @@ next:
 
 ## Pi 有一個很反常識，上下文越小，不一定越省錢
 
-<span class="tweet-meta">2026-09-08 15:23:03 · 小墨原文</span>
+<span class="tweet-meta">2026-09-08 15:23:03 · 小墨同學原文</span>
 
 > Pi 有一個很反常識，上下文越小，不一定越省錢
 >

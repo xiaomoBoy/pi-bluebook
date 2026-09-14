@@ -1,6 +1,6 @@
 ---
 title: 写在蓝皮书之外
-description: 小墨关于 Pi 的个人感悟、学习过程、踩坑记录与推文档案。
+description: 小墨同学关于 Pi 的个人感悟、学习过程、踩坑记录与推文档案。
 prev:
   text: 权限、隔离与验收
   link: /guide/safety
@@ -19,7 +19,7 @@ next:
 
 <article class="tweet-entry tweet-entry-featured">
 
-<span class="tweet-meta">2026-09-08 18:48:38 · 小墨原文</span>
+<span class="tweet-meta">2026-09-08 18:48:38 · 小墨同学原文</span>
 
 > 准备把自己的Pi学习过程整理出来
 >

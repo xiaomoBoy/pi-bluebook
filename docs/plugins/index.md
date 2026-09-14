@@ -1,6 +1,6 @@
 ---
 title: Pi 插件推荐
-description: 从小墨的 Pi 推文实践中整理插件、Package 与配套工具，并按需求、风险和当前可核验来源给出选择建议。
+description: 从小墨同学的 Pi 推文实践中整理插件、Package 与配套工具，并按需求、风险和当前可核验来源给出选择建议。
 prev:
   text: Skill、Extension 与 Package
   link: /guide/skills-extensions-packages

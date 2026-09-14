@@ -1,6 +1,6 @@
 ---
 title: 讓子代理學會分工
-description: 小墨 Pi 學習記錄第 5 階段，收錄 7 篇推文原文。
+description: 小墨同學 Pi 學習記錄第 5 階段，收錄 7 篇推文原文。
 outline: false
 prev:
   text: 技能與擴充功能
@@ -24,7 +24,7 @@ next:
 
 ## 我想分享的是，一定要多嘗試不同的Agent，真的你會回來感謝我的！
 
-<span class="tweet-meta">2026-08-19 21:39:36 · 小墨原文</span>
+<span class="tweet-meta">2026-08-19 21:39:36 · 小墨同學原文</span>
 
 > 我想分享的是，一定要多嘗試不同的Agent，真的你會回來感謝我的！
 >
@@ -44,7 +44,7 @@ next:
 
 ## Pi Agent 的 Sub-agent功能一定要用起來！
 
-<span class="tweet-meta">2026-08-24 18:52:20 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 18:52:20 · 小墨同學原文</span>
 
 > Pi Agent 的 Sub-agent功能一定要用起來！
 >
@@ -100,7 +100,7 @@ next:
 
 ## Pi Agent 的子代理我一直在用，最近我又拿 Apodex 1.1 跑了一輪多代理搜尋。
 
-<span class="tweet-meta">2026-08-28 10:16:28 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 10:16:28 · 小墨同學原文</span>
 
 > Pi Agent 的子代理我一直在用，最近我又拿 Apodex 1.1 跑了一輪多代理搜尋。
 >
@@ -146,7 +146,7 @@ next:
 
 ## 我用Pi 接入 Apodex 1.1，讓它幫我查查孫宇晨說的是真是假🔥
 
-<span class="tweet-meta">2026-08-28 11:24:12 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 11:24:12 · 小墨同學原文</span>
 
 > 我用Pi 接入 Apodex 1.1，讓它幫我查查孫宇晨說的是真是假🔥
 >
@@ -176,7 +176,7 @@ next:
 
 ## 看到這個用 Apodex 搜《紅樓夢》的例子，我想到 Pi 的子代理很適合處理這類問題。
 
-<span class="tweet-meta">2026-08-28 14:21:48 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 14:21:48 · 小墨同學原文</span>
 
 > 看到這個用 Apodex 搜《紅樓夢》的例子，我想到 Pi 的子代理很適合處理這類問題。
 >
@@ -198,7 +198,7 @@ next:
 
 ## 我開始讓 Pi 學我怎麼分析自己的 X 推文了🔥
 
-<span class="tweet-meta">2026-08-30 20:01:38 · 小墨原文</span>
+<span class="tweet-meta">2026-08-30 20:01:38 · 小墨同學原文</span>
 
 > 我開始讓 Pi 學我怎麼分析自己的 X 推文了🔥
 >
@@ -232,7 +232,7 @@ next:
 
 ## OMP 越做越狠了：一個 Agent，開始配一整個模型團隊。
 
-<span class="tweet-meta">2026-09-03 08:21:25 · 小墨原文</span>
+<span class="tweet-meta">2026-09-03 08:21:25 · 小墨同學原文</span>
 
 > OMP 越做越狠了：一個 Agent，開始配一整個模型團隊。
 >

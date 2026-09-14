@@ -1,6 +1,6 @@
 ---
 title: 先把第一个任务做完
-description: 小墨 Pi 学习记录第 2 阶段，收录 25 篇推文原文。
+description: 小墨同学 Pi 学习记录第 2 阶段，收录 25 篇推文原文。
 outline: false
 prev:
   text: 认识 Pi
@@ -24,7 +24,7 @@ next:
 
 ## 我测试了一下Pi Agent + Deepseek V4 Flash 终于感受到了什么才是真实的吐字速度
 
-<span class="tweet-meta">2026-08-12 10:42:44 · 小墨原文</span>
+<span class="tweet-meta">2026-08-12 10:42:44 · 小墨同学原文</span>
 
 > 我测试了一下Pi Agent + Deepseek V4 Flash 终于感受到了什么才是真实的吐字速度
 >
@@ -38,7 +38,7 @@ next:
 
 ## Pi Agent + 最新的Deepseek V4 Pro会擦除怎么样的火花？
 
-<span class="tweet-meta">2026-08-13 13:36:59 · 小墨原文</span>
+<span class="tweet-meta">2026-08-13 13:36:59 · 小墨同学原文</span>
 
 > Pi Agent + 最新的Deepseek V4 Pro会擦除怎么样的火花？
 >
@@ -54,7 +54,7 @@ next:
 
 ## 其实Pi 相关网站不用收藏那么多，只要几个就够了。
 
-<span class="tweet-meta">2026-08-23 21:02:18 · 小墨原文</span>
+<span class="tweet-meta">2026-08-23 21:02:18 · 小墨同学原文</span>
 
 > 其实Pi 相关网站不用收藏那么多，只要几个就够了。
 >
@@ -92,7 +92,7 @@ next:
 
 ## 很多人问我 Pi Agent 和 Deepseek Harness 有什么区别？
 
-<span class="tweet-meta">2026-08-24 08:20:49 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 08:20:49 · 小墨同学原文</span>
 
 > 很多人问我 Pi Agent 和 Deepseek Harness 有什么区别？
 >
@@ -119,7 +119,7 @@ next:
 
 ## Pi Agent 第一步，肯定是设置好看的状态栏🔥
 
-<span class="tweet-meta">2026-08-24 22:33:16 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 22:33:16 · 小墨同学原文</span>
 
 > Pi Agent 第一步，肯定是设置好看的状态栏🔥
 >
@@ -153,7 +153,7 @@ next:
 
 ## Pi的零基础实战，万字长文教程终于来了🔥
 
-<span class="tweet-meta">2026-08-26 15:10:30 · 小墨原文</span>
+<span class="tweet-meta">2026-08-26 15:10:30 · 小墨同学原文</span>
 
 > Pi的零基础实战，万字长文教程终于来了🔥
 >
@@ -186,7 +186,7 @@ next:
 
 ## Pi Agent 零基础实操，万字长文就怕你们没耐心看🔥
 
-<span class="tweet-meta">2026-08-26 21:04:56 · 小墨原文</span>
+<span class="tweet-meta">2026-08-26 21:04:56 · 小墨同学原文</span>
 
 > Pi Agent 零基础实操，万字长文就怕你们没耐心看🔥
 >
@@ -204,7 +204,7 @@ next:
 
 ## Pi 里模型不用多，三档就够。
 
-<span class="tweet-meta">2026-08-27 10:55:40 · 小墨原文</span>
+<span class="tweet-meta">2026-08-27 10:55:40 · 小墨同学原文</span>
 
 > Pi 里模型不用多，三档就够。
 >
@@ -227,7 +227,7 @@ next:
 
 ## 本地模型+ Pi Agent，才是本地模型正确打开方式🔥
 
-<span class="tweet-meta">2026-08-27 13:54:20 · 小墨原文</span>
+<span class="tweet-meta">2026-08-27 13:54:20 · 小墨同学原文</span>
 
 > 本地模型+ Pi Agent，才是本地模型正确打开方式🔥
 >
@@ -273,7 +273,7 @@ next:
 
 ## 看到GPT推出表情包功能，立马给我心心念念的Pi 安排上了。
 
-<span class="tweet-meta">2026-08-27 16:59:27 · 小墨原文</span>
+<span class="tweet-meta">2026-08-27 16:59:27 · 小墨同学原文</span>
 
 > 看到GPT推出表情包功能，立马给我心心念念的Pi 安排上了。
 >
@@ -287,7 +287,7 @@ next:
 
 ## Pi Agent 跑国产大模型，和我预想的差不多
 
-<span class="tweet-meta">2026-08-29 09:10:44 · 小墨原文</span>
+<span class="tweet-meta">2026-08-29 09:10:44 · 小墨同学原文</span>
 
 > Pi Agent 跑国产大模型，和我预想的差不多
 >
@@ -315,7 +315,7 @@ next:
 
 ## 同一个模型，换一个Agent Harness，就像换了一个模型？
 
-<span class="tweet-meta">2026-08-29 17:40:33 · 小墨原文</span>
+<span class="tweet-meta">2026-08-29 17:40:33 · 小墨同学原文</span>
 
 > 同一个模型，换一个Agent Harness，就像换了一个模型？
 >
@@ -377,7 +377,7 @@ next:
 
 ## 分享我最推荐的4个Pi Agent使用技巧🔥
 
-<span class="tweet-meta">2026-08-30 10:27:51 · 小墨原文</span>
+<span class="tweet-meta">2026-08-30 10:27:51 · 小墨同学原文</span>
 
 > 分享我最推荐的4个Pi Agent使用技巧🔥
 >
@@ -425,7 +425,7 @@ next:
 
 ## Claude Code、Codex、DeepSeek Harness 和 Pi，看起来都在做 Agent，但走的其实是四条完全不同的路。
 
-<span class="tweet-meta">2026-08-30 16:26:32 · 小墨原文</span>
+<span class="tweet-meta">2026-08-30 16:26:32 · 小墨同学原文</span>
 
 > Claude Code、Codex、DeepSeek Harness 和 Pi，看起来都在做 Agent，但走的其实是四条完全不同的路。
 >
@@ -491,7 +491,7 @@ next:
 
 ## DeepSeek Harness 和 Pi，你觉得谁更强？🔥
 
-<span class="tweet-meta">2026-08-31 16:44:16 · 小墨原文</span>
+<span class="tweet-meta">2026-08-31 16:44:16 · 小墨同学原文</span>
 
 > DeepSeek Harness 和 Pi，你觉得谁更强？🔥
 >
@@ -532,7 +532,7 @@ next:
 
 ## Flash 模型已经能干活了，很多人还不知道上Pi有多爽🔥
 
-<span class="tweet-meta">2026-09-01 13:27:35 · 小墨原文</span>
+<span class="tweet-meta">2026-09-01 13:27:35 · 小墨同学原文</span>
 
 > Flash 模型已经能干活了，很多人还不知道上Pi有多爽🔥
 >
@@ -582,7 +582,7 @@ next:
 
 ## 用了两周 Pi，你应该知道的必备技巧🔥
 
-<span class="tweet-meta">2026-09-01 15:09:23 · 小墨原文</span>
+<span class="tweet-meta">2026-09-01 15:09:23 · 小墨同学原文</span>
 
 > 用了两周 Pi，你应该知道的必备技巧🔥
 >
@@ -636,7 +636,7 @@ next:
 
 ## Fable 5.1 出来了，进 Pi 就一句话：别当默认引擎🔥
 
-<span class="tweet-meta">2026-09-02 17:33:12 · 小墨原文</span>
+<span class="tweet-meta">2026-09-02 17:33:12 · 小墨同学原文</span>
 
 > Fable 5.1 出来了，进 Pi 就一句话：别当默认引擎🔥
 >
@@ -674,7 +674,7 @@ next:
 
 ## Pi 模型厂商支持的还是不够多🔥
 
-<span class="tweet-meta">2026-09-02 18:54:20 · 小墨原文</span>
+<span class="tweet-meta">2026-09-02 18:54:20 · 小墨同学原文</span>
 
 > Pi 模型厂商支持的还是不够多🔥
 >
@@ -712,7 +712,7 @@ next:
 
 ## Pi+ Gemini 3.8 Flash 真是快到飞起😂
 
-<span class="tweet-meta">2026-09-03 13:20:26 · 小墨原文</span>
+<span class="tweet-meta">2026-09-03 13:20:26 · 小墨同学原文</span>
 
 > Pi+ Gemini 3.8 Flash 真是快到飞起😂
 >
@@ -730,7 +730,7 @@ next:
 
 ## 这就是Pi速度，模型刚出就更新😂
 
-<span class="tweet-meta">2026-09-05 09:29:46 · 小墨原文</span>
+<span class="tweet-meta">2026-09-05 09:29:46 · 小墨同学原文</span>
 
 > 这就是Pi速度，模型刚出就更新😂
 >
@@ -748,7 +748,7 @@ next:
 
 ## GPT-6 越贵，Pi 的价值反而越大🔥
 
-<span class="tweet-meta">2026-09-05 22:40:40 · 小墨原文</span>
+<span class="tweet-meta">2026-09-05 22:40:40 · 小墨同学原文</span>
 
 > GPT-6 越贵，Pi 的价值反而越大🔥
 >
@@ -782,7 +782,7 @@ next:
 
 ## GPT-6 越来越贵，本地模型越来越重要🔥。
 
-<span class="tweet-meta">2026-09-06 08:15:46 · 小墨原文</span>
+<span class="tweet-meta">2026-09-06 08:15:46 · 小墨同学原文</span>
 
 > GPT-6 越来越贵，本地模型越来越重要🔥。
 >
@@ -824,7 +824,7 @@ next:
 
 ## GPT-6 越来越强，我的Pi Agent反而越来越干净🔥
 
-<span class="tweet-meta">2026-09-06 16:28:11 · 小墨原文</span>
+<span class="tweet-meta">2026-09-06 16:28:11 · 小墨同学原文</span>
 
 > GPT-6 越来越强，我的Pi Agent反而越来越干净🔥
 >
@@ -854,7 +854,7 @@ next:
 
 ## DeepSeek 发布全新系列模型： deepseek-v4.1-flash-expires-on-0910
 
-<span class="tweet-meta">2026-09-08 17:01:41 · 小墨原文</span>
+<span class="tweet-meta">2026-09-08 17:01:41 · 小墨同学原文</span>
 
 > DeepSeek 发布全新系列模型： deepseek-v4.1-flash-expires-on-0910
 >

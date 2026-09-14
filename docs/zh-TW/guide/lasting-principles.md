@@ -1,6 +1,6 @@
 ---
 title: 從 98 條推文留下的十條判斷
-description: 從小墨的 Pi 學習記錄中蒸餾出截至 2026 開放學習版仍然成立的十條判斷。
+description: 從小墨同學的 Pi 學習記錄中蒸餾出截至 2026 開放學習版仍然成立的十條判斷。
 prev:
   text: 導論
   link: /zh-TW/guide/introduction

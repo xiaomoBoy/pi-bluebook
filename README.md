@@ -39,7 +39,7 @@
 | 实操案例 | [案例库](docs/cases/index.md) | 用 7 个单项实验和 1 个毕业项目，依次练习文件任务、压缩、扩展、分工、恢复、安全与完整 Agent 工作流 |
 | 参考手册 | [主题索引](docs/reference/index.md) | 按问题查找核心机制、操作入口、能力边界与延伸阅读 |
 | 插件推荐 | [选择地图](docs/plugins/index.md) | 从推文实践中整理当前可核验的插件来源、适用场景和风险边界 |
-| 小墨札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
+| 小墨同学札记 | [写在蓝皮书之外](docs/journey/index.md) | 单独保留个人感悟、踩坑记录与 98 条推文档案 |
 | Earendil 官方授权译文 | [译文专区](docs/translations/index.md) | 经 Earendil 授权发布的十一篇 Pi、Harness、会话机制、代码质量与公司愿景文章完整中文译文 |
 
 另有[内容整理](docs/cases/content-workflow.md)和[小型代码修复](docs/cases/code-repair.md)两项迁移练习，帮助读者把验收方法用到不同任务。
@@ -111,7 +111,7 @@ pi-bluebook/
 
 提交修改前请阅读 [贡献指南](CONTRIBUTING.md)。文章从原始材料到发布的分工与验收方式见 [文章工作流](EDITORIAL_WORKFLOW.md)。
 
-这本书由小墨整理；写作缘起与交流入口见[关于作者](https://pi.xiaomovps.com/about)。
+这本书由小墨同学整理；写作缘起与交流入口见[关于作者](https://pi.xiaomovps.com/about)。
 
 ## 许可证
 

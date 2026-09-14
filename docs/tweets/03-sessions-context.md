@@ -1,6 +1,6 @@
 ---
 title: 理解 Session 与上下文
-description: 小墨 Pi 学习记录第 3 阶段，收录 7 篇推文原文。
+description: 小墨同学 Pi 学习记录第 3 阶段，收录 7 篇推文原文。
 outline: false
 prev:
   text: 第一次任务
@@ -24,7 +24,7 @@ next:
 
 ## Pi 还有一个大家容易忽视的点，那就是缓存命中率🔥
 
-<span class="tweet-meta">2026-08-25 11:29:28 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 11:29:28 · 小墨同学原文</span>
 
 > Pi 还有一个大家容易忽视的点，那就是缓存命中率🔥
 >
@@ -46,7 +46,7 @@ next:
 
 ## Pi 为什么省 Token？其实没有什么神奇缓存技术🔥
 
-<span class="tweet-meta">2026-08-25 13:58:06 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 13:58:06 · 小墨同学原文</span>
 
 > Pi 为什么省 Token？其实没有什么神奇缓存技术🔥
 >
@@ -74,7 +74,7 @@ next:
 
 ## Pi 处理上下文压缩的方式，比我想象中有意思！
 
-<span class="tweet-meta">2026-08-25 15:55:06 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 15:55:06 · 小墨同学原文</span>
 
 > Pi 处理上下文压缩的方式，比我想象中有意思！
 >
@@ -108,7 +108,7 @@ next:
 
 ## 研究完Pi 长期记忆，结果比我想象的更复杂🔥
 
-<span class="tweet-meta">2026-08-26 18:52:45 · 小墨原文</span>
+<span class="tweet-meta">2026-08-26 18:52:45 · 小墨同学原文</span>
 
 > 研究完Pi 长期记忆，结果比我想象的更复杂🔥
 >
@@ -142,7 +142,7 @@ next:
 
 ## 我把Pi 上下文压缩，具象成了一款游戏🔥
 
-<span class="tweet-meta">2026-08-28 08:05:54 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 08:05:54 · 小墨同学原文</span>
 
 > 我把Pi 上下文压缩，具象成了一款游戏🔥
 >
@@ -168,7 +168,7 @@ next:
 
 ## Pi 的上下文 其实不是一条聊天记录，而是从 Session Tree 里面临时构建出来的一条路径。
 
-<span class="tweet-meta">2026-08-28 23:26:45 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 23:26:45 · 小墨同学原文</span>
 
 > Pi 的上下文 其实不是一条聊天记录，而是从 Session Tree 里面临时构建出来的一条路径。
 >
@@ -222,7 +222,7 @@ next:
 
 ## Pi 有一个很反常识，上下文越小，不一定越省钱
 
-<span class="tweet-meta">2026-09-08 15:23:03 · 小墨原文</span>
+<span class="tweet-meta">2026-09-08 15:23:03 · 小墨同学原文</span>
 
 > Pi 有一个很反常识，上下文越小，不一定越省钱
 >

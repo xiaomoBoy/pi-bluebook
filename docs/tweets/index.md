@@ -1,6 +1,6 @@
 ---
 title: 推文学习目录
-description: 按六个学习阶段整理小墨的 98 条 Pi 推文原文。
+description: 按六个学习阶段整理小墨同学的 98 条 Pi 推文原文。
 prev:
   text: 我的 Pi 学习记录
   link: /journey/

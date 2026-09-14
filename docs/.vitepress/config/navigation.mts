@@ -65,7 +65,7 @@ export const nav = [
             text: '文章与档案',
             items: [
               { text: 'Earendil 授权译文', link: '/translations/' },
-              { text: '小墨札记', link: '/journey/' },
+              { text: '小墨同学札记', link: '/journey/' },
               { text: '98 条推文档案', link: '/tweets/' }
             ]
           },
@@ -329,7 +329,7 @@ export const sidebar = {
       ],
       '/journey/': [
         {
-          text: '小墨札记',
+          text: '小墨同学札记',
           collapsed: true,
           items: [
             { text: '写在蓝皮书之外', link: '/journey/' },
@@ -359,7 +359,7 @@ export const sidebar = {
       ],
       '/tweets/': [
         {
-          text: '小墨札记',
+          text: '小墨同学札记',
           collapsed: true,
           items: [
             { text: '写在蓝皮书之外', link: '/journey/' },

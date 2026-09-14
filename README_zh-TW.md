@@ -48,7 +48,7 @@
 | 實作案例 | [案例庫](docs/zh-TW/cases/index.md) | 用 7 個單項實驗和 1 個畢業專案，練習完整 Agent 工作流 |
 | 參考手冊 | [主題索引](docs/zh-TW/reference/index.md) | 按問題查詢核心機制、操作入口、能力邊界與延伸閱讀 |
 | 外掛程式推薦 | [選擇地圖](docs/zh-TW/plugins/index.md) | 從推文實踐中整理當前可核驗的外掛程式來源、適用場景和風險邊界 |
-| 小墨札記 | [寫在藍皮書之外](docs/zh-TW/journey/index.md) | 單獨保留個人感悟、踩坑記錄與 98 條推文檔案 |
+| 小墨同學札記 | [寫在藍皮書之外](docs/zh-TW/journey/index.md) | 單獨保留個人感悟、踩坑記錄與 98 條推文檔案 |
 | Earendil 官方授權譯文 | [譯文專區](docs/zh-TW/translations/index.md) | 經 Earendil 授權釋出的十一篇 Pi、代理框架（Agent Harness）、工作階段機制、程式碼品質與公司願景文章完整中文譯文 |
 
 另有[內容整理](docs/zh-TW/cases/content-workflow.md)和[小型程式修復](docs/zh-TW/cases/code-repair.md)兩項遷移練習，幫助讀者把驗收方法用到不同任務。
@@ -127,7 +127,7 @@ pi-bluebook/
 
 提交修改前請閱讀 [貢獻指南](CONTRIBUTING_zh-TW.md)。文章從原始材料到釋出的分工與驗收方式見 [文章工作流](EDITORIAL_WORKFLOW.md)。
 
-這本書由小墨整理；寫作緣起與交流入口見[關於作者](https://pi.xiaomovps.com/zh-TW/about)。
+這本書由小墨同學整理；寫作緣起與交流入口見[關於作者](https://pi.xiaomovps.com/zh-TW/about)。
 
 ## 許可證
 

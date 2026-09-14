@@ -21,7 +21,7 @@ const localeContent = {
       about: '关于作者',
       cases: '实操案例',
       guide: '蓝皮书主线',
-      journey: '小墨札记',
+      journey: '小墨同学札记',
       plugins: '插件推荐',
       reference: '参考手册',
       translations: '授权译文',
@@ -42,7 +42,7 @@ const localeContent = {
       about: '關於作者',
       cases: '實作案例',
       guide: '藍皮書主線',
-      journey: '小墨札記',
+      journey: '小墨同學札記',
       plugins: '外掛程式',
       reference: '參考手冊',
       translations: '授權譯文',
@@ -122,12 +122,12 @@ const sharedThemeConfig = {
 
 const footerCN = {
   message: '<span class="pi-footer-brand">PI BLUEBOOK</span><span class="pi-footer-links"><a href="/guide/">学习目录</a><a href="/cases/">实操案例</a><a href="/reference/">参考手册</a><a href="/translations/">授权译文</a><a href="/about">关于作者</a><a href="https://github.com/xiaomoBoy/pi-bluebook">GitHub</a></span>',
-  copyright: '<span>© 2026 小墨</span><span>网站与原创内容采用 MIT License</span><span>Earendil 授权译文采用 CC BY 4.0 · 第三方内容归原作者所有</span>'
+  copyright: '<span>© 2026 小墨同学</span><span>网站与原创内容采用 MIT License</span><span>Earendil 授权译文采用 CC BY 4.0 · 第三方内容归原作者所有</span>'
 }
 
 const footerTW = {
   message: '<span class="pi-footer-brand">PI BLUEBOOK</span><span class="pi-footer-links"><a href="/zh-TW/guide/">學習目錄</a><a href="/zh-TW/cases/">實作案例</a><a href="/zh-TW/reference/">參考手冊</a><a href="/zh-TW/translations/">授權譯文</a><a href="/zh-TW/about">關於作者</a><a href="https://github.com/xiaomoBoy/pi-bluebook">GitHub</a></span>',
-  copyright: '<span>© 2026 小墨</span><span>網站與原創內容採用 MIT License</span><span>Earendil 授權譯文採用 CC BY 4.0 · 第三方內容歸原作者所有</span>'
+  copyright: '<span>© 2026 小墨同學</span><span>網站與原創內容採用 MIT License</span><span>Earendil 授權譯文採用 CC BY 4.0 · 第三方內容歸原作者所有</span>'
 }
 
 export default defineConfig({
@@ -142,7 +142,7 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ['meta', { name: 'theme-color', content: '#f4f1e9' }],
-    ['meta', { name: 'author', content: '小墨' }],
+    ['meta', { name: 'author', content: '小墨同学' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large' }],
     ['link', { rel: 'icon', href: '/brand-mark.svg', type: 'image/svg+xml' }],
     ['link', { rel: 'icon', href: '/favicon-48.png', type: 'image/png', sizes: '48x48' }],
@@ -288,7 +288,7 @@ export default defineConfig({
           inLanguage: locale.lang,
           author: {
             '@type': 'Person',
-            name: '小墨',
+            name: '小墨同学',
             url: 'https://xiaomovps.com/'
           }
         }
@@ -308,7 +308,7 @@ export default defineConfig({
             ...(isAbout ? [{
               '@type': 'Person',
               '@id': `${canonicalUrl}#person`,
-              name: '小墨',
+              name: '小墨同学',
               url: canonicalUrl,
               sameAs: ['https://xiaomovps.com/', 'https://x.com/xiaomovps', 'https://github.com/xiaomoBoy']
             }] : []),

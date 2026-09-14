@@ -1,6 +1,6 @@
 ---
 title: 把 Pi 变成长期工作流
-description: 小墨 Pi 学习记录第 6 阶段，收录 10 篇推文原文。
+description: 小墨同学 Pi 学习记录第 6 阶段，收录 10 篇推文原文。
 outline: false
 prev:
   text: 子 Agent 分工
@@ -24,7 +24,7 @@ next:
 
 ## 很多人都问Pi Agent算什么，我就把它类比成游戏角色：
 
-<span class="tweet-meta">2026-08-12 13:28:15 · 小墨原文</span>
+<span class="tweet-meta">2026-08-12 13:28:15 · 小墨同学原文</span>
 
 > 很多人都问Pi Agent算什么，我就把它类比成游戏角色：
 >
@@ -50,7 +50,7 @@ next:
 
 ## 谁能想到，Pi Agent 的控制台除了写代码，居然还能拿来打游戏。
 
-<span class="tweet-meta">2026-08-25 08:34:30 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 08:34:30 · 小墨同学原文</span>
 
 > 谁能想到，Pi Agent 的控制台除了写代码，居然还能拿来打游戏。
 >
@@ -82,7 +82,7 @@ next:
 
 ## 最近我干了件离谱的事情，我把 Pi 做成游戏了😂
 
-<span class="tweet-meta">2026-08-26 16:35:46 · 小墨原文</span>
+<span class="tweet-meta">2026-08-26 16:35:46 · 小墨同学原文</span>
 
 > 最近我干了件离谱的事情，我把 Pi 做成游戏了😂
 >
@@ -138,7 +138,7 @@ next:
 
 ## Pi 为什么一直不做桌面端？
 
-<span class="tweet-meta">2026-08-27 09:51:08 · 小墨原文</span>
+<span class="tweet-meta">2026-08-27 09:51:08 · 小墨同学原文</span>
 
 > Pi 为什么一直不做桌面端？
 >
@@ -176,7 +176,7 @@ next:
 
 ## 今天看到，JetBrains 给 Pi 做了一个 GUI 客户端🔥
 
-<span class="tweet-meta">2026-08-27 11:40:51 · 小墨原文</span>
+<span class="tweet-meta">2026-08-27 11:40:51 · 小墨同学原文</span>
 
 > 今天看到，JetBrains 给 Pi 做了一个 GUI 客户端🔥
 >
@@ -207,7 +207,7 @@ next:
 
 ## 最近研究 Pi 的时候，我发现社区其实已经做出了不少桌面端和移动端项目🔥
 
-<span class="tweet-meta">2026-08-27 16:12:20 · 小墨原文</span>
+<span class="tweet-meta">2026-08-27 16:12:20 · 小墨同学原文</span>
 
 > 最近研究 Pi 的时候，我发现社区其实已经做出了不少桌面端和移动端项目🔥
 >
@@ -237,7 +237,7 @@ next:
 
 ## 研究Pi发现，长期稳定使用比什么都重要🔥
 
-<span class="tweet-meta">2026-08-28 15:40:33 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 15:40:33 · 小墨同学原文</span>
 
 > 研究Pi发现，长期稳定使用比什么都重要🔥
 >
@@ -274,7 +274,7 @@ next:
 
 ## 我居然不知道，Pi 在游戏方面也有贡献🔥
 
-<span class="tweet-meta">2026-08-29 12:56:17 · 小墨原文</span>
+<span class="tweet-meta">2026-08-29 12:56:17 · 小墨同学原文</span>
 
 > 我居然不知道，Pi 在游戏方面也有贡献🔥
 >
@@ -328,7 +328,7 @@ next:
 
 ## 原来 MiniMax Code 2.0，也是基于 Pi 重做的。
 
-<span class="tweet-meta">2026-09-08 00:43:42 · 小墨原文</span>
+<span class="tweet-meta">2026-09-08 00:43:42 · 小墨同学原文</span>
 
 > 原来 MiniMax Code 2.0，也是基于 Pi 重做的。
 >
@@ -371,7 +371,7 @@ next:
 
 ## Pi V2 来了，可能要进入 Agent Runtime新时代🔥
 
-<span class="tweet-meta">2026-09-08 10:14:33 · 小墨原文</span>
+<span class="tweet-meta">2026-09-08 10:14:33 · 小墨同学原文</span>
 
 > Pi V2 来了，可能要进入 Agent Runtime新时代🔥
 >

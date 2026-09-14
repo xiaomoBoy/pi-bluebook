@@ -76,7 +76,7 @@ description: 面向中文初学者的 Pi Coding Agent 系统教程，从安装�
     </div>
     <aside class="bluebook-notes-strip">
       <span>AUTHOR'S NOTES</span>
-      <p><strong>小墨札记</strong>保留 98 条推文、个人感悟和判断变化。它是蓝皮书的素材档案，不替代经过核验的教程。</p>
+      <p><strong>小墨同学札记</strong>保留 98 条推文、个人感悟和判断变化。它是蓝皮书的素材档案，不替代经过核验的教程。</p>
       <a href="/journey/">阅读札记 →</a>
     </aside>
   </section>

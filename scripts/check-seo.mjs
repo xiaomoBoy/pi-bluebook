@@ -127,7 +127,7 @@ for (const filePath of htmlFiles) {
           webPage?.url !== expectedUrl ||
           webPage?.mainEntity?.['@id'] !== `${expectedUrl}#person` ||
           person?.['@id'] !== `${expectedUrl}#person` ||
-          person?.name !== '小墨' ||
+          person?.name !== '小墨同学' ||
           breadcrumb?.itemListElement?.at(-1)?.item !== expectedUrl ||
           !html.includes(`rel="canonical" href="${expectedUrl}"`) ||
           !html.includes(`property="og:type" content="profile"`)

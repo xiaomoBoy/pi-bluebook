@@ -1,6 +1,6 @@
 ---
 title: Pi 外掛程式推薦
-description: 從小墨的 Pi 推文實踐中整理外掛程式、包與配套工具，並按需求、風險和當前可核驗來源給出選擇建議。
+description: 從小墨同學的 Pi 推文實踐中整理外掛程式、包與配套工具，並按需求、風險和當前可核驗來源給出選擇建議。
 prev:
   text: 技能、擴充功能與包
   link: /zh-TW/guide/skills-extensions-packages

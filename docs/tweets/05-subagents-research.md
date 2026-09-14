@@ -1,6 +1,6 @@
 ---
 title: 让子 Agent 学会分工
-description: 小墨 Pi 学习记录第 5 阶段，收录 7 篇推文原文。
+description: 小墨同学 Pi 学习记录第 5 阶段，收录 7 篇推文原文。
 outline: false
 prev:
   text: Skill 与 Extension
@@ -24,7 +24,7 @@ next:
 
 ## 我想分享的是，一定要多尝试不同的Agent，真的你会回来感谢我的！
 
-<span class="tweet-meta">2026-08-19 21:39:36 · 小墨原文</span>
+<span class="tweet-meta">2026-08-19 21:39:36 · 小墨同学原文</span>
 
 > 我想分享的是，一定要多尝试不同的Agent，真的你会回来感谢我的！
 >
@@ -44,7 +44,7 @@ next:
 
 ## Pi Agent 的 Sub-agent功能一定要用起来！
 
-<span class="tweet-meta">2026-08-24 18:52:20 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 18:52:20 · 小墨同学原文</span>
 
 > Pi Agent 的 Sub-agent功能一定要用起来！
 >
@@ -100,7 +100,7 @@ next:
 
 ## Pi Agent 的 Sub-agent 我一直在用，最近我又拿 Apodex 1.1 跑了一轮多 Agent 搜索。
 
-<span class="tweet-meta">2026-08-28 10:16:28 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 10:16:28 · 小墨同学原文</span>
 
 > Pi Agent 的 Sub-agent 我一直在用，最近我又拿 Apodex 1.1 跑了一轮多 Agent 搜索。
 >
@@ -146,7 +146,7 @@ next:
 
 ## 我用Pi 接入 Apodex 1.1，让它帮我查查孙宇晨说的是真是假🔥
 
-<span class="tweet-meta">2026-08-28 11:24:12 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 11:24:12 · 小墨同学原文</span>
 
 > 我用Pi 接入 Apodex 1.1，让它帮我查查孙宇晨说的是真是假🔥
 >
@@ -176,7 +176,7 @@ next:
 
 ## 看到这个用 Apodex 搜《红楼梦》的例子，我想到 Pi 的 Sub-agent 很适合处理这类问题。
 
-<span class="tweet-meta">2026-08-28 14:21:48 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 14:21:48 · 小墨同学原文</span>
 
 > 看到这个用 Apodex 搜《红楼梦》的例子，我想到 Pi 的 Sub-agent 很适合处理这类问题。
 >
@@ -198,7 +198,7 @@ next:
 
 ## 我开始让 Pi 学我怎么分析自己的 X 推文了🔥
 
-<span class="tweet-meta">2026-08-30 20:01:38 · 小墨原文</span>
+<span class="tweet-meta">2026-08-30 20:01:38 · 小墨同学原文</span>
 
 > 我开始让 Pi 学我怎么分析自己的 X 推文了🔥
 >
@@ -232,7 +232,7 @@ next:
 
 ## OMP 越做越狠了：一个 Agent，开始配一整个模型团队。
 
-<span class="tweet-meta">2026-09-03 08:21:25 · 小墨原文</span>
+<span class="tweet-meta">2026-09-03 08:21:25 · 小墨同学原文</span>
 
 > OMP 越做越狠了：一个 Agent，开始配一整个模型团队。
 >

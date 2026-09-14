@@ -90,4 +90,4 @@ next:
 
 ## 需要查找，而不是继续上课时
 
-进入[参考手册](/reference/)按主题查询：[FAQ](/reference/faq)回答常见疑问，[故障排查手册](/reference/troubleshooting)从已经发生的症状开始定位，[热词表](/reference/glossary)解释陌生概念。想比较 Pi 与它的分支，可以读[OMP、Selesai Code 路线对照](/reference/pi-forks)。个人经历、推文原文和认知变化单独保存在[小墨札记](/journey/)，不会混进课程结论。
+进入[参考手册](/reference/)按主题查询：[FAQ](/reference/faq)回答常见疑问，[故障排查手册](/reference/troubleshooting)从已经发生的症状开始定位，[热词表](/reference/glossary)解释陌生概念。想比较 Pi 与它的分支，可以读[OMP、Selesai Code 路线对照](/reference/pi-forks)。个人经历、推文原文和认知变化单独保存在[小墨同学札记](/journey/)，不会混进课程结论。

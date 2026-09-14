@@ -1,6 +1,6 @@
 ---
 title: 推文學習目錄
-description: 按六個學習階段整理小墨的 98 條 Pi 推文原文。
+description: 按六個學習階段整理小墨同學的 98 條 Pi 推文原文。
 prev:
   text: 我的 Pi 學習記錄
   link: /zh-TW/journey/

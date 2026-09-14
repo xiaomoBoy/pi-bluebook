@@ -1,6 +1,6 @@
 ---
 title: 搭建自己的 Skill 与 Extension
-description: 小墨 Pi 学习记录第 4 阶段，收录 22 篇推文原文。
+description: 小墨同学 Pi 学习记录第 4 阶段，收录 22 篇推文原文。
 outline: false
 prev:
   text: Session 与上下文
@@ -24,7 +24,7 @@ next:
 
 ## 最近Pi Agent很火，我推荐几个我自己常用的插件和项目：
 
-<span class="tweet-meta">2026-08-11 17:09:32 · 小墨原文</span>
+<span class="tweet-meta">2026-08-11 17:09:32 · 小墨同学原文</span>
 
 > 最近Pi Agent很火，我推荐几个我自己常用的插件和项目：
 >
@@ -44,7 +44,7 @@ next:
 
 ## 习惯Pi Agent之后我基本上弃用了 MCP ，我现在更愿意给 Pi 装 Skill，然后把剩下的任务交给 CLI。
 
-<span class="tweet-meta">2026-08-23 16:41:32 · 小墨原文</span>
+<span class="tweet-meta">2026-08-23 16:41:32 · 小墨同学原文</span>
 
 > 习惯Pi Agent之后我基本上弃用了 MCP ，我现在更愿意给 Pi 装 Skill，然后把剩下的任务交给 CLI。
 >
@@ -73,7 +73,7 @@ next:
 
 ## 推荐几个新手使用Pi Agent 必装的安全插件！
 
-<span class="tweet-meta">2026-08-24 11:29:39 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 11:29:39 · 小墨同学原文</span>
 
 > 推荐几个新手使用Pi Agent 必装的安全插件！
 >
@@ -110,7 +110,7 @@ next:
 
 ## 分享一下Pi 远程设备的方案，官方插件+UU远程，基本上就够了
 
-<span class="tweet-meta">2026-08-24 15:56:13 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 15:56:13 · 小墨同学原文</span>
 
 > 分享一下Pi 远程设备的方案，官方插件+UU远程，基本上就够了
 >
@@ -141,7 +141,7 @@ next:
 
 ## Pi Agent 别只记得安装插件，Skill有时候其实更好用🔥
 
-<span class="tweet-meta">2026-08-26 08:26:44 · 小墨原文</span>
+<span class="tweet-meta">2026-08-26 08:26:44 · 小墨同学原文</span>
 
 > Pi Agent 别只记得安装插件，Skill有时候其实更好用🔥
 >
@@ -169,7 +169,7 @@ next:
 
 ## 最近 Pi 很火，但很多人一上来就只装 Extension。其实 Skill 才是更值得折腾的一块。
 
-<span class="tweet-meta">2026-08-26 10:17:15 · 小墨原文</span>
+<span class="tweet-meta">2026-08-26 10:17:15 · 小墨同学原文</span>
 
 > 最近 Pi 很火，但很多人一上来就只装 Extension。其实 Skill 才是更值得折腾的一块。
 >
@@ -205,7 +205,7 @@ next:
 
 ## Pi 插件和核心功能的边界到底在哪里？
 
-<span class="tweet-meta">2026-08-26 23:10:34 · 小墨原文</span>
+<span class="tweet-meta">2026-08-26 23:10:34 · 小墨同学原文</span>
 
 > Pi 插件和核心功能的边界到底在哪里？
 >
@@ -239,7 +239,7 @@ next:
 
 ## Pi Package 可能是最被大家忽然的功能🔥
 
-<span class="tweet-meta">2026-08-28 13:41:31 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 13:41:31 · 小墨同学原文</span>
 
 > Pi Package 可能是最被大家忽然的功能🔥
 >
@@ -273,7 +273,7 @@ next:
 
 ## 玩到最后，我开始让Pi自己改造自己🔥
 
-<span class="tweet-meta">2026-08-30 14:16:18 · 小墨原文</span>
+<span class="tweet-meta">2026-08-30 14:16:18 · 小墨同学原文</span>
 
 > 玩到最后，我开始让Pi自己改造自己🔥
 >
@@ -315,7 +315,7 @@ next:
 
 ## 玩 Pi，我发现很多人装了一堆插件，写代码还是乱🔥
 
-<span class="tweet-meta">2026-08-31 15:19:30 · 小墨原文</span>
+<span class="tweet-meta">2026-08-31 15:19:30 · 小墨同学原文</span>
 
 > 玩 Pi，我发现很多人装了一堆插件，写代码还是乱🔥
 >
@@ -335,7 +335,7 @@ next:
 
 ## Pi 你必须学会的事，学会写好AGENT.md🔥
 
-<span class="tweet-meta">2026-09-02 13:57:15 · 小墨原文</span>
+<span class="tweet-meta">2026-09-02 13:57:15 · 小墨同学原文</span>
 
 > Pi 你必须学会的事，学会写好AGENT.md🔥
 >
@@ -381,7 +381,7 @@ next:
 
 ## 玩 Pi 不是缺插件，是清理仓库里不用的东西🔥
 
-<span class="tweet-meta">2026-09-02 15:28:59 · 小墨原文</span>
+<span class="tweet-meta">2026-09-02 15:28:59 · 小墨同学原文</span>
 
 > 玩 Pi 不是缺插件，是清理仓库里不用的东西🔥
 >
@@ -433,7 +433,7 @@ next:
 
 ## Pi 终极建议，1 个网站、2 条用法、3 个插件🔥
 
-<span class="tweet-meta">2026-09-02 23:40:40 · 小墨原文</span>
+<span class="tweet-meta">2026-09-02 23:40:40 · 小墨同学原文</span>
 
 > Pi 终极建议，1 个网站、2 条用法、3 个插件🔥
 >
@@ -455,7 +455,7 @@ next:
 
 ## 推荐一个Pi 排版的插件，pi-cc-extensions
 
-<span class="tweet-meta">2026-09-04 16:37:26 · 小墨原文</span>
+<span class="tweet-meta">2026-09-04 16:37:26 · 小墨同学原文</span>
 
 > 推荐一个Pi 排版的插件，pi-cc-extensions
 >
@@ -482,7 +482,7 @@ next:
 
 ## Pi 可以自己生成可交付的ui，一个插件就搞定🔥
 
-<span class="tweet-meta">2026-09-04 19:52:40 · 小墨原文</span>
+<span class="tweet-meta">2026-09-04 19:52:40 · 小墨同学原文</span>
 
 > Pi 可以自己生成可交付的ui，一个插件就搞定🔥
 >
@@ -514,7 +514,7 @@ next:
 
 ## Pi 的工作台打造不是一朝一夕就能搭建好的，需要你自己根据你的需求去慢慢优化和迭代。
 
-<span class="tweet-meta">2026-09-06 20:15:34 · 小墨原文</span>
+<span class="tweet-meta">2026-09-06 20:15:34 · 小墨同学原文</span>
 
 > Pi 的工作台打造不是一朝一夕就能搭建好的，需要你自己根据你的需求去慢慢优化和迭代。
 >
@@ -568,7 +568,7 @@ next:
 
 ## 其实 Pi 想操作浏览器，不用装一堆插件，先把这几个搞明白就够了🔥
 
-<span class="tweet-meta">2026-09-07 00:46:20 · 小墨原文</span>
+<span class="tweet-meta">2026-09-07 00:46:20 · 小墨同学原文</span>
 
 > 其实 Pi 想操作浏览器，不用装一堆插件，先把这几个搞明白就够了🔥
 >
@@ -623,7 +623,7 @@ next:
 
 ## Pi 现在可以直接给自己写 Extension，我最近已经开始让它补自己的工作台了。
 
-<span class="tweet-meta">2026-09-07 10:26:17 · 小墨原文</span>
+<span class="tweet-meta">2026-09-07 10:26:17 · 小墨同学原文</span>
 
 > Pi 现在可以直接给自己写 Extension，我最近已经开始让它补自己的工作台了。
 >
@@ -661,7 +661,7 @@ next:
 
 ## Pi 插件装多了以后，我最近真的开始碰到兼容问题了。
 
-<span class="tweet-meta">2026-09-07 13:41:30 · 小墨原文</span>
+<span class="tweet-meta">2026-09-07 13:41:30 · 小墨同学原文</span>
 
 > Pi 插件装多了以后，我最近真的开始碰到兼容问题了。
 >
@@ -705,7 +705,7 @@ next:
 
 ## 最近我第一次给 Pi 写了一个自己的 Extension。
 
-<span class="tweet-meta">2026-09-07 23:11:13 · 小墨原文</span>
+<span class="tweet-meta">2026-09-07 23:11:13 · 小墨同学原文</span>
 
 > 最近我第一次给 Pi 写了一个自己的 Extension。
 >
@@ -743,7 +743,7 @@ next:
 
 ## 最近我第一次给 Pi 写了一个自己的 Extension。
 
-<span class="tweet-meta">2026-09-07 23:11:49 · 小墨原文</span>
+<span class="tweet-meta">2026-09-07 23:11:49 · 小墨同学原文</span>
 
 > 最近我第一次给 Pi 写了一个自己的 Extension。
 >
@@ -781,7 +781,7 @@ next:
 
 ## Pi 制作插件过程简单，但是里面细节问题真的很多😂
 
-<span class="tweet-meta">2026-09-08 12:35:22 · 小墨原文</span>
+<span class="tweet-meta">2026-09-08 12:35:22 · 小墨同学原文</span>
 
 > Pi 制作插件过程简单，但是里面细节问题真的很多😂
 >

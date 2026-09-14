@@ -65,7 +65,7 @@ export const navTW = [
             text: '文章與檔案',
             items: [
               { text: 'Earendil 授權譯文', link: '/zh-TW/translations/' },
-              { text: '小墨札記', link: '/zh-TW/journey/' },
+              { text: '小墨同學札記', link: '/zh-TW/journey/' },
               { text: '98 條推文檔案', link: '/zh-TW/tweets/' }
             ]
           },
@@ -329,7 +329,7 @@ export const sidebarTW = {
       ],
       '/zh-TW/journey/': [
         {
-          text: '小墨札記',
+          text: '小墨同學札記',
           collapsed: true,
           items: [
             { text: '寫在藍皮書之外', link: '/zh-TW/journey/' },
@@ -359,7 +359,7 @@ export const sidebarTW = {
       ],
       '/zh-TW/tweets/': [
         {
-          text: '小墨札記',
+          text: '小墨同學札記',
           collapsed: true,
           items: [
             { text: '寫在藍皮書之外', link: '/zh-TW/journey/' },

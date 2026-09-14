@@ -90,4 +90,4 @@ next:
 
 ## 需要查詢，而不是繼續上課時
 
-進入[參考手冊](/zh-TW/reference/)按主題查詢：[FAQ](/zh-TW/reference/faq)回答常見疑問，[故障排查手冊](/zh-TW/reference/troubleshooting)從已經發生的症狀開始定位，[熱詞表](/zh-TW/reference/glossary)解釋陌生概念。想比較 Pi 與它的分支，可以讀[OMP、Selesai Code 路線對照](/zh-TW/reference/pi-forks)。個人經歷、推文原文和認知變化單獨儲存在[小墨札記](/zh-TW/journey/)，不會混進課程結論。
+進入[參考手冊](/zh-TW/reference/)按主題查詢：[FAQ](/zh-TW/reference/faq)回答常見疑問，[故障排查手冊](/zh-TW/reference/troubleshooting)從已經發生的症狀開始定位，[熱詞表](/zh-TW/reference/glossary)解釋陌生概念。想比較 Pi 與它的分支，可以讀[OMP、Selesai Code 路線對照](/zh-TW/reference/pi-forks)。個人經歷、推文原文和認知變化單獨儲存在[小墨同學札記](/zh-TW/journey/)，不會混進課程結論。

@@ -1,6 +1,6 @@
 ---
 title: 從好奇開始認識 Pi
-description: 小墨 Pi 學習記錄第 1 階段，收錄 27 篇推文原文。
+description: 小墨同學 Pi 學習記錄第 1 階段，收錄 27 篇推文原文。
 outline: false
 prev:
   text: 學習目錄
@@ -24,7 +24,7 @@ next:
 
 ## Pi Agent不知道怎麼就火了，我其實很早就在用了，總結下裡幾個優點：
 
-<span class="tweet-meta">2026-08-11 09:42:03 · 小墨原文</span>
+<span class="tweet-meta">2026-08-11 09:42:03 · 小墨同學原文</span>
 
 > Pi Agent不知道怎麼就火了，我其實很早就在用了，總結下裡幾個優點：
 >
@@ -42,7 +42,7 @@ next:
 
 ## Pi Agent 已經夠小夠簡潔了，還有比更小的Agent？
 
-<span class="tweet-meta">2026-08-12 20:00:56 · 小墨原文</span>
+<span class="tweet-meta">2026-08-12 20:00:56 · 小墨同學原文</span>
 
 > Pi Agent 已經夠小夠簡潔了，還有比更小的Agent？
 >
@@ -60,7 +60,7 @@ next:
 
 ## Pi 這次銳評挺準的。
 
-<span class="tweet-meta">2026-08-23 10:21:19 · 小墨原文</span>
+<span class="tweet-meta">2026-08-23 10:21:19 · 小墨同學原文</span>
 
 > Pi 這次銳評挺準的。
 >
@@ -86,7 +86,7 @@ next:
 
 ## Pi Agent 的口號是：There are many agent harnesses, but this one is yours.
 
-<span class="tweet-meta">2026-08-24 00:27:19 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 00:27:19 · 小墨同學原文</span>
 
 > Pi Agent 的口號是：There are many agent harnesses, but this one is yours.
 >
@@ -121,7 +121,7 @@ next:
 
 ## 很多人用 Pi，但未必知道背後這個人。
 
-<span class="tweet-meta">2026-08-24 10:10:30 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 10:10:30 · 小墨同學原文</span>
 
 > 很多人用 Pi，但未必知道背後這個人。
 >
@@ -146,7 +146,7 @@ next:
 
 ## 很多人用 Pi，但未必知道背後這個人。
 
-<span class="tweet-meta">2026-08-24 10:57:00 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 10:57:00 · 小墨同學原文</span>
 
 > 很多人用 Pi，但未必知道背後這個人。
 >
@@ -171,7 +171,7 @@ next:
 
 ## 很多人把Pi 和 Pi coding agent 搞混在了一起，傻傻的分不清，我用一分鐘給你講清楚😄
 
-<span class="tweet-meta">2026-08-24 14:25:17 · 小墨原文</span>
+<span class="tweet-meta">2026-08-24 14:25:17 · 小墨同學原文</span>
 
 > 很多人把Pi 和 Pi coding agent 搞混在了一起，傻傻的分不清，我用一分鐘給你講清楚😄
 >
@@ -207,7 +207,7 @@ next:
 
 ## Pi 創作者 Mario Zechner 的 X bio 為什麼會有這麼一句話？
 
-<span class="tweet-meta">2026-08-25 18:47:32 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 18:47:32 · 小墨同學原文</span>
 
 > Pi 創作者 Mario Zechner 的 X bio 為什麼會有這麼一句話？
 >
@@ -249,7 +249,7 @@ next:
 
 ## 如果你也想開始學習 Pi，可以看看我的學習分享🔥
 
-<span class="tweet-meta">2026-08-25 21:09:50 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 21:09:50 · 小墨同學原文</span>
 
 > 如果你也想開始學習 Pi，可以看看我的學習分享🔥
 >
@@ -289,7 +289,7 @@ next:
 
 ## 回看Pi 的版本迭代記錄，就像再看一部Agent發展史！
 
-<span class="tweet-meta">2026-08-25 23:00:08 · 小墨原文</span>
+<span class="tweet-meta">2026-08-25 23:00:08 · 小墨同學原文</span>
 
 > 回看Pi 的版本迭代記錄，就像再看一部Agent發展史！
 >
@@ -331,7 +331,7 @@ next:
 
 ## Pi 真正的用法，其實是構建屬於自Agent🔥
 
-<span class="tweet-meta">2026-08-27 19:01:11 · 小墨原文</span>
+<span class="tweet-meta">2026-08-27 19:01:11 · 小墨同學原文</span>
 
 > Pi 真正的用法，其實是構建屬於自Agent🔥
 >
@@ -383,7 +383,7 @@ next:
 
 ## Pi 不是難，是很多人把學習順序搞反了。
 
-<span class="tweet-meta">2026-08-27 22:32:49 · 小墨原文</span>
+<span class="tweet-meta">2026-08-27 22:32:49 · 小墨同學原文</span>
 
 > Pi 不是難，是很多人把學習順序搞反了。
 >
@@ -430,7 +430,7 @@ next:
 
 ## 學 Pi 別收藏文件了，看完這個影片，比收藏十篇教學都有用。
 
-<span class="tweet-meta">2026-08-28 00:30:32 · 小墨原文</span>
+<span class="tweet-meta">2026-08-28 00:30:32 · 小墨同學原文</span>
 
 > 學 Pi 別收藏文件了，看完這個影片，比收藏十篇教學都有用。
 >
@@ -457,7 +457,7 @@ next:
 
 ## Pi 和 Oh My Pi，正在把代理框架推向兩個極端🔥
 
-<span class="tweet-meta">2026-08-29 20:23:31 · 小墨原文</span>
+<span class="tweet-meta">2026-08-29 20:23:31 · 小墨同學原文</span>
 
 > Pi 和 Oh My Pi，正在把代理框架推向兩個極端🔥
 >
@@ -493,7 +493,7 @@ next:
 
 ## Pi 0.84.4（2026-08-28）是目前最新版，官方推文裡重點提了這 3 條：
 
-<span class="tweet-meta">2026-08-29 21:49:05 · 小墨原文</span>
+<span class="tweet-meta">2026-08-29 21:49:05 · 小墨同學原文</span>
 
 > Pi 0.84.4（2026-08-28）是目前最新版，官方推文裡重點提了這 3 條：
 >
@@ -518,7 +518,7 @@ next:
 
 ## 以前是我盯著 Pi 改程式碼，現在有人開始讓 Pi 自己死磕最佳化了😂
 
-<span class="tweet-meta">2026-08-30 23:45:55 · 小墨原文</span>
+<span class="tweet-meta">2026-08-30 23:45:55 · 小墨同學原文</span>
 
 > 以前是我盯著 Pi 改程式碼，現在有人開始讓 Pi 自己死磕最佳化了😂
 >
@@ -567,7 +567,7 @@ next:
 
 ## Pi 最矛盾的點：追求極簡，還是複雜🔥
 
-<span class="tweet-meta">2026-08-31 11:08:02 · 小墨原文</span>
+<span class="tweet-meta">2026-08-31 11:08:02 · 小墨同學原文</span>
 
 > Pi 最矛盾的點：追求極簡，還是複雜🔥
 >
@@ -608,7 +608,7 @@ next:
 
 ## 我去，《殺戮尖塔》居然和 Pi 作者 Mario Zechner 有關係🔥
 
-<span class="tweet-meta">2026-08-31 13:23:25 · 小墨原文</span>
+<span class="tweet-meta">2026-08-31 13:23:25 · 小墨同學原文</span>
 
 > 我去，《殺戮尖塔》居然和 Pi 作者 Mario Zechner 有關係🔥
 >
@@ -648,7 +648,7 @@ next:
 
 ## 我發現了新玩法，拿Grok Bot 來跑Pi Agent🔥
 
-<span class="tweet-meta">2026-09-01 11:25:44 · 小墨原文</span>
+<span class="tweet-meta">2026-09-01 11:25:44 · 小墨同學原文</span>
 
 > 我發現了新玩法，拿Grok Bot 來跑Pi Agent🔥
 >
@@ -674,7 +674,7 @@ next:
 
 ## 不到一年，Pi 10 萬Star了🔥
 
-<span class="tweet-meta">2026-09-01 20:33:10 · 小墨原文</span>
+<span class="tweet-meta">2026-09-01 20:33:10 · 小墨同學原文</span>
 
 > 不到一年，Pi 10 萬Star了🔥
 >
@@ -700,7 +700,7 @@ next:
 
 ## 我來分享一下自己對Pi的學習過程
 
-<span class="tweet-meta">2026-09-04 20:54:05 · 小墨原文</span>
+<span class="tweet-meta">2026-09-04 20:54:05 · 小墨同學原文</span>
 
 > 我來分享一下自己對Pi的學習過程
 >
@@ -738,7 +738,7 @@ next:
 
 ## 推薦一個很有意思的 Pi 專案，pi-vs-claude-code。
 
-<span class="tweet-meta">2026-09-05 00:56:17 · 小墨原文</span>
+<span class="tweet-meta">2026-09-05 00:56:17 · 小墨同學原文</span>
 
 > 推薦一個很有意思的 Pi 專案，pi-vs-claude-code。
 >
@@ -788,7 +788,7 @@ next:
 
 ## Pi雖然核心簡單，但是組合在一起一點也不簡單。
 
-<span class="tweet-meta">2026-09-06 12:54:03 · 小墨原文</span>
+<span class="tweet-meta">2026-09-06 12:54:03 · 小墨同學原文</span>
 
 > Pi雖然核心簡單，但是組合在一起一點也不簡單。
 >
@@ -822,7 +822,7 @@ next:
 
 ## 看懂Pi設計的魅力，可能只需要一分鐘。
 
-<span class="tweet-meta">2026-09-07 14:25:45 · 小墨原文</span>
+<span class="tweet-meta">2026-09-07 14:25:45 · 小墨同學原文</span>
 
 > 看懂Pi設計的魅力，可能只需要一分鐘。
 >
@@ -854,7 +854,7 @@ next:
 
 ## 如果不在學習和研究Pi，這幾篇必讀文章你一定不能錯過🔥
 
-<span class="tweet-meta">2026-09-07 18:16:48 · 小墨原文</span>
+<span class="tweet-meta">2026-09-07 18:16:48 · 小墨同學原文</span>
 
 > 如果不在學習和研究Pi，這幾篇必讀文章你一定不能錯過🔥
 >
@@ -904,7 +904,7 @@ next:
 
 ## 如果你也在學習和研究Pi，這幾篇必讀文章你一定不要錯過🔥
 
-<span class="tweet-meta">2026-09-07 18:17:30 · 小墨原文</span>
+<span class="tweet-meta">2026-09-07 18:17:30 · 小墨同學原文</span>
 
 > 如果你也在學習和研究Pi，這幾篇必讀文章你一定不要錯過🔥
 >
@@ -954,7 +954,7 @@ next:
 
 ## 準備把自己的Pi學習過程整理出來
 
-<span class="tweet-meta">2026-09-08 18:48:38 · 小墨原文</span>
+<span class="tweet-meta">2026-09-08 18:48:38 · 小墨同學原文</span>
 
 > 準備把自己的Pi學習過程整理出來
 >
