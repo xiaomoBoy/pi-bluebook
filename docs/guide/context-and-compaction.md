@@ -114,6 +114,8 @@ test -f worklog/handoff.md && echo "PASS: 交接文件存在"
 
 推荐继续阅读官方授权译文 [Pi 中的压缩机制](/translations/compaction-in-pi) 和 [无法随身带走的会话](/translations/session-portability)，对照理解压缩过程与会话可移植性。
 
+想把会话、提示缓存和可调整的上下文连起来思考，可以读[小墨同学的译文串读](/journey/why-pi-keeps-context-editable)。
+
 ### 本章依据
 
 - [Pi Compaction](https://pi.dev/docs/latest/compaction)

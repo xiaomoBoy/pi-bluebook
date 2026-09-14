@@ -333,6 +333,7 @@ export const sidebarTW = {
           collapsed: true,
           items: [
             { text: '寫在藍皮書之外', link: '/zh-TW/journey/' },
+            { text: '為什麼把工作階段與上下文留在手裡', link: '/zh-TW/journey/why-pi-keeps-context-editable' },
             { text: '98 條推文檔案', link: '/zh-TW/tweets/' }
           ]
         },
@@ -363,6 +364,7 @@ export const sidebarTW = {
           collapsed: true,
           items: [
             { text: '寫在藍皮書之外', link: '/zh-TW/journey/' },
+            { text: '為什麼把工作階段與上下文留在手裡', link: '/zh-TW/journey/why-pi-keeps-context-editable' },
             { text: '98 條推文檔案', link: '/zh-TW/tweets/' }
           ]
         },

@@ -32,6 +32,8 @@ next:
 | Agent 能執行，程式碼就合格了嗎 | 《衡量程式碼的粗糙程度》《Pi：極簡而高效》 | [程式碼修復](/zh-TW/cases/code-repair)、[畢業專案](/zh-TW/cases/graduation-project) |
 | 想了解作者與公司的背景 | 公告、反思、制高點、通訊邀請 | 作為選讀，不是安裝前置條件 |
 
+如果想把工作階段、壓縮、快取和代理框架四個主題連起來讀，可以接著看[小墨同學的串讀文章：Pi 為什麼把工作階段與上下文留在你手裡](/zh-TW/journey/why-pi-keeps-context-editable)。這是一篇個人分析，不屬於下方十一篇授權譯文。
+
 ### 01 無法隨身帶走的工作階段
 
 **原文標題**　*The 工作階段（Session） You Cannot Take With You*

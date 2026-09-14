@@ -32,6 +32,8 @@ next:
 | Agent 能运行，代码就合格了吗 | 《衡量代码的粗糙程度》《Pi：极简而高效》 | [代码修复](/cases/code-repair)、[毕业项目](/cases/graduation-project) |
 | 想了解作者与公司的背景 | 公告、反思、制高点、通信邀请 | 作为选读，不是安装前置条件 |
 
+如果想把会话、压缩、缓存和 Harness 四个主题连起来读，可以接着看[小墨同学的串读文章：Pi 为什么把会话与上下文留在你手里](/journey/why-pi-keeps-context-editable)。这是一篇个人分析，不属于下方十一篇授权译文。
+
 ### 01 无法随身带走的会话
 
 **原文标题**　*The Session You Cannot Take With You*

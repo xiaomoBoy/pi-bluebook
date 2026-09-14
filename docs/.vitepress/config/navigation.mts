@@ -333,6 +333,7 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '写在蓝皮书之外', link: '/journey/' },
+            { text: '为什么把会话与上下文留在手里', link: '/journey/why-pi-keeps-context-editable' },
             { text: '98 条推文档案', link: '/tweets/' }
           ]
         },
@@ -363,6 +364,7 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '写在蓝皮书之外', link: '/journey/' },
+            { text: '为什么把会话与上下文留在手里', link: '/journey/why-pi-keeps-context-editable' },
             { text: '98 条推文档案', link: '/tweets/' }
           ]
         },

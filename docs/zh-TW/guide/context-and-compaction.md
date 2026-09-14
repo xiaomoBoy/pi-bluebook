@@ -114,6 +114,8 @@ test -f worklog/handoff.md && echo "PASS: 交接檔案存在"
 
 推薦繼續閱讀官方授權譯文 [Pi 中的壓縮機制](/zh-TW/translations/compaction-in-pi) 和 [無法隨身帶走的工作階段](/zh-TW/translations/session-portability)，對照理解壓縮過程與工作階段可移植性。
 
+想把工作階段、提示快取和可調整的上下文連起來思考，可以讀[小墨同學的譯文串讀](/zh-TW/journey/why-pi-keeps-context-editable)。
+
 ### 本章依據
 
 - [Pi 壓縮（Compaction）](https://pi.dev/docs/latest/compaction)

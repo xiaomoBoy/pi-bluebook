@@ -374,19 +374,22 @@ body .VPLocalSearchBox .search-keyboard-shortcuts {
   box-shadow: 0 8px 22px rgba(34, 45, 53, 0.08);
 }
 
-.VPDoc .agent-routes-diagram {
+.VPDoc .agent-routes-diagram,
+.VPDoc .concept-diagram {
   margin: 24px 0 8px;
   overflow-x: auto;
 }
 
-.VPDoc .agent-routes-diagram img {
+.VPDoc .agent-routes-diagram img,
+.VPDoc .concept-diagram img {
   width: 100%;
   max-width: none;
   margin: 0;
 }
 
 @media (max-width: 640px) {
-  .VPDoc .agent-routes-diagram img {
+  .VPDoc .agent-routes-diagram img,
+  .VPDoc .concept-diagram img {
     width: 720px;
   }
 }
