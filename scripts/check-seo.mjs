@@ -51,6 +51,7 @@ if (
 for (const filePath of htmlFiles) {
   const html = fs.readFileSync(filePath, 'utf8')
   const relativePath = path.relative(distDir, filePath)
+  const normalizedPath = relativePath.replaceAll('\\', '/')
   const requiredFragments = [
     'rel="canonical"',
     'property="og:image"',
@@ -62,25 +63,25 @@ for (const filePath of htmlFiles) {
 
   for (const fragment of requiredFragments) {
     if (count(html, fragment) !== 1) {
-      fail(`${relativePath} has ${count(html, fragment)} occurrences of ${fragment}`)
+      fail(`${normalizedPath} has ${count(html, fragment)} occurrences of ${fragment}`)
     }
   }
 
-  const isTW = relativePath.startsWith(`zh-TW${path.sep}`)
+  const isTW = normalizedPath.startsWith('zh-TW/')
   const expectedLanguage = isTW ? 'zh-Hant-TW' : 'zh-CN'
   const expectedOgLocale = isTW ? 'zh_Hant_TW' : 'zh_CN'
   if (!html.includes(`<html lang="${expectedLanguage}"`)) {
-    fail(`${relativePath} has the wrong html language`)
+    fail(`${normalizedPath} has the wrong html language`)
   }
   if (!html.includes(`property="og:locale" content="${expectedOgLocale}"`)) {
-    fail(`${relativePath} has the wrong Open Graph locale`)
+    fail(`${normalizedPath} has the wrong Open Graph locale`)
   }
 
   const alternateLinks = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)]
   const alternateLanguages = new Set(alternateLinks.map((match) => match[1]))
   for (const language of ['zh-CN', 'zh-Hant-TW', 'x-default']) {
     if (!alternateLanguages.has(language)) {
-      fail(`${relativePath} is missing the ${language} alternate`)
+      fail(`${normalizedPath} is missing the ${language} alternate`)
     }
   }
 
@@ -92,7 +93,7 @@ for (const filePath of htmlFiles) {
       ? path.join(distDir, cleanPath, 'index.html')
       : path.join(distDir, `${cleanPath}.html`)
     if (!fs.existsSync(targetFile)) {
-      fail(`${relativePath} points to missing ${language} alternate ${cleanPath}`)
+      fail(`${normalizedPath} points to missing ${language} alternate ${cleanPath}`)
     }
   }
 
@@ -101,7 +102,7 @@ for (const filePath of htmlFiles) {
 
   try {
     const data = JSON.parse(jsonLdMatch[1])
-    if (relativePath === 'index.html' || relativePath === 'zh-TW/index.html') {
+    if (normalizedPath === 'index.html' || normalizedPath === 'zh-TW/index.html') {
       if (
         data['@type'] !== 'WebSite' ||
         data.alternateName !== 'PI BLUEBOOK' ||
@@ -117,9 +118,9 @@ for (const filePath of htmlFiles) {
         !graphTypes.has('BreadcrumbList') ||
         webPage?.inLanguage !== expectedLanguage
       ) {
-        fail(`${relativePath} is missing WebPage or BreadcrumbList data`)
+        fail(`${normalizedPath} is missing WebPage or BreadcrumbList data`)
       }
-      if (relativePath === 'about.html' || relativePath === 'zh-TW/about.html') {
+      if (normalizedPath === 'about.html' || normalizedPath === 'zh-TW/about.html') {
         const expectedUrl = `https://pi.xiaomovps.com/${isTW ? 'zh-TW/' : ''}about`
         const person = data['@graph']?.find((item) => item['@type'] === 'Person')
         const breadcrumb = data['@graph']?.find((item) => item['@type'] === 'BreadcrumbList')
@@ -132,12 +133,12 @@ for (const filePath of htmlFiles) {
           !html.includes(`rel="canonical" href="${expectedUrl}"`) ||
           !html.includes(`property="og:type" content="profile"`)
         ) {
-          fail(`${relativePath} has incomplete author profile SEO data`)
+          fail(`${normalizedPath} has incomplete author profile SEO data`)
         }
       }
     }
   } catch (error) {
-    fail(`${relativePath} has invalid JSON-LD: ${error.message}`)
+    fail(`${normalizedPath} has invalid JSON-LD: ${error.message}`)
   }
 }
 

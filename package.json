@@ -12,7 +12,7 @@
     "check:releases": "node scripts/check-pi-releases.mjs",
     "check:seo": "node scripts/check-seo.mjs",
     "check": "npm run docs:check",
-    "docs:check": "npm run check:content && npm run check:locales && npm run check:terms && npm run check:releases && npm run docs:build && npm run check:seo && npm run check:pages",
+    "docs:check": "npm run check:translations && npm run check:content && npm run check:locales && npm run check:terms && npm run check:releases && npm run docs:build && npm run check:seo && npm run check:pages",
     "docs:preview": "vitepress preview docs",
     "sync:zh-tw": "python3 scripts/convert-zh-tw.py",
     "sync:pi-releases": "node scripts/sync-pi-releases.mjs",

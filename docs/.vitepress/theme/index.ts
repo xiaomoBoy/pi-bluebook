@@ -53,6 +53,8 @@ function hashTarget() {
   }
 }
 
+let activeRenderPage: ((page: number, shouldScroll: boolean) => void) | null = null
+
 function openHashTarget(shouldScroll = false) {
   if (!window.location.hash) return
 
@@ -61,12 +63,8 @@ function openHashTarget(shouldScroll = false) {
   if (!entry) return
 
   const page = entry.dataset.archivePage
-  const pageButton = page
-    ? document.querySelector<HTMLButtonElement>(`.tweet-pagination button[data-page="${page}"]`)
-    : null
-
-  if (pageButton && pageButton.getAttribute('aria-current') !== 'page') {
-    pageButton.click()
+  if (page !== undefined && activeRenderPage) {
+    activeRenderPage(Number(page), false)
   }
 
   window.requestAnimationFrame(() => {
@@ -76,12 +74,13 @@ function openHashTarget(shouldScroll = false) {
 
 function enhanceTweetArchive() {
   const entries = Array.from(document.querySelectorAll<HTMLElement>(entrySelector))
-  if (!entries.length) return
-
-  if (document.querySelector('.tweet-archive-tools')) {
-    openHashTarget(true)
+  if (!entries.length) {
+    activeRenderPage = null
+    document.querySelectorAll('.tweet-archive-tools, .tweet-pagination').forEach((el) => el.remove())
     return
   }
+
+  document.querySelectorAll('.tweet-archive-tools, .tweet-pagination').forEach((el) => el.remove())
 
   const pageCount = Math.ceil(entries.length / entriesPerPage)
   let currentPage = 0
@@ -206,6 +205,8 @@ function enhanceTweetArchive() {
     }
   }
 
+  activeRenderPage = renderPage
+
   tools.append(heading, directory, topPagination)
   entries[0].insertAdjacentElement('beforebegin', tools)
   entries.at(-1)?.insertAdjacentElement('afterend', bottomPagination)
@@ -251,6 +252,9 @@ export default {
       watch(() => route.path, scheduleEnhancement)
       window.addEventListener('hashchange', onHashChange)
     })
-    onUnmounted(() => window.removeEventListener('hashchange', onHashChange))
+    onUnmounted(() => {
+      window.removeEventListener('hashchange', onHashChange)
+      activeRenderPage = null
+    })
   }
 }

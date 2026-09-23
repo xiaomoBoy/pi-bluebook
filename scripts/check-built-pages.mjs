@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { pathToFileURL } from 'node:url'
 import MiniSearch from 'minisearch'
 import { miniSearch } from '../docs/.vitepress/config/search.mjs'
 
@@ -64,7 +65,9 @@ for (const locale of ['root', 'zh-TW']) {
     errors.push(`missing ${locale} search index`)
     continue
   }
-  const { default: indexJSON } = await import(path.join(dist, 'assets/chunks', indexFile))
+  const { default: indexJSON } = await import(
+    pathToFileURL(path.join(dist, 'assets/chunks', indexFile)).href
+  )
   const index = MiniSearch.loadJSON(indexJSON, {
     fields: ['title', 'titles', 'text'], storeFields: ['title', 'titles'], ...miniSearch.options
   })
