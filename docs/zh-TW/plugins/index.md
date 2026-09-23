@@ -15,11 +15,19 @@ next:
 
 我的推文裡陸續提到過很多 Pi 外掛程式。把它們放在一起以後，最重要的結論並不是“都值得安裝”，而是：**先說清楚自己缺什麼，再只試一個最接近需求的外掛程式。**
 
-這一頁把[推文檔案](/zh-TW/tweets/04-skills-extensions)裡的零散推薦重新整理，並在 2026 年 9 月 9 日核對了仍能確認的專案來源、安裝入口和主要風險。它是一張選擇地圖，不是必裝清單。
+這一頁把[推文檔案](/zh-TW/tweets/04-skills-extensions)裡的零散推薦重新整理，並在 2026 年 9 月 23 日重新核對專案來源、安裝入口和主要風險。Pi 的包（Package）目錄變化很快，因此這裡給出的是帶核驗日期的選擇地圖，不是永久排名或必裝清單。
 
-::: warning 安裝第三方包（Package）前先看原始碼
+::: warning 安裝第三方包前先看原始碼
 Pi 包可以在當前使用者權限下執行程式碼。名字裡帶 `safe`、`permission` 或 `sandbox`，也不代表它天然可信。先確認倉庫和維護者，再看原始碼、依賴與權限；來源不明確的舊推薦，本頁不提供安裝命令。
 :::
+
+## Level 0：第一次任務保持零外掛程式
+
+如果你還沒有完成[第一次任務](/zh-TW/guide/first-task)，先不要安裝任何第三方包。原版 Pi 已經能讀取、寫入、編輯檔案和執行命令，也能儲存工作階段。第一次成功需要證明的是工作目錄、模型、檔案範圍和驗收流程都正確，不是證明你能裝多少外掛程式。
+
+社群裡“哪些外掛程式必裝”是高頻問題，但沒有一套設定適合所有人。介面套件、Plan Mode、子代理（Subagent）、瀏覽器和權限系統解決的是不同問題；一次裝完整套件會讓報錯、快捷鍵衝突、額外模型呼叫和權限變化難以歸因。
+
+完成零外掛程式任務後，再用下面的選擇表一次只試一個。
 
 ## 如果你只想先選一個
 
@@ -27,9 +35,12 @@ Pi 包可以在當前使用者權限下執行程式碼。名字裡帶 `safe`、`
 | --- | --- | --- | --- |
 | 隨時看模型、上下文、Token、費用和 Git 狀態 | [pi-footer](#pi-footer-狀態列) | 資訊集中，最容易立即感受到價值 | **入門首選**；先臨時載入 |
 | 想讓終端機輸出、Diff、Mermaid 和狀態顯示更完整 | [pi-cc-extensions](#pi-cc-extensions-終端機體驗包) | 一套覆蓋多個互動細節 | 與其他介面增強外掛程式分開試 |
+| 想先做只讀規劃，再允許修改 | [pi-plan-mode](#pi-plan-mode-輕量只讀規劃) | 只增加一個明確工作階段 | 比子代理更適合作為第二個外掛程式 |
+| 想在瀏覽器裡標註計劃和程式碼差異 | [Plannotator](#plannotator-視覺化計劃與程式碼審閱) | 把人工回饋落到具體位置 | 功能較重，穩定使用後再裝 |
 | 讓 Pi 操作瀏覽器 | [三種瀏覽器方案](#瀏覽器外掛程式只選一種) | 三者連接方式和權限邊界不同 | **只選一種**，先用測試使用者帳戶 |
+| 希望危險操作先經過規則判斷或確認 | [權限系統](#permission-system) | 增加 allow、deny、ask 規則 | 不能替代容器或系統沙箱 |
+| 想把探索或審閱交給並行 Agent | [子-Agent](#子代理) | 可以隔離上下文並並行處理 | 進階能力；先理解模型與成本 |
 | 自動反覆實驗，最佳化一個可量化指標 | [pi-autoresearch](#pi-autoresearch-自動實驗迴圈) | 適合有測試命令和明確分數的任務 | 僅在獨立分支或 worktree 使用 |
-| 在瀏覽器裡審批計劃、標註程式碼差異 | [Plannotator](#plannotator-計劃與程式碼審閱) | 把“先審後做”變成可視流程 | 功能較重，穩定使用後再裝 |
 | 把圖表、架構圖或互動介面直接渲染出來 | [pi-generative-ui](#pi-generative-ui-生成式介面) | 適合視覺化結果 | 先檢查系統依賴 |
 | 用手機遠端接入正在執行的 Pi | [remote-pi](#remote-pi-遠端控制) | 遠端操作方便 | 實驗性選擇，先評估中繼與憑據風險 |
 
@@ -39,7 +50,7 @@ Pi 包可以在當前使用者權限下執行程式碼。名字裡帶 `safe`、`
 [擴充功能（Extension）載入失敗](/zh-TW/reference/troubleshooting#extension-failed)先檢查載入位置與乾淨基線；多個外掛程式同時異常時，按[外掛程式互相衝突](/zh-TW/reference/troubleshooting#resource-conflict)逐個恢復。診斷階段一次只改變一個變數。
 :::
 
-## 第一組：適合先試的介面增強
+## Level 1：適合先試的介面增強
 
 ### pi-footer：狀態列
 
@@ -79,7 +90,40 @@ pi -e npm:pi-cc-extensions
 pi install npm:pi-cc-extensions
 ```
 
-## 第二組：按任務選擇
+## Level 2：按任務選擇
+
+### pi-plan-mode：輕量只讀規劃
+
+`@narumitw/pi-plan-mode` 增加一個只讀 `/plan` 階段，讓 Pi 先探索、澄清並寫出可以實施的計劃，再回到正常模式修改檔案。它適合“改動較大，但暫時不需要瀏覽器審閱介面”的場景。
+
+- 當前核對來源：[narumiruna/pi-extensions · pi-plan-mode](https://github.com/narumiruna/pi-extensions/tree/main/packages/pi-plan-mode)
+- 適合：重構、跨檔案修改、需要先確認邊界的任務。
+- 注意：Plan Mode 約束的是當前工作階段，不是系統權限隔離；退出規劃階段後仍要檢查實際改動。
+
+先在測試專案單次載入：
+
+```bash
+pi -e npm:@narumitw/pi-plan-mode
+```
+
+只提交一個規劃任務，確認它沒有修改檔案、計劃能指出目標檔案和驗收方法，再決定是否永久安裝。
+
+### Plannotator：視覺化計劃與程式碼審閱
+
+Plannotator 為 Pi 增加瀏覽器裡的計劃審批、回覆標註和程式碼差異審閱。它適合需要“Agent 先交計劃，人逐項批註後再執行”的較大專案。
+
+- 當前核對來源：[backnotprop/plannotator](https://github.com/backnotprop/plannotator)
+- 當前包：[`@plannotator/pi-extension`](https://pi.dev/packages/%40plannotator/pi-extension)
+- 適合：較大改動、多人審閱、需要把回饋落到具體段落或程式碼行的任務。
+- 注意：它會啟動瀏覽器審閱介面，並引入比純終端機 Plan Mode 更多的操作入口；剛開始學 Pi 時沒有必要先裝。
+
+先臨時試用當前 npm 包：
+
+```bash
+pi -e npm:@plannotator/pi-extension
+```
+
+確認瀏覽器審閱頁能開啟、回饋能夠返回當前工作階段、退出後沒有留下不需要的後台程序，再永久安裝。
 
 ### 瀏覽器外掛程式只選一種
 
@@ -121,16 +165,6 @@ pi -e npm:pi-autoresearch
 
 先用一個小倉庫做三輪以內的實驗，確認它能留下實驗記錄、不會改動範圍外檔案，再考慮永久安裝。
 
-### Plannotator：計劃與程式碼審閱
-
-Plannotator 為 Pi 增加瀏覽器裡的計劃審批和程式碼差異標註。它適合需要“Agent 先交計劃，人確認後再執行”的專案，也能把具體行的意見送回 Pi。
-
-- 當前核對來源：[CodeByPeete/plannotator-pi](https://github.com/CodeByPeete/plannotator-pi)
-- 適合：較大改動、多人審閱、需要留下結構化回饋的任務。
-- 注意：它會引入計劃階段、瀏覽器介面和更多操作入口，剛開始學 Pi 時沒有必要先裝。
-
-它當前提供帶版本的 Git 安裝方式。請以倉庫 README 的最新版本為準，不要複製舊推文裡的版本號。
-
 ### pi-extension-doctor：擴充診斷
 
 `pi-extension-doctor` 是按命令觸發的只讀診斷工具，用來發現擴充衝突和過期 API。它不會把“外掛程式有問題”自動變成“已經修好”，但可以幫助縮小排查範圍。
@@ -157,6 +191,33 @@ pi -e npm:remote-pi
 
 官方 SSH 擴充功能、`pi-mobile`、Pi Web、`tmux + Tailscale` 也在推文裡出現過，但它們分別屬於官方示例、客戶端或遠端工作流，不應和普通包混成一個“外掛程式榜單”。
 
+## Level 3：權限系統與子代理最後再裝
+
+<a id="permission-system"></a>
+
+### @gotgenes/pi-permission-system：權限規則
+
+`@gotgenes/pi-permission-system` 可以為工具、Shell、MCP、技能（Skill）和子代理操作設定 `allow`、`deny`、`ask` 等規則，適合已經知道自己要攔截哪些動作的使用者。
+
+- 當前核對來源：[gotgenes/pi-permission-system](https://github.com/gotgenes/pi-permission-system)
+- 當前包：[`@gotgenes/pi-permission-system`](https://pi.dev/packages/%40gotgenes/pi-permission-system)
+- 適合：為穩定工作流增加可複查的確認和拒絕規則。
+- 重要邊界：權限外掛程式本身也在 Pi 程序中執行，不能成為作業系統安全邊界，也不能替代獨立帳戶、容器或虛擬機器。
+
+如果只是擔心第一次任務誤改檔案，先使用空練習目錄、Git 和人工驗收。只有能寫出一條明確規則和對應測試時，再臨時載入權限系統；不要因為包名裡有 `permission` 就直接信賴。
+
+<a id="子代理"></a>
+
+### 子代理：最後再裝
+
+子代理可以把探索、實現或審閱放進獨立上下文，也可以並行執行任務。社群裡存在多個名稱相近但介面、排程方式和持久化能力不同的實現；它們還會產生額外模型呼叫，可能使用與你主工作階段不同的預設模型。
+
+- 一個當前仍活躍的方案：[tintinweb/pi-subagents](https://github.com/tintinweb/pi-subagents)
+- 適合：可以獨立描述、獨立驗收、並行處理確實能縮短時間的子任務。
+- 不適合：第一次任務、範圍模糊的“把整個專案做好”、尚未理解模型費用與工作階段上下文時。
+
+安裝任何子代理前，必須先確認四件事：它預設呼叫哪個模型服務商和模型；是否允許後台執行；子任務能使用哪些工具；失敗或中止後怎樣找到實際產物。藍皮書會在[子代理如何分工](/zh-TW/guide/subagents)繼續講職責拆分，而不是在本頁給出一個無條件的“必裝”答案。
+
 ## 推文提過，但暫不提供安裝命令
 
 以下名字在歷史推文中出現過：
@@ -172,7 +233,7 @@ pi -e npm:remote-pi
 
 如果目標是安全，先使用系統帳戶權限、獨立測試目錄、Git 分支或 worktree、容器，以及 Pi 自帶的專案信賴（Project Trust）和資源停用引數。第三方“安全外掛程式”只能作為額外一層，不能替代這些邊界。
 
-## 這些是技能（Skill）或獨立工具，不是外掛程式
+## 這些是技能或獨立工具，不是外掛程式
 
 推文裡還推薦過 `browser-tools`、`brave-search`、`youtube-transcript`、`gmcli`、`gdcli`、`transcribe` 等技能。技能主要提供工作說明和配套資源；它可能呼叫工具，但不等同於在 Pi 程序中執行的擴充功能。
 
@@ -186,11 +247,11 @@ Pi Desktop、Pi Web、`pi-mobile`、Steel Browser，以及 `tmux + Tailscale + P
 | --- | --- | --- |
 | 介面與上下文觀察 | `pi-footer`、`pi-cc-extensions`、`pi-generative-ui`、`pi-context-view` | 前三個已有當前來源；`pi-context-view` 留待複核 |
 | 瀏覽器與網頁 | `pi-browser-harness`、`pi-agent-browser-native`、`pi-chrome`、`pi-browser-cdp-extension`、`pi-web-access` | 三個瀏覽器擴充功能已分路線整理；後兩個暫作歷史線索 |
-| 子代理（Subagent）與工作流 | `pi-subagents`、Plannotator、`pi-autoresearch`、`pi-extension-doctor` | 後三個已有當前來源；`pi-subagents` 回到子代理專題繼續核對 |
+| 規劃、子代理與工作流 | `pi-plan-mode`、`pi-subagents`、Plannotator、`pi-autoresearch`、`pi-extension-doctor` | Plan Mode 與 Plannotator 已分輕重路線；子代理只給進階候選和安裝前檢查 |
 | 遠端控制 | `remote-pi`、`pi-telegram`、Pi Web、`pi-mobile`、官方 SSH 擴充功能 | 只把 `remote-pi` 作為實驗性包；其餘按客戶端或遠端方案另行整理 |
 | 上下文壓縮 | `pi-smart-compact`、`pi-context`、`pi-press`、Hypa | 保留在[上下文推文](/zh-TW/tweets/03-sessions-context)中，之後單開橫向實測 |
 | 長期記憶 | `pi-memory`、`pi-hermes-memory`、`pi-honcho`、`pi-hindsight` | 屬於高影響能力，暫不依據功能描述直接推薦安裝 |
-| 安全與權限 | `safe-coder`、`pi-permission-gate`、`pi-protected-paths`、`pi-sandbox`、`pi-permission-modes` | 當前來源未逐一確認，不提供安裝命令 |
+| 安全與權限 | `@gotgenes/pi-permission-system`、`safe-coder`、`pi-permission-gate`、`pi-protected-paths`、`pi-sandbox`、`pi-permission-modes` | 只確認前者當前來源；其餘名字繼續作為歷史線索，不依據舊推文安裝 |
 | 有趣與專業軟體 | `pi-arcade`、`pi-unity` | 保留為生態案例，不列入初學者首裝清單 |
 
 這張表也說明了為什麼不能直接做“Top 20 外掛程式”：長期記憶、遠端控制、瀏覽器和權限外掛程式都會顯著擴大資料與執行邊界，它們需要獨立的實測和威脅檢查。
@@ -215,7 +276,7 @@ pi remove npm:pi-footer
 
 ## 我會怎樣繼續維護這份清單
 
-專案是否仍在維護、安裝字串和依賴都可能變化。每次更新時，我會分別記錄：
+專案是否仍在維護、安裝字串和依賴都可能變化。本頁當前來源最後核驗於 **2026 年 9 月 23 日**。每次更新時，我會分別記錄：
 
 - **推文實踐判斷**：當時為什麼推薦、解決了什麼問題。
 - **當前來源核驗**：倉庫是否唯一、安裝方式是否仍有效、最近是否維護。

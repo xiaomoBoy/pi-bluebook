@@ -1,6 +1,6 @@
 ---
 title: 安裝 Pi，並第一次開啟它
-description: 使用官方 npm 命令安裝 Pi，確認版本，練習啟動和退出。
+description: 在官方安裝器與 npm 路線之間做出選擇，確認版本，並練習啟動和退出 Pi。
 prev:
   text: 安裝前檢查
   link: /zh-TW/guide/before-install
@@ -13,7 +13,7 @@ next:
 
 # 安裝 Pi，並第一次開啟它
 
-上一課準備好了終端機、空白練習目錄、Node.js 和 npm。現在只做一件事，讓 `pi` 命令能在這臺電腦上正常開啟和退出。
+上一課準備好了終端機、空白練習目錄、Node.js 和 npm。現在只做一件事，讓 `pi` 命令能在這臺電腦上正常開啟和退出。模型登入和第一次任務仍放在後面的獨立驗收階段。
 
 ::: info Windows 使用者
 本頁的快捷鍵和目錄按 macOS 編寫。Windows 使用者請改走 [Windows 中文安裝路徑](/zh-TW/guide/windows-setup)，不要在命令提示符或 PowerShell 中直接照抄本頁；獨立路徑完成安裝和第一次啟動後，會接回第 3 課。
@@ -23,22 +23,39 @@ Linux 使用者使用相同的安裝與驗證命令，但複製、貼上請按�
 
 先開啟終端機。如果你不確定自己現在在哪，先輸入 `pwd` 看一眼。下面第一條安裝命令安裝的是電腦可呼叫的 Pi 命令；後面“啟動 Pi”時所在的目錄，才決定 Pi 會看到哪些檔案。
 
-## 1. 執行官方安裝命令
+## 1. 選擇一條官方安裝路線
 
-用滑鼠選中下面**整行**，按 `Command + C`；點回終端機的閃爍游標，按 `Command + V`，確認沒有多出其他文字後按輸入鍵。
+Pi 官方目前為 macOS 和 Linux 提供兩條安裝路線。兩條都安裝同一個 **Pi Coding Agent**；只選一條，不要連續執行兩種方法。
+
+| 路線 | 適合誰 | 安裝命令 | 以後怎樣移除 |
+| --- | --- | --- | --- |
+| 官方安裝器 | 希望由官方指令碼完成環境預檢、安裝和 PATH 處理的初學者 | `curl -fsSL https://pi.dev/install.sh \| sh` | 重新執行安裝器並選擇解除安裝 |
+| npm 全域安裝 | 已經管理 Node.js/npm，希望明確使用包管理器的讀者 | `npm install -g --ignore-scripts @earendil-works/pi-coding-agent` | 用 npm 全域解除安裝 |
+
+本書推薦第一次安裝優先使用**官方安裝器**。它會檢查 Node.js 22.19.0 或更高版本和 npm；缺少環境時會先詢問是否幫助安裝。上一課已經讓你提前完成這些檢查，所以正常情況下它應直接進入 Pi 安裝流程。
+
+用滑鼠選中下面**整行**，按 `Command + C`；點回終端機的閃爍游標，按 `Command + V`，確認網域是 `pi.dev`、沒有多出其他文字後按輸入鍵。
+
+```bash
+curl -fsSL https://pi.dev/install.sh | sh
+```
+
+這條命令會下載並立即執行 Pi 官方安裝指令碼。不要把網域換成搜尋結果、網盤或別人轉發的指令碼地址。安裝器顯示環境檢查和安裝動作時，先讀清提示再繼續；如果它準備安裝你沒有計劃使用的系統元件，取消並保留提示文字。
+
+如果你明確選擇 npm 路線，則執行下面這條，不再執行上面的安裝器：
 
 ```bash
 npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 ```
 
-這行安裝的是 **Pi Coding Agent**，也就是後面用 `pi` 命令開啟的完整終端機應用。它使用 Pi Agent Core 等底層元件，但不需要你單獨安裝核心包，再手動拼接一組外掛程式。技能（Skill）和擴充功能（Extension）是以後按任務增加的能力。名稱與層次見[Pi 與 Pi Coding Agent 的區別](/zh-TW/reference/faq#pi-vs-pi-coding-agent)，安裝命令見[官方 Quickstart](https://pi.dev/docs/latest/quickstart)。
+這兩條路線安裝的都是後面用 `pi` 命令開啟的完整終端機應用。Pi 使用 Pi Agent Core 等底層元件，但不需要你單獨安裝核心包，再手動拼接一組外掛程式。技能（Skill）和擴充功能（Extension）是以後按任務增加的能力。名稱與層次見[Pi 與 Pi Coding Agent 的區別](/zh-TW/reference/faq#pi-vs-pi-coding-agent)，安裝入口見[官方 Quickstart](https://pi.dev/docs/latest/quickstart)。
 
-`-g` 表示把 Pi 安裝成這臺電腦可以直接呼叫的命令。`--ignore-scripts` 會禁止依賴包在安裝時執行生命週期指令碼；Pi 的正常 npm 安裝不需要這些指令碼。
+npm 路線中的 `-g` 表示把 Pi 安裝成這臺電腦可以直接呼叫的命令；`--ignore-scripts` 會禁止依賴包在安裝時執行生命週期指令碼。Pi 的正常 npm 安裝不需要這些指令碼。
 
-按輸入鍵後，終端機會陸續顯示下載和安裝資訊。這是正常的等待過程，不需要繼續輸入。只有同時滿足下面三點，安裝才算透過：
+安裝開始後，終端機會陸續顯示檢查、下載和安裝資訊。這是正常的等待過程，不需要繼續輸入。無論選擇哪條路線，只有同時滿足下面三點，安裝才算透過：
 
 1. 終端機重新出現可以輸入的游標；
-2. 最後沒有出現以 `npm ERR!` 開頭的錯誤。
+2. 最後沒有出現安裝失敗或 `npm ERR!` 錯誤；
 3. 緊接著執行 `pi --version` 能返回版本號。
 
 如果安裝超過一會兒仍在滾動文字，繼續等待；如果文字停止但游標沒有回來，也先不要輸入下一條命令。網路慢時下載會比普通命令花更久。
@@ -49,7 +66,7 @@ npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 pi --version
 ```
 
-這裡輸入的是 `pi --version`，隨後出現的一串版本號才是輸出。看到版本號、並且游標重新出現，而不是 `command not found`，就算透過。本書不把某個具體 Pi 版本當成永久要求，安裝命令核驗於 2026-09-09，後續以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 為準。
+這裡輸入的是 `pi --version`，隨後出現的一串版本號才是輸出。看到版本號、並且游標重新出現，而不是 `command not found`，就算透過。本書不把某個具體 Pi 版本當成永久要求，兩條安裝路線核驗於 2026-09-23，後續以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 為準。
 
 ![在真實終端機中檢查 Node.js、npm 與 Pi 版本](/images/01-Pi-版本检查-实操图.png)
 
@@ -57,9 +74,10 @@ pi --version
 
 ### 小檢查
 
-- [ ] 安裝命令已結束，終端機沒有顯示 `npm ERR!`。
+- [ ] 安裝命令已結束，終端機沒有顯示失敗或 `npm ERR!`。
 - [ ] `pi --version` 顯示了版本號。
 - [ ] 我沒有為安裝輸入 `sudo`，也沒有輸入電腦帳戶密碼來繞過報錯。
+- [ ] 我記得自己使用的是官方安裝器還是 npm，後續解除安裝時不會混用來源。
 
 ## 2. 第一次啟動
 
@@ -96,9 +114,10 @@ pi
 Pi 關閉後會回到原來的終端機提示符。此時再輸入一次 `pi` 並按輸入鍵；能再次看到 Pi 介面，說明你已經分清了“終端機命令”和“Pi 內命令”兩個狀態。第二次開啟後可再次輸入 `/quit`，為下一課做準備。
 
 ::: warning 遇到常見失敗時
-- 安裝過程出現 `npm ERR!` 或 `EACCES`，不要直接加 `sudo`。先等命令結束；然後拖選“安裝命令”到最後一行報錯，按 `Command + C` 儲存完整文字，再確認 Node.js 來自官方 LTS 安裝。
+- 官方安裝器的環境檢查失敗時，先儲存它顯示的 Node.js、npm 和 PATH 提示；不要緊接著改用 npm 反覆覆蓋安裝。
+- npm 路線出現 `npm ERR!` 或 `EACCES`，不要直接加 `sudo`。先等命令結束；然後拖選“安裝命令”到最後一行報錯，按 `Command + C` 儲存完整文字，再確認 Node.js 來自官方 LTS 安裝。
 - 安裝成功後仍提示 `pi: command not found`，完全退出終端機並重新開啟，再執行 `pi --version`。不要自行修改 PATH。
-- 網路下載失敗，確認網路後用同一條官方命令重試一次，先別混用多個安裝器。
+- 網路下載失敗，確認網路後用剛才選擇的同一條官方路線重試一次，先別混用安裝器和多個包管理器。
 - 安裝過程中突然出現要求輸入密碼的提示，不要為了繼續而輸入密碼。先按 `Control + C` 停止，保留螢幕上的文字，再檢查自己是否誤加了其他命令。
 :::
 

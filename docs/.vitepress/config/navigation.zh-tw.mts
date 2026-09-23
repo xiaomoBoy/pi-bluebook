@@ -9,7 +9,7 @@ export const navTW = [
           {
             text: '學習入口',
             items: [
-              { text: '從零開始操作', link: '/zh-TW/guide/start-here' },
+              { text: '30 分鐘第一次成功', link: '/zh-TW/guide/start-here' },
               { text: '完整學習目錄', link: '/zh-TW/guide/' },
               { text: 'Pi、OMP 與 Selesai 怎麼選', link: '/zh-TW/reference/pi-forks' },
               { text: '從導論開始', link: '/zh-TW/guide/introduction' },
@@ -89,7 +89,7 @@ export const sidebarTW = {
           collapsed: true,
           items: [
             { text: '完整學習目錄', link: '/zh-TW/guide/' },
-            { text: '從零開始操作', link: '/zh-TW/guide/start-here' },
+            { text: '30 分鐘第一次成功', link: '/zh-TW/guide/start-here' },
             { text: '導論 · 為什麼讀這本書', link: '/zh-TW/guide/introduction' },
             { text: '十條仍然成立的判斷', link: '/zh-TW/guide/lasting-principles' },
             { text: '凡例與本版說明', link: '/zh-TW/guide/edition-2026' },

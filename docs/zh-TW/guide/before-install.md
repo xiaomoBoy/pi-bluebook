@@ -85,7 +85,7 @@ node --version
 npm --version
 ```
 
-兩行都返回版本號，而且 Node.js 不低於 `22.19.0`，就可以進入下一課。這個最低版本要求核驗於 2026-09-09，釋出後請以 [Pi 官方原始碼要求](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json) 為準。
+兩行都返回版本號，而且 Node.js 不低於 `22.19.0`，就可以進入下一課。這個最低版本要求核驗於 2026-09-23，釋出後請以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 為準。
 
 例如，第一行可能顯示 `v22.19.0` 或更高版本，第二行會顯示另一串版本號。版本號的具體數字可以不同；關鍵是兩條命令都有版本號輸出，而且每次輸出後游標都會回來。
 

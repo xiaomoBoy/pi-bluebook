@@ -1,6 +1,6 @@
 ---
 title: Windows 中文路徑：安裝並啟動 Pi
-description: 在 Windows 上用 Git Bash 準備 Node.js、安裝 Pi、建立練習目錄並完成第一次啟動。
+description: 先在原生 Git Bash、PowerShell 與 WSL 之間選擇，再按 Git Bash 入門路線安裝並啟動 Pi。
 prev:
   text: 藍皮書主線
   link: /zh-TW/guide/
@@ -15,10 +15,22 @@ next:
 
 你在 Windows 電腦上開啟了藍皮書，卻發現第 1、2 課寫的是 Mac 終端機、`Command` 快捷鍵和 `/Users/...` 路徑。不要把這些命令逐字改成 Windows 格式，也不要同時混用命令提示符、PowerShell、WSL 和 Git Bash。
 
-這條中文路徑把 Windows 獨有的準備工作集中在一頁完成。透過本頁驗收後，直接進入[第 3 課：登入與模型設定](/zh-TW/guide/connect-model)，再回到共同主線。
+這條中文路徑先解釋 Windows 上的三種執行環境，再把第一次安裝固定在最容易復現的 Git Bash 路線上。透過本頁驗收後，直接進入[第 3 課：登入與模型設定](/zh-TW/guide/connect-model)，再回到共同主線。
+
+## 先選擇執行環境
+
+Pi 可以原生執行在 Windows，也可以完整執行在 WSL。真正重要的不是“哪條路線最強”，而是專案檔案、開發工具和 Shell 必須位於同一個你能解釋清楚的環境中。
+
+| 路線 | Pi 與專案放在哪裡 | 適合情況 | 本書處理 |
+| --- | --- | --- | --- |
+| 原生 Windows + Git Bash | Pi、Node.js 和專案主要位於 Windows；命令工具使用 Git Bash | 第一次安裝、檔案主要在 Windows、希望步驟最少 | **本頁預設路線，提供完整實作和驗收** |
+| 原生 Windows + PowerShell 工具 | Pi 仍是 Windows 程序，可把模型面對的預設工具改為 PowerShell | 工作依賴 PowerShell 模組或 Windows 原生命令 | 基礎路線完成後再按官方文件設定，不作為首次安裝前置 |
+| 完整 WSL | Pi、Node.js、Git 和專案都位於選定的 Linux 發行版 | 開發環境本來就在 Linux/WSL，熟悉 WSL 檔案與網路邊界 | 按 Linux 路線安裝，不在 Windows 與 WSL 之間混裝 Pi |
+
+如果拿不準，選擇第一行。不要因為電腦已經安裝 WSL，就讓 Windows 的 Node.js、WSL 的 npm、Git Bash 的路徑和 PowerShell 命令混在同一次安裝裡。已經長期在 WSL 中開發的讀者，可以直接跟隨 [Pi 官方 Windows 指南](https://pi.dev/docs/latest/windows)的 WSL 路線，再使用本書後續課程的 Linux 命令。
 
 ::: info 本頁採用的路線
-Pi 在 Windows 上預設使用 **Git Bash**。官方依次查詢自定義 Bash 路徑、Git for Windows 的預設安裝位置 `C:\Program Files\Git\bin\bash.exe`，最後才查詢 PATH 中的其他 `bash.exe`。本頁面向第一次安裝的讀者，只使用官方推薦的 Git for Windows 預設路線，不設定 Cygwin、MSYS2、WSL 或可選 PowerShell 工具。
+Pi 原生執行在 Windows 時預設使用 **Git Bash**。官方依次查詢自定義 Bash 路徑、Git for Windows 的預設安裝位置 `C:\Program Files\Git\bin\bash.exe`，最後才查詢 PATH 中的其他 `bash.exe`。本頁面向第一次安裝的讀者，只使用 Git for Windows 預設路線，不設定 Cygwin、MSYS2、WSL 或可選 PowerShell 工具。
 :::
 
 Windows 讀者也按“四樣準備”開始：現有的 Windows 電腦、Git Bash 終端機、Pi Agent，以及一種可用的模型存取方式。**不需要為了學習 Pi 更換 Mac 或 Linux 裝置，也不需要安裝 iTerm2**；iTerm2 是 macOS 軟體。前兩樣和 Pi 的安裝在本頁完成，訂閱或 API Key 留到[下一課](/zh-TW/guide/connect-model)選擇。
@@ -71,7 +83,7 @@ node --version
 npm --version
 ```
 
-兩條命令都應返回版本號，並且 Node.js 不低於 `22.19.0`。最低版本要求核驗於 2026-09-09；釋出後的變化以 [Pi 官方原始碼要求](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json)為準。
+兩條命令都應返回版本號，並且 Node.js 不低於 `22.19.0`。最低版本要求核驗於 2026-09-23；釋出後的變化以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart)為準。
 
 如果出現 `command not found`，先確認 Node.js 安裝程式已經完成，再完全關閉並重開 Git Bash。不要先從網上覆制陌生的 PATH 修改命令，也不要在多個 Node.js 安裝器之間來回切換。
 
@@ -118,7 +130,7 @@ pi --version
 command -v pi
 ```
 
-第一條應顯示 Pi 版本號，第二條應顯示 Git Bash 實際找到的 `pi` 命令位置。安裝命令核驗於 2026-09-09，後續以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 為準。
+第一條應顯示 Pi 版本號，第二條應顯示 Git Bash 實際找到的 `pi` 命令位置。安裝命令核驗於 2026-09-23，後續以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 為準。
 
 如果安裝過程出現 `npm ERR!`、`EPERM` 或 `Access is denied`：
 
@@ -166,6 +178,7 @@ Pi 官方還提供可選的 `powershell` 工具，但它不是本書入門路線
 
 ## 本頁驗收
 
+- 我已經明確選擇原生 Windows + Git Bash，而不是一邊操作一邊切換 Shell。
 - Git Bash 的 Git、Bash 和預設路徑檢查全部透過。
 - `node --version` 不低於本頁要求，`npm --version` 有輸出。
 - 我建立了空白的 `~/pi-practice`，並能說出它對應的 Windows 路徑。
@@ -186,4 +199,4 @@ Pi 官方還提供可選的 `powershell` 工具，但它不是本書入門路線
 - [Git for Windows](https://git-scm.com/download/win)
 - [Node.js 下載頁](https://nodejs.org/en/download)
 
-安裝命令和 Node.js 要求核驗於 2026-09-09；Windows 終端機選擇核驗於 2026-09-14。Pi、Node.js 或 Git for Windows 更新後，應優先複查上述官方頁面。
+安裝命令、Node.js 要求與 Windows 三條執行路線核驗於 2026-09-23。Pi、Node.js 或 Git for Windows 更新後，應優先複查上述官方頁面。

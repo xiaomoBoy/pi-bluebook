@@ -1,6 +1,6 @@
 ---
 title: 安装 Pi，并第一次打开它
-description: 使用官方 npm 命令安装 Pi，确认版本，练习启动和退出。
+description: 在官方安装器与 npm 路线之间做出选择，确认版本，并练习启动和退出 Pi。
 prev:
   text: 安装前检查
   link: /guide/before-install
@@ -13,7 +13,7 @@ next:
 
 # 安装 Pi，并第一次打开它
 
-上一课准备好了终端、空白练习目录、Node.js 和 npm。现在只做一件事，让 `pi` 命令能在这台电脑上正常打开和退出。
+上一课准备好了终端、空白练习目录、Node.js 和 npm。现在只做一件事，让 `pi` 命令能在这台电脑上正常打开和退出。模型登录和第一次任务仍放在后面的独立验收阶段。
 
 ::: info Windows 用户
 本页的快捷键和目录按 macOS 编写。Windows 用户请改走 [Windows 中文安装路径](/guide/windows-setup)，不要在命令提示符或 PowerShell 中直接照抄本页；独立路径完成安装和第一次启动后，会接回第 3 课。
@@ -23,22 +23,39 @@ Linux 用户使用相同的安装与验证命令，但复制、粘贴请按当�
 
 先打开终端。如果你不确定自己现在在哪，先输入 `pwd` 看一眼。下面第一条安装命令安装的是电脑可调用的 Pi 命令；后面“启动 Pi”时所在的目录，才决定 Pi 会看到哪些文件。
 
-## 1. 执行官方安装命令
+## 1. 选择一条官方安装路线
 
-用鼠标选中下面**整行**，按 `Command + C`；点回终端的闪烁光标，按 `Command + V`，确认没有多出其他文字后按回车。
+Pi 官方目前为 macOS 和 Linux 提供两条安装路线。两条都安装同一个 **Pi Coding Agent**；只选一条，不要连续运行两种方法。
+
+| 路线 | 适合谁 | 安装命令 | 以后怎样移除 |
+| --- | --- | --- | --- |
+| 官方安装器 | 希望由官方脚本完成环境预检、安装和 PATH 处理的初学者 | `curl -fsSL https://pi.dev/install.sh \| sh` | 重新运行安装器并选择卸载 |
+| npm 全局安装 | 已经管理 Node.js/npm，希望明确使用包管理器的读者 | `npm install -g --ignore-scripts @earendil-works/pi-coding-agent` | 用 npm 全局卸载 |
+
+本书推荐第一次安装优先使用**官方安装器**。它会检查 Node.js 22.19.0 或更高版本和 npm；缺少环境时会先询问是否帮助安装。上一课已经让你提前完成这些检查，所以正常情况下它应直接进入 Pi 安装流程。
+
+用鼠标选中下面**整行**，按 `Command + C`；点回终端的闪烁光标，按 `Command + V`，确认域名是 `pi.dev`、没有多出其他文字后按回车。
+
+```bash
+curl -fsSL https://pi.dev/install.sh | sh
+```
+
+这条命令会下载并立即运行 Pi 官方安装脚本。不要把域名换成搜索结果、网盘或别人转发的脚本地址。安装器显示环境检查和安装动作时，先读清提示再继续；如果它准备安装你没有计划使用的系统组件，取消并保留提示文字。
+
+如果你明确选择 npm 路线，则执行下面这条，不再运行上面的安装器：
 
 ```bash
 npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 ```
 
-这行安装的是 **Pi Coding Agent**，也就是后面用 `pi` 命令打开的完整终端应用。它使用 Pi Agent Core 等底层组件，但不需要你单独安装核心包，再手动拼接一组插件。Skill 和 Extension 是以后按任务增加的能力。名称与层次见[Pi 与 Pi Coding Agent 的区别](/reference/faq#pi-vs-pi-coding-agent)，安装命令见[官方 Quickstart](https://pi.dev/docs/latest/quickstart)。
+这两条路线安装的都是后面用 `pi` 命令打开的完整终端应用。Pi 使用 Pi Agent Core 等底层组件，但不需要你单独安装核心包，再手动拼接一组插件。Skill 和 Extension 是以后按任务增加的能力。名称与层次见[Pi 与 Pi Coding Agent 的区别](/reference/faq#pi-vs-pi-coding-agent)，安装入口见[官方 Quickstart](https://pi.dev/docs/latest/quickstart)。
 
-`-g` 表示把 Pi 安装成这台电脑可以直接调用的命令。`--ignore-scripts` 会禁止依赖包在安装时运行生命周期脚本；Pi 的正常 npm 安装不需要这些脚本。
+npm 路线中的 `-g` 表示把 Pi 安装成这台电脑可以直接调用的命令；`--ignore-scripts` 会禁止依赖包在安装时运行生命周期脚本。Pi 的正常 npm 安装不需要这些脚本。
 
-按回车后，终端会陆续显示下载和安装信息。这是正常的等待过程，不需要继续输入。只有同时满足下面三点，安装才算通过：
+安装开始后，终端会陆续显示检查、下载和安装信息。这是正常的等待过程，不需要继续输入。无论选择哪条路线，只有同时满足下面三点，安装才算通过：
 
 1. 终端重新出现可以输入的光标；
-2. 最后没有出现以 `npm ERR!` 开头的错误。
+2. 最后没有出现安装失败或 `npm ERR!` 错误；
 3. 紧接着运行 `pi --version` 能返回版本号。
 
 如果安装超过一会儿仍在滚动文字，继续等待；如果文字停止但光标没有回来，也先不要输入下一条命令。网络慢时下载会比普通命令花更久。
@@ -49,7 +66,7 @@ npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 pi --version
 ```
 
-这里输入的是 `pi --version`，随后出现的一串版本号才是输出。看到版本号、并且光标重新出现，而不是 `command not found`，就算通过。本书不把某个具体 Pi 版本当成永久要求，安装命令核验于 2026-09-09，后续以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。
+这里输入的是 `pi --version`，随后出现的一串版本号才是输出。看到版本号、并且光标重新出现，而不是 `command not found`，就算通过。本书不把某个具体 Pi 版本当成永久要求，两条安装路线核验于 2026-09-23，后续以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。
 
 ![在真实终端中检查 Node.js、npm 与 Pi 版本](/images/01-Pi-版本检查-实操图.png)
 
@@ -57,9 +74,10 @@ pi --version
 
 ### 小检查
 
-- [ ] 安装命令已结束，终端没有显示 `npm ERR!`。
+- [ ] 安装命令已结束，终端没有显示失败或 `npm ERR!`。
 - [ ] `pi --version` 显示了版本号。
 - [ ] 我没有为安装输入 `sudo`，也没有输入电脑账户密码来绕过报错。
+- [ ] 我记得自己使用的是官方安装器还是 npm，后续卸载时不会混用来源。
 
 ## 2. 第一次启动
 
@@ -96,9 +114,10 @@ pi
 Pi 关闭后会回到原来的终端提示符。此时再输入一次 `pi` 并按回车；能再次看到 Pi 界面，说明你已经分清了“终端命令”和“Pi 内命令”两个状态。第二次打开后可再次输入 `/quit`，为下一课做准备。
 
 ::: warning 遇到常见失败时
-- 安装过程出现 `npm ERR!` 或 `EACCES`，不要直接加 `sudo`。先等命令结束；然后拖选“安装命令”到最后一行报错，按 `Command + C` 保存完整文字，再确认 Node.js 来自官方 LTS 安装。
+- 官方安装器的环境检查失败时，先保存它显示的 Node.js、npm 和 PATH 提示；不要紧接着改用 npm 反复覆盖安装。
+- npm 路线出现 `npm ERR!` 或 `EACCES`，不要直接加 `sudo`。先等命令结束；然后拖选“安装命令”到最后一行报错，按 `Command + C` 保存完整文字，再确认 Node.js 来自官方 LTS 安装。
 - 安装成功后仍提示 `pi: command not found`，完全退出终端并重新打开，再运行 `pi --version`。不要自行修改 PATH。
-- 网络下载失败，确认网络后用同一条官方命令重试一次，先别混用多个安装器。
+- 网络下载失败，确认网络后用刚才选择的同一条官方路线重试一次，先别混用安装器和多个包管理器。
 - 安装过程中突然出现要求输入密码的提示，不要为了继续而输入密码。先按 `Control + C` 停止，保留屏幕上的文字，再检查自己是否误加了其他命令。
 :::
 

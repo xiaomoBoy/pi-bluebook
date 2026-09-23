@@ -9,7 +9,7 @@ export const nav = [
           {
             text: '学习入口',
             items: [
-              { text: '从零开始操作', link: '/guide/start-here' },
+              { text: '30 分钟第一次成功', link: '/guide/start-here' },
               { text: '完整学习目录', link: '/guide/' },
               { text: 'Pi、OMP 与 Selesai 怎么选', link: '/reference/pi-forks' },
               { text: '从导论开始', link: '/guide/introduction' },
@@ -89,7 +89,7 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '完整学习目录', link: '/guide/' },
-            { text: '从零开始操作', link: '/guide/start-here' },
+            { text: '30 分钟第一次成功', link: '/guide/start-here' },
             { text: '导论 · 为什么读这本书', link: '/guide/introduction' },
             { text: '十条仍然成立的判断', link: '/guide/lasting-principles' },
             { text: '凡例与本版说明', link: '/guide/edition-2026' },
