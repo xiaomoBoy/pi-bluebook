@@ -8,6 +8,16 @@
 
 第三方商標、截圖、引用和其他第三方素材不自動包含在本許可中，其權利歸各自權利人所有。
 
+## Pi 官方版本記錄
+
+`docs/.vitepress/data/pi-releases.json` 中的英文版本明細由
+[Pi Coding Agent 官方 Changelog](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md)
+生成。上游專案採用 [MIT License](https://github.com/earendil-works/pi/blob/main/LICENSE)：
+
+> Copyright (c) 2025 Mario Zechner
+
+本倉庫保留上述版權聲明和上游許可證連結。版本檔案頁面的中文分類、檢索組織和關鍵節點說明屬於本專案原創整理，採用本倉庫 MIT License。
+
 ## Earendil 官方授權譯文
 
 `docs/translations/` 中十一篇 Earendil 文章的中文譯文及適配部分，

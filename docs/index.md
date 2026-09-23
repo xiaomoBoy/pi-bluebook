@@ -38,7 +38,7 @@ description: 面向中文初学者的 Pi Coding Agent 系统教程，从安装�
     <header class="bluebook-section__header">
       <div>
         <p>READING MAP</p>
-        <h2>一条主线，五个功能入口</h2>
+        <h2>一条主线，六个功能入口</h2>
       </div>
       <p>先按主线学习，再到案例练习；遇到问题查手册，需要扩展时看插件，想追溯完整观点再读授权译文。</p>
     </header>
@@ -67,8 +67,14 @@ description: 面向中文初学者的 Pi Coding Agent 系统教程，从安装�
         <p>从 98 条推文实践中整理，按需求、来源和风险选择，不做一键全家桶。</p>
         <b>查看选择地图 →</b>
       </a>
+      <a class="bluebook-map__item" href="/releases/">
+        <span>05 · RELEASE ARCHIVE</span>
+        <h3>版本更新</h3>
+        <p>检索每个正式版本的发布日期、功能变化、破坏性调整与问题修复。</p>
+        <b>查询版本记录 →</b>
+      </a>
       <a class="bluebook-map__item" href="/translations/">
-        <span>05 · AUTHORIZED TRANSLATIONS</span>
+        <span>06 · AUTHORIZED TRANSLATIONS</span>
         <h3>授权译文</h3>
         <p>经 Earendil 授权发布的十一篇完整中文译文，保留原文信息、授权声明与图片署名。</p>
         <b>进入译文专区 →</b>

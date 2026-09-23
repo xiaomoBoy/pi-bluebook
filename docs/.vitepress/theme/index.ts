@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
-import { nextTick, onMounted, onUnmounted, watch } from 'vue'
+import { defineAsyncComponent, nextTick, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vitepress'
 import './custom.css'
 
@@ -222,7 +222,11 @@ function scheduleEnhancement() {
 
 export default {
   extends: DefaultTheme,
-  enhanceApp() {
+  enhanceApp({ app }) {
+    app.component(
+      'PiReleaseExplorer',
+      defineAsyncComponent(() => import('./components/PiReleaseExplorer.vue'))
+    )
     if (typeof window === 'undefined') return
     // VitePress also decodes the fragment while rendering language links.
     // Drop an invalid incoming fragment before those components render.

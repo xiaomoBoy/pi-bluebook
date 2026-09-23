@@ -28,7 +28,7 @@ POST_FIXES = GLOSSARY.get("post_opencc_fixes", {})
 TERMS = GLOSSARY.get("prose_terms_first_occurrence", {})
 
 # 內部文件前綴（需加 /zh-TW）
-DOC_PREFIXES = ("about/", "guide/", "cases/", "reference/", "plugins/", "journey/", "translations/", "tweets/")
+DOC_PREFIXES = ("about/", "guide/", "cases/", "reference/", "plugins/", "releases/", "journey/", "translations/", "tweets/")
 
 # term 正則：依字串長度由長到短，避免 Prompt Caching 被 Caching 先吃掉等
 TERM_ORDER = sorted(TERMS.keys(), key=len, reverse=True)

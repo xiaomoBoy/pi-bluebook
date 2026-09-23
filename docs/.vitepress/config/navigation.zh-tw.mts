@@ -77,6 +77,7 @@ export const navTW = [
           }
         ]
       },
+      { text: '版本更新', link: '/zh-TW/releases/' },
       { text: '聯絡合作', link: 'https://xiaomovps.com/' }
     ] satisfies DefaultTheme.NavItem[]
 
@@ -272,6 +273,26 @@ export const sidebarTW = {
           items: [
             { text: '藍皮書完整目錄', link: '/zh-TW/guide/' },
             { text: '8 個實作案例', link: '/zh-TW/cases/' }
+          ]
+        }
+      ],
+      '/zh-TW/releases/': [
+        {
+          text: '版本檔案',
+          collapsed: false,
+          items: [
+            { text: '全部版本更新', link: '/zh-TW/releases/' },
+            { text: '安全更新 Pi', link: '/zh-TW/guide/lifecycle-management' },
+            { text: '故障排查手冊', link: '/zh-TW/reference/troubleshooting' }
+          ]
+        },
+        {
+          text: '繼續理解',
+          collapsed: false,
+          items: [
+            { text: 'Pi 完整執行原理', link: '/zh-TW/guide/how-pi-works' },
+            { text: '從 98 條推文留下的判斷', link: '/zh-TW/guide/lasting-principles' },
+            { text: '版本迭代原始札記', link: '/zh-TW/tweets/01-meet-pi#post-2092265777214951636' }
           ]
         }
       ],

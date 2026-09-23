@@ -77,6 +77,7 @@ export const nav = [
           }
         ]
       },
+      { text: '版本更新', link: '/releases/' },
       { text: '联系合作', link: 'https://xiaomovps.com/' }
     ] satisfies DefaultTheme.NavItem[]
 
@@ -272,6 +273,26 @@ export const sidebar = {
           items: [
             { text: '蓝皮书完整目录', link: '/guide/' },
             { text: '8 个实操案例', link: '/cases/' }
+          ]
+        }
+      ],
+      '/releases/': [
+        {
+          text: '版本档案',
+          collapsed: false,
+          items: [
+            { text: '全部版本更新', link: '/releases/' },
+            { text: '安全更新 Pi', link: '/guide/lifecycle-management' },
+            { text: '故障排查手册', link: '/reference/troubleshooting' }
+          ]
+        },
+        {
+          text: '继续理解',
+          collapsed: false,
+          items: [
+            { text: 'Pi 完整运行原理', link: '/guide/how-pi-works' },
+            { text: '从 98 条推文留下的判断', link: '/guide/lasting-principles' },
+            { text: '版本迭代原始札记', link: '/tweets/01-meet-pi#post-2092265777214951636' }
           ]
         }
       ],

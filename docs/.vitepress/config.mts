@@ -24,6 +24,7 @@ const localeContent = {
       journey: '小墨同学札记',
       plugins: '插件推荐',
       reference: '参考手册',
+      releases: '版本更新',
       translations: '授权译文',
       tweets: '推文学习目录'
     }
@@ -45,6 +46,7 @@ const localeContent = {
       journey: '小墨同學札記',
       plugins: '外掛程式',
       reference: '參考手冊',
+      releases: '版本更新',
       translations: '授權譯文',
       tweets: '推文學習目錄'
     }

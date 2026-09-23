@@ -13,6 +13,7 @@
 | 推文档案与札记组件 | `docs/.vitepress/theme/styles/archive.css` | 分页、锚点与移动端 |
 | 响应式布局 | `docs/.vitepress/theme/styles/layout.css` | 顶部菜单、侧栏、正文与页脚 |
 | 正文和课程 | `docs/guide/`、`docs/cases/`、`docs/reference/` | 导航、交叉链接、图片与验收步骤 |
+| Pi 版本档案 | `docs/releases/`、`docs/.vitepress/data/pi-releases.json` | 先运行 `npm run sync:pi-releases`，再同步繁体并检查页面 |
 | 图解源稿 | `docs/diagrams/` | 对应 SVG 是否同步导出 |
 | 网站使用的图片和下载材料 | `docs/public/images/`、`docs/public/examples/` | 引用路径与隐私信息 |
 
@@ -49,6 +50,8 @@ npm run docs:check
 只想快速检查内容引用时，可运行 `npm run check:content`。只检查已经生成的正式产物，可运行 `npm run check:seo`。
 
 简体正文更新后，运行 `npm run sync:zh-tw` 重新生成繁体页面、练习材料和繁体导航。转换管线为 OpenCC s2twp 加 `scripts/zh-tw-glossary.json` 名词覆盖层：词表以[乐词网](https://terms.naer.edu.tw/)电子计算机名词为准收敛简中用字（如账号、回车、菜单类用字），有冲突的名词经使用者确认后保留并记入词表 `_comment`。不要手工改生成文件，改词表后重跑即可。`npm run check:translations` 只读比对生成内容，`npm run check:terms` 回归检查已淘汰用字是否复发（违禁表见 `scripts/check-zh-tw-terms.py`），两项都进 `npm run docs:check` 与 CI。转换依赖锁定在 `requirements-dev.txt`；生成后仍需人工检查授权译文说明和关键页面排版，名词问题一般不需要再人工逐项校对。
+
+版本档案的数据源是 Pi Coding Agent 官方 `CHANGELOG.md`。刷新时运行 `npm run sync:pi-releases`；脚本会下载官方记录、保留每个正式版本的完整条目，并更新来源哈希与核验日期。生成后的 JSON 需要提交到仓库，使正式网站和 CI 构建不依赖实时网络。`npm run check:releases` 会检查版本顺序、重复项、来源和五个关键节点证据。
 
 ## 新增页面
 
