@@ -67,6 +67,12 @@ for (const filePath of htmlFiles) {
     }
   }
 
+  const documentTitle = html.match(/<title>([^<]+)<\/title>/)?.[1]
+  const openGraphTitle = html.match(/property="og:title" content="([^"]+)"/)?.[1]
+  if (!documentTitle || documentTitle !== openGraphTitle) {
+    fail(`${normalizedPath} has inconsistent document and Open Graph titles`)
+  }
+
   const isTW = normalizedPath.startsWith('zh-TW/')
   const expectedLanguage = isTW ? 'zh-Hant-TW' : 'zh-CN'
   const expectedOgLocale = isTW ? 'zh_Hant_TW' : 'zh_CN'

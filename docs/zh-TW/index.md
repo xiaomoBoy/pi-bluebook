@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Pi Coding Agent 學習藍皮書
-titleTemplate: ':title｜中文初學者實戰路線'
+title: Pi Coding Agent 中文教學
+titleTemplate: ':title｜從入門到可控 Agent 工作流'
 description: 面向中文初學者的 Pi Coding Agent 系統教學，從安裝和第一次可驗收任務開始，逐步掌握工作階段、上下文、技能、擴充功能與長期 Agent 工作流。
 ---
 
