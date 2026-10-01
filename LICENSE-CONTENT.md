@@ -26,6 +26,8 @@
 发布。页面保留原文标题、作者、发布日期、原文链接及授权说明；英文原文版权归 Earendil 所有。
 原文配图随对应文章授权使用，页面保留原摄影者、制图方或项目来源署名；这些图片不因进入本仓库而自动适用网站原创内容的 MIT License。
 
+授权记录：2026 年 9 月 9 日，Earendil Partner & CEO Colin Hanna 通过邮件同意本项目发布所申请文章的中文改编与译文，并同意 Earendil 此后发布的文章以同样方式翻译和改编；条件是保留原文标题、作者、发布日期、原文链接，并注明 “Adapted and translated with permission from Earendil.”，改编部分按 CC BY 4.0 发布。
+
 ## 繁体中文版
 
 `docs/zh-TW/`、`docs/public/examples-tw/`、根目录 `README_zh-TW.md` 等繁体中文内容，
