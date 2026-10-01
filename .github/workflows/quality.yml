@@ -35,8 +35,10 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install Python dependencies
-        run: python -m pip install -r requirements-dev.txt
+      - name: Verify generated translations
+        run: |
+          python -m pip install -r requirements-dev.txt
+          npm run check:translations
 
       - name: Check content and build site
         run: npm run docs:check
