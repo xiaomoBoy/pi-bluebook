@@ -135,30 +135,19 @@ def apply_compound_agents(text: str, counters: dict, with_first_occurrence: bool
             return repl_fn(m)
         return _w
 
-    def sub_repl(m):
-        if not with_first_occurrence:
-            return "子代理"
-        n = counters.get("Subagent", 0)
-        counters["Subagent"] = n + 1
-        return "子代理（Subagent）" if n == 0 else "子代理"
+    def first_occurrence(key: str, word: str, english: str):
+        def _repl(m):
+            if not with_first_occurrence:
+                return word
+            n = counters.get(key, 0)
+            counters[key] = n + 1
+            return f"{word}（{english}）" if n == 0 else word
+        return guarded(_repl)
 
-    def main_repl(m):
-        if not with_first_occurrence:
-            return "主代理"
-        n = counters.get("MainAgent", 0)
-        counters["MainAgent"] = n + 1
-        return "主代理（Main Agent）" if n == 0 else "主代理"
-
-    def sub_hyphen_repl(m):
-        if not with_first_occurrence:
-            return "子代理"
-        n = counters.get("Subagent", 0)
-        counters["Subagent"] = n + 1
-        return "子代理（Subagent）" if n == 0 else "子代理"
-
-    text = SUB_AGENT_RE.sub(guarded(sub_repl), text)
-    text = SUB_AGENT_HYPHEN_RE.sub(guarded(sub_hyphen_repl), text)
-    text = MAIN_AGENT_RE.sub(guarded(main_repl), text)
+    sub_repl = first_occurrence("Subagent", "子代理", "Subagent")
+    text = SUB_AGENT_RE.sub(sub_repl, text)
+    text = SUB_AGENT_HYPHEN_RE.sub(sub_repl, text)
+    text = MAIN_AGENT_RE.sub(first_occurrence("MainAgent", "主代理", "Main Agent"), text)
     text = MULTI_AGENT_RE.sub("多代理", text)
     return text
 
@@ -198,16 +187,13 @@ def convert_code_segment(text: str) -> str:
 
 def convert_fragment(fragment: str) -> str:
     """同頁錨點：OpenCC + 修正 + 純中文（rest 形式），以對齊標題 slug。"""
-    counters: dict = {}
-    text = CONVERTER.convert(fragment)
-    text = apply_post_fixes(text)
+    text = apply_post_fixes(CONVERTER.convert(fragment))
     text = SUB_AGENT_RE.sub("子代理", text)
     text = SUB_AGENT_HYPHEN_RE.sub("子代理", text)
     text = MAIN_AGENT_RE.sub("主代理", text)
     text = MULTI_AGENT_RE.sub("多代理", text)
     for term in TERM_ORDER:
         text = TERM_PATTERNS[term].sub(TERMS[term]["rest"], text)
-    _ = counters
     return apply_post_fixes(text)
 
 
@@ -365,10 +351,21 @@ def generate(output_docs: Path) -> None:
         and ".vitepress/dist/" not in p.as_posix()
     )
     print(f"來源 {len(sources)} 篇")
+    generated = set()
     for src in sources:
         dst = output_docs / "zh-TW" / src.relative_to(DOCS)
         convert_file(src, dst)
+        generated.add(dst)
         print(f"  {src.relative_to(DOCS)} -> {dst.relative_to(output_docs)}")
+
+    # 簡中頁面刪除或改名後，同步移除對應的舊繁體頁。
+    for stale in sorted((output_docs / "zh-TW").rglob("*.md")):
+        if stale not in generated:
+            stale.unlink()
+            print(f"  刪除 {stale.relative_to(output_docs)}")
+    for directory in sorted((output_docs / "zh-TW").rglob("*"), reverse=True):
+        if directory.is_dir() and not any(directory.iterdir()):
+            directory.rmdir()
 
     convert_navigation(output_docs)
 

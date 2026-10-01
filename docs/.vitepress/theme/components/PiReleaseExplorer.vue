@@ -263,6 +263,14 @@ const filteredReleases = computed(() => {
 })
 
 const visibleReleases = computed(() => filteredReleases.value.slice(0, displayLimit.value))
+// Open an exact version match (permalinks set the query to one), else the first result.
+// Loading more keeps this value, so records the reader opened are not collapsed.
+const openVersion = computed(() => {
+  const exact = filteredReleases.value.find(
+    (release) => release.version === normalizeText(query.value)
+  )
+  return (exact ?? filteredReleases.value[0])?.version
+})
 const remainingCount = computed(() => Math.max(0, filteredReleases.value.length - displayLimit.value))
 
 watch([query, changeType, topic, year], () => {
@@ -277,7 +285,11 @@ onMounted(() => {
   if (!release) return
 
   query.value = release.version
-  nextTick(() => document.getElementById(hash)?.scrollIntoView({ block: 'start' }))
+  // VitePress already queued a scroll measured against the unfiltered list;
+  // queue ours after it so the filtered layout wins.
+  nextTick(() => requestAnimationFrame(() => {
+    document.getElementById(hash)?.scrollIntoView({ block: 'start' })
+  }))
 })
 
 function normalizeText(value: string) {
@@ -288,16 +300,13 @@ function releaseId(version: string) {
   return `release-v${version.replace(/[^a-z\d]+/gi, '-')}`
 }
 
-function sectionLabel(section: ReleaseSection) {
-  const label = (t.value as Record<string, string>)[section.key]
-  return label || section.title
+function label(key: string) {
+  return (t.value as Record<string, string>)[key]
 }
 
 function setMilestone(family: string) {
+  resetFilters()
   query.value = family
-  changeType.value = 'all'
-  topic.value = 'all'
-  year.value = 'all'
   nextTick(() => explorer.value?.scrollIntoView({ block: 'start', behavior: 'smooth' }))
 }
 
@@ -392,7 +401,7 @@ function resetFilters() {
               :aria-pressed="changeType === option"
               @click="changeType = option"
             >
-              {{ (t as Record<string, string>)[option] }}
+              {{ label(option) }}
             </button>
           </div>
         </fieldset>
@@ -408,7 +417,7 @@ function resetFilters() {
               :aria-pressed="topic === option"
               @click="topic = option"
             >
-              {{ (t as Record<string, string>)[option] }}
+              {{ label(option) }}
             </button>
           </div>
         </fieldset>
@@ -447,12 +456,12 @@ function resetFilters() {
 
       <div v-if="visibleReleases.length" class="release-list">
         <article
-          v-for="(release, index) in visibleReleases"
+          v-for="release in visibleReleases"
           :id="releaseId(release.version)"
           :key="release.version"
           class="release-record"
         >
-          <details :open="index === 0 && displayLimit === 18">
+          <details :open="release.version === openVersion">
             <summary>
               <span class="release-record__version">v{{ release.version }}</span>
               <span class="release-record__date">{{ release.date }}</span>
@@ -462,9 +471,9 @@ function resetFilters() {
             <div class="release-record__body">
               <p class="release-record__note">{{ t.officialEnglish }}</p>
               <section v-for="section in release.sections" :key="`${release.version}-${section.title}`">
-                <h3><span>{{ sectionLabel(section) }}</span><small>{{ section.title }}</small></h3>
+                <h3><span>{{ label(section.key) || section.title }}</span><small>{{ section.title }}</small></h3>
                 <ul>
-                  <li v-for="item in section.items" :key="item">{{ item }}</li>
+                  <li v-for="(item, itemIndex) in section.items" :key="itemIndex">{{ item }}</li>
                 </ul>
               </section>
               <footer>

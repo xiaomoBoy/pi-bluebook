@@ -8,6 +8,11 @@ const PACKAGE_URL =
   'https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/package.json'
 const SOURCE_URL =
   'https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md'
+
+// Private-use characters mark code-block text so it survives cleanMarkdown.
+const CODE_START = '\uE000'
+const CODE_END = '\uE001'
+
 const OUTPUT_PATH = path.join(
   process.cwd(),
   'docs',
@@ -128,15 +133,21 @@ function parseSections(body) {
       continue
     }
 
+    if (inCodeBlock) {
+      // Code is kept verbatim; cleanMarkdown only touches prose outside the markers.
+      if (line.trim()) currentItem = appendText(currentItem, codeText(line.trim()), ' · ')
+      continue
+    }
+
     const sectionMatch = line.match(/^###\s+(.+)$/)
-    if (sectionMatch && !inCodeBlock) {
+    if (sectionMatch) {
       flushSection()
       currentSection = createSection(cleanMarkdown(sectionMatch[1]))
       continue
     }
 
     const topLevelBullet = line.match(/^-\s+(.+)$/)
-    if (topLevelBullet && !inCodeBlock) {
+    if (topLevelBullet) {
       flushItem()
       currentItem = topLevelBullet[1]
       continue
@@ -149,7 +160,7 @@ function parseSections(body) {
     }
 
     const numberedItem = line.match(/^\d+\.\s+(.+)$/)
-    if (numberedItem && !inCodeBlock) {
+    if (numberedItem) {
       flushItem()
       currentItem = numberedItem[1]
       continue
@@ -161,13 +172,13 @@ function parseSections(body) {
     }
 
     if (!line.trim()) {
-      if (currentItem && !inCodeBlock) flushItem()
+      flushItem()
       continue
     }
 
     if (/^(?:\|?\s*:?-+:?\s*)+\|?$/.test(line)) continue
 
-    currentItem = appendText(currentItem, line.trim(), inCodeBlock ? ' · ' : ' ')
+    currentItem = appendText(currentItem, line.trim(), ' ')
   }
 
   flushSection()
@@ -186,16 +197,35 @@ function appendText(existing, next, separator) {
   return existing ? `${existing}${separator}${next}` : next
 }
 
+function codeText(value) {
+  return `${CODE_START}${value}${CODE_END}`
+}
+
 function cleanMarkdown(value) {
+  // Inline code and code blocks keep identifiers such as session_start intact.
+  // They become placeholders so links or bold text wrapping them still unwrap.
+  const code = []
+  const prose = value.replace(/`([^`]+)`|\uE000([^\uE001]*)\uE001/g, (_, inline, block) => {
+    code.push(inline ?? block)
+    return `\uE002${code.length - 1}\uE003`
+  })
+
+  return cleanProse(prose)
+    .replace(/\uE002(\d+)\uE003/g, (_, index) => code[Number(index)])
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function cleanProse(value) {
   return value
     .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-    .replace(/<([^>]+)>/g, '$1')
-    .replace(/<[^>]*>/g, '')
-    .replace(/[`*_~]/g, '')
-    .replace(/\\([\\`*_{}\[\]()#+\-.!])/g, '$1')
-    .replace(/\s+/g, ' ')
-    .trim()
+    .replace(/<(https?:\/\/[^>]+)>/g, '$1')
+    .replace(/<\/?[a-z][a-z\d-]*(?:\s[^>]*)?\/?>/gi, '')
+    .replace(/(\*\*|__|~~)(?=\S)(.+?)(?<=\S)\1/g, '$2')
+    .replace(/(^|[^\w*])\*(?=\S)([^*]+?)(?<=\S)\*(?![\w*])/g, '$1$2')
+    .replace(/(^|[^\w])_(?=\S)([^_]+?)(?<=\S)_(?!\w)/g, '$1$2')
+    .replace(/\\([\\`*_{}\[\]()#+\-.!<>])/g, '$1')
 }
 
 function sectionKey(title) {
