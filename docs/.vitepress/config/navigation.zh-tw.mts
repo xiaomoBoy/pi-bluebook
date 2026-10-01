@@ -301,7 +301,7 @@ export const sidebarTW = {
           text: '譯文目錄',
           collapsed: true,
           items: [
-            { text: '十一篇授權譯文總覽', link: '/zh-TW/translations/' }
+            { text: '十二篇授權譯文總覽', link: '/zh-TW/translations/' }
           ]
         },
         {
@@ -337,6 +337,13 @@ export const sidebarTW = {
           collapsed: true,
           items: [
             { text: '衡量程式碼的粗糙程度', link: '/zh-TW/translations/measuring-code-sloppiness' }
+          ]
+        },
+        {
+          text: '工具與 MCP',
+          collapsed: true,
+          items: [
+            { text: '“你說過不要 MCP！”', link: '/zh-TW/translations/you-said-no-mcp' }
           ]
         },
         {

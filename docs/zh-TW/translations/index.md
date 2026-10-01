@@ -1,6 +1,6 @@
 ---
 title: Earendil 官方授權譯文
-description: 經 Earendil 正式授權釋出的十一篇 Pi、代理框架、程式碼品質與公司願景文章完整中文譯文。
+description: 經 Earendil 正式授權釋出的十二篇 Pi、代理框架、MCP、程式碼品質與公司願景文章完整中文譯文。
 prev:
   text: 參考手冊
   link: /zh-TW/reference/
@@ -13,7 +13,7 @@ next:
 
 # Earendil 官方授權譯文
 
-這裡收錄 Earendil 關於 Pi、代理框架（Agent Harness）、工作階段機制、程式碼品質與公司願景的十一篇文章中文譯文。十一篇譯文均已獲得 Earendil 正式授權，並按原文完整翻譯。
+這裡收錄 Earendil 關於 Pi、代理框架（Agent Harness）、工作階段機制、MCP、程式碼品質與公司願景的十二篇文章中文譯文。十二篇譯文均已獲得 Earendil 正式授權，並按原文完整翻譯。
 
 每一頁都保留原文標題、作者、釋出日期和原文連結，並標明：
 
@@ -23,16 +23,17 @@ next:
 
 ## 建議閱讀順序
 
-前六篇最貼近 Pi 學習：先理解工作階段、壓縮和快取，再認識代理框架，並從非工程師和效能案例兩個角度理解 Pi。第七至十篇記錄 Pi 加入 Earendil 的背景，以及 Earendil 對可信、個性化軟體的長期願景。第十一篇進一步討論 AI 程式碼的品質評估。
+前六篇最貼近 Pi 學習：先理解工作階段、壓縮和快取，再認識代理框架，並從非工程師和效能案例兩個角度理解 Pi。第七至十篇記錄 Pi 加入 Earendil 的背景，以及 Earendil 對可信、個性化軟體的長期願景。第十一篇進一步討論 AI 程式碼的品質評估。第十二篇說明 Pi 為什麼改為支援 MCP，以及 Codemode 如何讓模型用指令碼呼叫工具。
 
 | 你現在想弄清什麼 | 建議先讀 | 讀完回到哪裡 |
 | --- | --- | --- |
 | Pi 為什麼這樣設計 | 《什麼是代理框架？》《這個代理框架屬於我》 | [導論](/zh-TW/guide/introduction)、[執行原理](/zh-TW/guide/how-pi-works) |
 | 長對話為什麼會丟細節 | 工作階段可移植性、壓縮、提示快取三篇 | [模組三](/zh-TW/guide/context-and-compaction)、[壓縮實驗](/zh-TW/cases/compaction-before-after) |
 | Agent 能執行，程式碼就合格了嗎 | 《衡量程式碼的粗糙程度》《Pi：極簡而高效》 | [程式碼修復](/zh-TW/cases/code-repair)、[畢業專案](/zh-TW/cases/graduation-project) |
+| Pi 現在能不能用 MCP | 《“你說過不要 MCP！”》 | [技能（Skill）和 MCP 怎麼選](/zh-TW/reference/faq#skill-vs-mcp)、[版本檔案](/zh-TW/releases/) |
 | 想了解作者與公司的背景 | 公告、反思、制高點、通訊邀請 | 作為選讀，不是安裝前置條件 |
 
-如果想把工作階段、壓縮、快取和代理框架四個主題連起來讀，可以接著看[小墨同學的串讀文章：Pi 為什麼把工作階段與上下文留在你手裡](/zh-TW/journey/why-pi-keeps-context-editable)。這是一篇個人分析，不屬於下方十一篇授權譯文。
+如果想把工作階段、壓縮、快取和代理框架四個主題連起來讀，可以接著看[小墨同學的串讀文章：Pi 為什麼把工作階段與上下文留在你手裡](/zh-TW/journey/why-pi-keeps-context-editable)。這是一篇個人分析，不屬於下方十二篇授權譯文。
 
 ### 01 無法隨身帶走的工作階段
 
@@ -144,6 +145,16 @@ Earendil 邀請讀者透過開放寫作和電子郵件，加入一場關於軟�
 
 [閱讀中文譯文](/zh-TW/translations/measuring-code-sloppiness) · [檢視英文原文](https://earendil.com/posts/measuring-code-sloppiness/)
 
+### 12 “你說過不要 MCP！”
+
+**原文標題**　*“You Said No MCP!”*
+
+**釋出日期**　2026-09-29
+
+Pi 曾明確表示不內建 MCP，如今改為支援。文章解釋團隊為什麼改變主意、MCP 和 Pi 各自發生了哪些變化，以及讓模型編寫指令碼來呼叫工具的 Codemode 是什麼。
+
+[閱讀中文譯文](/zh-TW/translations/you-said-no-mcp) · [檢視英文原文](https://earendil.com/posts/you-said-no-mcp/)
+
 ::: info 翻譯與許可說明
-十一篇英文原文的版權歸 Earendil 所有。中文譯文及適配部分經 Earendil 授權按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) 釋出。譯文力求忠實保留原文結構、觀點、示例、圖片和連結；如有歧義，請以對應的英文原文為準。原文配圖隨文章授權使用，並在譯文中保留攝影者、製圖方或專案來源署名。
+十二篇英文原文的版權歸 Earendil 所有。中文譯文及適配部分經 Earendil 授權按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) 釋出。譯文力求忠實保留原文結構、觀點、示例、圖片和連結；如有歧義，請以對應的英文原文為準。原文配圖隨文章授權使用，並在譯文中保留攝影者、製圖方或專案來源署名。
 :::

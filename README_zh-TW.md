@@ -20,7 +20,7 @@
 這是簡體中文版之外的追加版本，原有內容不受影響。網站導航列可切換「簡體中文 / 繁體中文」，繁中內容位於 `/zh-TW/` 路徑。
 
 - 名詞採用臺灣常用說法（參照 IICM 電腦名詞譯名臺灣用語），專有名詞首次出現時中英並列，例如工作階段（Session）、代理框架（Agent Harness）。
-- `docs/translations/` 的十一篇授權譯文為簡中譯文之繁體轉換版，授權聲明與出處完整保留。
+- `docs/translations/` 的十二篇授權譯文為簡中譯文之繁體轉換版，授權聲明與出處完整保留。
 - 上游更新簡中原文後可執行 `npm run sync:zh-tw` 同步頁面、練習材料與導航，名詞覆蓋層（`scripts/zh-tw-glossary.json`，以[樂詞網](https://terms.naer.edu.tw/)電子計算機名詞為準）會自動套用，無需重跑人工校稿；`npm run check:terms` 會擋下已淘汰用字復發。
 
 ## 當前內容與學習路徑
@@ -49,7 +49,7 @@
 | 參考手冊 | [主題索引](docs/zh-TW/reference/index.md) | 按問題查詢核心機制、操作入口、能力邊界與延伸閱讀 |
 | 外掛程式推薦 | [選擇地圖](docs/zh-TW/plugins/index.md) | 從推文實踐中整理當前可核驗的外掛程式來源、適用場景和風險邊界 |
 | 小墨同學札記 | [寫在藍皮書之外](docs/zh-TW/journey/index.md) | 單獨保留個人感悟、踩坑記錄與 98 條推文檔案 |
-| Earendil 官方授權譯文 | [譯文專區](docs/zh-TW/translations/index.md) | 經 Earendil 授權釋出的十一篇 Pi、代理框架（Agent Harness）、工作階段機制、程式碼品質與公司願景文章完整中文譯文 |
+| Earendil 官方授權譯文 | [譯文專區](docs/zh-TW/translations/index.md) | 經 Earendil 授權釋出的十二篇 Pi、代理框架（Agent Harness）、工作階段機制、MCP、程式碼品質與公司願景文章完整中文譯文 |
 
 另有[內容整理](docs/zh-TW/cases/content-workflow.md)和[小型程式修復](docs/zh-TW/cases/code-repair.md)兩項遷移練習，幫助讀者把驗收方法用到不同任務。
 
@@ -135,7 +135,7 @@ pi-bluebook/
 你可以使用、修改和分發，也可以用於商業用途；分發本專案的全部或重要部分時，需要
 保留原版權宣告和許可證。具體說明見[內容許可](LICENSE-CONTENT_zh-TW.md)。
 
-- `docs/translations/` 中十一篇 Earendil 官方授權譯文及適配部分採用 [CC BY 4.0](LICENSE-CONTENT_zh-TW.md)，英文原文版權歸 Earendil 所有。
+- `docs/translations/` 中十二篇 Earendil 官方授權譯文及適配部分採用 [CC BY 4.0](LICENSE-CONTENT_zh-TW.md)，英文原文版權歸 Earendil 所有。
 - 第三方商標、截圖、引用和其他第三方素材不自動包含在原創內容許可中，其權利歸各自權利人所有；素材旁的單獨說明優先。
 
 具體權利和條件以許可檔案為準。

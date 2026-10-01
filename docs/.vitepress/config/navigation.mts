@@ -301,7 +301,7 @@ export const sidebar = {
           text: '译文目录',
           collapsed: true,
           items: [
-            { text: '十一篇授权译文总览', link: '/translations/' }
+            { text: '十二篇授权译文总览', link: '/translations/' }
           ]
         },
         {
@@ -337,6 +337,13 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '衡量代码的粗糙程度', link: '/translations/measuring-code-sloppiness' }
+          ]
+        },
+        {
+          text: '工具与 MCP',
+          collapsed: true,
+          items: [
+            { text: '“你说过不要 MCP！”', link: '/translations/you-said-no-mcp' }
           ]
         },
         {

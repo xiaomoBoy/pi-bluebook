@@ -203,7 +203,7 @@ Session 让你续写同一工作历史，Context 决定模型本轮能看到什�
 
 固定流程、检查标准和参考资料优先写成 Skill；已有 CLI 能清楚完成的工作，可以先让 Pi 读取帮助并调用 CLI。Pi 从 0.99.0 起以内置 Extension 的形式支持 MCP，可以用 `pi mcp add` 添加服务器，并新增 Codemode：模型编写 JavaScript 脚本来调用工具（据[官方更新记录](/releases/#release-v0-99-0)，核验于 2026-10-01）。即便如此，也只有确实需要结构化暴露外部能力、并愿意承担工具说明、认证和维护成本时，再接入 MCP 服务器。
 
-**继续阅读：** [Skill](/reference/glossary#skill) · [Tool / Tool Call](/reference/glossary#tool-tool-call) · [Skill、Extension 与 Package](/guide/skills-extensions-packages)
+**继续阅读：** [Skill](/reference/glossary#skill) · [Tool / Tool Call](/reference/glossary#tool-tool-call) · [Skill、Extension 与 Package](/guide/skills-extensions-packages) · [“你说过不要 MCP！”](/translations/you-said-no-mcp)
 
 ## Extension 是不是装得越多越好？ {#more-extensions-better}
 

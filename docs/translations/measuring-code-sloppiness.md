@@ -5,8 +5,8 @@ prev:
   text: 邀请你开启一场通信
   link: /translations/invitation
 next:
-  text: 官方授权译文目录
-  link: /translations/
+  text: “你说过不要 MCP！”
+  link: /translations/you-said-no-mcp
 ---
 
 <span class="library-status">Earendil 官方授权中文译文 · 11</span>
@@ -84,4 +84,5 @@ LLM 的确能写出**几乎**完全正确的代码。这是因为代码具有可
 
 - [英文原文：If coding is solved, what now?: Measuring the sloppiness of code](https://earendil.com/posts/measuring-code-sloppiness/)
 - [上一篇：邀请你开启一场通信](/translations/invitation)
+- [下一篇：“你说过不要 MCP！”](/translations/you-said-no-mcp)
 - [返回：官方授权译文目录](/translations/)

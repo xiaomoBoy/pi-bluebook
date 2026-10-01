@@ -203,7 +203,7 @@ Pi 會寫入壓縮摘要和保留邊界，原工作階段仍用於記錄歷史�
 
 固定流程、檢查標準和參考資料優先寫成技能；已有 CLI 能清楚完成的工作，可以先讓 Pi 讀取幫助並呼叫 CLI。Pi 從 0.99.0 起以內建擴充功能的形式支援 MCP，可以用 `pi mcp add` 新增伺服器，並新增 Codemode：模型編寫 JavaScript 指令碼來呼叫工具（據[官方更新記錄](/zh-TW/releases/#release-v0-99-0)，核驗於 2026-10-01）。即便如此，也只有確實需要結構化暴露外部能力、並願意承擔工具說明、認證和維護成本時，再接入 MCP 伺服器。
 
-**繼續閱讀：** [技能](/zh-TW/reference/glossary#技能) · [Tool / Tool Call](/zh-TW/reference/glossary#tool-tool-call) · [技能、擴充功能與包](/zh-TW/guide/skills-extensions-packages)
+**繼續閱讀：** [技能](/zh-TW/reference/glossary#技能) · [Tool / Tool Call](/zh-TW/reference/glossary#tool-tool-call) · [技能、擴充功能與包](/zh-TW/guide/skills-extensions-packages) · [“你說過不要 MCP！”](/zh-TW/translations/you-said-no-mcp)
 
 ## 擴充功能是不是裝得越多越好？ {#more-extensions-better}
 

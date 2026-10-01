@@ -5,8 +5,8 @@ prev:
   text: 邀請你開啟一場通訊
   link: /zh-TW/translations/invitation
 next:
-  text: 官方授權譯文目錄
-  link: /zh-TW/translations/
+  text: “你說過不要 MCP！”
+  link: /zh-TW/translations/you-said-no-mcp
 ---
 
 <span class="library-status">Earendil 官方授權中文譯文 · 11</span>
@@ -88,4 +88,5 @@ LLM 的確能寫出**幾乎**完全正確的程式碼。這是因為程式碼具
 
 - [英文原文：If coding is solved, what now?: Measuring the sloppiness of code](https://earendil.com/posts/measuring-code-sloppiness/)
 - [上一篇：邀請你開啟一場通訊](/zh-TW/translations/invitation)
+- [下一篇：“你說過不要 MCP！”](/zh-TW/translations/you-said-no-mcp)
 - [返回：官方授權譯文目錄](/zh-TW/translations/)
