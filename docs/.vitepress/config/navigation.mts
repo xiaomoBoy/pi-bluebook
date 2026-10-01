@@ -355,6 +355,7 @@ export const sidebar = {
           items: [
             { text: '写在蓝皮书之外', link: '/journey/' },
             { text: '为什么把会话与上下文留在手里', link: '/journey/why-pi-keeps-context-editable' },
+            { text: 'Pi 为什么又接纳了 MCP', link: '/journey/pi-mcp-codemode' },
             { text: '98 条推文档案', link: '/tweets/' }
           ]
         },
@@ -386,6 +387,7 @@ export const sidebar = {
           items: [
             { text: '写在蓝皮书之外', link: '/journey/' },
             { text: '为什么把会话与上下文留在手里', link: '/journey/why-pi-keeps-context-editable' },
+            { text: 'Pi 为什么又接纳了 MCP', link: '/journey/pi-mcp-codemode' },
             { text: '98 条推文档案', link: '/tweets/' }
           ]
         },
