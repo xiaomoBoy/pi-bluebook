@@ -227,6 +227,10 @@ export default {
       'PiCodemodeReplay',
       defineAsyncComponent(() => import('./components/PiCodemodeReplay.vue'))
     )
+    app.component(
+      'PiTerminalReplay',
+      defineAsyncComponent(() => import('./components/PiTerminalReplay.vue'))
+    )
     if (typeof window === 'undefined') return
     // VitePress also decodes the fragment while rendering language links.
     // Drop an invalid incoming fragment before those components render.

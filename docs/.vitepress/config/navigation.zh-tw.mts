@@ -146,6 +146,7 @@ export const sidebarTW = {
           collapsed: true,
           items: [
             { text: '13. 長時間任務與 VPS', link: '/zh-TW/guide/vps-and-long-running' },
+            { text: '選學 · Pi Durable', link: '/zh-TW/guide/pi-durable' },
             { text: '14. 權限、隔離與驗收', link: '/zh-TW/guide/safety' }
           ]
         },
@@ -282,6 +283,8 @@ export const sidebarTW = {
           collapsed: false,
           items: [
             { text: '全部版本更新', link: '/zh-TW/releases/' },
+            { text: 'Pi 1.0.0 更新要點', link: '/zh-TW/releases/pi-1-0' },
+            { text: 'Pi Durable 入門', link: '/zh-TW/guide/pi-durable' },
             { text: '安全更新 Pi', link: '/zh-TW/guide/lifecycle-management' },
             { text: '故障排查手冊', link: '/zh-TW/reference/troubleshooting' }
           ]
@@ -301,7 +304,7 @@ export const sidebarTW = {
           text: '譯文目錄',
           collapsed: true,
           items: [
-            { text: '十二篇授權譯文總覽', link: '/zh-TW/translations/' }
+            { text: '十四篇授權譯文總覽', link: '/zh-TW/translations/' }
           ]
         },
         {
@@ -319,7 +322,9 @@ export const sidebarTW = {
           items: [
             { text: '什麼是代理框架？', link: '/zh-TW/translations/what-is-a-harness' },
             { text: '這個代理框架屬於我', link: '/zh-TW/translations/mine-agent-harness' },
-            { text: 'Pi：極簡而高效', link: '/zh-TW/translations/pi-minimal-performant' }
+            { text: 'Pi：極簡而高效', link: '/zh-TW/translations/pi-minimal-performant' },
+            { text: 'Pi 1.0', link: '/zh-TW/translations/pi-1-0' },
+            { text: 'Pi Durable', link: '/zh-TW/translations/pi-durable' }
           ]
         },
         {

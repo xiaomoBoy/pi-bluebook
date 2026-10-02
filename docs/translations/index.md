@@ -1,6 +1,6 @@
 ---
 title: Earendil 官方授权译文
-description: 经 Earendil 正式授权发布的十二篇 Pi、Agent Harness、MCP、代码质量与公司愿景文章完整中文译文。
+description: 经 Earendil 正式授权发布的十四篇 Pi、Agent Harness、MCP、代码质量与公司愿景文章完整中文译文。
 prev:
   text: 参考手册
   link: /reference/
@@ -13,7 +13,7 @@ next:
 
 # Earendil 官方授权译文
 
-这里收录 Earendil 关于 Pi、Agent Harness、会话机制、MCP、代码质量与公司愿景的十二篇文章中文译文。十二篇译文均已获得 Earendil 正式授权，并按原文完整翻译。
+这里收录 Earendil 关于 Pi、Agent Harness、会话机制、MCP、代码质量与公司愿景的十四篇文章中文译文。十四篇译文均已获得 Earendil 正式授权，并按原文完整翻译。
 
 每一页都保留原文标题、作者、发布日期和原文链接，并标明：
 
@@ -23,7 +23,7 @@ next:
 
 ## 建议阅读顺序
 
-前六篇最贴近 Pi 学习：先理解会话、压缩和缓存，再认识 Harness，并从非工程师和性能案例两个角度理解 Pi。第七至十篇记录 Pi 加入 Earendil 的背景，以及 Earendil 对可信、个性化软件的长期愿景。第十一篇进一步讨论 AI 代码的质量评估。第十二篇说明 Pi 为什么改为支持 MCP，以及 Codemode 如何让模型用脚本调用工具。
+前六篇最贴近 Pi 学习：先理解会话、压缩和缓存，再认识 Harness，并从非工程师和性能案例两个角度理解 Pi。第七至十篇记录 Pi 加入 Earendil 的背景，以及 Earendil 对可信、个性化软件的长期愿景。第十一篇进一步讨论 AI 代码的质量评估。第十二篇说明 Pi 为什么改为支持 MCP，以及 Codemode 如何让模型用脚本调用工具。第十三、十四篇介绍 Pi 1.0 与实验性的 Pi Durable。
 
 | 你现在想弄清什么 | 建议先读 | 读完回到哪里 |
 | --- | --- | --- |
@@ -31,9 +31,10 @@ next:
 | 长对话为什么会丢细节 | 会话可移植性、压缩、提示缓存三篇 | [模块三](/guide/context-and-compaction)、[压缩实验](/cases/compaction-before-after) |
 | Agent 能运行，代码就合格了吗 | 《衡量代码的粗糙程度》《Pi：极简而高效》 | [代码修复](/cases/code-repair)、[毕业项目](/cases/graduation-project) |
 | Pi 现在能不能用 MCP | 《“你说过不要 MCP！”》 | [Skill 和 MCP 怎么选](/reference/faq#skill-vs-mcp)、[版本档案](/releases/) |
+| Pi 1.0 和 Durable 有什么区别 | 《Pi 1.0》《Pi Durable》 | [更新要点](/releases/pi-1-0)、[Durable 专篇](/guide/pi-durable) |
 | 想了解作者与公司的背景 | 公告、反思、制高点、通信邀请 | 作为选读，不是安装前置条件 |
 
-如果想把会话、压缩、缓存和 Harness 四个主题连起来读，可以接着看[小墨同学的串读文章：Pi 为什么把会话与上下文留在你手里](/journey/why-pi-keeps-context-editable)。这是一篇个人分析，不属于下方十二篇授权译文。
+如果想把会话、压缩、缓存和 Harness 四个主题连起来读，可以接着看[小墨同学的串读文章：Pi 为什么把会话与上下文留在你手里](/journey/why-pi-keeps-context-editable)。这是一篇个人分析，不属于下方十四篇授权译文。
 
 ### 01 无法随身带走的会话
 
@@ -155,6 +156,28 @@ Pi 曾明确表示不内置 MCP，如今改为支持。文章解释团队为什�
 
 [阅读中文译文](/translations/you-said-no-mcp) · [查看英文原文](https://earendil.com/posts/you-said-no-mcp/)
 
+
+
+### 13 Pi 1.0
+
+**原文标题**　*Pi 1.0*
+
+**发布日期**　2026-10-01
+
+介绍 Pi 正式版的设计取舍、Codemode、虚拟模型、工具延迟加载与默认全屏，并说明 Pi Durable 的独立定位。
+
+[阅读中文译文](/translations/pi-1-0) · [查看英文原文](https://earendil.com/posts/pi-1-0/) · [1.0.0 更新要点](/releases/pi-1-0)
+
+### 14 Pi Durable
+
+**原文标题**　*Pi Durable*
+
+**发布日期**　2026-10-01
+
+介绍用于长期运行 Agent 应用的实验性框架，完整保留崩溃恢复、并发对话、扩展、任务、压缩、应用状态与多人协作的代码和演示。
+
+[阅读中文译文](/translations/pi-durable) · [查看英文原文](https://earendil.com/posts/pi-durable/) · [初学者入门专篇](/guide/pi-durable)
+
 ::: info 翻译与许可说明
-十二篇英文原文的版权归 Earendil 所有。中文译文及适配部分经 Earendil 授权按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) 发布。译文力求忠实保留原文结构、观点、示例、图片和链接；如有歧义，请以对应的英文原文为准。原文配图随文章授权使用，并在译文中保留摄影者、制图方或项目来源署名。
+十四篇英文原文的版权归 Earendil 所有。中文译文及适配部分经 Earendil 授权按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) 发布。译文力求忠实保留原文结构、观点、示例、图片和链接；如有歧义，请以对应的英文原文为准。原文配图随文章授权使用，并在译文中保留摄影者、制图方或项目来源署名。
 :::

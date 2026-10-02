@@ -167,3 +167,8 @@ grep -c '^## ' long-task/output/index.md
 tmux 相關說明核驗於 2026-09-09。
 
 tmux 可以保留終端機工作階段，但不會在 VPS 重啟、程序崩潰或記憶體不足後自動恢復 Pi。關於 tmux 工作階段本身的命令與生命週期，另見 [tmux 官方手冊](https://github.com/tmux/tmux/wiki/Getting-Started)。
+
+
+## 選學：Pi Durable
+
+如果你準備開發能在程序中斷後恢復任務的 Agent 應用，可繼續閱讀[Pi Durable：讓 Agent 在中斷後繼續工作](/zh-TW/guide/pi-durable)。它是實驗性框架，本書原有的進度檔案練習仍可獨立完成。

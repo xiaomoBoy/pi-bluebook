@@ -5,8 +5,8 @@ prev:
   text: 衡量程式碼的粗糙程度
   link: /zh-TW/translations/measuring-code-sloppiness
 next:
-  text: 官方授權譯文目錄
-  link: /zh-TW/translations/
+  text: Pi 1.0
+  link: /zh-TW/translations/pi-1-0
 ---
 
 <span class="library-status">Earendil 官方授權中文譯文 · 12</span>

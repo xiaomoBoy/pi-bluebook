@@ -13,6 +13,10 @@ lastUpdated: false
 
 本頁把 Pi Coding Agent 官方 `CHANGELOG.md` 整理成可檢索檔案。**版本號、釋出日期和英文變更明細均來自官方記錄**；中文只用於檢索標籤、分類和五個關鍵節點說明，不把推測補成官方事實。官方 Changelog 目前從 `0.10.0` 開始，本頁不虛構更早版本的更新內容。
 
+## Pi 1.0 專題
+
+2026 年 10 月 1 日釋出的 Pi 1.0.0 已收錄到下方完整檔案。可先讀[中文更新要點](/zh-TW/releases/pi-1-0)，再讀[官方釋出文章譯文](/zh-TW/translations/pi-1-0)。同期推出的實驗性框架另見[Pi Durable 入門專篇](/zh-TW/guide/pi-durable)。
+
 <PiReleaseExplorer />
 
 ## 資料邊界與維護方式

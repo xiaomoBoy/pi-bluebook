@@ -146,6 +146,7 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '13. 长时间任务与 VPS', link: '/guide/vps-and-long-running' },
+            { text: '选学 · Pi Durable', link: '/guide/pi-durable' },
             { text: '14. 权限、隔离与验收', link: '/guide/safety' }
           ]
         },
@@ -282,6 +283,8 @@ export const sidebar = {
           collapsed: false,
           items: [
             { text: '全部版本更新', link: '/releases/' },
+            { text: 'Pi 1.0.0 更新要点', link: '/releases/pi-1-0' },
+            { text: 'Pi Durable 入门', link: '/guide/pi-durable' },
             { text: '安全更新 Pi', link: '/guide/lifecycle-management' },
             { text: '故障排查手册', link: '/reference/troubleshooting' }
           ]
@@ -301,7 +304,7 @@ export const sidebar = {
           text: '译文目录',
           collapsed: true,
           items: [
-            { text: '十二篇授权译文总览', link: '/translations/' }
+            { text: '十四篇授权译文总览', link: '/translations/' }
           ]
         },
         {
@@ -319,7 +322,9 @@ export const sidebar = {
           items: [
             { text: '什么是 Agent Harness？', link: '/translations/what-is-a-harness' },
             { text: '这个 Harness 属于我', link: '/translations/mine-agent-harness' },
-            { text: 'Pi：极简而高效', link: '/translations/pi-minimal-performant' }
+            { text: 'Pi：极简而高效', link: '/translations/pi-minimal-performant' },
+            { text: 'Pi 1.0', link: '/translations/pi-1-0' },
+            { text: 'Pi Durable', link: '/translations/pi-durable' }
           ]
         },
         {

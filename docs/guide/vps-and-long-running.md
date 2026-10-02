@@ -167,3 +167,8 @@ grep -c '^## ' long-task/output/index.md
 tmux 相关说明核验于 2026-09-09。
 
 tmux 可以保留终端会话，但不会在 VPS 重启、进程崩溃或内存不足后自动恢复 Pi。关于 tmux 会话本身的命令与生命周期，另见 [tmux 官方手册](https://github.com/tmux/tmux/wiki/Getting-Started)。
+
+
+## 选学：Pi Durable
+
+如果你准备开发能在进程中断后恢复任务的 Agent 应用，可继续阅读[Pi Durable：让 Agent 在中断后继续工作](/guide/pi-durable)。它是实验性框架，本书原有的进度文件练习仍可独立完成。

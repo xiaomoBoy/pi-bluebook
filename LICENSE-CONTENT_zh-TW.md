@@ -20,13 +20,15 @@
 
 ## Earendil 官方授權譯文
 
-`docs/translations/` 中十二篇 Earendil 文章的中文譯文及適配部分，
+`docs/translations/` 中十四篇 Earendil 文章的中文譯文及適配部分，
 經 Earendil 授權按
 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)
 釋出。頁面保留原文標題、作者、釋出日期、原文連結及授權說明；英文原文版權歸 Earendil 所有。
 原文配圖隨對應文章授權使用，頁面保留原攝影者、製圖方或專案來源署名；這些圖片不因進入本倉庫而自動適用網站原創內容的 MIT License。
 
 `docs/.vitepress/theme/data/earendil-codemode-replay.json` 儲存《“You Said No MCP!”》的原始回放資料，來源為 [Earendil 原文演示](https://earendil.com/static/posts/you-said-no-mcp/codemode-replay.json)。該資料隨授權譯文使用，版權歸 Earendil 所有，不適用本倉庫的 MIT License。
+
+`docs/public/recordings/earendil/` 保留《Pi 1.0》和《Pi Durable》的原始終端機錄影，分別來自 [Pi 1.0 示範](https://earendil.com/static/posts/pi-1-0/demo.cast.json)和 [Pi Durable 示範](https://earendil.com/static/posts/pi-durable/vacation.cast.json)。錄影隨授權譯文使用，版權歸 Earendil 所有；播放器 asciinema-player 按其 Apache-2.0 授權使用，不屬於本儲存庫原創內容。
 
 授權記錄：2026 年 9 月 9 日，Earendil Partner & CEO Colin Hanna 透過郵件同意本專案釋出所申請文章的中文改編與譯文，並同意 Earendil 此後釋出的文章以同樣方式翻譯和改編；條件是保留原文標題、作者、釋出日期、原文連結，並註明 “Adapted and translated with permission from Earendil.”，改編部分按 CC BY 4.0 釋出。
 
