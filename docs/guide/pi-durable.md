@@ -148,6 +148,18 @@ node packages/coding-agent/src/experimental/vacation/main.ts --continue
 
 想看这些机制组合成一个能用的应用，可以做[选学案例：用 Pi Durable Assistant 观察断点恢复](/cases/durable-assistant)，不填 API Key 就能在本机复现崩溃恢复。下一步可以读[官方完整译文](/translations/pi-durable)，再对照以下固定版本资料。原文中的支付、审批、部署片段用来说明机制，其中的外部服务需要自行实现，不是可以直接复制运行的完整应用。
 
+## 社区生态
+
+以下动向核验于 **2026-10-11**，依据作者原帖与项目资料。第三方项目均非 Earendil 官方产品，本书未实际运行，不据此评价可用性。
+
+| 动向 | 是什么，适合谁继续看 |
+| --- | --- |
+| PiDurableKit | Finn Voorhees 的 Swift 社区封装，在 JavaScriptCore 中运行 Pi Durable；适合研究 Apple 平台 Agent 应用的开发者，接入前先核对系统要求。 |
+| Rivet Actors | Rivet 公布其 Actors 已支持 Pi Durable；适合研究托管 Actor 与长期任务的服务端开发者，部署与费用按 Rivet 自身规则核对。 |
+| 浏览器与 WebView 实验 | Marco Jacopo Ferrarotti 自述把核心放入浏览器，并用 Kotlin 层托管工具环境；适合探索客户端执行的开发者，目前这里只记录作者实验，未取得可复现仓库。 |
+| 自建助手倡议 | Sawyer Hood 号召用 Pi Durable 构建 Muse、Dots 或 Grok Bot 类应用；适合寻找选题的人，这是倡议，不是已完成产品。 |
+| Durable Codemode | Mario Zechner 提到可能让 Codemode 具备持久执行能力；截至核验日**尚未发布**，适合关注框架方向的人，不作为本课现成功能。 |
+
 ## 来源与继续阅读
 
 - [Earendil：Pi Durable 发布文章](https://earendil.com/posts/pi-durable/)
@@ -157,3 +169,9 @@ node packages/coding-agent/src/experimental/vacation/main.ts --continue
 - [Durable 包的运行环境要求](https://github.com/earendil-works/pi/blob/v1.0.0/packages/durable/package.json)
 - [三十多个官方示例](https://github.com/earendil-works/pi/tree/v1.0.0/packages/durable/test/examples) · [小型编程助手示例](https://github.com/earendil-works/pi/tree/v1.0.0/packages/coding-agent/src/experimental/durable)
 - [Pi Durable Assistant：作者基于 Pi Durable 做的个人 Agent（非官方）](https://github.com/xiaomoBoy/pi-durable-assistant)：组合了断点恢复、后台子 Agent、定时计划和网页界面，可对照本课机制阅读
+
+- [PiDurableKit 仓库](https://github.com/finnvoor/PiDurableKit)与 [Finn Voorhees 原帖](https://x.com/finnvoorhees/status/2108192018824339709)
+- [Nathan Flurry：Rivet Actors 与 Pi Durable](https://x.com/NathanFlurry/status/2107888557151137830)与 [Rivet 官方公告](https://x.com/rivet_dev/status/2107840906141335935)
+- [Marco Jacopo Ferrarotti：浏览器与 WebView 实验](https://x.com/mjf891/status/2108177206962790452)
+- [Sawyer Hood：自建助手倡议](https://x.com/sawyerhood/status/2107872386339287239)
+- [Mario Zechner：Durable Codemode 构想](https://x.com/badlogicgames/status/2108192220385820698)
