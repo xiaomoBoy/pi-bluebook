@@ -199,6 +199,13 @@ export const sidebarTW = {
           ]
         },
         {
+          text: '選學案例',
+          collapsed: true,
+          items: [
+            { text: 'Pi Durable 斷點恢復', link: '/zh-TW/cases/durable-assistant' }
+          ]
+        },
+        {
           text: '遇到問題',
           collapsed: true,
           items: [{ text: 'Pi 故障排查手冊', link: '/zh-TW/reference/troubleshooting' }]

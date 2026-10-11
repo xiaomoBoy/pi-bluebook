@@ -146,7 +146,7 @@ node packages/coding-agent/src/experimental/vacation/main.ts --continue
 
 當你要開發一個長期線上的機器人、多使用者共同參與的工作流，或需要讓多段對話和後台任務在重啟後繼續執行的應用時，Pi Durable 才開始顯得有價值。它還支援應用狀態文件、擴充熱替換、多人訂閱同一對話等機制；這些能力需要開發者組合，不等於現成的 Slack 服務或多人聊天網站。
 
-下一步可以讀[官方完整譯文](/zh-TW/translations/pi-durable)，再對照以下固定版本資料。原文中的支付、審批、部署片段用來說明機制，其中的外部服務需要自行實現，不是可以直接複製執行的完整應用。
+想看這些機制組合成一個能用的應用，可以做[選學案例：用 Pi Durable Assistant 觀察斷點恢復](/zh-TW/cases/durable-assistant)，不填 API Key 就能在本機復現崩潰恢復。下一步可以讀[官方完整譯文](/zh-TW/translations/pi-durable)，再對照以下固定版本資料。原文中的支付、審批、部署片段用來說明機制，其中的外部服務需要自行實現，不是可以直接複製執行的完整應用。
 
 ## 來源與繼續閱讀
 

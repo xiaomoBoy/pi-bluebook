@@ -54,3 +54,7 @@ next:
 
 - [从资料到可核对的草稿](/cases/content-workflow)：从两份冲突材料中整理事实表、待确认草稿与未知项，适合内容写作者。
 - [修复一个小程序](/cases/code-repair)：先复现两个失败测试，只修实现，再亲自验证四个测试和修改范围，适合想开始处理代码的读者。
+
+## 选学案例
+
+- [用 Pi Durable Assistant 观察断点恢复](/cases/durable-assistant)：不填 API Key，在本机运行一个基于 Pi Durable 的个人 Agent，于长任务中途模拟崩溃，检查任务是否接着完成、有没有重复执行。适合读完 [Pi Durable 入门专篇](/guide/pi-durable) 后动手。

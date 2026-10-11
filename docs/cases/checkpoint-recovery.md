@@ -93,4 +93,4 @@ sed -n '1,180p' long-task/progress.md
 
 ## 选学：Pi Durable
 
-如果你准备开发能在进程中断后恢复任务的 Agent 应用，可继续阅读[Pi Durable：让 Agent 在中断后继续工作](/guide/pi-durable)。它是实验性框架，本书原有的进度文件练习仍可独立完成。
+如果你准备开发能在进程中断后恢复任务的 Agent 应用，可继续阅读[Pi Durable：让 Agent 在中断后继续工作](/guide/pi-durable)。它是实验性框架，本书原有的进度文件练习仍可独立完成。想直接看到框架自动存档的效果，可以接着做[选学案例：用 Pi Durable Assistant 观察断点恢复](/cases/durable-assistant)。
