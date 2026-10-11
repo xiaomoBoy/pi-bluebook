@@ -96,6 +96,66 @@ grep -c '^## ' output/行动清单-复核版.md
 Pi Package 以当前用户的完整系统权限运行。除了可执行的 Extension，Skill 和其他资源也可能引导 Agent 运行命令或产生副作用。不要因为它叫“包”或“社区资源”就直接信任。安装前应审查整个包的来源、资源和安装内容。
 :::
 
+## 实操：把自己的资源打成一个 Package
+
+当同一个 Skill 和 Extension 要交给另一台电脑时，可以把它们放进一个带 `package.json` 的目录。本节先组装目录并在本机验证；跨机器复制、Git／npm 分发不在本节实测范围。
+
+Pi 会自动发现 `extensions/`、`skills/`、`prompts/`、`themes/`；不需要的目录可以省略。资源放在其他位置时，才需要在清单的 `pi` 字段声明路径。
+
+### 1. 组装并检查材料
+
+在普通终端的练习目录中，另建一个空目录；如果名称已存在，换新名字，不覆盖旧练习。下载本书已有的[检查扩展](/examples/extension/bluebook-check.ts)和<a href="/examples/skill/action-list-review/SKILL.md" download>行动清单 Skill</a>：
+
+```bash
+mkdir bluebook-package-practice
+cd bluebook-package-practice
+mkdir -p bluebook-package/extensions bluebook-package/skills/action-list-review
+curl -fL https://pi.xiaomovps.com/examples/extension/bluebook-check.ts \
+  -o bluebook-package/extensions/bluebook-check.ts
+curl -fL https://pi.xiaomovps.com/examples/skill/action-list-review/SKILL.md \
+  -o bluebook-package/skills/action-list-review/SKILL.md
+cat > bluebook-package/package.json <<'JSON'
+{
+  "name": "bluebook-practice-package",
+  "version": "0.1.0",
+  "private": true,
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
+JSON
+```
+
+最后一段要整段复制，结束行 `JSON` 单独占一行。先阅读两个下载文件，确认 Extension 只注册检查命令、Skill 只有会议记录核对规则，再继续。Pi 提供的宿主包放在 `peerDependencies`，不要另装一份放进 `dependencies`；这个示例没有额外运行依赖，无需在包目录执行 `npm install`。
+
+### 2. 本地安装并确认加载
+
+仍在 `bluebook-package-practice`，执行：
+
+```bash
+pi install --local ./bluebook-package
+pi list --approve
+pi --approve
+```
+
+`pi install` 应无错误并回到提示符；`pi list --approve` 应在项目范围列出指向 `bluebook-package` 的本地来源，确认后再进入 Pi。`--local` 将声明写入当前项目的 `.pi/settings.json`，本地资源仍从原目录读取，不会复制成另一份。这里的 `--approve` 只用于已检查的练习资源，显式批准本次运行加载项目资源，不是系统沙箱；不要拿它跳过陌生仓库的检查。
+
+在 Pi 编辑区输入 `/`，命令列表应出现 `bluebook-check` 和 `skill:action-list-review`。执行 `/bluebook-check`，应出现「蓝皮书 Extension 已加载」通知。它直接运行教学命令，不依赖模型声称已经加载，也无需发送模型任务。
+
+### 3. 卸载后再次验收
+
+用 `/quit` 退出，回到同一目录：
+
+```bash
+pi remove --local --approve ./bluebook-package
+pi list --approve
+pi --approve
+```
+
+列表中应不再有这个 Package；在新 Pi 会话输入 `/`，上面两个教学命令也应消失。如果仍出现，先检查是否还通过全局安装或 `-e`、`--skill` 加载了同名资源。移除声明不会删除自己创建的目录，材料仍可保留。检查后用 `/quit` 退出。
+
+2026-10-12，在独立配置中用 Pi 1.1.0 完成上述本地安装、命令清单检查、扩展通知和移除后的清单复查；没有测试 npm／Git 来源或公共发布。完整打包规则见[固定版本 Package 文档](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/packages.md)。
+
 ### 本章依据
 
 - [Pi Skills](https://pi.dev/docs/latest/skills)
@@ -103,4 +163,4 @@ Pi Package 以当前用户的完整系统权限运行。除了可执行的 Exten
 - [Pi Packages](https://pi.dev/docs/latest/packages)
 - [Skill、Extension 和 Pi Package 的区别](/tweets/04-skills-extensions)
 
-以上动态行为核验于 2026-09-09。教学 Skill 已在本机 Pi 0.80.10 中验证为临时加载，并出现在 `skill:action-list-review` 命令列表；Pi 的资源位置和命令可能更新，以对应官方页面为准。
+前半节教学 Skill 的原核验日期为 2026-09-09，使用本机 Pi 0.80.10 验证临时加载与 `skill:action-list-review` 命令列表。本地 Package 练习的版本和日期见该节末尾；Pi 的资源位置和命令可能更新，以对应官方页面为准。

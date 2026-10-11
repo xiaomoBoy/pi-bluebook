@@ -96,6 +96,66 @@ grep -c '^## ' output/行動清單-複核版.md
 Pi 包以當前使用者的完整系統權限執行。除了可執行的擴充功能，技能和其他資源也可能引導 Agent 執行命令或產生副作用。不要因為它叫“包”或“社群資源”就直接信賴。安裝前應審查整個包的來源、資源和安裝內容。
 :::
 
+## 實作：把自己的資源打成一個包
+
+當同一個技能和擴充功能要交給另一臺電腦時，可以把它們放進一個帶 `package.json` 的目錄。本節先組裝目錄並在本機驗證；跨機器複製、Git／npm 分發不在本節實測範圍。
+
+Pi 會自動發現 `extensions/`、`skills/`、`prompts/`、`themes/`；不需要的目錄可以省略。資源放在其他位置時，才需要在清單的 `pi` 欄位宣告路徑。
+
+### 1. 組裝並檢查材料
+
+在普通終端機的練習目錄中，另建一個空目錄；如果名稱已存在，換新名字，不覆蓋舊練習。下載本書已有的[檢查擴充](/examples-tw/extension/bluebook-check.ts)和<a href="/examples-tw/skill/action-list-review/SKILL.md" download>行動清單技能</a>：
+
+```bash
+mkdir bluebook-package-practice
+cd bluebook-package-practice
+mkdir -p bluebook-package/extensions bluebook-package/skills/action-list-review
+curl -fL https://pi.xiaomovps.com/examples-tw/extension/bluebook-check.ts \
+  -o bluebook-package/extensions/bluebook-check.ts
+curl -fL https://pi.xiaomovps.com/examples-tw/skill/action-list-review/SKILL.md \
+  -o bluebook-package/skills/action-list-review/SKILL.md
+cat > bluebook-package/package.json <<'JSON'
+{
+  "name": "bluebook-practice-package",
+  "version": "0.1.0",
+  "private": true,
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
+JSON
+```
+
+最後一段要整段複製，結束行 `JSON` 單獨佔一行。先閱讀兩個下載檔案，確認擴充功能只註冊檢查命令、技能只有會議記錄核對規則，再繼續。Pi 提供的宿主包放在 `peerDependencies`，不要另裝一份放進 `dependencies`；這個示例沒有額外執行依賴，無需在包目錄執行 `npm install`。
+
+### 2. 本地安裝並確認載入
+
+仍在 `bluebook-package-practice`，執行：
+
+```bash
+pi install --local ./bluebook-package
+pi list --approve
+pi --approve
+```
+
+`pi install` 應無錯誤並回到提示符；`pi list --approve` 應在專案範圍列出指向 `bluebook-package` 的本地來源，確認後再進入 Pi。`--local` 將宣告寫入當前專案的 `.pi/settings.json`，本地資源仍從原目錄讀取，不會複製成另一份。這裡的 `--approve` 只用於已檢查的練習資源，顯式批准本次執行載入專案資源，不是系統沙箱；不要拿它跳過陌生倉庫的檢查。
+
+在 Pi 編輯區輸入 `/`，命令清單應出現 `bluebook-check` 和 `skill:action-list-review`。執行 `/bluebook-check`，應出現「藍皮書擴充功能已載入」通知。它直接執行教學命令，不依賴模型聲稱已經載入，也無需傳送模型任務。
+
+### 3. 解除安裝後再次驗收
+
+用 `/quit` 退出，回到同一目錄：
+
+```bash
+pi remove --local --approve ./bluebook-package
+pi list --approve
+pi --approve
+```
+
+清單中應不再有這個包；在新 Pi 工作階段輸入 `/`，上面兩個教學命令也應消失。如果仍出現，先檢查是否還透過全域安裝或 `-e`、`--skill` 載入了同名資源。移除宣告不會刪除自己建立的目錄，材料仍可保留。檢查後用 `/quit` 退出。
+
+2026-10-12，在獨立設定中用 Pi 1.1.0 完成上述本地安裝、命令清單檢查、擴充通知和移除後的清單複查；沒有測試 npm／Git 來源或公共釋出。完整打包規則見[固定版本包文件](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/packages.md)。
+
 ### 本章依據
 
 - [Pi 技能](https://pi.dev/docs/latest/skills)
@@ -103,4 +163,4 @@ Pi 包以當前使用者的完整系統權限執行。除了可執行的擴充�
 - [Pi 包](https://pi.dev/docs/latest/packages)
 - [技能、擴充功能和 Pi 包的區別](/zh-TW/tweets/04-skills-extensions)
 
-以上動態行為核驗於 2026-09-09。教學技能已在本機 Pi 0.80.10 中驗證為臨時載入，並出現在 `skill:action-list-review` 命令清單；Pi 的資源位置和命令可能更新，以對應官方頁面為準。
+前半節教學技能的原核驗日期為 2026-09-09，使用本機 Pi 0.80.10 驗證臨時載入與 `skill:action-list-review` 命令清單。本地包練習的版本和日期見該節末尾；Pi 的資源位置和命令可能更新，以對應官方頁面為準。
