@@ -4,17 +4,333 @@
     "sourceUrl": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md",
     "rawUrl": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/CHANGELOG.md",
     "packageUrl": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/package.json",
-    "verifiedAt": "2026-10-02",
-    "sourceSha256": "c7ef7c96089636ce1066c2d8705d55e60e40c321ede7ef0461eddba0114a5b14",
+    "verifiedAt": "2026-10-11",
+    "sourceSha256": "5dd1d0a04d7901f55ec00e5cfdca4b207666e1470fdc60098b2b5fc932f801ef",
     "packageName": "@earendil-works/pi-coding-agent",
-    "packageVersion": "1.0.0",
-    "latestVersion": "1.0.0",
-    "latestDate": "2026-10-01",
+    "packageVersion": "1.1.0",
+    "latestVersion": "1.1.0",
+    "latestDate": "2026-10-07",
     "oldestVersion": "0.10.0",
     "oldestDate": "2025-11-25",
-    "releaseCount": 282
+    "releaseCount": 287
   },
   "releases": [
+    {
+      "version": "1.1.0",
+      "date": "2026-10-07",
+      "year": "2026",
+      "sourceUrl": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#110---2026-10-07",
+      "itemCount": 38,
+      "changeTypes": [
+        "features",
+        "added",
+        "changed",
+        "fixed"
+      ],
+      "topics": [
+        "models",
+        "providers",
+        "sessions",
+        "context",
+        "extensions",
+        "interface",
+        "sdk",
+        "platforms"
+      ],
+      "sections": [
+        {
+          "title": "New Features",
+          "key": "features",
+          "items": [
+            "Program status reporting: terminals and agent dashboards that support OSC 7501 see whether Pi is working, blocked on a dialog or login, done, or failed. See Program status.",
+            "Claude Haiku 5.5: anthropic/claude-haiku-5-5, with adaptive thinking up to xhigh/max effort.",
+            "Adjust default tools with +name/-name: --tools entries like pi -t +codemode,-write change the default selection instead of replacing it. See Tools.",
+            "GPT-6 Luna and image classification: OpenAI's GPT-6 Luna is available as a classifier model through the Decisions API, and codemode's models.classify() accepts images for classifiers that support them. See Use classifier models.",
+            "Native llama.cpp decision models: Julia-1, Laya, Kev, lev, and OpenJev served by llama.cpp 0.6.0 or later run natively as classifiers through /v1/systemone. See Classification."
+          ]
+        },
+        {
+          "title": "Added",
+          "key": "added",
+          "items": [
+            "Added +name and -name entries to --tools, which change the default tool selection instead of replacing it, for example pi -t +codemode",
+            "Added durationMs to the tool render context and to tool_execution_end extension events: the recorded execution time of a final tool result (#10549)",
+            "Added outputPad to the tool render context (#10557 by @rwachtler)",
+            "Added OpenAI's GPT-6 Luna as a classifier model through the Decisions API, available with OPENAI_API_KEY (see Use classifier models)",
+            "Added images to codemode's models.classify() context, so classifiers that accept images, such as GPT-6 Luna, can judge them",
+            "Added program status reporting with OSC 7501: terminals and agent dashboards that support it see whether Pi is working, blocked on a dialog or login, done, or failed. PI_PROGRAM_STATUS=1|0 overrides detection (see Terminal setup) (#10607)",
+            "Added aborted to agent_settled session, extension, and JSON events, so integrations can tell a cancelled run from a finished one (#10607)",
+            "Added Claude Haiku 5.5 (anthropic/claude-haiku-5-5), with adaptive thinking up to xhigh/max effort and prompt caching on Bedrock",
+            "Added native llama.cpp decision models: Julia-1, Laya, Kev, lev, and OpenJev served by llama.cpp 0.6.0 or later are listed only as classifiers through /v1/systemone instead of as chat models (see Classification) (#10382)"
+          ]
+        },
+        {
+          "title": "Changed",
+          "key": "changed",
+          "items": [
+            "Changed outputPad to also apply to ! command output, tool output, and summary blocks (#9946, #10557 by @rwachtler)",
+            "Changed pi mcp login --timeout to limit the whole sign-in, including requests to the authorization server, instead of only the wait for the browser (#10565)"
+          ]
+        },
+        {
+          "title": "Fixed",
+          "key": "fixed",
+          "items": [
+            "Fixed bash and PowerShell results losing Took after reloading a session, and the live Took including wall-clock steps; both now show the recorded execution time (#10549)",
+            "Fixed managed installs keeping every old release; pi update now keeps only the new release and the one it updated from (#10392, #10511 by @davidbrai)",
+            "Fixed standalone binaries loading .env, .env.local, and .env.development from the launch directory into Pi's environment (#10473)",
+            "Fixed !! command headers losing their dim color once output arrives (#10557 by @rwachtler)",
+            "Fixed the codemode description not marking searchTools(), describeTool(), and describeNamespace() as async, which led models to serialize the unawaited promise as {} (#10555)",
+            "Fixed codemode output items running together, so models could not tell where one text() or console.log() output ended and the next began. With several text items, each now starts with a ==> text N/M <== line, and console calls follow the other output in one <console_output> block with one line per call",
+            "Fixed /mcp waiting for all servers to connect before opening; the manager now updates live and remains usable while enabling, reconnecting, or disabling servers (#10562)",
+            "Fixed images being dropped as \"could not be resized\" when running under node --watch on Node 24.19+ and 26.x, where Node posts its own messages on the image resize worker channel (#10527)",
+            "Fixed clipboard paste doing nothing in Termux, and failed copies there omitting the Termux:API install hint (#10391)",
+            "Fixed ! and RPC bash output keeping fragments of color codes, such as a stray m, when a code was split across output chunks (#10504)",
+            "Fixed MCP OAuth sign-ins that could not be cancelled while waiting on the authorization server and kept running after the session ended. The sign-in screen now cancels with Esc at every step, session shutdown aborts a running sign-in, and each request to the authorization server times out after 15 seconds (#10565)",
+            "Fixed shutdown waiting up to 15 seconds to refresh an MCP OAuth token that was about to expire, only to close the server's session (#10565)",
+            "Fixed the fullscreen text selection surviving session switches and other transcript rebuilds, which highlighted unrelated text in the new transcript (#9311, #10567 by @christianklotz)",
+            "Fixed OpenAI models on Bedrock ignoring the thinking level and always running at Bedrock's default reasoning effort (#9331, #10142 by @jsanter27)",
+            "Fixed model headers in models.json not overriding the originator and User-Agent headers of Codex requests (#10429 by @lucasmeijer)",
+            "Fixed server_busy and servers are currently busy provider errors ending the turn instead of being retried (#10543)",
+            "Fixed Mistral responses that end with finish_reason: \"error\" not being retried (#10487)",
+            "Reduced context-limit request failures by estimating input at 3.5 characters per token instead of 4 when calculating output limits (#10497)",
+            "Fixed Radius models disabled by an organization owner still being listed",
+            "Fixed Anthropic browser login failing with \"localhost refused to connect\" when port 53692 is reserved or in use, for example by Hyper-V/WSL port exclusions on Windows: login now falls back to a free loopback port (#10571)",
+            "Fixed session costs undercounting long prompts on models with prompt-length pricing tiers, such as Claude Haiku 5.5, Gemini 3.1 Pro, and GPT-5.4, through OpenCode, OpenCode Go, OpenRouter, Vercel AI Gateway, Google, MiniMax, and other providers",
+            "Fixed Markdown links not being clickable in Herdr (#10573)"
+          ]
+        }
+      ]
+    },
+    {
+      "version": "1.0.4",
+      "date": "2026-10-05",
+      "year": "2026",
+      "sourceUrl": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#104---2026-10-05",
+      "itemCount": 12,
+      "changeTypes": [
+        "features",
+        "added",
+        "fixed"
+      ],
+      "topics": [
+        "providers",
+        "sessions",
+        "packages",
+        "interface",
+        "sdk"
+      ],
+      "sections": [
+        {
+          "title": "New Features",
+          "key": "features",
+          "items": [
+            "Tool patterns and --no-mcp: --tools and --exclude-tools accept * patterns, for example --tools read,codemode,'mcp__radius__*' keeps only one MCP server's tools. --tools now keeps MCP tools unless an entry starts with mcp__, and --no-mcp turns off MCP for one run. See Tools and MCP tools.",
+            "Codemode persists images: tools.read() on an image file now gives back an image block that image() can show. See Call tools."
+          ]
+        },
+        {
+          "title": "Added",
+          "key": "added",
+          "items": [
+            "Added * patterns to --tools and --exclude-tools, for example --tools read,codemode,'mcp__radius__*'",
+            "Added --no-mcp to disable the built-in MCP support for one run"
+          ]
+        },
+        {
+          "title": "Fixed",
+          "key": "fixed",
+          "items": [
+            "Fixed syntax highlighting losing colors after the first line of multiline strings and comments in fenced code blocks (#10143)",
+            "Fixed codemode scripts not receiving images from read: tools.read() now resolves to an image block for image files, which image() shows (#10251)",
+            "Fixed MCP OAuth sign-in failing with invalid_redirect_uri on servers with OpenID Connect client registration, such as mcp.modem.dev: pi now registers as a native client (#10493)",
+            "Fixed --tools removing MCP tools, which left pi --tools codemode without any MCP servers. --tools now keeps MCP tools unless an entry starts with mcp__",
+            "Fixed MCP session shutdown returning while a server was still connecting, leaving its transport open until the server answered or timed out (#10249)",
+            "Fixed system prompt rules and the skills hint naming tools hidden by prepareLoadout. Hidden tools are left out of the rules, the skills hint names no tool when the file reader is hidden, and codemode shows each tool's prompt guidelines with its declaration; ToolLoadout gains getPromptGuidelines() (#10343)",
+            "Fixed Bedrock requests that fail with The pending stream has been canceled after a stalled HTTP/2 connection not being retried automatically (#10379)",
+            "Fixed codemode scripts that patch built-ins (for example Array.prototype.toJSON = ...) crashing pi and leaving the tool call unsettled. Built-ins are now frozen before the script runs, so such patches have no effect (#10444)"
+          ]
+        }
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "2026-10-05",
+      "year": "2026",
+      "sourceUrl": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#103---2026-10-05",
+      "itemCount": 10,
+      "changeTypes": [
+        "features",
+        "breaking",
+        "added",
+        "changed",
+        "fixed"
+      ],
+      "topics": [
+        "models",
+        "providers",
+        "sessions",
+        "context",
+        "interface",
+        "platforms"
+      ],
+      "sections": [
+        {
+          "title": "New Features",
+          "key": "features",
+          "items": [
+            "Azure Foundry Chat Completions — The azure provider (renamed from azure-openai-responses) now also serves Foundry Chat Completions deployments, starting with azure/deepseek-v4-pro. See Azure OpenAI.",
+            "Codemode images saved to files — image() also writes each image to a temp file and names the path in the result, so later turns can copy or move generated images. See Generate images."
+          ]
+        },
+        {
+          "title": "Breaking Changes",
+          "key": "breaking",
+          "items": [
+            "Renamed the Azure provider from azure-openai-responses to azure. Rename the provider key in auth.json (or run /login again), in models.json, and in settings.json (defaultProvider, enabledModels patterns, and modelThinkingLevels keys). Sessions that used the old provider fall back to another model when resumed, and their prompt cache is not reused. The AZURE_OPENAI_* environment variables are unchanged (#9714 by @jsanter27)"
+          ]
+        },
+        {
+          "title": "Added",
+          "key": "added",
+          "items": [
+            "Added Azure Foundry Chat Completions deployments, starting with azure/deepseek-v4-pro (#9645, #9714 by @jsanter27)"
+          ]
+        },
+        {
+          "title": "Changed",
+          "key": "changed",
+          "items": [
+            "Codemode image() now also saves each image to a temp file and names the path in the result, so later turns can copy or move generated images (#10310)",
+            "Output files (full text of truncated tool output, binary MCP resources, codemode images) are now readable only by the user",
+            "Home/End now always move the editor cursor to the line start/end; fullscreen transcript top/bottom moved to Ctrl+Home/Ctrl+End, which no longer move the editor cursor (#10314)"
+          ]
+        },
+        {
+          "title": "Fixed",
+          "key": "fixed",
+          "items": [
+            "Fixed subscription logins such as Sign in with ChatGPT failing with refresh_token_invalidated after a request was cancelled during an OAuth token refresh",
+            "Fixed codemode failing for the rest of a session after a pnpm global update removed the running install, and added a restart hint when errors occur after pi was updated or removed on disk (#10439)",
+            "Fixed interactive sessions reporting a read EIO or setRawMode EIO crash (and asking to run /bug) when the terminal went away, e.g. after closing the window or resuming a suspended pi in a closed terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "2026-10-04",
+      "year": "2026",
+      "sourceUrl": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#102---2026-10-04",
+      "itemCount": 2,
+      "changeTypes": [
+        "features",
+        "added"
+      ],
+      "topics": [
+        "models"
+      ],
+      "sections": [
+        {
+          "title": "New Features",
+          "key": "features",
+          "items": [
+            "Sampling by thinking level — samplingParamsByThinkingLevel in models.json sets sampling parameters such as temperature and top_p for each thinking level on OpenAI-compatible APIs. See Configure sampling by thinking level."
+          ]
+        },
+        {
+          "title": "Added",
+          "key": "added",
+          "items": [
+            "Added samplingParamsByThinkingLevel to models.json for per-thinking-level sampling parameter overrides on OpenAI-compatible APIs. See Configure sampling by thinking level (#9776 by @mrexodia)"
+          ]
+        }
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "2026-10-03",
+      "year": "2026",
+      "sourceUrl": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#101---2026-10-03",
+      "itemCount": 27,
+      "changeTypes": [
+        "features",
+        "added",
+        "changed",
+        "fixed",
+        "removed"
+      ],
+      "topics": [
+        "models",
+        "providers",
+        "sessions",
+        "context",
+        "extensions",
+        "packages",
+        "interface",
+        "sdk",
+        "platforms"
+      ],
+      "sections": [
+        {
+          "title": "New Features",
+          "key": "features",
+          "items": [
+            "Nix flake — nix run github:earendil-works/pi/stable runs the latest release, and nix profile add github:earendil-works/pi/stable installs it. See Install pi.",
+            "Project overrides for MCP servers — .pi/mcp.json and /mcp can enable, disable, or change the exposure of a user-level server for one project. See Configure servers.",
+            "MCP Client ID Metadata Documents — oauth.clientRegistration: \"cimd\" lets authorization servers allow pi by its document URL instead of dynamic registration. See Authenticate with OAuth.",
+            "Tool renderers for any tool — pi.registerToolRenderer() draws calls to tools that are not registered yet, such as MCP tools in resumed sessions. See Tool rendering.",
+            "Cloudflare Clef classifiers — @cf/cloudflare/clef and @cf/cloudflare/clef-flash are usable from codemode scripts and extensions. See Use classifier models."
+          ]
+        },
+        {
+          "title": "Added",
+          "key": "added",
+          "items": [
+            "Added a copy key (app.message.copy, default ctrl+x) to OAuth sign-in screens in /login, /mcp, and /mcp login, which copies the sign-in URL when the browser cannot be opened or the wrapped link cannot be selected.",
+            "Added oauth.clientRegistration: \"cimd\" for MCP servers, which identifies pi with its Client ID Metadata Document on pi.dev instead of dynamic client registration, so authorization servers can allow pi by URL (#10302)",
+            "Added project overrides for user-level MCP servers: a .pi/mcp.json entry without command or url sets only enabled, exposure, and toolExposure of the user-level server, and /mcp can enable or disable a server for the current project (#10277)",
+            "Added Cloudflare's Clef and Clef Flash classifier models to cloudflare-workers-ai, usable from codemode scripts and extensions (#10316 by @ndisidore, #10322 by @RealAlexandreAI)",
+            "Added pi.registerToolRenderer(), which chooses how calls to a tool are drawn, including tools that are not registered (#10285)",
+            "Added a Nix flake for macOS and Linux: nix run github:earendil-works/pi/stable runs the latest release, and nix profile add github:earendil-works/pi/stable installs it. See Install pi (#9137)"
+          ]
+        },
+        {
+          "title": "Changed",
+          "key": "changed",
+          "items": [
+            "pi update on global npm installations now recommends migrating to the managed installation from the pi.dev installer, which pins all dependencies.",
+            "Anthropic tools added or redefined mid-conversation are now defined inline in the conversation, so redefining a tool under the same name keeps the prompt cache instead of resending the full tool list."
+          ]
+        },
+        {
+          "title": "Fixed",
+          "key": "fixed",
+          "items": [
+            "Fixed installations resolving vulnerable brace-expansion 5.0.9 by pinning brace-expansion 5.0.12 as a direct dependency (GHSA-q2hr-2g5m-vwhr, GHSA-qhr7-859c-m2p7, GHSA-6j4f-fj2g-mc7p) (#10288)",
+            "Fixed a trailing comma in --models adding an extra model to the model cycle (#10334)",
+            "Fixed a codemode script that prints in a loop crashing pi by running out of memory: a script fails once its output passes 16 Mi characters or 100000 items (#10283)",
+            "Fixed JPEG, GIF, and WebP images rendered by extensions through Image not appearing in Kitty, Ghostty, WezTerm, and Warp (#10292)",
+            "Fixed MCP tool calls in resumed sessions and HTML exports rendering fully expanded until their server connected, or for good if it never did (#10285)",
+            "Fixed fullscreen Kitty images collapsing to a one-row strip after scrolling in WezTerm (#10319)",
+            "Fixed \"Selected model is at capacity\" provider errors ending the turn instead of being retried (#10278)",
+            "Fixed Cloudflare AI Gateway Claude models failing with a 404 by using dashed model IDs (claude-opus-5-5 instead of claude-opus-5.5)",
+            "Fixed Sign in with ChatGPT continuing when its callback port is taken by another login, which made the browser show \"OAuth state mismatch\"; it now fails with a port-in-use error (#10265)",
+            "Fixed Amazon Bedrock OpenAI models costing requests above 272k input tokens at the short-context rate; Bedrock models now include the pricing tiers listed on models.dev (#10326)",
+            "Fixed Amazon Bedrock Claude requests failing with \"Invalid signature in thinking block\" after the system prompt or tools changed (#10324)",
+            "Fixed Together DeepSeek V4 Pro losing its thinking level controls after Together renamed it to deepseek-ai/DeepSeek-V4-Pro-0813 (#10336 by @cv)",
+            "Fixed the default NVIDIA model pointing at nvidia/nemotron-3-super-120b-a12b, which NVIDIA no longer serves; the default is now nvidia/nemotron-3-ultra-550b-a55b"
+          ]
+        },
+        {
+          "title": "Removed",
+          "key": "removed",
+          "items": [
+            "Removed npm-shrinkwrap.json from the published package. npm installations no longer pin transitive dependencies, and library consumers can now override them. Use the pi.dev installer for pinned installations (#5653)"
+          ]
+        }
+      ]
+    },
     {
       "version": "1.0.0",
       "date": "2026-10-01",
