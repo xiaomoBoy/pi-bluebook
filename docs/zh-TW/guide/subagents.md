@@ -44,6 +44,31 @@ next:
 
 如果你還不能給單個 Agent 寫出可驗收的任務，增加子代理通常只會讓問題變得更難看懂。先用一個 Agent 完成三至五個真實任務，再把穩定、獨立、重複出現的部分分出去。
 
+<a id="choose-subagents"></a>
+
+## 怎樣選擇子代理擴充
+
+先完成下面的手動分工案例，再決定是否安裝。以下是 **2026-10-12** 的資料核對，四項都是非官方專案；版本、維護狀態和權限以各倉庫為準，不按下載量排名。
+
+| 專案 | 版本、安裝與維護 | 適合場景與邊界 |
+| --- | --- | --- |
+| [badlogic/pi-subagent](https://github.com/badlogic/pi-subagent) | 內部清單為 `0.1.0`，私有包，無公開 npm 版或 Release；README 採用原始碼克隆與 CLI 軟鏈安裝，需 Node.js 22.19 和 tmux。最近提交為 9 月 30 日，未歸檔，無 Issues 入口；未發現許可證。 | 適合習慣 tmux、想直接檢視子工作階段的人；不支援巢狀。公開原始碼不等於已有開源許可，使用前核對授權；安裝路徑和 SSH 前置條件按 README 確認。 |
+| [nicobailon/pi-subagents](https://github.com/nicobailon/pi-subagents) | `0.77.0`，MIT；`pi install npm:pi-subagents@0.77.0`。10 月 10 日釋出，11 日仍有提交，未歸檔。 | 適合需要 reviewer、scout、oracle 等預設角色與前後台委派的人；先確認每個角色實際選擇的模型、工具和後台行為。 |
+| [tintinweb/pi-subagents](https://github.com/tintinweb/pi-subagents) | `0.20.0`，MIT；`pi install npm:@tintinweb/pi-subagents@0.20.0`，要求 Pi 1.1.0。10 月 9 日釋出，11 日仍有提交，未歸檔。 | 適合遷移 Claude Code 式 Agent 與工作流習慣的人；巢狀預設關閉，子項工具限制不自動繼承父項，需逐項設定。 |
+| [pi-subagent-manager](https://github.com/championswimmer/pi-subagent-manager) | `0.25.0`，MIT；`pi install npm:pi-subagent-manager@0.25.0`，要求 Pi 0.99.2、Node.js 22.19。10 月 11 日釋出並提交，未歸檔。 | 適合需要路徑樹、巢狀和暫停恢復的人；共享工作目錄與系統權限，工具策略不是沙箱。 |
+
+只有原始碼安裝流程的第一項，安裝步驟見[專案 README](https://github.com/badlogic/pi-subagent#install)，本課不額外維護一份軟鏈指令碼。其 README 使用的 `earendil-works/pi-subagent` 地址目前重定向到作者倉庫，不能據此把它當成官方產品。
+
+與[外掛程式選擇頁](/zh-TW/plugins/#子代理)保持同一條邊界：安裝前先讀原始碼、依賴與安裝內容，再用沒有真實資料的隔離練習目錄；額外模型呼叫可能增加費用。一次只裝一個，多個擴充可能爭用 `/agents` 等命令。提示詞和工具清單不能替代系統隔離。
+
+表中命令用於核對安裝來源，本課不要求逐項執行。若試用 npm 項後換另一項，先用 `pi remove` 加同一來源移除，再用 `pi list` 確認消失；原始碼安裝按該專案 README 處理。
+
+### 維護者最小復現
+
+2026-10-12，在獨立設定與練習目錄中安裝 `pi-subagents@0.77.0`，用 Pi 1.1.0 委派一個前臺 `delegate`，固定為 `deepseek/deepseek-flash:off`，要求只回復 `BLUEBOOK_CHILD_OK`。這次無檔案變更的測試顯式採用文件支援的 `acceptance.level: "none"`，由維護者獨立對照返回標記；工具事件記錄了一個子任務、退出碼為 `0`、工具計數為 `0`，主工作階段收到同一標記。隨後用同一來源移除，`pi list` 顯示沒有包。
+
+這隻驗證一次前臺委派；沒有測試併發、後台、巢狀、重啟恢復或另外三個擴充，不能寫成四項都「已驗證可用」。
+
 ## 配套實作：CASE 05 · 兩路獨立審閱
 
 本課不再維護第二份操作步驟。進入 [CASE 05 · 兩路獨立審閱](/zh-TW/cases/independent-review)，按其中的固定材料、三條工作階段、任務原文、獨立驗收和失敗恢復完整練習一次。
@@ -63,4 +88,8 @@ next:
 - [Pi 官方擴充功能示例索引](https://pi.dev/docs/latest/extensions#examples-reference)
 - [我對子代理工作流的實際使用記錄](https://x.com/xiaomovps/status/2091841029850681551)
 
-核心能力邊界核驗於 2026-09-09。
+核心能力邊界的原核驗日期為 2026-09-09；擴充資料與上述最小復現單獨記錄於 2026-10-12。
+
+- [pi-subagents v0.77.0](https://github.com/nicobailon/pi-subagents/releases/tag/v0.77.0)
+- [tintinweb v0.20.0](https://github.com/tintinweb/pi-subagents/releases/tag/v0.20.0)
+- [pi-subagent-manager 版本與許可證](https://github.com/championswimmer/pi-subagent-manager/blob/main/package.json)

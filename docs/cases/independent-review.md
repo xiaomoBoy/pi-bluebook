@@ -85,7 +85,7 @@ pi --name "分工合并" --no-extensions
 
 ## 关键现象
 
-两路会话互不读取对方结论，并且只由主会话写 `merged.md`。这里练习的是可审计的分工结构，不是假定核心内置了一个“子 Agent 按钮”。[第 12 课](/guide/subagents)解释这种手动分工与子 Agent 扩展的关系。
+两路会话互不读取对方结论，并且只由主会话写 `merged.md`。这里练习的是可审计的分工结构，不是假定核心内置了一个“子 Agent 按钮”。[第 12 课](/guide/subagents)解释这种手动分工与子 Agent 扩展的关系；完成本案例后，可继续读[怎样选择子 Agent 扩展](/guide/subagents#choose-subagents)，核对版本、来源和权限边界。
 
 ## 独立验收
 
