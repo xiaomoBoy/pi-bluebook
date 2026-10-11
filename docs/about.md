@@ -21,6 +21,12 @@ next: false
 
 比起 Agent 说自己做完了，我更关心结果能不能跑通、复现，并由自己验收。所以这里尽量按“场景 → 概念 → 实操 → 验收”来写；发现旧判断不准确，也会回头改。
 
+## 我做的开源项目
+
+- [Pi Durable Assistant](https://github.com/xiaomoBoy/pi-durable-assistant)：基于 Pi Durable 做的可自托管个人 Agent，进程重启后能接着跑任务，带网页界面、子 Agent 和定时计划。读完 [Pi Durable 这一课](/guide/pi-durable) 后，可以拿它看一个组合好的完整应用。
+- [Pi Durable Edge](https://github.com/xiaomoBoy/pi-durable-edge)：上面这个 Agent 的 Cloudflare 版，不用买服务器，目前是实验版。
+- 写作与演示用的 Claude Code 工具等其他项目，见 [GitHub 主页](https://github.com/xiaomoBoy)。
+
 ## 继续交流
 
 [X · @xiaomovps](https://x.com/xiaomovps) · [GitHub · xiaomoBoy](https://github.com/xiaomoBoy) · [个人站](https://xiaomovps.com/) · [AI Spark](https://aisparkedu.com/)

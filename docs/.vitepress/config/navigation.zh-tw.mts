@@ -72,7 +72,9 @@ export const navTW = [
           {
             text: '專案',
             items: [
-              { text: 'GitHub 倉庫', link: 'https://github.com/xiaomoBoy/pi-bluebook' }
+              { text: 'GitHub 倉庫', link: 'https://github.com/xiaomoBoy/pi-bluebook' },
+              { text: 'Pi Durable Assistant', link: 'https://github.com/xiaomoBoy/pi-durable-assistant' },
+              { text: '作者的全部開源專案', link: 'https://github.com/xiaomoBoy' }
             ]
           }
         ]

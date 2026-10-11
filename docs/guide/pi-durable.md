@@ -156,3 +156,4 @@ node packages/coding-agent/src/experimental/vacation/main.ts --continue
 - [旅行规划器源码：模拟搜索与等待时间](https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/experimental/vacation/vacation.ts)
 - [Durable 包的运行环境要求](https://github.com/earendil-works/pi/blob/v1.0.0/packages/durable/package.json)
 - [三十多个官方示例](https://github.com/earendil-works/pi/tree/v1.0.0/packages/durable/test/examples) · [小型编程助手示例](https://github.com/earendil-works/pi/tree/v1.0.0/packages/coding-agent/src/experimental/durable)
+- [Pi Durable Assistant：作者基于 Pi Durable 做的个人 Agent（非官方）](https://github.com/xiaomoBoy/pi-durable-assistant)：组合了断点恢复、后台子 Agent、定时计划和网页界面，可对照本课机制阅读

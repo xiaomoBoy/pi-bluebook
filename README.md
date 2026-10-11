@@ -116,6 +116,12 @@ pi-bluebook/
 
 这本书由小墨同学整理；写作缘起与交流入口见[关于作者](https://pi.xiaomovps.com/about)。
 
+## 作者的其他项目
+
+- **[Pi Durable Assistant](https://github.com/xiaomoBoy/pi-durable-assistant)**：基于 Pi Durable 做的可自托管个人 Agent，进程重启后能接着跑任务，带网页界面、子 Agent 和定时计划。
+- **[Pi Durable Edge](https://github.com/xiaomoBoy/pi-durable-edge)**：上面这个 Agent 的 Cloudflare 版，不用买服务器（实验版）。
+- 更多开源工具见 [GitHub 主页](https://github.com/xiaomoBoy)。
+
 ## 许可证
 
 本仓库的网站代码、原创书稿、推文整理稿和原创图片统一采用 [MIT License](LICENSE)。

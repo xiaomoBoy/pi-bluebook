@@ -72,7 +72,9 @@ export const nav = [
           {
             text: '项目',
             items: [
-              { text: 'GitHub 仓库', link: 'https://github.com/xiaomoBoy/pi-bluebook' }
+              { text: 'GitHub 仓库', link: 'https://github.com/xiaomoBoy/pi-bluebook' },
+              { text: 'Pi Durable Assistant', link: 'https://github.com/xiaomoBoy/pi-durable-assistant' },
+              { text: '作者的全部开源项目', link: 'https://github.com/xiaomoBoy' }
             ]
           }
         ]
