@@ -130,7 +130,7 @@ pi --version
 command -v pi
 ```
 
-第一条应显示 Pi 版本号，第二条应显示 Git Bash 实际找到的 `pi` 命令位置。安装命令核验于 2026-09-23，后续以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。
+第一条应显示 Pi 版本号，第二条应显示 Git Bash 实际找到的 `pi` 命令位置。npm 路线不固定间接依赖；以后更新时如果 Pi 显示迁移提示，先阅读[生命周期管理](/guide/lifecycle-management)，不要在本页连续运行两种安装方式。安装命令核验于 2026-09-23，后续以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。
 
 如果安装过程出现 `npm ERR!`、`EPERM` 或 `Access is denied`：
 
@@ -200,3 +200,5 @@ Pi 官方还提供可选的 `powershell` 工具，但它不是本书入门路线
 - [Node.js 下载页](https://nodejs.org/en/download)
 
 安装命令、Node.js 要求与 Windows 三条运行路线核验于 2026-09-23。Pi、Node.js 或 Git for Windows 更新后，应优先复查上述官方页面。
+
+2026-10-12 仅对照 [Pi v1.1.0 固定 Windows 文档](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/windows.md)与更新源码做文字复查；没有 Windows 环境，未更新上面的实机核验日期。

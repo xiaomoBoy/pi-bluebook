@@ -45,6 +45,8 @@ pi
 
 输入 `/settings` 可以打开常用设置。这一阶段保持默认值就够了。主题、会话压缩和其他选项会在真正遇到需求时再讲。
 
+Pi 1.1.0 默认全屏显示；`Home`／`End` 移动输入框光标，全屏记录的首尾改用 `Ctrl+Home`／`Ctrl+End`。若启动时只看到版本和按键提示，可能设置了 `quietStartup: "header"`；它会隐藏模型范围与资源列表，不代表资源加载失败。需要核对资源时，可用 `pi --verbose` 启动。
+
 如果不小心打开了不认识的设置页，按 `Esc` 返回。本课不要跟着别人的截图修改大量选项，不同版本和终端的显示可能不同。
 
 ## 3. 正确理解项目信任
@@ -95,3 +97,5 @@ pi
 - [Pi 使用说明](https://pi.dev/docs/latest/usage)
 - [Pi 设置说明](https://pi.dev/docs/latest/settings)
 - [Pi 安全说明](https://pi.dev/docs/latest/security)
+
+2026-10-12 在独立练习目录实测 Pi 1.1.0 的全屏启动、`/model`、`/settings`、`Esc` 返回、`/quit`、再次启动与无工具连通测试；另在独立配置中确认 `Home`／`End` 能编辑输入首尾、`quietStartup: true` 隐藏版本、`"header"` 保留版本。记录首尾快捷键与项目信任边界仅对照[固定版本按键说明](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/keybindings.md)和[安全说明](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/security.md)核对，未重新做全部信任场景测试。

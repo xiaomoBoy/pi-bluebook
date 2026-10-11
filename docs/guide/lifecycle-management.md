@@ -79,6 +79,13 @@ pi update
 
 官方当前说明，`pi update` 默认只更新 Pi 本体，与 `pi update --self` 的目标相同。它不会自动把所有已安装 Package 一起升级。
 
+截至 Pi 1.1.0，更新时还要区分两种结果：
+
+- npm 全局安装更新成功后会建议迁移到官方安装器，因为 npm 路线不固定间接依赖；这条提示本身不是更新失败。
+- 官方安装器管理的安装，更新后只保留新版本和本次更新前的版本。它不代替项目备份，也不适用于 npm 等其他安装方式。
+
+从 1.0.2 或更早版本升级且使用 Azure 时，提供商名称已从 `azure-openai-responses` 改为 `azure`。需要重新 `/login`，并核对自定义模型和设置中的旧名称；配置字段及旧会话缓存的影响见[Pi 1.1.0 更新要点](/releases/pi-1-1)。不用 Azure 时无需处理。
+
 命令结束、普通终端重新出现输入行后，检查：
 
 ```bash
@@ -103,7 +110,7 @@ Windows Git Bash 把目录换成 `~/pi-practice`。进入 Pi 后提交：
 能收到准确回复，说明当前认证和模型调用也能工作。测试失败时先保留完整错误和更新前后的版本号，不要紧接着重装、清空设置和更换 Provider；一次只排查一个变量。
 
 ::: warning `--force` 不是日常更新按钮
-`pi update --self --force` 会在已经是最新版时仍尝试重新安装，适合明确的修复场景，不是普通更新的必经步骤。官方还说明，实验性的安装器管理模式不支持 `--force`；这种安装应重新运行对应安装器进行修复。
+`pi update --self --force` 会在已经是最新版时仍尝试重新安装，适合明确的修复场景，不是普通更新的必经步骤。官方还说明，安装器管理模式不支持 `--force`；这种安装应重新运行对应安装器进行修复。
 :::
 
 ## 3. 分清 Pi、模型目录和 Package 的更新
@@ -233,4 +240,4 @@ fi
 - [Pi Sessions：会话保存位置](https://pi.dev/docs/latest/sessions)
 - [Pi Settings：设置与更新检查](https://pi.dev/docs/latest/settings)
 
-页面中的安装器、npm 卸载方式和存储位置核验于 2026-09-23。实际使用时仍应以当前官方文档和本机 `pi --help` 为准。
+官方安装器、登录退出及存储位置仍保留 2026-09-23 的核验记录。2026-10-12 在独立 npm 前缀中实测 `pi list`、从 1.0.0 更新到 1.1.0、1.1.0 的 npm 迁移提示、`pi update --models` 和 npm 卸载；测试副本已移除，独立配置目录仍在，系统原有安装未改动。托管安装的旧版本清理与 Azure 改名仅对照[固定版本 Changelog](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/CHANGELOG.md)核对，未实测托管更新或 Azure 账号。实际使用时仍以对应官方文档和本机 `pi --help` 为准。

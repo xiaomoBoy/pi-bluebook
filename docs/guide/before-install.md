@@ -85,7 +85,7 @@ node --version
 npm --version
 ```
 
-两行都返回版本号，而且 Node.js 不低于 `22.19.0`，就可以进入下一课。这个最低版本要求核验于 2026-09-23，发布后请以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。
+两行都返回版本号，而且 Node.js 不低于 `22.19.0`，就可以进入下一课。最低版本要求于 2026-10-12 对照 Pi 1.1.0 固定文档核对；本机实际执行了空目录与 Node.js、npm 检查，输出为 `v24.14.1` 和 `11.11.0`。安装 Node.js 的流程未重新实测，后续请以 [Pi 官方 Quickstart](https://pi.dev/docs/latest/quickstart) 为准。
 
 例如，第一行可能显示 `v22.19.0` 或更高版本，第二行会显示另一串版本号。版本号的具体数字可以不同；关键是两条命令都有版本号输出，而且每次输出后光标都会回来。
 
