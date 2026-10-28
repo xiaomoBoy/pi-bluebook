@@ -125,4 +125,4 @@ pi --no-extensions
 - [我的 Extension 学习记录](https://x.com/xiaomovps/status/2096979758349496647)
 - [从通知问题回到事件与状态](https://x.com/xiaomovps/status/2097181979540111592)
 
-Extension API 与 `agent_settled` 事件核验于 2026-09-09。教学文件已在本机 Pi 0.80.10 中实际加载，`bluebook-check` 命令注册成功，并返回预期界面通知请求。
+Extension API 与 `agent_settled` 事件核验于 2026-09-09，2026-10-28 对照 [Pi v1.4.0 固定 Extension 文档](https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/docs/extensions.md)复查，`agent_settled` 仍是自动处理结束后用于通知的事件。教学文件于 2026-10-28 在独立配置的 Pi 1.4.0 中重新加载、执行并停用，结果见 [CASE 04 的维护者复现记录](/cases/first-extension#维护者复现记录)。

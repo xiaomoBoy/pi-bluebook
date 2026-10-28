@@ -171,6 +171,12 @@ Windows Git Bash 把 `shasum -a 256 -c` 换成 `sha256sum -c`，其余命令不�
 - `after-file.md` 仍缺字段：打开 `checkpoint.md` 人工核对，记录遗漏；不要让 Agent 反复改到测试通过。
 - 实验结束后不想保留低阈值：退出 Pi，删除整个 `compaction-lab`；或只删除其中的 `.pi/settings.json`。这不会改用户级设置。
 
+## 维护者复现记录
+
+2026-10-28，在 macOS 的独立配置与新练习目录中，用 Pi `1.4.0` 和默认的 `deepseek/deepseek-v4-pro` 按本页步骤完整复现。首次进入实验目录时出现 Project Trust 提示，核对材料后选择信任。`/compact` 显示从 3,095 tokens 压缩，压缩前后 `/session` 的 ID 相同。记忆回答一轮只调用了 `write`，没有读取文件；`after-memory.md` 保留了全部六项，与 `before.md` 的 `diff` 没有输出。两份输入指纹均为 `OK`，`after-file.md` 找到三条固定信息，`pi -r` 能重新打开同名会话并显示原 ID。整次实验的模型费用不到 0.03 美元。
+
+这是一次「六项全部保留」的结果，不代表每次压缩都能保留全部信息；换模型、换会话长度后出现「未知」或差异，同样是有效结果。
+
 ## 这个案例对应哪两条判断
 
 - [第 6 条：Session 可保存，不等于模型始终记得全部内容](/guide/lasting-principles#session-and-context)

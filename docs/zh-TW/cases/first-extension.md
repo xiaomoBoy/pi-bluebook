@@ -96,3 +96,7 @@ pi --no-extensions -e ./bluebook-examples/bluebook-check-custom.ts
 ## 失敗恢復
 
 保留完整載入錯誤與檔案路徑。不要把檔案複製到多個自動發現目錄反覆嘗試；先用 `--no-extensions` 回到乾淨狀態，再核對下載內容。
+
+## 維護者復現記錄
+
+2026-10-28，在 macOS 的獨立設定與練習目錄中用 Pi `1.4.0` 復現：`-e` 載入後，`/bluebook-check` 出現在命令補全中，執行後顯示固定提示；改成 `bluebook-check-custom` 的副本載入後顯示新文字；以 `pi --no-extensions` 重啟後，兩個教學命令都不再出現。全程沒有呼叫模型。

@@ -97,6 +97,8 @@ test -f worklog/handoff.md && echo "PASS: 交接文件存在"
 
 压缩不会撤销或恢复磁盘文件。若命令报错、长时间没有回到可输入状态，停止重复执行，保留错误文字和当前 `handoff.md`；重新启动并恢复会话后，先从文件重建上下文。
 
+如果错误是 `generation hit the token cap`，而 `pi --version` 低于 `1.4.0`，这是旧版摘要输出上限过小造成的，不是你的文件有问题。先按[生命周期管理](/guide/lifecycle-management)升级，再重新压缩；变化说明见 [Pi 1.2–1.4 更新要点](/releases/pi-1-4#压缩为什么不再失败)。
+
 ## 本课验收
 
 - `worklog/handoff.md` 能在普通终端中确认存在。

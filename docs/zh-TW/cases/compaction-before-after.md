@@ -171,6 +171,12 @@ Windows Git Bash 把 `shasum -a 256 -c` 換成 `sha256sum -c`，其餘命令不�
 - `after-file.md` 仍缺欄位：開啟 `checkpoint.md` 人工核對，記錄遺漏；不要讓 Agent 反覆改到測試透過。
 - 實驗結束後不想保留低閾值：退出 Pi，刪除整個 `compaction-lab`；或只刪除其中的 `.pi/settings.json`。這不會改使用者級設定。
 
+## 維護者復現記錄
+
+2026-10-28，在 macOS 的獨立設定與新練習目錄中，用 Pi `1.4.0` 和預設的 `deepseek/deepseek-v4-pro` 按本頁步驟完整復現。首次進入實驗目錄時出現專案信賴提示，核對材料後選擇信賴。`/compact` 顯示從 3,095 tokens 壓縮，壓縮前後 `/session` 的 ID 相同。記憶回答一輪只呼叫了 `write`，沒有讀取檔案；`after-memory.md` 保留了全部六項，與 `before.md` 的 `diff` 沒有輸出。兩份輸入指紋均為 `OK`，`after-file.md` 找到三條固定資訊，`pi -r` 能重新開啟同名工作階段並顯示原 ID。整次實驗的模型費用不到 0.03 美元。
+
+這是一次「六項全部保留」的結果，不代表每次壓縮都能保留全部資訊；換模型、換工作階段長度後出現「未知」或差異，同樣是有效結果。
+
 ## 這個案例對應哪兩條判斷
 
 - [第 6 條：工作階段可儲存，不等於模型始終記得全部內容](/zh-TW/guide/lasting-principles#session-and-context)

@@ -125,4 +125,4 @@ pi --no-extensions
 - [我的擴充功能學習記錄](https://x.com/xiaomovps/status/2096979758349496647)
 - [從通知問題回到事件與狀態](https://x.com/xiaomovps/status/2097181979540111592)
 
-擴充功能 API 與 `agent_settled` 事件核驗於 2026-09-09。教學檔案已在本機 Pi 0.80.10 中實際載入，`bluebook-check` 命令註冊成功，並返回預期介面通知請求。
+擴充功能 API 與 `agent_settled` 事件核驗於 2026-09-09，2026-10-28 對照 [Pi v1.4.0 固定擴充功能文件](https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/docs/extensions.md)複查，`agent_settled` 仍是自動處理結束後用於通知的事件。教學檔案於 2026-10-28 在獨立設定的 Pi 1.4.0 中重新載入、執行並停用，結果見 [CASE 04 的維護者復現記錄](/zh-TW/cases/first-extension#維護者復現記錄)。
