@@ -292,6 +292,7 @@ export const sidebar = {
           collapsed: false,
           items: [
             { text: '全部版本更新', link: '/releases/' },
+            { text: 'Pi 1.2–1.4 更新要点', link: '/releases/pi-1-4' },
             { text: 'Pi 1.1.0 更新要点', link: '/releases/pi-1-1' },
             { text: 'Pi 1.0.0 更新要点', link: '/releases/pi-1-0' },
             { text: 'Pi Durable 入门', link: '/guide/pi-durable' },

@@ -30,7 +30,7 @@ Pi 可以原生執行在 Windows，也可以完整執行在 WSL。真正重要�
 如果拿不準，選擇第一行。不要因為電腦已經安裝 WSL，就讓 Windows 的 Node.js、WSL 的 npm、Git Bash 的路徑和 PowerShell 命令混在同一次安裝裡。已經長期在 WSL 中開發的讀者，可以直接跟隨 [Pi 官方 Windows 指南](https://pi.dev/docs/latest/windows)的 WSL 路線，再使用本書後續課程的 Linux 命令。
 
 ::: info 本頁採用的路線
-Pi 原生執行在 Windows 時預設使用 **Git Bash**。官方依次查詢自定義 Bash 路徑、Git for Windows 的預設安裝位置 `C:\Program Files\Git\bin\bash.exe`，最後才查詢 PATH 中的其他 `bash.exe`。本頁面向第一次安裝的讀者，只使用 Git for Windows 預設路線，不設定 Cygwin、MSYS2、WSL 或可選 PowerShell 工具。
+Pi 原生執行在 Windows 時預設使用 **Git Bash**。官方依次查詢自定義 Bash 路徑、Git for Windows 的預設安裝位置 `%ProgramFiles%\Git\bin\bash.exe`（通常是 `C:\Program Files\Git\bin\bash.exe`）和 `%ProgramFiles(x86)%` 下的同名位置，最後才查詢 PATH 中的其他 `bash.exe`。本頁面向第一次安裝的讀者，只使用 Git for Windows 預設路線，不設定 Cygwin、MSYS2、WSL 或可選 PowerShell 工具。
 :::
 
 Windows 讀者也按“四樣準備”開始：現有的 Windows 電腦、Git Bash 終端機、Pi Agent，以及一種可用的模型存取方式。**不需要為了學習 Pi 更換 Mac 或 Linux 裝置，也不需要安裝 iTerm2**；iTerm2 是 macOS 軟體。前兩樣和 Pi 的安裝在本頁完成，訂閱或 API Key 留到[下一課](/zh-TW/guide/connect-model)選擇。
@@ -201,4 +201,4 @@ Pi 官方還提供可選的 `powershell` 工具，但它不是本書入門路線
 
 安裝命令、Node.js 要求與 Windows 三條執行路線核驗於 2026-09-23。Pi、Node.js 或 Git for Windows 更新後，應優先複查上述官方頁面。
 
-2026-10-12 僅對照 [Pi v1.1.0 固定 Windows 文件](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/windows.md)與更新原始碼做文字複查；沒有 Windows 環境，未更新上面的實機核驗日期。
+2026-10-28 僅對照 [Pi v1.4.0 固定 Windows 文件](https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/docs/windows.md)與[版本更新記錄](/zh-TW/releases/pi-1-4)做文字複查；沒有 Windows 環境，未更新上面的實機核驗日期。

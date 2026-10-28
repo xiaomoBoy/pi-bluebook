@@ -79,7 +79,7 @@ pi update
 
 官方當前說明，`pi update` 預設只更新 Pi 本體，與 `pi update --self` 的目標相同。它不會自動把所有已安裝包一起升級。
 
-截至 Pi 1.1.0，更新時還要區分兩種結果：
+截至 Pi 1.4.0，更新時還要區分兩種結果：
 
 - npm 全域安裝更新成功後會建議遷移到官方安裝器，因為 npm 路線不固定間接依賴；這條提示本身不是更新失敗。
 - 官方安裝器管理的安裝，更新後只保留新版本和本次更新前的版本。它不代替專案備份，也不適用於 npm 等其他安裝方式。
@@ -240,4 +240,4 @@ fi
 - [Pi 工作階段（Session）：工作階段儲存位置](https://pi.dev/docs/latest/sessions)
 - [Pi Settings：設定與更新檢查](https://pi.dev/docs/latest/settings)
 
-官方安裝器、登入退出及儲存位置仍保留 2026-09-23 的核驗記錄。2026-10-12 在獨立 npm 字首中實測 `pi list`、從 1.0.0 更新到 1.1.0、1.1.0 的 npm 遷移提示、`pi update --models` 和 npm 解除安裝；測試副本已移除，獨立設定目錄仍在，系統原有安裝未改動。託管安裝的舊版本清理與 Azure 改名僅對照[固定版本 Changelog](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/CHANGELOG.md)核對，未實測託管更新或 Azure 使用者帳戶。實際使用時仍以對應官方文件和本機 `pi --help` 為準。
+官方安裝器、登入退出及儲存位置仍保留 2026-09-23 的核驗記錄。2026-10-28 在獨立 npm 字首中實測 `pi list`、從 1.1.0 更新到 1.4.0、1.4.0 的 npm 遷移提示、`pi update --models` 和 npm 解除安裝；測試副本與獨立設定目錄均已移除，系統原有安裝未改動。託管安裝的舊版本清理與 Azure 改名僅對照[固定版本 Changelog](https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/CHANGELOG.md)核對，未實測託管更新或 Azure 使用者帳戶。實際使用時仍以對應官方文件和本機 `pi --help` 為準。

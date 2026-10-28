@@ -154,7 +154,7 @@ pi --approve
 
 列表中应不再有这个 Package；在新 Pi 会话输入 `/`，上面两个教学命令也应消失。如果仍出现，先检查是否还通过全局安装或 `-e`、`--skill` 加载了同名资源。移除声明不会删除自己创建的目录，材料仍可保留。检查后用 `/quit` 退出。
 
-2026-10-12，在独立配置中用 Pi 1.1.0 完成上述本地安装、命令清单检查、扩展通知和移除后的清单复查；没有测试 npm／Git 来源或公共发布。完整打包规则见[固定版本 Package 文档](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/packages.md)。
+2026-10-28，在独立配置中用 Pi 1.4.0 完成上述本地安装、命令清单检查、扩展通知和移除后的清单复查；没有测试 npm／Git 来源或公共发布。完整打包规则见[固定版本 Package 文档](https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/docs/packages.md)。
 
 ### 本章依据
 

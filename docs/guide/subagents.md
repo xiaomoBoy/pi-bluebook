@@ -65,7 +65,7 @@ next:
 
 ### 维护者最小复现
 
-2026-10-12，在独立配置与练习目录中安装 `pi-subagents@0.77.0`，用 Pi 1.1.0 委派一个前台 `delegate`，固定为 `deepseek/deepseek-flash:off`，要求只回复 `BLUEBOOK_CHILD_OK`。这次无文件变更的测试显式采用文档支持的 `acceptance.level: "none"`，由维护者独立对照返回标记；工具事件记录了一个子任务、退出码为 `0`、工具计数为 `0`，主会话收到同一标记。随后用同一来源移除，`pi list` 显示没有 Package。
+2026-10-28，在独立配置与练习目录中安装 `pi-subagents@0.77.0`，用 Pi 1.4.0 委派一个前台 `delegate`，固定为 `deepseek/deepseek-flash:off`，要求只回复 `BLUEBOOK_CHILD_OK`。这次无文件变更的测试显式采用文档支持的 `acceptance.level: "none"`，由维护者独立对照返回标记；工具事件记录了一个子任务、退出码为 `0`、工具计数为 `0`，主会话收到同一标记。随后用同一来源移除，`pi list` 显示没有 Package。
 
 这只验证一次前台委派；没有测试并发、后台、嵌套、重启恢复或另外三个扩展，不能写成四项都「已验证可用」。
 
@@ -88,7 +88,7 @@ next:
 - [Pi 官方 Extension 示例索引](https://pi.dev/docs/latest/extensions#examples-reference)
 - [我对子 Agent 工作流的实际使用记录](https://x.com/xiaomovps/status/2091841029850681551)
 
-核心能力边界的原核验日期为 2026-09-09；扩展资料与上述最小复现单独记录于 2026-10-12。
+核心能力边界的原核验日期为 2026-09-09；扩展资料核对于 2026-10-12，上述最小复现于 2026-10-28 用 Pi 1.4.0 重做。
 
 - [pi-subagents v0.77.0](https://github.com/nicobailon/pi-subagents/releases/tag/v0.77.0)
 - [tintinweb v0.20.0](https://github.com/tintinweb/pi-subagents/releases/tag/v0.20.0)

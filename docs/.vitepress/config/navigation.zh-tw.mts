@@ -292,6 +292,7 @@ export const sidebarTW = {
           collapsed: false,
           items: [
             { text: '全部版本更新', link: '/zh-TW/releases/' },
+            { text: 'Pi 1.2–1.4 更新要點', link: '/zh-TW/releases/pi-1-4' },
             { text: 'Pi 1.1.0 更新要點', link: '/zh-TW/releases/pi-1-1' },
             { text: 'Pi 1.0.0 更新要點', link: '/zh-TW/releases/pi-1-0' },
             { text: 'Pi Durable 入門', link: '/zh-TW/guide/pi-durable' },
